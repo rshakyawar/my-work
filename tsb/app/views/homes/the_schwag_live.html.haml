@@ -1,0 +1,41 @@
+= stylesheet_link_tag "/stylesheets/rewards_reset.css.css"
+= stylesheet_link_tag "/stylesheets/rewards_main.css"
+:css
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .FBConnectButton_Simple, .FBConnectButton_RTL_Simple {
+    background-image:url("/images/iconFbook.png");
+    height: 30px;
+    width: 34px;
+    display: block;
+    float: right
+   }
+   .tb, .t-count, .t-count a {
+     background:url("../images/iconBird.png") no-repeat scroll 0 0 transparent;
+   }
+   .float_align{
+     float:left;
+   }
+#main{:style => "padding-top:40px;"}
+  #blockRight{:style => "position:relative;margin-left:30px;"}
+    %section.promo_shadow
+      #blockRight
+        .schwagBlock{:style=>"margin-left: 266px;"}
+          .schwagimgBlock
+            .current-map-layer{:style => "background: url('#{@schwag.schwag_image.url(:medium)}') no-repeat scroll 0% 0% transparent; width: 237px; height: 212px;"}
+            %label.schwagTtemDescBg.noofDes #{@schwag.description}
+            %label.noOfItemBg.noofDes #{ @schwag.no_of_items }

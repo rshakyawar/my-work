@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  versus: 
+  member: 
+  shot_count: 1
+  ready_to_next_question: false
+  fb_twit_token: MyString
+
+two:
+  versus: 
+  member: 
+  shot_count: 1
+  ready_to_next_question: false
+  fb_twit_token: MyString

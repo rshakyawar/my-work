@@ -1,0 +1,42 @@
+:css
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+#middle_content
+  .my_stash_box_main
+    .my_stash_box_lock_img
+    .my_stash_box
+    .my_stash_box_lock_img
+  .my_stash_box_heading_txt A personal collection of my STASHBOX contributions.
+  .forget_key_box
+    .forget_stashname_bg
+      #popup1.popupbox      
+        %h2
+          = notice
+      .forget_login_heading{:style=>"margin-top: 8px;"}
+      .forget_heading_txt
+        Please enter your email below. Click the "enter"
+        button. We will send your Stashname
+        infofmation to you!
+      %form{:action => "#{members_send_forgot_stash_name_path}",:method => "POST"}
+        .member_login_field_main
+          .forgot_login_field
+            %input.forgot_login_field_bg{:name => "userEmail",  :type => "text", :placeholder => "EMAIL"}/
+          .forgot_login_field
+            %input.forgot_login_field_bg{:name => "confirmEmail", :type => "text", :placeholder => "CONFIRM EMAIL"}/
+        .member_login_forget_txt
+          Forgot your
+          %a{:href => "#{new_member_password_path}"} stashword
+        .member_login_enter_bttn
+          %input.member_login_enter_bttn_bg{:type => "submit", :value => "ENTER",:style=>"cursor:pointer;padding-left: 10px;"}/
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}    
+-if flash[:notice]
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [510,375] });      

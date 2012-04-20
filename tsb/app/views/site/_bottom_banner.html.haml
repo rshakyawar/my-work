@@ -1,0 +1,40 @@
+%section.secTwo
+  #logoOne
+    %img{:alt => "Logo Two", :src => "#{@product.logo_one.url(:medium)}"}/
+  #topBanner
+    %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:medium)}"}/
+  #bgImgBlock{:style=>"background-image:url('#{@product.background.url(:medium)}');"}
+    %p Background Image
+    #versusBlock
+      #versusLeft.versusLeft_set
+        %img{:alt => "Versus Left", :src => "#{@product.versus_left.url(:medium)}"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@product.versus_right.url(:medium)}"}/
+  #bottomBannerBlock{:style=>"background-color:#{@product.bottom_banner_color}"}
+    #bannerTxt
+      #quizBlock_bg QUESTION
+#logo2Block
+  #logoTwo
+    %img{:alt => "Logo Two", :src => "#{@product.logo_two.url(:medium)}"}/
+%form#bottom_baner{:action => "/save_button_color", :method => "POST" ,:id=>"save_bottom_banner"}
+  %input{:type => "hidden",:value=>"",:name=>"font_color",:id=>"font_color"}/
+:javascript
+  $(document).ready(function() {
+    setPanelControls('#viewport_ban');  
+  });
+    $('#colorSelector').ColorPicker({
+      color: '#000000',
+      onShow: function (colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function (colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+       onChange: function (hsb, hex, rgb) {
+          $('#bottomBannerBlock').css('background-color','#'+hex);
+      }
+    });
+
+ 

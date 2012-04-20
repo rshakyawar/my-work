@@ -1,0 +1,21 @@
+%section.secTwo
+  #topBanner
+    %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:medium)}"}/
+  #bgImgBlock{:style=>"background-image:url('#{@product.background.url(:medium)}');"}
+    - if @product.background.to_s =="/backgrounds/original/missing.png"
+      %p Background Image
+    - else 
+      %p &nbsp;
+    #versusBlock
+      #versusLeft.versusLeft_set
+        %img{:alt => "Versus Left", :src => "#{@question.versus_left.url(:medium)}"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+  #bottomBannerBlock{:style=>"background-color:#{@product.bottom_banner_color}"}
+    #bannerTxt
+      #quizBlock_bg{:style=>"background-color:#{@product.bottom_banner_color};color:#{@question.font_color};font-family:#{@question.font_style}"} #{@question.title || "QUESTION"}
+#logo2Block
+  #logoTwo
+    %img{:alt => "Logo Two", :src => "#{@product.logo_two.url(:medium)}"}/
+:javascript
+  $(document).ready(function() {setPanelControls('#viewport1');	});

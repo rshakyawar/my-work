@@ -1,0 +1,54 @@
+.Versus_Login3_main {
+	width:374px;
+	height:435px;
+	background:url(../images/Versus_Login_bg.png) no-repeat;
+	position:relative;
+	margin: 0px auto;
+}
+.versus_login3_input1 {
+	position:absolute;
+	top:182px;
+	left:53px;
+}
+.versus_login3_input2 {
+	position:absolute;
+	top:226px;
+	left:53px;
+}
+.Versus_Login3_main input {
+	width:257px;
+	height:29px;
+	background:url(../images/Versus_Login_field_bg.png) no-repeat;
+	border:none;
+	font:normal 14px "TrajanPro";
+	color:#000;
+	text-align:right;
+	padding:0px 5px 0px 5px;
+	padding-top: 5px\9;
+}
+.Versus_Login3_submit {
+	width:62px !important;
+	height:26px !important;
+	border:solid 1px #000 !important;
+	position:absolute;
+	cursor:pointer;
+	background-image:none !important;
+ background-color:#000;
+	top:267px;
+	left:257px;
+	opacity:0;
+}
+.versus_login3_not_member_bttn {
+	width:169px;
+	height:44px;
+	position:absolute;
+	top:343px;
+	left:104px;
+}
+.versus_login3_not_member_bttn a {
+	background:url(../images/versus_login3_not_member_bttn.png) no-repeat;
+	width:169px;
+	height:44px;
+	display:block;
+}
+

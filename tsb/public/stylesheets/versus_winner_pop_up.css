@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'knowyour';
+    src: url('../fonts/knowyour.eot?') format('eot'),
+         url('../fonts/knowyour.woff') format('woff'),
+         url('../fonts/knowyour.ttf') format('truetype'),
+         url('../fonts/knowyour.svg') format('svg');
+}
+@font-face {
+    font-family: 'TheLastFont';
+    src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+         url('../fonts/lastfontwastingonyou.woff') format('woff'),
+         url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+         url('../fonts/lastfontwastingonyou.svg') format('svg');
+}
+
+.YouWonPopup_main  {
+	width:511px;
+	height:438px;
+	background:url(/images/YouWonPopup_sprite.png) no-repeat left top;
+	margin:0px auto;
+	padding:20px 0px 0px 0px;
+}
+.youwonpopup_close_bttn_main {
+	width:500px;
+	height:1px;
+	position:relative;
+}
+.youwonpopup_close_bttn {
+	width:28px;
+	height:27px;
+	position:absolute;
+	right:7px;
+	margin-top:-1px;
+}
+.youwonpopup_close_bttn a {
+	width:28px;
+	height:27px;
+	background:url(/images/YouWonPopup_sprite.png) no-repeat -387px -477px;
+	display:block;
+}
+.youwonpopup_txtline1 {
+	width:511px;
+	height:30px;
+	font:normal 24px "knowyour", Arial, Helvetica, sans-serif;
+	color:#0048cd;
+	text-align:center;
+}
+.youwonpopup_txtline2 {
+	width:500px;
+	height:auto;
+	font:italic normal 18px "TheLastFont", Arial, Helvetica, sans-serif  ;
+	color:#000;
+	text-align:center;
+	margin:0px 0px 0px 0px;
+}
+.youwonpopup_txtline2 span {
+	color:#0048cd;
+}
+.youwonpopup_img_bg {
+	width:360px;
+	height:249px;
+	background:url(/images/YouWonPopup_sprite.png) no-repeat left -471px;
+	margin:10px auto 0px auto;
+	padding:7px 0px 0px 13px;
+}
+.youwonpopup_winner_code_txt {
+	width:500px;
+	height:auto;
+	font:normal 18px "knowyour", Arial, Helvetica, sans-serif;
+ color:#EA6421;
+	text-align:center;
+}
+.youwonpopup_dont_belive_txt {
+	width:500px;
+	height:auto;
+	font:italic 18px "TheLastFont", Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+}
+.youwonpopup_dont_belive_txt span {
+	color:#EA6421;
+}
+.youwonpopup_dont_belive_txt lucky {
+	font-size:24px;
+}

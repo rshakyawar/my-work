@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  books: MyString
+  travel: MyString
+  fashion: MyString
+  tv_film: MyString
+  nightlife: MyString
+  home: MyString
+  food: MyString
+  gaming: MyString
+  music: MyString
+  gallery: MyString
+  beauty_grooming: MyString
+  health_fitness: MyString
+  member: 
+
+two:
+  books: MyString
+  travel: MyString
+  fashion: MyString
+  tv_film: MyString
+  nightlife: MyString
+  home: MyString
+  food: MyString
+  gaming: MyString
+  music: MyString
+  gallery: MyString
+  beauty_grooming: MyString
+  health_fitness: MyString
+  member: 

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  versus: 
+  member: 
+  magic_number: MyString
+  winner_code: MyString
+
+two:
+  versus: 
+  member: 
+  magic_number: MyString
+  winner_code: MyString

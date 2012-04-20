@@ -1,0 +1,65 @@
+= inner_form.fields_for:member_survey_three_attributes do |f|         
+  #stash_status.communication_box
+    .box_top_corner
+    .box_middle_corner
+      .communication_heading
+        %span Stash Stats
+        = succeed "We've" do
+          %br/
+        got our own census thing going on, and want to know what your stats are. Let us know what's going on by
+        %br/
+        checking off the options that apply to you in each of the below categories:
+      - if true   
+        .membership_box3_img_row                    
+          .box3_img_bg                
+            .box3_top_txt_row{:onClick=>"change_expert_color('#drop_down_18','#select_18_id','#member_survey_three_hopelessly_devoted_to','18');"}
+              .step3_img_links_row
+                - unless survey_three_obj.hopelessly_devoted_to.blank?  
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_18",:style=>"background-color:#3BB9FF",:tabindex=>"12"} RELATIONSHIP STATUS    
+                  %input{:type => "hidden",:id=>"member_survey_three_hopelessly_devoted_to",:value=>"#{survey_three_obj.hopelessly_devoted_to.first}",:name=>"member[member_survey_three_attributes][hopelessly_devoted_to][]"} 
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_18",:tabindex=>"12"} RELATIONSHIP STATUS
+                  %input{:type => "hidden",:id=>"member_survey_three_hopelessly_devoted_to",:value=>"#{survey_three_obj.hopelessly_devoted_to}",:name=>"member[member_survey_three_attributes][hopelessly_devoted_to][]", :disabled=>true}                      
+                .box3_img_relationship                        
+          .box3_img_bg              
+            .box3_top_txt_row{:onClick=>"change_expert_color('#drop_down_15','#select_15_id','#member_survey_three_academic_accolades','15');"}
+              .step3_img_links_row            
+                - unless survey_three_obj.academic_accolades.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_15",:style=>"background-color:#3BB9FF",:tabindex=>"14"} EDUCATION   
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{survey_three_obj.academic_accolades.first}",:name=>"member[member_survey_three_attributes][academic_accolades][]"}                                       
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_15",:tabindex=>"14"} EDUCATION
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{survey_three_obj.academic_accolades}",:name=>"member[member_survey_three_attributes][academic_accolades][]", :disabled=>true}  
+              .box3_img_education                  
+          .box3_img_bg                     
+            .box3_top_txt_row{:onClick=>"change_expert_color('#drop_down_16','#select_16_id','#member_survey_three_shelling_it_out','16');"}
+              .step3_img_links_row             
+                - unless survey_three_obj.shelling_it_out.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_16",:style=>"background-color:#3BB9FF",:tabindex=>"15"} SPENDING HABITS         
+                  %input{:type => "hidden",:id=>"member_survey_three_shelling_it_out",:value=>"#{survey_three_obj.shelling_it_out.first}",:name=>"member[member_survey_three_attributes][shelling_it_out][]"}                      
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_16",:tabindex=>"15"} SPENDING HABITS
+                %input{:type => "hidden",:id=>"member_survey_three_shelling_it_out",:value=>"#{survey_three_obj.shelling_it_out}",:name=>"member[member_survey_three_attributes][shelling_it_out][]", :disabled=>true}   
+              .box3_img_spending                                                               
+          .box3_img_bg{:style=>"margin-left: 100px"}                         
+            .box3_top_txt_row{:onClick=>"change_expert_color('#drop_down_17','#select_17_id','#member_survey_three_punch_the_clock','17');"}
+              .step3_img_links_row
+                - unless survey_three_obj.punch_the_clock.blank?  
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_17",:style=>"background-color:#3BB9FF",:tabindex=>"13"}   9 TO 5
+                  %input{:type => "hidden",:id=>"member_survey_three_punch_the_clock",:value=>"#{survey_three_obj.punch_the_clock.first}",:name=>"member[member_survey_three_attributes][punch_the_clock][]"}                                          
+                - else        
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_17",:tabindex=>"13"}  9 TO 5
+                  %input{:type => "hidden",:id=>"member_survey_three_punch_the_clock",:value=>"#{survey_three_obj.punch_the_clock}",:name=>"member[member_survey_three_attributes][punch_the_clock][]", :disabled=>true}                                                     
+                .box3_img_9to5                 
+          .box3_img_bg             
+            .box3_top_txt_row{:onClick=>"change_expert_color('#drop_down_19','#select_19_id','#member_survey_three_guilty_by_vocation','19');"}
+              .step3_img_links_row            
+                - unless survey_three_obj.guilty_by_vocation.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_19",:style=>"background-color:#3BB9FF",:tabindex=>"14"} OCCUPATION    
+                  %input{:type => "hidden",:id=>"member_survey_three_guilty_by_vocation",:value=>"#{survey_three_obj.guilty_by_vocation.first}",:name=>"member[member_survey_three_attributes][guilty_by_vocation][]"}                                       
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_19",:tabindex=>"14"} OCCUPATION
+                  %input{:type => "hidden",:id=>"member_survey_three_guilty_by_vocation",:value=>"#{survey_three_obj.guilty_by_vocation}",:name=>"member[member_survey_three_attributes][guilty_by_vocation][]", :disabled=>true}  
+              .box3_img_occupation                                                      
+      .clear
+    .box_bottm_corner            

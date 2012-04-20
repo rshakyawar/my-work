@@ -1,0 +1,65 @@
+= javascript_include_tag 'fb'
+:css
+  .FBConnectButton_Simple, .FBConnectButton_RTL_Simple {
+    background-image:url("/images/iconFbook.png");
+    background-repeat:no-repeat;
+    outline:medium none;
+    text-decoration:none;
+    display: block;
+    height: 30px;
+    width: 34px;
+   }
+   .tb, .t-count, .t-count a {
+     background:url("../images/iconBird.png") no-repeat scroll 0 0 transparent;
+   }
+   .Ernestschwag_facebook_bttn {   
+   }
+   
+   .Ernestschwag_facebook_bttn a {    
+    	background:url(../images/ernestschwag_social_icons.png) no-repeat -3px -2px;   
+   }    
+  .submitBtnBlock{
+    float: left;
+    width: 290px;
+  }
+   
+  .invited_frnd_send_bttn_bg {
+    width:84px;
+    height:32px;
+    background:url("../images/log_in_imgs.png") no-repeat -540px -272px;
+    font:bold 16px "Times New Roman", Times, serif;
+    color:#000;
+    text-decoration:none;
+    font-style:italic;
+    display:block;
+    border:none;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-top: 20px;
+    float: right;
+  }  
+#main
+  %img{:alt => "The Stash Box Blog", :height => "74", :src => "images/logo_blog.gif", :width => "420"}/
+  - @feed.entries.each do |post|
+    .blogEntry
+      %b
+        = post.title.to_s
+      %p
+        = post.content.to_s.html_safe
+      %ul.buttons.social{:style=>"margin:0"}
+        %li
+          %a{:href => "javascript:;", :onclick => "OpenDialog(this,1);"}
+            %img{:alt => "What You Got", :src => "images/btn_whatyougot.gif"}/ 
+      .facebook_twit            
+        %ul.buttons.social                   
+          %li
+            =link_to image_tag("iconBird.png"), "https://twitter.com/share?original_referer=http%3A%2F%2Fthestashbox.com%2Fblog&source=tweetbutton&text=The%20Stashbox%20-%20Blog&url=http%3A%2F%2Fthestashbox.com%2Fblog"
+          %li    
+            %a{:href => "javascript:void(0);",:class=>"Ernestschwag_facebook_bttn"}
+              %img{:border => "0", :src => "/images/facebook.png"}/            
+      %div{:style => 'clear:both;'}            
+      = render :partial => 'submitted_assets/form', :locals => {:submitted_asset => @submitted_asset}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'blog'
+

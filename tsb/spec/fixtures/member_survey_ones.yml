@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sms: MyString
+  calls: MyString
+  email: MyString
+  social_networking: MyString
+  humans: MyString
+  member: 
+
+two:
+  sms: MyString
+  calls: MyString
+  email: MyString
+  social_networking: MyString
+  humans: MyString
+  member: 

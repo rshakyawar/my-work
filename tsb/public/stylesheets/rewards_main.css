@@ -1,0 +1,1091 @@
+ /*---------------------------------------------
+	The Stash Box Stylesheet
+	
+	Author: Beata Domagala Pink Parachuters
+	Created: August, 2011
+	Modified: ...
+	--------
+	Structure of this Document (search for "=" to jump to each section heading):
+		
+		1. =XHTML ELEMENTS
+		2. =GLOBAL 
+		3. =HEADER
+		4. =NAV
+		5. =CONTENT 
+		6. =SIDEBAR
+		7. =FOOTER 
+SH - start here
+EH - end here
+---------------------------------------------*/
+
+/*=XHTML ELEMENTS
+---------------------------------------------*/
+
+@font-face {font-family:Trajan Pro; src: url('TrajanPro-Regular.otf');}
+@font-face {font-family:Copperplate; src: url('Copperplate.ttc');}
+ @font-face {
+     font-family: 'TheLastFont11';
+     src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+          url('../fonts/lastfontwastingonyou.woff') format('woff'),
+          url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+          url('../fonts/lastfontwastingonyou.svg') format('svg');
+ }
+  @font-face {
+     font-family: 'TheLastFont';
+     src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+          url('../fonts/lastfontwastingonyou.woff') format('woff'),
+          url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+          url('../fonts/lastfontwastingonyou.svg') format('svg');
+ }
+  @font-face {
+     font-family: 'Trajan';
+     src: url('../fonts/TrajanPro-Regular.eot?') format('eot'),
+          url('../fonts/TrajanPro-Regular.woff') format('woff'),
+          url('../fonts/TrajanPro-Regular.ttf') format('truetype'),
+          url('../fonts/TrajanPro-Regular.svg') format('svg');
+ }
+  @font-face {
+     font-family: 'TrajanPro';
+     src: url('../fonts/TrajanPro-Regular.eot?') format('eot'),
+          url('../fonts/TrajanPro-Regular.woff') format('woff'),
+          url('../fonts/TrajanPro-Regular.ttf') format('truetype'),
+          url('../fonts/TrajanPro-Regular.svg') format('svg');
+ }
+
+body {
+	color: #000;
+	font-size:14px; 
+    font-family:"Times New Roman", Times, serif;
+    line-height:1.4;
+    background: url("../images/doors_bricks_resized.jpg") repeat scroll 50% 40% black;
+	}
+div li a.sending_text:hover,
+div li a.fb_image:hover,
+div li a.thank_you:hover,
+div li a.thank_you_popup:hover,
+div li a.deal_logo:hover,
+div li a.steal_logo:hover,
+div li a.schwag_logo:hover,
+div li a.real_popup:hover,
+div li a.looser_popup:hover,
+div li a.winner_popup:hover{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+
+a {color: #666;}
+a:link, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {}
+
+h2{font-family:Trajan Pro, serif; font-size:18px; text-transform:uppercase; float: left; font-style:italic; padding:15px 0 3px 15px; }
+h3{font-family:Copperplate, sans-serif; font-weight:bold; font-size:12px;}
+
+p {margin: 5px 0;}	
+em{font-style: italic;}
+
+/*=GLOBAL ELEMENTS
+---------------------------------------------*/ 
+/*=HEADER ELEMENTS
+---------------------------------------------*/ 
+header{
+	margin: 0 auto;
+    overflow: hidden;
+    width: 99%;
+	padding:10px 0px 10px 0px;
+}
+h1{
+	float:left;
+	width:30px;
+	padding:0 25px 0 15px;
+}
+/*=NAV ELEMENTS
+---------------------------------------------*/ 
+nav{
+	 float: left;
+    margin: 10px 0px;
+    width: 90%;
+	}
+nav ul{
+	float:right;
+	}
+nav li{
+	float:left;
+	margin:0 4px;
+}
+nav li a{
+	display:block;
+	text-indent:-3000px;
+	height:30px;
+}
+nav li a.active{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+nav li a.thank_you{
+	background:url(../images/Thank_you_img.png) no-repeat 0 0;
+	width:114px;
+}
+nav li a.one{
+	background:url(../images/rewards-nav.png) no-repeat 0 0;
+	width:114px;
+}
+nav li a.two{
+	background:url(../images/rewards-nav.png) no-repeat -119px 0;
+	width:113px;
+}
+nav li a.three{
+	background:url(../images/rewards-nav.png) no-repeat -240px 0;
+	width:103px;
+}
+nav li a.thank_you_popup{
+	background:url(../images/popups_img.png) no-repeat 0 0;
+	width:114px;
+}
+
+nav li a.one:hover,
+nav li a.two:hover,
+nav li a.three:hover{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+p.versusBack{
+    float: right;
+    margin: 10px 20px 3px 0;
+}
+p.versusBack a.active{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+	 display: block;
+    height: 40px;
+}
+	
+ /*=CONTENT ELEMENTS
+---------------------------------------------*/ 
+#black_bg {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#door_left, #door_left_visible {
+    background: url("../images/door_left.jpg") no-repeat scroll 100% 50% transparent;
+    cursor: pointer;
+    display: none;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 50%;
+    z-index: 30;
+}
+#door_right, #door_right_visible {
+    background: url("../images/door_right.jpg") no-repeat scroll 0 50% transparent;
+    cursor: pointer;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 49.9%;
+    z-index: 30;
+}
+#wrapper{
+	width:868px;
+   margin:0 auto;
+   height:100%;
+   padding:0;
+   overflow:hidden;
+}
+#main{
+    display: block;
+    margin:0 10px 15px 10px;
+    overflow: hidden;
+    text-align: center;
+}
+#blockLeft{
+    float: left;
+    width: 204px;
+}
+#blockRight{
+    float: left;
+    width: 630px;
+}
+section.secOne{
+	background:url(../images/image_upload_bg.png) no-repeat;
+	width:204px;
+	height:165px;
+	float:left;
+}
+section.secOne #secOneBlock{
+    float: left;
+    height: 140px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+}
+#secOneBlock .tit,
+#secFiveBlock .tit{
+    clear: both;
+    float: left;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+#secOneBlock .chooseImgBtn{
+    background: url("../images/ch_img_button.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    cursor: pointer;
+    float: left;
+    height: 32px;
+    margin: 0px;
+    width: 175px;
+}
+#secOneBlock .chooseImgTxt{
+    clear: both;
+    float: left;
+    font-size: 12px!important;
+    margin: 0;
+}
+#secOneBlock .removeImg{
+    background: url("../images/remove_img_button.jpg") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 27px;
+    margin: 20px 0;
+    padding-top: 3px;
+    width: 140px;
+}
+#secOneBlock .removeImg a{
+	padding-left: 10px;
+	font-size: 15px;
+}
+#secFiveBlock .zoomTxt,
+#secOneBlock .zoomTxt{
+    clear: both;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+	text-transform:uppercase;
+}
+#secFiveBlock .dealDeatilsInputBg{
+    background: url("../images/theDealInput.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    clear: both;
+    float: left;
+    height: 32px;
+    margin-bottom: 3px;
+    margin-top: 4px;
+    width: 176px;
+}
+#secFiveBlock a{
+	color: #000000;
+	text-decoration: underline;
+}
+#secOneBlock ul.zoomer{
+    display: inline;
+    float: left;
+    margin: 15px 0;
+}
+li#zoomNeg{
+	float: left;
+}
+li#zoomCursor{
+	float: left;
+}
+li#zoomPlus{
+	float: left;
+}
+#secOneBlock .moveTxt{
+    clear: both;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+}
+#secOneBlock .moveImg{
+    clear: both;
+    float: left;
+    margin: 7px 0 0 10px;
+}
+
+#secOneBlock div.reset{
+    clear: both;
+    display: block;
+    float: left;
+    height: 30px;
+    margin-left: 100px;
+	margin-top: 5px;
+    width: 85px;
+}
+#secOneBlock div.resetImg{
+    float: left;
+    margin-left: 5px;
+    width: 30px;
+}
+#secOneBlock div.resetTxt{
+    float: left;
+    margin-top: 5px;
+}
+section.secTwo {
+	border:1px solid #333;
+	width:614px;
+	float:left;
+	margin:0 0 0 15px;
+}
+section.secTwo p{
+	margin: 0px;
+}
+#logoOne{
+    border-right: 1px dotted gray;
+	border-bottom: 1px dotted gray;
+    height: 75px;
+    width: 172px;
+	float: left;
+}
+#topBanner{
+	border-bottom: 1px solid gray;
+    height: 75px;
+    width:614px;	
+	float: left;
+}
+#bgImgBlock{
+    width: 614px;	
+	float: left;
+	//padding-top:25px
+}
+#versusBlock_bg{
+    height: 220px;
+    width: 614px;	
+	float: left;
+	position:relative;
+	top: -224px;
+	left:0px;
+	z-index:1000
+}
+#versusBlock{
+    height: 220px;
+    width: 614px;	
+	float: left;
+}
+.versusLeft_set {
+    float: left;
+    height: 200px;
+    margin-left: 75px;
+    width: 200px;
+    background-color: #FFFFFF;
+}
+#versusLeft{
+    border: 2px solid #A1A1A1;
+}
+.versusRight_set {
+    float: left;
+    height: 200px;
+    margin-left: 75px;
+    width: 200px;
+    background-color: #FFFFFF;
+}
+#versusRight{
+    border: 2px solid #A1A1A1;
+}
+#bottomBannerBlock{
+	border-top: 1px solid #000000;
+	border-bottom: 2px solid #918f90;
+    height: 75px;
+    width: 614px;	
+	float: left;
+	position:relative;
+}
+#bottomBannerBlock #bannerTxt{
+    float: left;
+    text-align: left;
+}
+#bottomBannerBlock #quizBlock{
+    float: left;
+	border: 1px solid #918f90;
+    margin-left: 30px;
+    margin-top: 3px;
+    text-align: center;
+    width: 565px;
+	height: 35px;
+}
+#quizBlock_bg {
+    text-align: center;
+    width: 565px;
+	height: 35px;
+	position:absolute;
+	top:21px;
+	left:25px;	
+	background-color:white;
+}
+#question_a {
+    background: url("../images/quesPanelImg1.jpg") no-repeat scroll left top transparent;
+	border:none;
+    height: 23px;
+    margin-top: 3px;
+    width: 166px;	
+}
+#question_b {
+    border: medium none;
+    height: 33px;
+    text-align: center;
+    width: 565px;
+	float: left;
+	clear: both;
+}
+#logo2Block{
+    background-color: #FFFFFF;
+    border-top: 2px solid #918F90;
+    float: left;
+    height: 85px;
+    width: 614px;
+}
+#logoTwo{
+    border: 1px solid #918F90;
+    float: left;
+    height: 55px;
+    margin-left: 250px;
+    margin-top: 15px;
+    width: 120px;
+}
+section.secThree{
+    float: left;
+    height: 100px;
+    width: 614px;
+	margin: 0 0 0 15px;
+}
+#saveBlock{
+    width: 614px;	
+	float: left;
+}
+#continueBlock{
+    width: 307px;	
+	float: right;
+}
+#saveBlock input.saveBtnSty{
+    background: url("../images/saveBtn.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 78px;
+    margin-top: 15px;
+    width: 166px;
+	border: 0px;
+}
+#continueBlock input.continueBtnSty{
+    background: url("../images/btn_continue.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: right;
+    height: 80px;
+    margin-top: 15px;
+    width: 175px;
+	border: 0px;
+}
+section.secFive{
+    background: url("../images/bg-deal.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 297px;
+    margin-top: 22px;
+    width: 203px;
+}
+
+#secFiveBlock {
+    float: left;
+    height: 282px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+}
+section.secFour #secFiveBlock{
+    float: left;
+    height: 105px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+	font-family:Trajan Pro, serif;
+}
+#secFiveBlock div.txt1 {
+    clear: both;
+    float: left;
+    font-size: 11px;
+    font-style: italic;
+    margin-bottom: 15px;
+	text-align: left;
+}
+#secFiveBlock div.txt2 {
+    clear: both;
+    float: left;
+    font-size: 11px;
+    font-style: italic;
+}
+section.secOne #questionBlock {
+    float: left;
+    height: 335px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+}
+#questionBlock .h5sty{
+    clear: both;
+    float: left;
+    font-size: 17px;
+    font-style: italic;
+    margin-top: 5px;
+}
+#questionBlock div.typeQues{
+    background: url("../images/quesPanelImg2.jpg") no-repeat scroll left top transparent;
+    clear: both;
+    height: 35px;
+    width: 178px;
+}
+#fontSel {
+    background: url("../images/quesPanelImg3.jpg") no-repeat scroll left top transparent;
+    border: medium none;
+    height: 26px;
+    margin-top: 5px;
+    width: 168px;
+}
+#questionBlock div.maxChar{
+    clear: both;
+    float: left;
+    font-size: 12px !important;
+    padding-left: 3px;
+}
+#questionBlock div.delQ{
+    clear: both;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 30px 0;
+    width: 175px;
+}
+#questionBlock div.delQimg{
+    float: left;
+    margin-right: 5px;
+    width: 30px;
+}
+#questionBlock div.delQtxt{
+    float: left;
+    margin-top: 5px;
+}
+#questionBlock div.chooseFont{
+    background: url("../images/quesPanelImg4.gif") no-repeat scroll left top transparent;
+    clear: both;
+    height: 20px;
+    width: 118px;
+	margin-bottom: 8px;
+}
+#questionBlock div.fontType{
+    background: url("../images/quesPanelImg2.jpg") no-repeat scroll left top transparent;
+    clear: both;
+    display: block;
+    height: 35px;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    width: 178px;
+}
+#questionBlock div.fontColor{
+    background: url("../images/quesPanelImg3.gif") no-repeat scroll left top transparent;
+    clear: both;
+    display: block;
+    height: 35px;
+    margin-bottom: 30px;
+    width: 178px;
+}
+
+/*Rewards Section*/
+#LeftRew{
+	float:left;
+	width:200px;
+}
+#RightRew{
+	float:right;
+	width:350px;
+}
+#social{
+	border:1px solid #333;
+	width:313px;
+	height:166px;
+}
+
+/* Master css start */
+
+#slider01 {
+margin: 8px 8px 8px 4px;
+width: 120px;
+}
+
+#overlay {opacity:0.0; z-index:100; background-color:white; position:absolute; top:213px; left:212px;  height:235px; width:200px}
+
+#files, #files:hover {
+	cursor: pointer;
+	height: 31px;
+}
+#viewport3, .mapwrapper3 {
+        width: 200px;
+        height: 200px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+#viewport1, .mapwrapper1 {
+        width: 172px;
+        height: 52px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+#viewport2, .mapwrapper2 {
+        width: 441px;
+        height: 52px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+#viewport5, .mapwrapper5{
+        width: 120px;
+        height: 55px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+#viewport6, .mapwrapper6 {
+        width: 195px;
+        height: 285px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+		position: relative;
+		top: 3px;
+}
+#viewport7, .mapwrapper7 {
+        width: 237px;
+        height: 212px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+		position: relative;
+}
+#viewport_bg, .mapwrapper_bg{
+		width: 614px;
+		height: 269px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+#viewport_ban, .mapwrapper_ban{
+		width: 614px;
+		height: 75px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+.mapwrapper3, .mapwrapper1, .mapwrapper2, .mapwrapper5 {
+    position: relative;
+}
+.map-control {
+    background: url("../images/move_img_button.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    height: 32px;
+    left: 5px;
+    position: relative;
+    top: 5px;
+    width: 34px;
+}
+.map-control a {
+    height: 13px;
+    width: 13px;
+    display: block;
+    text-indent: -999em;
+    position: absolute;
+    outline: none;
+}
+.map-control a:hover {
+    background: #535353;
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+
+.map-control a.left {
+    left: -2px;
+    top: 9px;
+}
+
+.map-control a.right {
+    left: 22px;
+    top: 9px;
+}
+
+.map-control a.up {
+    left: 10px;
+    top: -2px;
+}
+
+.map-control a.down {
+    left: 10px;
+    top: 20px;
+}
+/* Master css end */
+ul.fontselector {
+  background: white;
+  border: 1px solid #ccc;
+  border-top: 0;
+  font-size: 14px;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding:0;
+  line-height: 1.2;
+  z-index:    10;
+  position:   absolute;
+}
+ul.fontselector li {
+  margin:   0;
+  padding:  0;
+  list-style: none;
+}
+ul.fontselector a {
+  display:    block;
+  padding:    3px;
+  color:      black;
+  text-decoration: none;
+}
+ul.fontselector a:hover {
+  background: #ddd;
+  cursor:     pointer;
+}
+
+/* the deal, steal, schwag page style START here */
+
+.dealBlock {
+    float: left;
+    width: 612px;
+	height: 348px;
+}
+.dealBlockLeft {
+    float: left;
+    width: 238px;
+	height: 348px;
+}
+.imgBlock {
+    background-color: #FFFFFF;
+    float: left;
+    height: 212px;
+    width: 237px;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+.dealPrice{
+    background: url("../images/theDealPrice.png") no-repeat scroll 0 0 transparent;
+     border: 0 none;
+    float: left;
+    height: 25px;
+    margin: 10px 0 0 10px;
+    overflow: auto;
+    padding: 5px;
+    width: 210px;
+}
+.itemDesc{
+    background: url("../images/itemDesc.png") no-repeat scroll 0 0 transparent;
+     border: medium none;
+    float: left;
+    height: 69px;
+     margin: 10px 0 0 10px;
+    overflow: auto;
+    padding: 5px;
+    width: 209px;
+}
+.dealBlockRight {
+     float: left;
+    height: 348px;
+    margin-left: 30px;
+    width: 320px;
+}
+.sendMeImgBlock {
+    background: url("../images/iconBg.png") no-repeat scroll 0 0 transparent;
+    border: 1px solid #000000;
+    float: left;
+    height: 166px;
+    margin-top: 28px;
+    width: 314px;
+}
+.sendMeInnerBlock {
+    float: left;
+    height: 140px;
+    margin: 10px 0 0 70px;
+}
+.iconBlock {
+	float:left;
+    width: 180px;
+	height:33px;
+	margin-bottom: 5px;
+}
+.iconBlock ul li {
+	display: inline;
+}
+.sendMeTit {
+    float: left;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.dealCode,
+.ecomLink{
+    background: url("../images/theDealCode.png") no-repeat scroll 0 0 transparent;
+}
+.codeEco {
+	float: left;
+    height: 32px;
+    margin-top: 25px;
+    width: 312px;
+    border:none;
+    padding:5px;
+}
+.ButtonBlock {
+    float: left;
+    width: 614px;
+}
+.saveBtnSty {
+    background: url("../images/saveBtn1.png") no-repeat scroll 0 0 transparent;
+}
+.finalDealBtnSty {
+    background: url("../images/finalizeDealBtn.png") no-repeat scroll 0 0 transparent;
+	margin-left: 57px;
+}
+.reviewVersusBtnSty {
+    background: url("../images/reviewMyVersusBtn.png") no-repeat scroll 0 0 transparent;
+    margin-left: 280px;
+}
+.btnPos {
+	border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 78px;
+    margin-top: -35px;
+    width: 166px;
+}
+.stealRegpriceInputBg {
+    background: url("../images/discountInputBg.png") no-repeat scroll 0 0 transparent;
+    clear: both;
+    margin-top: 4px;
+}
+.stealSalpriceInputBg {
+    background: url("../images/discountInputBg.png") no-repeat scroll 0 0 transparent;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.regSal {
+	border: 0 none;
+	float: left;
+	height: 33px;
+	margin-bottom: 3px;
+	width: 81px;
+}
+.regPrice,
+.salePrice {
+    background: url("../images/regSalePriceBg.png") no-repeat scroll 0 0 transparent;
+}
+.regSalPrice {
+	border: medium none;
+    float: left;
+    height: 30px;
+    margin: 8px 0 0 22px;
+    overflow: hidden;
+    padding: 3px;
+    width: 78px;
+}
+.finalStealBtnSty {
+    background: url("../images/stealBtn.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 78px;
+    margin: 15px 0 0 57px;
+    width: 166px;
+}
+section.secSix {
+    background: url("../images/theSchwagLeftBtmBoxBg.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 197px;
+    margin-top: 22px;
+    width: 203px;
+}
+#secSixBlock {
+    float: left;
+    height: 282px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+}
+#secSixBlock .tit {
+    clear: both;
+    float: left;
+    font-size: 17px;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+#secSixBlock .zoomTxt {
+    clear: both;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+#secSixBlock .dealDeatilsInputBg {
+    background: url("../images/theDealInput.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    clear: both;
+    float: left;
+    height: 32px;
+    margin-bottom: 3px;
+    margin-top: 4px;
+    width: 176px;
+}
+.schwagBlock {
+    float: left;
+    height: 348px;
+    margin-left: 185px;
+    margin-top: 70px;
+    width: 238px;
+}
+.schwagimgBlock {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    float: left;
+    height: 212px;
+    width: 237px;
+}
+.noOfItemBg {
+    background: url("../images/noOfItemBg.png") no-repeat scroll 0 0 transparent;
+    height: 28px;
+}
+.schwagTtemDescBg {
+    background: url("../images/theItemDesc.png") no-repeat scroll 0 0 transparent;
+    height: 66px;
+}
+.noofDes{
+	float: left;
+	margin-top: 10px;
+    width: 230px;
+    border:none;
+    padding:5px
+}
+.finalSchwagBtnSty {
+    background: url("../images/schwagBtn.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 78px;
+    margin-left: 57px;
+    margin-top: 15px;
+    width: 166px;
+}
+#secOneBlock .chooseImgBtnNoBackground{
+    background: url("../images/ch_img_button_no_bg.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    cursor: pointer;
+    overflow: auto;
+    float: left;
+    height: 32px;
+    margin: 0px;
+    width: 175px;
+    display: none;
+    padding-top: 3px;
+    font-size: medium;
+    text-decoration: underline;
+    position: relative;
+    top: -26px;
+    
+}
+.rewardLink{
+  background-color:#FFFFFF;
+  border:1px solid #000000;
+  float:left;
+  height:170px;
+  width:180px;
+  margin-left:18px;
+  margin-top:94px;
+}
+.reward_logos {
+    float: left;
+    width: 82%;
+}
+.reward_logos ul li {
+	display:inline;
+	margin-left:8px;
+}
+.reward_logos ul li a{
+	padding:5px 22px;
+}
+.current_logo{
+ -moz-box-shadow: 5px 5px 10px #C694EC;
+ -webkit-box-shadow: 5px 5px 10px #C694EC;
+ box-shadow: 3px 0px 10px #C694EC;
+}
+.reward_logos ul li a span{
+	visibility:hidden
+}
+.reward_logos ul{
+    margin-left: 212px;
+    margin-top: 22px;
+}
+.real_popup{
+  background:url(../images/real_popup.png) no-repeat 0 0;
+}
+.steal_logo{
+  background:url(../images/steal_img1.png) no-repeat 0 0;
+}
+.schwag_logo{
+  background:url(../images/schwag_img1.png) no-repeat 0 0;
+}
+.deal_logo{
+  background:url(../images/deal_img.png) no-repeat 0 0;
+}
+.winner_popup{
+  background:url(../images/winner_popup.png) no-repeat 0 0;
+}
+.looser_popup{
+  background:url(../images/looser_popup.png) no-repeat 0 0;
+}
+.sending_text{
+  background:url(../images/share_text.png) no-repeat 0 0;
+}
+.fb_image{
+  background:url(../images/fb_logo.png) no-repeat 0 0;
+}
+section.secFour{
+    background: url("../images/imgReqBg.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 117px;
+    margin-top: 20px;
+    width: 203px;
+}
+#secFourBlock div.tit{
+    font-size: 18px;
+    font-style: italic;
+    margin: 5px 0 3px 13px;
+	text-align:left;
+}
+#secFourBlock div.txt1 {
+    clear: both;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 15px;
+   	text-align: left;
+   	margin-left: 12px;
+   	margin-top:5px;
+}
+#secFourBlock div.txt2 {
+    clear: both;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+   	margin-left: 12px;
+   	margin-top: -5px;
+}
+
+/* the deal, steal, schwag page style END here */

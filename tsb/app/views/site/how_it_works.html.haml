@@ -1,0 +1,71 @@
+#main
+  %img{:alt => "Join The Stash Box", :height => "107",:style=>"cursor: pointer;", :src => "images/logo-joinus_new.png", :width => "274",:onclick=>"openVideo(this,5);"}/
+  #boxWrap{:style=>"float: left;margin: -42px 0 0; width: 100%;"}
+    .box2.hunt
+      %h2
+        Hunt Down
+        %br>/
+        a Membership
+      %h3 Step No.1
+      %p Use your membership to access, co-create and communicate with the Stashbox's elite brand list.
+      %a#lnkMore1{:href => "javascript:;", :onclick => "OpenDialog(this,1);"}
+        More
+        %img{:alt => "Dot", :src => "images/img_dot.jpg"}/
+    .box2.voice
+      %h2
+        Your Voice
+        %br>/
+        is Heard
+      %h3 Step No.2
+      %p
+        The stashbox is your vehicle to direct brand communication.
+        %br>/
+        Speak up!
+      %a{:href => "javascript:;", :onclick => "OpenDialog(this,2);"}
+        %img{:alt => "Dot", :src => "images/img_dot.jpg"}/
+        More
+    .box2.schang
+      %a{:href => "javascript:;", :onclick => "OpenDialog(this,3);"}
+        More
+        %img{:alt => "Dot", :src => "images/img_dot.jpg"}/
+      %div{:style=>"margin-left: -10px;"}
+        %h2
+          \&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;You Get
+          %br/
+          Free Schwag
+        %h3 Step No.3
+        %p
+          No silly gift cards or endless point systems here! Straight up free products, exclusive offers and the ability to co-create with killer brands.
+    .box2.safe
+      %a{:href => "javascript:;", :onclick => "OpenDialog(this,4);"}
+        %img{:alt => "Dot", :src => "images/img_dot.jpg"}/
+        More
+      %div{:style=>"margin-right: -6px;"}        
+        %h2{:style=>"margin-top: 7px;"} You're Safe
+        %h3{:style=>"margin-top: 13px;"} Step No.4
+        %p
+          The STASHBOX only contacts you when something awesome is on the horizon. No inbox overload!
+          %br>/
+          Speak up!
+#popup1.popupbox
+  %h2 Membership code
+  %p There will be a variety of ways to hunt down a membership code both on and offline. Take the first step (hint, hint) and follow us on twitter.
+#popup2.popupbox
+  %h2 Your voice is heard
+  %p Speak up! Our elite lists of brands know you've got ideas so share 'em! This is your chance to express yourself and see an actual result.
+#popup3.popupbox
+  %h2 You get free schwag
+  %p The world is full of tricks, but that's not how we roll. We give up exclusive offers, crazy discounts, invites to awesome parties, the opportunity to co-collaborate with amazing brands and really cool free product.
+#popup4.popupbox
+  %h2 You're safe
+  %p Mother always said not to speak to strangers and while mother knows best, you've got our word; we will NEVER give your information out. EVER. PROMISE.
+#popup5.popupbox
+  #play_video
+    %iframe{:allowFullScreen => "", :frameborder => "0", :src => "http://player.vimeo.com/video/30886867",:class=>"video_dimension",:id=>"iframe_video"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'how_it_works'
+:javascript
+  $("#popup5").dialog({ modal: true , resizable: false,dialogClass: 'vimeo_video', close :function(event, ui){
+  iframe = document.getElementById("iframe_video"); 
+  iframe.src = iframe.src; }});

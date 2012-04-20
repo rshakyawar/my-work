@@ -1,0 +1,29 @@
+%section.secTwo
+  #logoOne
+    %img{:alt => "Logo Two", :src => "#{@product.logo_one.url(:medium)}"}/
+  #topBanner
+    %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:medium)}"}/
+  #bgImgBlock{:style=>"background-image:url('#{@product.background.url(:medium)}');"}
+    %p Background Image
+    #versusBlock
+      #versusLeft.versusLeft_set
+        %img{:alt => "Versus Left", :src => "#{@product.versus_left.url(:medium)}"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@product.versus_right.url(:medium)}"}/
+  #bottomBannerBlock{:style=>"background-color:#{@product.bottom_banner_color}"}
+    #bannerTxt
+      #quizBlock_bg QUESTION
+#logo2Block
+  #logoTwo
+    .mapwrapper5
+      #viewport5
+        .current-map-layer{:style => "background: url('#{@product.logo_two.url(:medium)}') no-repeat scroll 0% 0% transparent; width: 120px; height: 55px;"}
+          / top level map content goes here
+        %div{:style => "height: 100px; width: 200px;"}
+          = image_tag @product.logo_two.url(:medium)
+          .mapcontent
+            / map content goes here
+      #viewport{:style => "display: none;"}
+        %img{:alt => "Logo Two", :src => "/images/5.gif"}/
+:javascript
+  $(document).ready(function() {setPanelControls('#viewport5');	});

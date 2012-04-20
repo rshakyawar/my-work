@@ -1,0 +1,26 @@
+#black_bg
+  #door_left
+  #door_right
+#door_left_visible
+#door_right_visible
+#flash_crowd
+#outer
+  #center_inner
+    = render :partial => 'shared/nav'
+    #tsb_logo_big
+    %br/
+    %p.text_big
+      PLEASE ENTER YOUR EMAIL BELOW FOR UPDATES
+      %br>/
+      AND TO BE THE FIRST TO RECEIVE A MEMBERSHIP
+    %br/
+    .center_wrapper
+      #email_form
+        = form_for @subscriber do |f|
+          #email_input
+            = f.text_field :email
+          #enter_button
+            = submit_tag ''
+      %br{:style => "clear:both;"}/
+      = succeed "&amp;nbsp;" do
+        = link_to '', new_partner_session_path, :id => 'brand_partnert_entrance'

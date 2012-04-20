@@ -1,0 +1,125 @@
+= stylesheet_link_tag 'membership_survey'
+.membership_content
+  .membership_form_main
+    .membership_form_top_corner
+    .membership_form_middle_corner
+      -if !@validate_member_form.blank? and @validate_member_form.errors.any?
+        #error_explanation{:style=>"margin-left:145px;text-align:left;"}
+          %h3= "#{pluralize(@validate_member_form.errors.count, "error")} prohibited this member from being saved:"
+          %FONT{:COLOR => "red"} 
+            %ul{:style=>"margin-left:15px;"}
+              - @validate_member_form.errors.full_messages.each do |msg|
+                %li= msg                                    
+      = form_for(@member_form, :url => members_save_path,:html =>  {:id=>"save_member_survey_form_three"}) do |fm|
+        .membership_form_main_row.member_first_field_row
+          .membership_form_name Email
+          .membership_form_field
+            =fm.text_field :email,:class=>"member_form_field1",:autocomplete=>"off",:tabindex=>"1", :placeholder => "Email"              
+          .clear
+        .membership_form_main_row
+          .membership_form_name Name
+          .membership_form_field
+            =fm.text_field :first_name,:class=>"member_form_field2",:autocomplete=>"off",:tabindex=>"2", :placeholder => "First name"           
+          .membership_form_field     
+            =fm.text_field :last_name,:class=>"member_form_field2",:autocomplete=>"off",:tabindex=>"3", :placeholder => "Last name"            
+          .clear
+        .member_divide_line
+        .membership_form_main_row.space1
+          .membership_form_name Gender
+          .membership_form_field
+            - gender_hash = {"1"=>"Male", "2"=>"Female"}
+            #select6.select #{@member_form.gender.blank? ? "Gender" : gender_hash[@member_form.gender.to_s]}
+            = fm.select :gender, options_for_select([['Gender', ''],['Male', '1'], ['Female', '2']] , @member_form.gender), {},{:tabindex=>4, :class=>"styled", :onkeyup=>"change_select_text(this)"}
+          .clear
+        .membership_form_main_row
+          .membership_form_name Bday         
+          .membership_form_field
+            #select7.date #{@member_form.b_day.blank? ? "Date" : @member_form.b_day.day.to_s}
+            %select#member_form_b_day_3i{:name => "#{fm.object_name}[b_day(3i)]", :tabindex => "5",:class=>"date_styled",  :onkeyup=>"change_date_text(this)"}
+              %option{:value => ""} Date
+              - for index in 1..31
+                - if !@member_form.b_day.blank? and @member_form.b_day.day.to_s == index.to_s
+                  %option{:value => "#{index}", :selected=>true} #{index}
+                - else
+                  %option{:value => "#{index}"} #{index}
+          .membership_form_field
+            - month_hash = {"1"=> "January", "2"=>"February", "3"=>"March", "4"=>"April", "5"=>"May", "6"=>"June", "7"=>"July", "8"=>"August", "9"=>"September", "10"=>"October", "11"=>"November", "12"=>"December"}
+            #select8.month #{@member_form.b_day.blank? ? "Month" : month_hash[@member_form.b_day.month.to_s]}
+            %select#member_form_b_day_2i{:name => "#{fm.object_name}[b_day(2i)]", :tabindex => "5", :class=>"month_styled",  :onkeyup=>"change_month_text(this)"}
+              %option{:value => ""} Month
+              - month_hash.each do |key, value|
+                - if !@member_form.b_day.blank? and @member_form.b_day.month.to_s == key.to_s
+                  %option{:value => "#{key}", :selected=>true} #{value}
+                - else
+                  %option{:value => "#{key}"} #{value}
+          .membership_form_field
+            #select9.year #{@member_form.b_day.blank? ? "Year" : @member_form.b_day.year.to_s}
+            %select#member_form_b_day_1i{:name => "#{fm.object_name}[b_day(1i)]", :tabindex => "5", :class=>"year_styled", :onkeyup=>"change_year_text(this)"}
+              %option{:value => ""} Year
+              - for index in 1892..2011
+                - if !@member_form.b_day.blank? and @member_form.b_day.year.to_s == index.to_s
+                  %option{:value => "#{index}", :selected=>true} #{index}
+                - else
+                  %option{:value => "#{index}"} #{index}                                       
+          .clear
+        .member_divide_line
+        .membership_form_main_row.space1
+          .membership_form_name 
+            Username
+            %br/          
+            %p 3-10 characters; Numbers & letters       
+          .membership_form_field
+            =fm.text_field :stash_name,:class=>"member_form_field1",:autocomplete=>"off",:tabindex=>"8" , :placeholder => "Stashname"             
+          .clear
+        .membership_form_main_row
+          .membership_form_name 
+            Password
+            %p 6-10 characters; Numbers & letters         
+          .membership_form_field
+            =fm.password_field :password,:class=>"member_form_field1",:tabindex=>"9", :placeholder => "Stashword"                           
+          .clear
+        .membership_form_main_row
+          .membership_form_name.confirm_password Confirm Password
+          .membership_form_field
+            =fm.password_field :password_confirmation,:class=>"member_form_field1",:tabindex=>"10", :placeholder => "Confirm Stashword"                           
+          .clear
+        .member_divide_line
+        .membership_form_main_row.space1
+          .membership_form_name
+            Address
+            %p optional
+          .membership_form_field
+            =fm.text_field :my_mail_goes_to,:class=>"member_form_field3",:tabindex=>"11", :placeholder => "Address"                           
+          .clear
+        .membership_form_main_row
+          .membership_form_name
+            City
+            %p optional
+          .membership_form_field
+            =fm.text_field :city,:class=>"member_form_field2",:autocomplete=>"off",:tabindex=>"12", :placeholder => "City"                           
+          .membership_form_name.membership_form_name2
+            State
+            %p optional
+          .membership_form_field
+            #select10.state #{@member_form.state.blank? ? "State" : @member_form.state.to_s}       
+            = fm.select 'state', options_for_select(APPLICATION_CONFIG.member_survey.state_names, @member_form.state), {:prompt=>"State"},{:tabindex=>"13", :class=>"state_styled", :onkeyup=>"change_state_text(this)"}                          
+          .clear
+        .membership_form_main_row
+          .membership_form_name Zip
+          .membership_form_field
+            =fm.text_field :zip,:class=>"member_form_zip_field",:autocomplete=>"off" ,:tabindex=>"14", :placeholder => "Zip Code"                           
+          .clear
+        .clear
+    .membership_form_bottm_corner
+  .member_form_bottm_bttn_main
+    .form_page_next_bttn
+      - if member_signed_in?
+        %a{:href => "#{member_root_path}"}      
+      - else  
+        %a{:href => "/member_survey/survey?message_pop_up=true"}
+    .form_page_create_bttn
+      %a{:href => "javascript:void(0)",:onclick=>"$('#save_member_survey_form_three').submit();" }
+= javascript_include_tag 'membership'      
+= javascript_include_tag 'member_form'
+
+

@@ -1,0 +1,15 @@
+= stylesheet_link_tag "who_we_are"
+#main
+  - if params[:tsb_gang].blank?
+    =render :partial => 'tsb_who_we_are'
+  - else
+    .profile_content
+      .profile_back_bttn
+        %a{:href => "/who_we_are/"}
+      .profile_middle
+        - if params[:tsb_gang] == "andrew_stephen"
+          %div{:class=>"show_image"} 
+            %a{:href => "http://www.andrewstephen.net",:target=>"_blank"}   
+        - else                 
+          %img{:alt => "", :border => "0", :src => "/images/tsb_team/#{params[:tsb_gang]}_profile_img.png"}/
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"}

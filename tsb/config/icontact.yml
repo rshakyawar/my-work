@@ -1,0 +1,31 @@
+defaults: &defaults
+  header :
+    :accept_type : "application/json"
+    :content_type : "application/json"
+    :api_version : "2.2"
+    :api_app_id : "xQAYK94SyVleVBFFgY4XLjWvSyEG6SUu"
+    :api_user_name : "dchouhan"
+    :api_password : "st$l2010"
+  :accountid : "1040126"
+  :clientfolderid : "12317"
+  :subscriber_list_id : "19260"
+  :member_list_id : "19263"
+  :guest_user_id : "27199"
+development:
+  <<: *defaults
+production:
+  <<: *defaults
+  header :
+    :accept_type : "application/json"
+    :content_type : "application/json"
+    :api_version : "2.2"
+    :api_app_id : "xQAYK94SyVleVBFFgY4XLjWvSyEG6SUu"
+    :api_user_name : "thestashbox"
+    :api_password : "tsb_pass"
+  :accountid : "1040012"
+  :clientfolderid : "12203"
+  :subscriber_list_id : "19077"
+  :member_list_id : "20671"
+  :guest_user_id : "27203"
+staging:
+  <<: *defaults

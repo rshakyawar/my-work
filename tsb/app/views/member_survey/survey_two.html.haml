@@ -1,0 +1,125 @@
+= stylesheet_link_tag 'membership_survey'
+.membership_content
+  .membership_form_main
+    .membership_form_top_corner
+    .membership_form_middle_corner
+      .membership_form_main_row.member_first_field_row
+        .membership_form_name Email
+        .membership_form_field
+          %input.member_form_field1{:type => "text", :value => ""}/
+        .clear
+      .membership_form_main_row
+        .membership_form_name Name
+        .membership_form_field
+          %input.member_form_field2{:onblur => "if ( this.value == '' ) { this.value = this.defaultValue;}", :onfocus => "if ( this.value == this.defaultValue || this.value == '' ) { this.value = '';}", :type => "text", :value => "First Name"}/
+        .membership_form_field
+          %input.member_form_field2{:onblur => "if ( this.value == '' ) { this.value = this.defaultValue;}", :onfocus => "if ( this.value == this.defaultValue || this.value == '' ) { this.value = '';}", :type => "text", :value => "Last Name"}/
+        .clear
+      .member_divide_line
+      .membership_form_main_row.space1
+        .membership_form_name Gender
+        .membership_form_field
+          #select6.select Gender
+          %select.styled{:name => "6", :onchange => "change_select_text(this.value)"}
+            %option{:value => "Mail"} Mail
+            %option{:value => "Femail"} Femail
+            %option{:value => "India"} India
+        .clear
+      .membership_form_main_row
+        .membership_form_name Bday
+        .membership_form_field
+          #select7.date Date
+          %select.date_styled{:name => "7", :onchange => "change_date_text(this.value)"}
+            %option{:value => "01"} 01
+            %option{:value => "02"} 02
+            %option{:value => "India"} India
+        .membership_form_field
+          #select8.month Month
+          %select.month_styled{:name => "7", :onchange => "change_month_text(this.value)"}
+            %option{:value => "Jan"} Jan
+            %option{:value => "Feb"} Feb
+            %option{:value => "India"} India
+        .membership_form_field
+          #select9.year Year
+          %select.year_styled{:name => "7", :onchange => "change_year_text(this.value)"}
+            %option{:value => "1986"} 1986
+            %option{:value => "1990"} 1990
+            %option{:value => "India"} India
+        .clear
+      .member_divide_line
+      .membership_form_main_row.space1
+        .membership_form_name Username
+        .membership_form_field
+          %input.member_form_field1{:type => "text", :value => ""}/
+        .clear
+      .membership_form_main_row
+        .membership_form_name Password
+        .membership_form_field
+          %input.member_form_field1{:type => "text", :value => ""}/
+        .clear
+      .membership_form_main_row
+        .membership_form_name.confirm_password Confirm Password
+        .membership_form_field
+          %input.member_form_field1{:type => "text", :value => ""}/
+        .clear
+      .member_divide_line
+      .membership_form_main_row.space1
+        .membership_form_name
+          Address
+          %p optional
+        .membership_form_field
+          %input.member_form_field3{:type => "text", :value => ""}/
+        .clear
+      .membership_form_main_row
+        .membership_form_name
+          City
+          %p optional
+        .membership_form_field
+          %input.member_form_field2{:type => "text", :value => ""}/
+        .membership_form_name.membership_form_name2
+          State
+          %p optional
+        .membership_form_field
+          #select10.state State
+          %select.state_styled{:name => "7", :onchange => "change_state_text(this.value)"}
+            %option{:value => "MP"} MP
+            %option{:value => "Rajasthan"} Rajasthan
+            %option{:value => "India"} India
+        .clear
+      .membership_form_main_row
+        .membership_form_name Zip
+        .membership_form_field
+          %input.member_form_zip_field{:type => "text", :value => ""}/
+        .clear
+      .clear
+    .membership_form_bottm_corner
+  .member_form_bottm_bttn_main
+    .form_page_next_bttn
+      %a{:href => "javascript:void(0)"}
+    .form_page_create_bttn
+      %a{:href => "javascript:void(0)"}
+:javascript
+  function change_select_text(val) 
+  {  
+  	 document.getElementById('select6').innerHTML = val;
+  }
+  
+  function change_date_text(val) 
+  {
+  	 document.getElementById('select7').innerHTML = val; 
+  }
+  
+  function change_month_text(val)
+  {
+  	 document.getElementById('select8').innerHTML = val;
+  }
+
+  function change_year_text(val)
+  {
+  	 document.getElementById('select9').innerHTML = val; 
+  }
+
+  function change_state_text(val)  
+  {
+  	 document.getElementById('select10').innerHTML = val; 
+  }          

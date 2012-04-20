@@ -1,0 +1,7 @@
+%a{:href => "javascript:void(0);", :onclick =>"select_unselect_values('#{type}', #{i})", :onmouseover=> "OpenDialogomMouse(this,#{j}#{i})", :onmouseout=> "CloseDialog(this,#{j}#{i})"} #{i}
+-if @member_survey_one.send(type) == i.to_s
+  -disp = "block"
+-else
+  -disp = "none"
+%div{:style => "display:#{disp};", :onclick=>"$('.#{type}_cross_#{i}').hide();$('#member_survey_one_#{type}').val(null);",:class=>"#{type}_cross_#{i}"}
+  &nbsp;

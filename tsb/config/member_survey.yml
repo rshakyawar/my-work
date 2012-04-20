@@ -1,0 +1,35 @@
+defaults: &defaults
+  survey_1 :
+    sms : ["Eh, not so much", "Occasional Text exchange", "140 Character Consistency", "Totally A Texter"]
+    calls : ["Avoid at all cost unless it’s the weekly family call", "Just the essentials-work, family, check in with friends", "If it rings, I’ll answer. If I want to talk, I’ll call", "BLUETOOTH STATUS"]
+    emails : ["Does that require a stamp?", "Active from 9-5, it’s a work thing", "I mix it up and get the occasional mailing list item", "Only way you, your mom and your brand will ever reach me"]
+    social_networking : ["That film was nominated for an Oscar, right?", "Yeah, I made a MySpace page but that’s about it", "Facebook, Twitter, 4 Square- I’m active!", "UNSTOPPABLE- I’m the king/queen of the social net scene"]
+    humans : ["Unless it’s a must, I prefer to get the 411 via technology", "I regularly meet up and make the rounds. I’m semi social.", "See ya there! I’m out and about.", "SOCIAL BUTTERFLY! I’m here, there and everywhere!"]
+  survey_2 : 
+    like : "Like"
+    books : ["Classics", "Sci Fi + Fantasy", "Non-fiction", "Health, Mind, & Body", "Fiction + Literature", "Biographies", "Business", "Graphic Novels + Comics", "Computer/Internet", "Food + Wine", "Entertainment", "Gay & Lesbian", "Home & Garden", "Law", "Medicine", "Mysteries & Thrillers", "Outdoors & Nature", "Parenting & Family", "Professional", "Reference", "Sports + Fitness", "Young Adult + Children’s", "Travel"]
+    travel : ["Resort + All-Inclusive", "Road Trip", "Exotic Destination", "Adventure Seeker", "Domestic", "Voluntourism + Ecotourism", "Family", "Romantic Getaway", "Golf & Spa", "Luxury", "Casino", "Adults Only", "Cultural/Educational"]   
+    fashion: ["Bargain Shopper", "Fashionista", "Vintage Connoisseur", "Runway", "Ready-to-Wear", "Sporty + Street Wear", "Business Casual", "Preppy Classics", "Goth", "Bohemian", "Glamorous", "Edgy", "Handmade", "Rugged / Outdoor", "Debonair", "Resort Wear / Cruise", "Green/Eco Friendly", "Hand Me Downs"] 
+    tv_film :  ["Action & Adventure", "Anime & Animation", "Children & Family", "Classics", "Comedy", "Documentary", "Drama", "Faith & Spirituality", "Gay & Lesbian", "Horror", "Independent", "Music & Musicals", "Romance", "Thrillers", "Sports & Fitness", "Special Interests", "Science Fiction & Fantasy", "Kids TV", "TV Action & Adventure", "TV Classics", "TV Comedies", "TV Documentaries", "TV Mini Series", "TV Mystery & Thrillers", "TV Reality Programming", "TV Science Fiction", "TV Variety & Talk", "TV History, War, Politics, News", "TV Westerns", "Made For TV Movies"]
+    nightlife : ["Dinner and a movie", "Dive Bar Dweller", "Behind the Velvet Rope / Bottle Service", "Pub Crawl With Pals", "Comedy clubs + Improv", "Arcade", "Karaoke", "Bespoke Cocktails", "Cabaret", "Costume Parties", "Live Music", "Billiards + Sports Bar", "Bowling", "Open Mic", "Wine Bar", "Beer Garden", "Happy Hour", "Poetry + Prose Readings"]
+    home : ["Straight from The Box", "DIY", "So Bohemian Like You", "Modern Marvel", "Antique", "Art Collector", "Green/Eco friendly", "Antiques", "Gardening", "Art Deco", "Brick & Mortar", "Shabby Chic", "Americana", "Victorian", "Luxe", "Retro", "Minimal", "Farming", "Studio", "Home Office", "Loft"]   
+    food :  ["TV Dinner", "Foodie", "Home-cooked + Family Style", "Trendy", "Grill Master", "Wine + Cheese", "Vegan + Vegetarian", "International Cuisine", "Organic + Local", "Molecular Gastronomy", "Mixology", "Pot Luck", "Fast Food", "Street Food", "Tapas", "Meat Lover"]
+    gaming : ["Action", "Fighting", "Side-Scrolling Platform", "First-Person Shooter", "Third-Person Shooter", "Massive Multiplayer Online", "Action-Adventure", "Survival Horror", "Zombie Shooters", "Facebook Games", "Mobile Games", "Role-Playing" , "Life Simulation", "Racing", "Strategy", "Tower Defense", "Ol' Fashioned Board Games", "Karaoke", "Party", "Casual", "Sports", "Educational", "Puzzle", "Adult"] 
+    music : ["Alternative", "Blues", "Children's Music", "Christian & Gospel", "Classical", "Comedy", "Country", "Dance", "Electronic", "Hip Hop/Rap", "Indie", "Jazz", "Latino", "Metal", "Oldies", "Pop/Top 40", "Adult Contemporary", "R&B/Soul", "Funk", "Reggae", "Rock", "Singer/Songwriter/Folk", "Soundtrack", "World"]
+    arts : ["Action + Adventure", "Anime + Animation", "Classics", "Comedies", "Documentary", "Drama", "Faith & Spirituality", "Gay & Lesbian", "Horror", "Independent", "Mini Series + Made for TV", "Music and Musicals", "Romance", "Thrillers", "Sports & Fitness", "Special Interests", "Science Fi & Fantasy", "Children + Young Adult", "Mysteries + Thrillers", "Reality Programming", "Variety + Talkshow", "History, Politics, News", "Western", "Reality", "Museums + Galleries", "Theatre + Broadway", "Performance Art", "Dance + Jazz"]
+    beauty_grooming : ["Treat myself (spa + massage)", "Product Junkie", "Cut + Blow", "Cosmetics", "Skin Care", "Anti Aging", "Bath and Body", "Fragrance", "Natural & Organic", "Nail Care", "Shaving & Hair Removal", "Oral Care", "Tanning", "Tattoos & Body Art"]
+    health_fitness : ["Gym Rat", "Recreational", "Yoga", "Diet & Weight Loss", "Alternative Medicine", "Healthy + Nutritious", "Men's Health", "Women’s Health", "Mental Health and Therapy", "Recovery", "Relationships", "Safety + First Aid"]
+  survey_3 :
+    HOPELESSLY_DEVOTED_TO : ["Married", "Single", "Divorced", "Common Law Marriage", "Long Term Relationship", "Children?"]
+    ACADEMIC_ACCOLADES : ["High School Student", "High School Graduate", "College Student", "College Graduate", "Grad School Student", "Grad School Graduate"]
+    SHELLING_IT_OUT : ["Shoestring Budget", "If the price is right", "Spontaneous Splurger", "Personal Shopper on speed dial"]
+    PUNCH_THE_CLOCK : ["Full Time", "Part Time", "Inactive", "Retired"]
+    GUILTY_BY_VOCATION : ["Management", "Business & Financial", "Computer & Mathematical", "Architecture & Engineering", "Community & Social Service Occupations", "Legal Occupations", "Education", "Arts", "Design", "Entertainment", "Healthcare Practiconers", "Healthcare Support", "Protective Service", "Food Preparation & Serving", "Personal Care", "Sales Occupations", "Office & Administrative", "Production", "OTHER"]
+    STORK_INVENTORY : ["(Do you have children?)", "Yes", "No", "Someday", "Never"]
+  state_names : ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",  "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+development:
+  <<: *defaults
+production:
+  <<: *defaults
+staging:
+  <<: *defaults

@@ -1,0 +1,73 @@
+= stylesheet_link_tag "/stylesheets/rewards_reset.css.css"
+= stylesheet_link_tag "/stylesheets/rewards_main.css"
+:css
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .rewardLink{
+    background-color:#FFFFFF;
+    border:1px solid #000000;
+    float:left;
+    height:223px;
+    width:197px;
+    margin-left:5px;
+    margin-top:94px;
+  }
+#main{:style => "padding-top:40px;"}
+  #blockRight{:style => "position:relative;margin-left:30px;"}
+    %section.promo_shadow
+      #topBanner{:style=>"width: 761px;"}
+        %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:promo_top_banner)}"}/
+      - unless @reward_link.deal_image_file_name.blank?
+        .dealBlock{:style=>"margin-left: 67px;margin-top: -18px;"}
+          .stealImageBlock.rewardLink
+            #deal_viewport
+              %a{:href => "/versus/the_deal"}
+                %img{:alt => "", :src => "#{@reward_link.deal_image.url(:thank_you_deal)}"} 
+              #viewport{:style => "display: none;"}
+                %img{:alt => "", :src => "/images/the_deal.jpg"}/
+          .stealImageBlock.rewardLink
+            #steal_viewport
+              %a{:href => "/versus/the_steal"}          
+                %img{:alt => "", :src => "#{@reward_link.steal_image.url(:thank_you_steal)}"} 
+              #viewport{:style => "display: none;"}
+                %img{:alt => "", :src => "/images/the_steal.jpg"}/
+          .schwagImageBlock.rewardLink
+            #schwag_viewport
+              %a{:href => "/versus/the_schwag"}                
+                %img{:alt => "", :src => "#{@reward_link.schwag_image.url(:thank_you_schwag)}"}
+              #viewport{:style => "display: none;"}
+                %img{:alt => "", :src => "/images/the_schwag.jpg"}/
+      - else
+        .dealBlock{:style=>"margin-left: 172px;margin-top: -18px;"}
+          .stealImageBlock.rewardLink
+            #steal_viewport
+              %a{:href => "/versus/the_steal"}          
+                %img{:alt => "", :src => "#{@reward_link.steal_image.url(:thank_you_steal)}"} 
+              #viewport{:style => "display: none;"}
+                %img{:alt => "", :src => "/images/the_steal.jpg"}/
+          .schwagImageBlock.rewardLink
+            #schwag_viewport
+              %a{:href => "/versus/the_schwag"}                
+                %img{:alt => "", :src => "#{@reward_link.schwag_image.url(:thank_you_schwag)}"}
+              #viewport{:style => "display: none;"}
+                %img{:alt => "", :src => "/images/the_schwag.jpg"}/             
+    #logoTwo{:style=>"margin-left: 330px;"}
+      %img{:alt => "Logo Two", :src => "#{@product.logo_two.url(:medium)}"}/
+%input#slider{:type => "hidden", :value => "0"}
+= javascript_include_tag 'promo_versus'
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}

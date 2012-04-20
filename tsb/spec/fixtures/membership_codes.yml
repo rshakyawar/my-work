@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  limit: MyString
+  value: MyString
+  activated_at: 2011-08-29 18:54:28
+  number_of_uses: 1
+
+two:
+  limit: MyString
+  value: MyString
+  activated_at: 2011-08-29 18:54:28
+  number_of_uses: 1

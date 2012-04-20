@@ -1,0 +1,117 @@
+.Wrong_Earn_Shot_container{
+	background:url(/images/wrong_earn_shot_mainbg.png);
+	width:354px;
+	height:522px;
+	margin:0 auto;
+}
+.Wrong_Earn_Shot_close_row {
+	width:354px;
+	height:1px;
+	position:relative;
+}
+.Wrong_Earn_Shot_close_bttn {
+	width:17px;
+	height:17px;
+	position:absolute;
+	right:5px;
+	top:9px;
+}
+.Wrong_Earn_Shot_close_bttn a {
+	width:17px;
+	height:17px;
+	display:block;
+}
+.Wrong_Earn_Shot_inner_black{
+	background:url(/images/wrong_earn_shot_blackbg.png);
+	width:324px;
+	height:481px;
+    left: 16px;
+    position: relative;
+    top: 9px;
+	padding-top:10px;	
+}
+.top_Wrong_Earn_Shot_img{
+	background:url();
+	width:171px;
+	height:184px;
+	margin:0 auto;
+	position:relative;
+	top:7px;
+}
+.Wrong_Earn_Shot_sorry_txt {
+	width:324px;
+	height:auto;
+	font:bold 14px "TrajanPro";
+	color:#fff;
+	text-align:center;
+	margin-top:8px;
+}
+.Wrong_Earn_Shot_sorry_txt span {
+	
+}
+.Wrong_Earn_Shot_love_it_txt{
+	font:italic 22px "TheLastFont11";
+	color:#ffffff;
+	text-align:center;
+	margin-top:8px;
+	background:url(/images/wrong_earn_shot_txt_bg.png) no-repeat;
+	width:324px;
+	height:64px;
+	line-height:25px;
+	padding:10px 0px 0px 0px;		
+}
+.Wrong_Earn_Shot_love_it_txt span {
+	font-size:36px;
+}
+
+.Wrong_Earn_Shot_simply_txt{
+	font:normal 14px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	margin:10px auto 0px auto;
+	width:270px;
+}
+.Wrong_Earn_Shot_social_icon_row {
+	width:320px;
+	height:auto;
+	margin-top:10px;
+}
+.Wrong_Earn_Shot_twitter_part {
+	width:140px;
+	height:50px;
+	float:left;
+	margin-left:12px;
+	font:normal 9px "TrajanPro";
+	color:#91918c;
+}
+.Wrong_Earn_Shot_twitter_part a {
+	width:39px;
+	height:41px;
+	background:url(/images/wrong_earn_shot_social_icons.png) no-repeat left -1px;
+	display:block;
+	margin-left:47px;
+}
+.Wrong_Earn_Shot_facebook_part {
+	width:140px;
+	height:50px;
+	margin-left: 20px;
+	font:normal 9px "TrajanPro";
+	color:#91918c;
+}
+.Wrong_Earn_Shot_facebook_part a {
+	width:40px;
+	height:42px;
+	background:url(/images/wrong_earn_shot_social_icons.png) no-repeat -50px top;
+	display:block;
+	margin-left:45px;
+}
+.Wrong_Earn_Shot_still_dont_txt {
+	font:normal 10px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	margin-top:19px;	
+}
+.Wrong_Earn_Shot_still_dont_txt span a{
+	font-size:11px;
+	color:#9a371c;	
+}

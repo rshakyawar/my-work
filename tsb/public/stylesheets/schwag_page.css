@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'TheLastFont';
+    src: url('TSB_fonts/lastfontwastingonyou.eot?') format('eot'),
+         url('TSB_fonts/lastfontwastingonyou.woff') format('woff'),
+         url('TSB_fonts/lastfontwastingonyou.ttf') format('truetype'),
+         url('TSB_fonts/lastfontwastingonyou.svg') format('svg');
+}
+.Ernestrewards_main {
+	width:760px;
+	height:auto;
+	margin:100px auto 0px auto;
+}
+.Ernestrewards_top {
+	width:760px;
+	height:75px;
+	background:#000;
+}
+.Ernestrewards_top_left {
+	width:172px;
+	height:75px;
+	float:left;
+}
+.Ernestrewards_top_right {
+	width:586px;
+	height:75px;
+	float:left;
+	text-align:center;
+	padding-top:8px;
+}
+.Ernestrewards_middle {
+	width:758px;
+	height:auto;
+	border:solid 1px #000;
+}
+.Ernestrewards_middle_row {
+	width:auto;
+	height:230px;
+	margin:62px auto 0px auto;
+	text-align:center;
+}
+
+.Ernestrewards_middle_last_row {
+	width:758px;
+	height:82px;
+}
+.Ernestrewards_last_button_row {
+	width:760px;
+	height:auto;
+	margin:17px 0px 0px 0px ;
+}
+.Ernestrewards_last_button {
+	width:121px;
+	height:55px;
+	margin:0px auto;
+}
+
+/* new css start   */
+
+.Ernestschwag_top_right {
+	float: left;
+    height: 60px;
+    padding-left: 130px;
+    padding-top: 16px;
+    text-align: left;
+    width: 456px;
+}
+
+.Ernestschwag_main_content_row {
+	width:758px;
+	height:auto;
+	margin:-200px 0px 0px 0px;
+}
+.Ernestschwag_the_steal_txt_row {
+	width:515px;
+	height:30px;
+	margin:10px auto 0px auto;
+	font:bold 20px "Trajan Pro";
+	color:#000;
+}
+.Ernestschwag_the_steal_img_row {
+	width:156px;
+	height:152px;
+	background:url("../images/Ernestschwag_steal_img.png") no-repeat left top;
+	margin:5px 0px 0px 90px;
+}
+.Ernestschwag_the_upcomming_txt_row {
+	width:515px;
+	height:30px;
+	margin:0px 0px 0px 90px;
+	font:bold 13px "Trajan Pro";
+	color:#000;
+}
+.Ernestschwag_middle_bttn {
+	width:515px;
+	height:auto;
+	margin:0px auto 0px auto;
+}
+.Ernestschwag_middle_bttn ul {
+	margin:0px;
+	padding:0px;
+}
+.Ernestschwag_middle_bttn ul li {
+	list-style:none;
+	display:block;
+	width:42px;
+	height:42px;
+	float:left;
+	margin:15px 15px 0px 0px;
+}
+.Ernestschwag_middle_bttn ul li a {
+	background:url("../images/ernestschwag_small_bttn_img.png") no-repeat left top;
+	display:block;
+	width:42px;
+	height:42px;
+}
+.Ernestschwag_middle_bttnrow2 {
+	width:515px;
+	height:42px;
+	margin:24px auto 0px auto;
+}
+.Ernestschwag_first_shot_bttn {
+	width:145px;
+	height:42px;
+	float:left;
+}
+.Ernestschwag_first_shot_bttn a {
+	width:145px;
+	height:37px;
+	background:url("../images/ernestschwag_bttm_bttn.png") no-repeat -12px -2px;
+	display:block;
+}
+.Ernestschwag_second_shot_bttn {
+	width:145px;
+	height:42px;
+	float:left;
+	margin:0px 0px 0px 31px;
+}
+.Ernestschwag_second_shot_bttn a {
+	width:145px;
+	height:37px;
+	background:url("../images/ernestschwag_bttm_bttn.png") no-repeat -185px -2px;
+	display:block;
+}
+.Ernestschwag_third_shot_bttn {
+	width:145px;
+	height:42px;
+	float:left;
+	margin:0px 0px 0px 31px;
+}
+.Ernestschwag_third_shot_bttn a {
+	width:145px;
+	height:37px;
+	background:url("../images/ernestschwag_bttm_bttn.png") no-repeat -358px -2px;
+	display:block;
+}
+.Ernestschwag_middle_txtrow3 {
+	width:515px;
+	height:auto;
+	margin:9px auto 0px auto;
+}
+.Ernestschwag_middle_txtrow3_row1 {
+	width:515px;
+	height:34px;
+}
+.Ernestschwag_txt_part1 {
+	width:169px;
+	height:30px;
+	font:normal 16px "Trajan Pro";
+	color:#000;
+	float:left;
+	text-align:right;
+	padding:4px 12px 0px 0px;
+}
+.Ernestschwag_social_bttn_part {
+	width:75px;
+	height:34px;
+	float:left;
+}
+.Ernestschwag_facebook_bttn {
+	width:29px;
+	height:34px;
+	float:left;
+}
+.Ernestschwag_facebook_bttn a {
+	width:29px;
+	height:29px;
+	background:url("../images/ernestschwag_social_icons.png") no-repeat -3px -2px;
+	display:block;
+}
+.Ernestschwag_twitter_bttn {
+	width:31px;
+	height:34px;
+	float:left;
+	margin:0px 0px 0px 10px;
+}
+.Ernestschwag_twitter_bttn a {
+	width:31px;
+	height:31px;
+	background:url("../images/ernestschwag_social_icons.png") no-repeat -42px -1px;
+	display:block;
+}
+.Ernestschwag_txt_part2 {
+	width:229px;
+	height:30px;
+	font:normal 16px "Trajan Pro";
+	color:#000;
+	float:left;
+	text-align:left;
+	padding:4px 0px 0px 3px;
+}
+.Ernestschwag_middle_txtrow3_row2 {
+	width:515px;
+	height:20px;
+	font:normal 14px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+}

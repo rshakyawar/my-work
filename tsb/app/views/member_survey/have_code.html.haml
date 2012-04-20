@@ -1,0 +1,38 @@
+#main
+  #middle_content
+    .join_us_img
+    = form_tag(member_survey_submit_code_path) do |f|
+      .so_close_row
+        .lock_img
+        .I_have_bg
+          .so_close_heading
+          .I_have_content
+            You are just a few steps away from entering the world of STASHBOX.  To proceed, please fill in your membership code below
+            and away we'll go.
+          .code_field_main
+            .code_field
+              = text_field_tag :membership_code,'' ,:class=>"code_field_bg", :autocomplete => "off", :placeholder => "Code",:id=>"membership_code_id"
+        .lock_img2
+        .clear
+      .continue_bttn_row
+        %input.continue_bttn_bg{:style=>"cursor:pointer;", :type => "button", :value => "SuBMIT",:onclick=>"this.form.submit();"}/
+#popup1.popupbox{:style=>"overflow: hidden;"}
+  .popup_oh_no_txt{:style=>"margin: 92px 0 0 3px;"} Oh No!
+  .popup_content_txt{:style=>"margin: 20px 0 0 15px;"}
+    Apologies, but it appears as though your membership code is no longer valid.
+    But fear not, 
+    %a{:href => "#{hunt_membership_path}"} 
+      %FONT{:COLOR => "red"} find a new code  
+    here and let's resume.  Shall we?
+
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'membership_code_pop_up'
+- unless @invalid_membership_code.nil?
+  :javascript
+    $(document).ready(function() {
+      OpenDialog('#popup1',1);
+    });
+:javascript
+  window.onload = function(){  $('#membership_code_id').val("");};
+    

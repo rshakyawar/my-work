@@ -1,0 +1,26 @@
+@font-face{
+  font-family: 'TheLastFont';
+  src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+       url('../fonts/lastfontwastingonyou.woff') format('woff'),
+       url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+       url('../fonts/lastfontwastingonyou.svg') format('svg');
+}
+@font-face{
+  font-family: 'TheLastFont11';
+  src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+       url('../fonts/lastfontwastingonyou.woff') format('woff'),
+       url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+       url('../fonts/lastfontwastingonyou.svg') format('svg');
+}
+footer {
+  margin:0 auto;
+  overflow:hidden;
+  padding:10px 0;
+  width:99%;
+  text-align:center;
+  color:#3F3E3E;
+  font:normal 14px 'TheLastFont';
+}
+.none_display{
+ display:none;  
+}

@@ -1,0 +1,24 @@
+%section.promo_shadow
+  #topBanner_promo
+    .mapwrapper2
+      #viewport2
+        .current-map-layer{:style => "background: url('#{@product.top_banner.url(:promo_top_banner)}') no-repeat scroll 0% 0% transparent; width: 761px; height: 75px;"}
+        %div{:style => "height: 100px; width: 550px;"}
+          = image_tag @product.top_banner.url(:promo_top_banner)
+          .mapcontent
+      #viewport{:style => "display: none;"}
+        %img{:alt => "Top Banner", :src => "/images/temp_top_banner.jpg"}/
+  #bgImgBlock_promo{:style=>"background-image:url('#{@product.background.url(:promo_background)}');"}
+    - if @product.background.to_s =="/backgrounds/original/missing.png"
+      %p Background Image
+    - else 
+      %p &nbsp;
+    #versusBlock{:style=>"margin:20px 0 0px 64px"}
+      #versusLeft.versusLeft_set
+        %img{:alt => "Versus Left", :src => "#{@question.versus_left.url(:medium)}"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+  #bottomBannerBlock_promo
+    %img{:alt => "question_image", :src => "#{@question.question_image.url(:promo_question)}"}
+:javascript
+  $(document).ready(function() {setPanelControls('#viewport2');	});

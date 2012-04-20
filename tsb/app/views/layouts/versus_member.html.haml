@@ -1,0 +1,93 @@
+<!doctype html>
+/[if lt IE 7 ] <html lang="en" class="no-js ie6">
+/ [if (gt IE 6)|!(IE)]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}/
+    %title The Stash Box - Versus
+    %meta{:content => "The Stash Box", :name => "description"}/
+    %meta{:content => "The Stash Box", :name => "author"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "/stylesheets/reset_versus.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/main_versus.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/promo_versus.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/jquery-ui-1.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/colorpicker.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/global.css", :rel => "stylesheet"}/
+    /[if lt IE 9 ] <link rel="stylesheet" href="css/ie.css">
+    %script{:src => "/javascripts/jquery-1.5.1.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.core.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.widget.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.mouse.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.slider.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/mapbox.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/curvycorners.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/controlPanel.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/colorpicker.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/fontselector.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/modernizr-1.6.min.js"}
+  %body{:class => @class}
+    :css
+      .promo_versu_revalution_needs_logo2 {
+        width:413px;
+        height:92px;
+        background:url("/images/revolution_needs_logo.png") no-repeat left top;
+        margin:0px auto 0px auto;
+      }
+      .versus_instruction{
+        width:876px;
+        height:30px;
+        font: italic 25px TheLastFont11;
+        color:#333333;
+        text-align:center;
+      }
+      .promo_versu_top_txt {
+        width:876px;
+        height:30px;
+        font: italic 20px TheLastFont11;
+        color:#333333;
+        text-align:center;
+      }
+      .promo_versu_arrow_row {
+        width:876px;
+        height:1px;
+        position:relative;
+      }
+      .promo_versu_arrow_main {
+        width:300px;
+        height:auto;
+        position:absolute;
+        margin-top:-10px;
+      }
+      .promo_versu_arrow {
+        width:83px;
+        height:27px;
+        background:url("/images/promo_versu_arrow.png") no-repeat left top;
+      }
+      .promo_versu_arrow_txt {
+        width:137px;
+        height:40px;
+      }
+      .promo_versu_arrow_txt a {
+        width:137px;
+        height:40px;
+        background:url("/images/promo_versu_arrow.png") no-repeat left top;
+        display:block;
+      }
+    #wrapper
+      %header
+        %div
+          #middle_content{:style=>"position:relative;padding:0px;"}
+            .promo_versu_arrow_row
+              .promo_versu_arrow_main
+                .promo_versu_arrow_txt
+                  =link_to "",tsb_join_path
+            - if versus_member_signed_in?
+              .tsb_log_out
+                =link_to( image_tag("logout.png"), destroy_versus_member_session_path)
+            .versus_instruction Dear Stashboxer
+            .promo_versu_top_txt Simply Click on The Picture You Prefer Below
+      = yield
+

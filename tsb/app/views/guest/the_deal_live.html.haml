@@ -1,0 +1,77 @@
+= stylesheet_link_tag "/stylesheets/rewards_reset.css.css"
+= stylesheet_link_tag "/stylesheets/rewards_main.css"
+:css
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .FBConnectButton_Simple, .FBConnectButton_RTL_Simple {
+    background-image:url("/images/iconFbook.png");
+    height: 30px;
+    width: 34px;
+    display: block;
+    float: right
+   }
+   .tb, .t-count, .t-count a {
+     background:url("../images/iconBird.png") no-repeat scroll 0 0 transparent;
+   }
+   .float_align{
+     float:left;
+   }
+#main{:style => "padding-top:40px;"}
+  #blockRight{:style => "position:relative;margin-left:30px;"}
+    %section.promo_shadow
+      #topBanner{:style=>"width: 761px;"}
+        %img{:alt => "Top Banner", :src => "#{@question.product.top_banner.url(:promo_top_banner)}"}/
+      .dealBlock{:style=>"width: 761px;"}
+        .dealBlockLeft
+          .imgBlock
+            .current-map-layer{:style => "background: url('#{@deal.deal_image.url(:medium)}') no-repeat scroll 0% 0% transparent; width: 237px; height: 212px;"}
+          %label.dealPrice #{ @deal.price}
+          %label.itemDesc #{@deal.description}
+        .dealBlockRight{:style => "margin-left: 105px;"}
+          .sendMeImgBlock
+            .sendMeInnerBlock
+              .sendMeTit SEND ME MY DEAL
+              .iconBlock
+                %ul
+                  %li
+                    %a{:href => "mailto:info@thestashbox.com"}
+                      %img{:height => "33", :src => "/images/iconMail.png", :width => "33"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:height => "33", :src => "/images/iconSms.png", :width => "33"}/
+              .sendMeTit SPREAD THE LOVE
+              .iconBlock
+                %ul{:style=>"margin-left:30px;"}
+                  %li.float_align
+                    %a{:href => "mailto:info@thestashbox.com"}
+                      %img{:height => "33", :src => "/images/iconMail.png", :width => "33"}/
+                  %li.float_align
+                    %a{:href => "#"}
+                      %img{:height => "33", :src => "/images/iconSms.png", :width => "33"}/
+                  %li.float_align
+                    %a{:name => "fb_share",:type=>"icon"}
+                      %img{:height => "33", :src => "/images/iconFbook.png", :width => "33"}/
+                      %script{:src => "http://static.ak.fbcdn.net/connect.php/js/FB.Share", :type => "text/javascript"}
+                  %li.float_align
+                    =link_to image_tag("/images/iconBird.png"), "https://twitter.com/share?original_referer=http%3A%2F%2Fthestashbox.com%2Fblog&source=tweetbutton&text=The%20Stashbox%20-%20Blog&url=http%3A%2F%2Fthestashbox.com%2Fblog"                      
+            %label.dealCode.codeEco #{@deal.code}
+            %label.ecomLink.codeEco 
+              %a{:href=>"#{@deal.e_commerce_link}"}
+                #{@deal.e_commerce_link}
+    #logoTwo{:style=>"margin-left: 330px;"}
+      %img{:alt => "Logo Two", :src => "#{@question.product.logo_two.url(:medium)}"}/
+

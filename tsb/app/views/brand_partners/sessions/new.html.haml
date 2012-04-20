@@ -1,0 +1,30 @@
+#wrapper
+  #main
+    .logoBlock
+      %a{:href => "#"}
+        %img{:alt => "brand logo", :height => "127", :src => "/images/brandLogo.gif", :width => "303"}/
+    .BrandTxt
+      %a{:href => "#"}
+        %img{:alt => "Brand Partner Entrance", :height => "30", :src => "/images/brandPartnerTxt.gif", :width => "403"}/
+    .contentBlock
+      .mickLeft
+        %img{:alt => "On the air", :height => "210", :src => "/images/airMickImg.png", :width => "104"}/
+      .userBlock
+        .userBlockContent
+          %form#brand_partner_new{:action => "/brand_partners/sign_in", :method => "post"}
+            .revolution
+              %img{:alt => "Revolution needs", :height => "70", :src => "/images/revolutionNeed.png", :width => "270"}/
+            .userName
+              %input#laUserName.inputSty{:name => "brand_partner[partner_name]", :placeholder => "USERNAME", :required => "", :type => "text", :value => ""}/
+            .userName
+              %input#laUserPw.inputSty{:name => "brand_partner[password]", :placeholder => "PASSWORD",:autocomplete=>"off" ,:required => "", :type => "password", :value => ""}/
+            .userTxt
+              %span
+                FORGOT YOUR
+                %a{:href => "/forgot_user_name"} USERNAME
+                OR 
+                %a{:href => "#{new_brand_partner_password_path}"} PASSWORD
+            .btnBlock
+              %input#enterBtn.revBtnSty{:name => "enterBtn", :type => "submit",:onclick=>"this.form.submit();", :value => ""}/
+      .mickRight
+        %img{:alt => "On the air", :height => "210", :src => "/images/airMickImg.png", :width => "104"}/

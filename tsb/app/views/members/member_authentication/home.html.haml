@@ -1,0 +1,203 @@
+= stylesheet_link_tag "/stylesheets/versus_winner_pop_up.css"
+= stylesheet_link_tag "/stylesheets/promo_versus_second.css"
+= stylesheet_link_tag "/stylesheets/brand_partner.css"
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"} 
+:css
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    background:none repeat scroll 0 0 #FFFFFF;
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .TSB_Dessert_youwonpopup_txtline1 {
+  width:511px;
+  height: 50px;
+  padding-left: 105px;
+  font:normal 20px "knowyour", Arial, Helvetica, sans-serif;
+  color:#ea6421;
+  text-align:center;
+  }
+
+  .TSB_Dessert_youwonpopup_txtline2 {
+  width:500px;
+  height:auto;
+  font:italic normal 14px "TheLastFont", Arial, Helvetica, sans-serif  ;
+  color:#000;
+  text-align:center;
+  margin:10px 0px 0px 0px;
+  }
+
+  .TSB_Dessert_youwonpopup_txtline2 span {
+  color:#EA6421;
+  }
+
+  .TSB_Dessert_youwonpopup_img_bg {
+  width:325px;
+  height:224px;
+  background:url(../images/TSB_Dessert_YouWonPopup_img_bg.png) no-repeat left top;
+  margin:10px auto 0px auto;
+  padding:7px 0px 0px 13px;
+  } 
+  
+  .membership_survey1_steps {    
+   	width:160px;    
+   	height:40px;   
+   	margin:10px auto 0px auto;  
+  }
+  
+  .steps1 {   
+   	width:33px;      
+   	height:33px;    
+   	background:url("/images/membership_survey_step_round.png") no-repeat left top;     
+   	float:left;    
+   	margin:0px 10px 0px 10px;    
+   	font:normal 25px  Arial, Helvetica, sans-serif;   
+   	color:#333;   
+   	font-style:italic;    
+   	text-align:center;   
+   	padding:2px 0px 0px 0px;    
+  }
+  .steps1 span {     
+  	 color:#fff;     
+  }
+  .ui-dialog {
+    background-color: Transparent;
+    background-image: url("") !important;
+    height: 788px !important;
+    width: 607px !important;
+  }
+  .ui-dialog .ui-dialog-titlebar-close{
+    margin: -2px 26px 0 5px;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("") no-repeat scroll center top transparent;
+  }
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background:url("/images/wrong_earn_shot_close.png") no-repeat scroll center top transparent;
+    border:0 solid #999999;
+    color:#212121;
+    font-weight:normal;
+    outline:medium none;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("/images/wrong_earn_shot_close.png") no-repeat scroll center top transparent;
+  }
+      
+- if @questions.size == 3      
+  - if (params[:question_no].to_i) == 1  
+    .membership_survey1_steps
+      .steps1
+        %span 1
+      .steps1 2
+      .steps1 3    
+  - if (params[:question_no].to_i) == 2  
+    .membership_survey1_steps
+      .steps1 1
+      .steps1 
+        %span 2
+      .steps1 3    
+  - if (params[:question_no].to_i) == 3 
+    .membership_survey1_steps
+      .steps1 1
+      .steps1 2
+      .steps1 
+        %span 3 
+- if @questions.size == 2      
+  - if (params[:question_no].to_i) == 1  
+    .membership_survey1_steps{:style=>"padding-left:57px;"}
+      .steps1
+        %span 1
+      .steps1 2  
+  - if (params[:question_no].to_i) == 2  
+    .membership_survey1_steps{:style=>"padding-left:57px;"}
+      .steps1 1
+      .steps1 
+        %span 2   
+- if @questions.size == 1      
+  - if (params[:question_no].to_i) == 1  
+    .membership_survey1_steps{:style=>"padding-left:106px;"}
+      .steps1
+        %span 1            
+#main{:style => "padding-top:40px;padding-bottom:25px"}
+  #blockRight{:style => "position:relative;margin-left:30px;"}
+    %section.promo_shadow
+      #topBanner_promo{:style=>"border-right: 1px solid gray;"}
+        %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:promo_top_banner)}"}/
+      #bgImgBlock_promo{:style=>"background-image:url('#{@product.background.url(:promo_background)}');"}
+        - if @product.background.to_s =="/backgrounds/original/missing.png"
+          %p Background Image
+        - else 
+          %p &nbsp;
+        #versusBlock{:style=>"margin:20px 0 0px 64px"}
+          #versusLeft.versusLeft_set.blue_border_versus
+            %img{:alt => "Versus Left", :src => "#{@question.versus_left.url(:medium)}"}/
+          #versusRight.versusRight_set.blue_border_versus
+            %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+      #bottomBannerBlock_promo
+        %img{:alt => "question_image", :src => "#{@question.question_image.url(:promo_question)}"}      
+      %div
+        %a.dis_none{:id=>"below_image_tag",:href=>"/members/save_count_choice/#{@question_no.to_i}",:style=>"color:black;"}
+%ul{:style=>"margin-top:30px;"}
+  - if @questions.size == 1
+    %li{:style=>"margin-bottom:30px;"}    
+      - if (params[:question_no].to_i) == 1 
+        %a{:href => "#",:style=>"visibility:hidden;",:id=>"question_id"}          
+          %img{:alt => "", :src => "/images/final_versus_back_bttn.png"} 
+        %a.dis_none{:href => "/members/save_count_choice/2",:style=>" margin-left: 300px;",:id=>"reward_thank_you_id"}          
+          %img{:alt => "", :src => "/images/TSB_Final_Versus_Rewards_Button.png"}
+  - if @questions.size == 2
+    %li    
+      - if (params[:question_no].to_i) == 1  
+        %a.dis_none{:href => "/members/save_count_choice/2",:style=>" margin-left: 520px;",:id=>"questio_id"}          
+          %img{:alt => "", :src => "/images/final_versus_next_bttn.png"} 
+        %a{:href => "/members/versus_question/2",:style=>" margin-left: 520px;",:id=>"old_questio_id"}          
+          %img{:alt => "", :src => "/images/final_versus_next_bttn.png"}         
+    %li{:style=>"margin-bottom:30px;"}        
+      - if (params[:question_no].to_i) == 2  
+        %a.dis_none{:href => "/members/save_count_choice/1",:style=>" margin-left: 315px;",:id=>"question_id"}          
+          %img{:alt => "", :src => "/images/final_versus_back_bttn.png",:style=>"margin-top:20px;"} 
+        %a{:href => "/members/versus_question/1",:style=>" margin-left: 315px;",:id=>"old_question_id"}          
+          %img{:alt => "", :src => "/images/final_versus_back_bttn.png",:style=>""}         
+        %a.dis_none{:href => "/members/save_count_choice/3",:style=>" margin-left: 80px;position:absolute;",:id=>"questio_id"}          
+          %img{:alt => "", :src => "/images/TSB_Final_Versus_Rewards_Button.png"}
+  - if @questions.size == 3
+    %li    
+      - if (params[:question_no].to_i) == 1  
+        %a.dis_none{:href => "/members/save_count_choice/2",:style=>" margin-left: 520px;",:id=>"questio_id"}          
+          %img{:alt => "", :src => "/images/final_versus_next_bttn.png"} 
+        %a{:href => "/members/versus_question/2",:style=>" margin-left: 520px;",:id=>"old_questio_id"}          
+          %img{:alt => "", :src => "/images/final_versus_next_bttn.png"}         
+    %li        
+      - if (params[:question_no].to_i) == 2  
+        %a.dis_none{:href => "/members/save_count_choice/1",:style=>" margin-left: 315px;",:id=>"question_id"}          
+          %img{:alt => "", :src => "/images/final_versus_back_bttn.png"} 
+        %a{:href => "/members/versus_question/1",:style=>" margin-left: 315px;",:id=>"old_question_id"}          
+          %img{:alt => "", :src => "/images/final_versus_back_bttn.png"}         
+        %a.dis_none{:href => "/members/save_count_choice/3",:style=>" margin-left: 120px;",:id=>"questio_id"}          
+          %img{:alt => "", :src => "/images/final_versus_next_bttn.png"}     
+        %a{:href => "/members/versus_question/3",:style=>" margin-left: 120px;",:id=>"old_questio_id"}          
+          %img{:alt => "", :src => "/images/final_versus_next_bttn.png"}               
+    %li       
+      - if (params[:question_no].to_i) == 3  
+        %a.dis_none{:href => "/members/save_count_choice/2",:style=>" margin-left: 315px;",:id=>"question_id"}          
+          %img{:alt => "", :src => "/images/final_versus_back_bttn.png"}    
+        %a{:href => "/members/versus_question/2",:style=>" margin-left: 315px;float: left;margin-bottom:30px;",:id=>"question_id"}          
+          %img{:alt => "", :src => "/images/final_versus_back_bttn.png"}    
+        %a.dis_none{:href => "/members/save_count_choice/3",:style=>" margin-left: 75px;margin-bottom:30px;",:id=>"reward_thank_you_id"}          
+          %img{:alt => "", :src => "/images/TSB_Final_Versus_Rewards_Button.png"}                                          
+/= render :partial=>"members/member_authentication/urban_mercenaries", :locals=>{:question_no=>params[:question_no].to_i}
+= javascript_include_tag 'promo_versus'
+= javascript_include_tag 'homepage'
+= javascript_include_tag 'how_it_works'

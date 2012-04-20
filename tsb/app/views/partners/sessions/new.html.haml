@@ -1,0 +1,26 @@
+#flash_crowd
+#outer
+  #center_inner_2
+    = render :partial => 'shared/nav'
+    #tsb_logo_big
+    %br/
+    .center_wrapper
+      %form#email_form{:action => "brandview.html", :method => "post"}
+        %table{:border => "0"}
+          %tr
+            %td.align_right
+              %p.text_big BRAND PARTNER ENTRANCE
+            %td
+          %tr
+            %td{:colspan => "2"}
+              #username_input
+                %input{:name => "username", :type => "text"}/
+          %tr
+            %td
+              #stashword_input
+                %input{:name => "stashword", :type => "text"}/
+            %td
+              #enter_button_darken
+                %input{:type => "submit", :value => ""}/
+      %br{:style => "clear:both;"}/
+      \&nbsp;

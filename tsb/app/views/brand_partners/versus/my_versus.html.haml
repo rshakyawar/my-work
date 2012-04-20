@@ -1,0 +1,98 @@
+:css
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+#main
+  .versusLogoBlock
+    %a{:href => "#"}
+      %img{:alt => "brand logo", :height => "113", :src => "/images/logoAirImg.png", :width => "339"}/
+  .BrandTxtBlock
+    %a{:href => "#"}
+      %img{:alt => "Brand Partner", :height => "28", :src => "/images/brandPartnerTxt.png", :width => "249"}/
+  .navBtnBlock
+    %ul
+      %li
+        %a{:href => "/brand_partners/versus/new"}
+          %img{:alt => "New Versus", :height => "39", :src => "/images/newVersusBtn.png", :width => "130"}/
+      %li
+        %a.active{:href => "/brand_partners/my_versus"}
+          %img{:alt => "My Versus", :height => "39", :src => "/images/myVersusBtn.png", :width => "130"}/
+      %li
+        %a{:href => "/brand_partners/edit"}
+          %img{:alt => "My Profile", :height => "39", :src => "/images/myProfileBtn.png", :width => "130"}/
+  .myVersusBlock
+    .myVersusContentBlock
+      %form#myVersusForm{:action => "", :method => "post", :name => "myVersusForm"}
+        .versusTit
+          %h2 MY VERSUS
+        .versusSubTit
+          %h4 PLEASE CHOOSE A SAVED VERSUS
+        .drobDownInput
+          %select#drop{:name => "versusQue", :value => "",:onchange =>"change_question_value();"}
+            %option{:value => @select_versus.id} #{@select_versus.detail unless @select_versus.nil?}
+            - brand_partner_versus.each do |versus|
+              - unless @select_versus.detail == versus.detail
+                %option{:value => versus.id} #{versus.detail}
+        .versusSubTit
+          %h5 PLEASE SAVE EDITS BELOW
+        .versusSubTit
+          %h4 CONTACT
+        .versusInput
+          %input#contactName.inputSty{:name => "contactName", :placeholder => "CONTACT NAME", :required => "", :type => "text", :value => "#{@select_versus.contact_name}"}/
+        .versusInput
+          %input#contactEmail.inputSty{:name => "contactEmail", :placeholder => "CONTACT EMAIL", :required => "", :type => "email", :value => "#{@select_versus.contact_email}"}/
+        .versusSubTit
+          %h4 VERSUS DETAILS
+        .versusInput
+          %input#versusName.inputSty{:name => "versusName", :placeholder => "VERSUS NAME", :required => "", :style => "margin: 10px 0px;", :type => "text", :value => "#{@select_versus.detail}"}/
+        .versusSubTit
+          %h4 # OF VERSUS QUESTIONS
+        .drobDownInput
+          %select#drop1.Short{:name => "versusQue"}
+            %option{:value => @select_versus.no_of_questions} #{@select_versus.no_of_questions }
+            - %w[1 2 3].each do |v|
+              - unless @select_versus.no_of_questions.to_i == v.to_i
+                %option{:value => v} #{v}
+        .submitBtnBlock
+          %input.continueBtnSty{:name => "continueBtn", :type => "button",:onclick=>"update_versus();"}/
+#popup1.popupbox
+  - if @select_versus.errors and @select_versus.errors.size == 1
+    %h2 #{@select_versus.errors.full_messages[0] rescue ""}
+  - else
+    %h2 All ﬁelds must be ﬁlled in Please try again
+=form_for(@select_versus, :url =>brand_partners_my_versus_path,:html=>{:id=>"question_save_question_value",:class=>"question"}) do |f|
+  = f.text_field :id, :type => "hidden",:class=>"inputSty",:id=>"selected_versus"
+=form_for(@select_versus, :url =>brand_partners_update_versus_detail_path,:html=>{:id=>"update_question_value",:class=>"versus"}) do |f|
+  = f.text_field :contact_name, :class=>"inputSty",:id=>"contact_name",:type => "hidden"
+  = f.text_field :contact_email,:type => "hidden", :class=>"inputSty",:id=>"contact_email"
+  = f.text_field :detail, :class=>"inputSty",:type => "hidden",:style => "margin: 10px 0px;",:id=>"detail"
+  = f.text_field :id, :type => "hidden",:class=>"inputSty",:id=>"id",:value=>"#{@select_versus.id || brand_partner_versus.first.id}"
+  = f.text_field :no_of_questions, :class=>"inputSty",:id=>"no_of_questions",:type => "hidden"
+
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+- if @select_versus and @select_versus.errors.any?
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [520,287] });
+:javascript
+  function change_question_value(){
+    var selected_versus_detail_id = document.getElementById("drop").value;
+    $('#selected_versus').val(selected_versus_detail_id);
+    $('#question_save_question_value').submit();
+  }
+  function update_versus(){
+      var contactName =  $('#contactName').val();
+      var versusName  = $('#versusName').val();
+      var contactEmail = $('#contactEmail').val();
+      var no_of_question = document.getElementById("drop1").value;
+      $('#contact_name').val(contactName);
+      $('#contact_email').val(contactEmail);
+      $('#detail').val(versusName);
+      $('#no_of_questions').val(no_of_question);
+      $('#update_question_value').submit();
+  }

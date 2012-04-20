@@ -1,0 +1,22 @@
+#wrapper
+  #main
+    .logoBlock
+      %a{:href => "#"}
+        %img{:alt => "brand logo", :height => "127", :src => "/images/brandLogo.gif", :width => "303"}/
+    #notice
+      = flash[:notice]
+    .contentBlock
+      .mickLeft{:style=>"width:230px;"}
+      .userBlock
+        .userBlockContent
+          %form#thestashbox_admin{:action => "#{admins_path}", :method => "post"}
+            .revolution
+              %h2 Admin Login
+            .userName
+              %input#laUserName.inputSty{:name => "admin[name]", :placeholder => "NAME", :required => "", :type => "text", :value => ""}/
+            .userName
+              %input#laUserPw.inputSty{:name => "admin[admin_password]", :placeholder => "PASSWORD",:autocomplete=>"off" ,:required => "", :type => "password", :value => ""}/
+            .btnBlock
+              %input#enterBtn.revBtnSty{:name => "enterBtn", :type => "submit",:onclick=>"this.form.submit();", :value => ""}/
+
+

@@ -1,0 +1,51 @@
+# defined from tsb_developer_bpsection1.pdf, feb 28, 2011
+
+Scenario: Any user visits site
+As a user i can navigate to thestashbox.com site
+And will see large doors for the landing page
+I can click anywhere in the center area of the page
+And I should see the doors open
+And be presented with a form for entering my email address to be notified with membership information
+Or I can login as a brand partner
+
+Scenario: New user signup (normal user)
+I want to enter my email address and click enter
+So that i can receive membership information
+And I should see a flash message saying 'thanks for signing up'
+And i should automatically receive a response email from the system (tbd)
+
+Scenario: Brand partner
+Given I am on the login page
+I should see a button for brand partner entrance
+Upon clicking the button
+I will be shown a login form
+And can enter my username and password (stashword)
+
+Scenario: Brand partner successful login
+As a brand partner who is already configured to use the site
+Given that I am on the login page
+I can enter a correct username in the username field
+I can enter a correct password (stashword) in the stashword field
+Upon clicking the enter button
+I should be directed to the brand partner review page
+And should see a list of platforms to choose from
+And can select VERSUS or EVENTS (co-labs not functional this release)
+
+Scenario: Brand partner - failed login
+As a brand partner who is already configured to use the site
+Upon clicking the enter button with incorrect or no authentication information
+I should see a flash message stating incorrect login
+
+Scenario: View twitter posts on site
+As any user or visitor i can click the twitter link
+And will be taken to the twitter page on the site
+And can view recent twitter posts from thestashbox
+
+Scenario: Membership Codes
+TBD - membership codes can expire after ? time has elapsed and can be expired by usage
+
+Scenario: Versus Dashboard
+As a brand partner i want to see the results of a versus occurrance
+So that I can guage whether our marketing efforts are successful
+I can view the standard dashboard template which is included in the fee
+Or I can pay a premium to have the dashboard modified to show different/additional information

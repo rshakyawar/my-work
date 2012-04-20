@@ -1,0 +1,175 @@
+/* Eric Meyer's reset */
+*{margin:0; padding:0;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit;}
+body {line-height: 1.5;}
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+table, td, th { vertical-align:inherit; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+a img { border: none; }
+ol, ul {list-style: none;}
+:focus {outline: 0;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; outline:none;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#main .logoBlock{
+    clear: both;
+    display: block;
+    height: 140px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#main .BrandTxt{
+    clear: both;
+    display: block;
+    height: 70px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#main .contentBlock{
+    clear: both;
+    display: block;
+    height: 400px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+	margin-left: 45px;
+}
+
+#main .mickLeft{
+	float: left;
+	width: 200px;
+	margin-top: 60px;
+}
+
+#main .mickRight{
+	float: left;
+	width: 200px;
+	margin-top: 60px;
+}
+
+#main .userBlockContent{
+    height: 340px;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 290px;
+}
+
+#main .userBlock{
+    background: url("../images/userboxBg.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 375px;
+    width: 332px;
+}
+
+#main .forgotTxt{
+    margin-bottom: 15px;
+    width: 290px;
+}
+#main .userMessage{
+    margin-bottom: 40px;
+    width: 290px;
+	font-size: 11px;
+	line-height: 16px;
+}
+#main .userName{
+    float: left;
+    margin-bottom: 8px;
+    width: 290px;
+}
+#main .userTxt{
+    float: left;
+    width: 290px;
+}
+#main .userTxt span {
+	font-size: 13px;
+	margin-left: 10px;
+	float: left;
+}
+#main .userTxt span a{
+	color: #FCA505;
+}
+#main .btnBlock{
+    float: left;
+	width: 290px;
+}
+#main input.btnSty {
+    background: url("../images/enterBtn.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 35px;
+    margin-right: 15px;
+    margin-top: 85px;
+    width: 75px;
+}
+#main input.enterBtnSty {
+    background: url("../images/enterBtn.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 35px;
+    margin-right: 15px;
+    margin-top: 43px;
+    width: 75px;
+}
+#main .revolution{
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 290px;
+}
+
+#main input.revBtnSty {
+    background: url("../images/enterBtn.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 35px;
+    margin-right: 15px;
+    margin-top: 50px;
+    width: 75px;
+}
+#main input.inputSty {
+    background: url("../images/formInputImg.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 32px;
+    width: 270px;
+	padding:5px;
+}
+/* Meyer's reset ends here */

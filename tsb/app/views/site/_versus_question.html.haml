@@ -1,0 +1,39 @@
+%section.secTwo
+  #logoOne
+    .mapwrapper1
+      #viewport1
+        .current-map-layer{:style => "background: url('#{@product.logo_one.url(:medium)}') no-repeat scroll 0% 0% transparent; width: 172px; height: 52px;"}
+          / top level map content goes here
+        %div{:style => "height: 80px; width: 250px;"}
+          = image_tag @product.logo_one.url(:medium)
+          .mapcontent
+            / map content goes here
+      #viewport{:style => "display: none;"}
+        %img{:alt => "Logo One", :src => "/images/1.gif"}/
+  #topBanner
+    %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:medium)}"}/
+  #bgImgBlock{:style=>"background-image:url('#{@product.background.url(:medium)}');"}
+    %p Background Image
+    #versusBlock
+      #versusLeft.versusLeft_set
+        %img{:alt => "Versus Left", :src => "#{@product.versus_left.url(:medium)}"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@product.versus_right.url(:medium)}"}/
+  #bottomBannerBlock{:style=>"background-color:#{@product.bottom_banner_color};color:#{@product.bottom_banner_color};"}
+    #bannerTxt
+      Bottom Banner
+    #quizBlock
+      %input{:type => "text",:id=>"question_b",:maxlength=>"50",:name=>"question_a",:value=>"QUESTION 1",:style =>"" }/
+      %input{:type => "hidden",:value=>"1",:name=>"selected_question",:id=>"selected_question" }/
+#logo2Block
+  #logoTwo
+    %img{:alt => "Logo Two", :src => "#{@product.logo_two.url(:medium)}"}/
+%form#question{:action => "/save_question_information", :method => "POST" ,:id=>"save_question_value"}
+  %input{:type => "hidden",:value=>"",:name=>"question[question_no]",:id=>"question_no"}/
+  %input{:type => "hidden",:value=>"",:name=>"question[title]",:id=>"title"}/
+  %input{:type => "hidden",:value=>"",:name=>"question[font_style]",:id=>"font_style"}/
+  %input{:type => "hidden",:value=>"",:name=>"question[font_color]",:id=>"text_font_color"}/
+  %input{:type => "hidden",:value=>"",:name=>"question_button_no",:id=>"question_button_no"}/
+:javascript
+  $(document).ready(function() {setPanelControls('#viewport1');	});
+

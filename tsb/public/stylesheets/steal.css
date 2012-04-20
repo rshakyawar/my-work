@@ -1,0 +1,93 @@
+.steel-container{
+	width:615px;
+	margin:0 auto;
+}
+.steel-container .main-head{
+	text-align:center;
+	font: normal 42px "TrajanPro";
+	color:#636363;
+}
+.steel-container .main-head span{
+	text-align:center;
+	font: normal 42px TheLastFont11;
+	color:#636363;
+}
+.steel-container .steal-wrapper{
+	background:url(../images/osdg_left_right_part_bg.png);
+	width:615px;
+	height:418px;
+	margin-top:5px;
+}
+.steal-wrapper .left-part-steel{
+	float:left;
+	width:306px;	
+	text-align:center;
+}
+.left-part_txt_percenr_off {
+	width:298px;
+	font: normal 19px "TrajanPro";
+	color:#e1e1e1;
+	margin-left:0px;
+	text-align:center;
+}
+.left-part_txt_percenr_off span{
+	font: normal 32px "TrajanPro";		
+}
+.left-part-steel .t-shirt-off{
+	margin-top:20px;
+	line-height:10px;
+}
+.steal-wrapper .right-part{
+	float:left;
+	width:295px;
+}
+.right-part .my-steel-head{
+	text-align:center;
+	font:italic 24px TheLastFont11;
+	color:#e1e1e1;
+	margin-top:14px;
+}
+.my-steel-head span{
+	font:normal 12px "TrajanPro";
+	color:#e1e1e1;
+}
+.right-part .social-icon{
+	margin-top:3px;
+	text-align:center;	
+}
+.right-part .social-icon a{
+	text-decoration:none;
+}
+.osdg_steelcode{
+	 background: url("../images/OSDG__TheSteal_down_bg.jpg") repeat scroll 0 0 transparent;
+    color: #E1E1E1;
+    font: italic 20px TheLastFont11;
+    height: 122px;
+    margin-top: 14px;
+    padding-top: 5px;
+    text-align: center;
+    width: 307px;
+}
+.osdg_steelcode_bottom_txt{
+	font:normal 11px TrajanPro;
+	color:#ed1c24;
+}
+.osdg_steelcode_bottom_txt span a{
+	font:normal 11px "TrajanPro";
+	color:#f7941d;
+}
+.osdg_sono-link{
+	margin-top:17px;
+}
+.osdg_sono-link a{
+	font:italic 11px TheLastFont11;
+	color:#e1e1e1;
+	padding:0px;
+	text-decoration:none;
+	}	
+.osdg_steel_content_main {
+    background: url("../images/osdg_main_bg.png") no-repeat scroll 0 0 transparent;
+    height: 435px;
+    padding: 9px 0 0 20px;
+    width: 655px;
+}	

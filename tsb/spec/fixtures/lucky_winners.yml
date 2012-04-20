@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  winning_time: 2011-10-21 20:06:06
+  ip_address: MyString
+  code: MyString
+  question_id: 1
+
+two:
+  winning_time: 2011-10-21 20:06:06
+  ip_address: MyString
+  code: MyString
+  question_id: 1

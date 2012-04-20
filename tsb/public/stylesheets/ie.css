@@ -1,0 +1,5 @@
+/*less than IE 9*/
+
+body.blog .ui-dialog h2 {
+    margin: 30px 10px 10px;
+}

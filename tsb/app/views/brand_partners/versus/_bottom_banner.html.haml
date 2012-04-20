@@ -1,0 +1,45 @@
+%section.secTwo
+  #topBanner
+    %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:medium)}"}/
+  #bgImgBlock{:style=>"background-image:url('#{@product.background.url(:medium)}');"}
+    - if @product.background.to_s =="/backgrounds/original/missing.png"
+      %p Background Image
+    - else 
+      %p &nbsp;
+    #versusBlock
+      #versusLeft.versusLeft_set
+        %img{:alt => "Versus Left", :src => "#{@question.versus_left.url(:medium)}"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+  #bottomBannerBlock{:style=>"background-color:#{@product.bottom_banner_color}"}
+    %img{:alt => "Top Banner", :src => "#{@product.bottom_banner.url(:medium)}"}/    
+    #bannerTxt
+      #quizBlock_bg{:style=>"background-color:#{@product.bottom_banner_color};color:#{@question.font_color};font-family:#{@question.font_style}"} #{@question.title || "QUESTION"}
+#logo2Block
+  #logoTwo
+    %img{:alt => "Logo Two", :src => "#{@product.logo_two.url(:medium)}"}/
+=form_for(@product, :url =>brand_partners_save_versus_page_path,:html =>  {:id=>"save_bottom_banner"}) do |f|
+  %input{:type => "hidden",:value=>"",:name=>"product[bottom_banner_color]",:id=>"font_color"}/
+  %input{:type => "hidden",:value=>"#{@versus.id}",:name=>"versus_id",:id=>"versus_id"}/
+  %input{:type => "hidden",:value=>"#{params[:img_block]}",:name=>"img_block",:id=>"img_block_id"}/
+:javascript
+  $(document).ready(function() {
+    setPanelControls('#viewport_ban');  
+  });
+    $('#colorSelector').ColorPicker({
+      color: '#000000',
+      onShow: function (colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function (colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+       onChange: function (hsb, hex, rgb) {
+          $('#bottomBannerBlock').css('background-color','#'+hex);
+          $('#quizBlock_bg').css('background-color','#'+hex);
+      }
+    });
+
+ 

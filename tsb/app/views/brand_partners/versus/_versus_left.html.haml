@@ -1,0 +1,24 @@
+%section.promo_shadow
+  #topBanner_promo
+    %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:promo_top_banner)}"}/
+  #bgImgBlock_promo{:style=>"background-image:url('#{@product.background.url(:promo_background)}');"}
+    - if @product.background.to_s =="/backgrounds/original/missing.png"
+      %p Background Image
+    - else 
+      %p &nbsp;
+    #versusBlock{:style=>"margin:20px 0 0px 64px"}
+      #versusLeft.versusLeft_set
+        .mapwrapper3
+          #viewport3
+            .current-map-layer{:style => "background: url('#{@question.versus_left.url(:medium)}') no-repeat scroll 0% 0% transparent; width: 200px; height: 200px;"}
+            %div{:style => "height: 344px; width: 344px;"}
+              = image_tag @question.versus_left.url(:medium)
+              .mapcontent
+          #viewport{:style => "display: none;"}
+            %img{:alt => "Versus Left", :src => "/images/temp_versus-left.jpg"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+  #bottomBannerBlock_promo
+    %img{:alt => "question_image", :src => "#{@question.question_image.url(:promo_question)}"}
+:javascript
+  $(document).ready(function() {setPanelControls('#viewport3');	});

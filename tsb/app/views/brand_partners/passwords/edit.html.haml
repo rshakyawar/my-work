@@ -1,0 +1,33 @@
+:css
+  h2 {
+    font-family:Trajan Pro,serif;
+    font-size:9px;
+    text-transform:uppercase;
+  }
+  #error_explanation{
+    margin-left:40px;
+  }
+#middle_content
+  .my_stash_box_main
+    .my_stash_box_lock_img
+    .my_stash_box
+    .my_stash_box_lock_img
+  .my_stash_box_heading_txt A personal collection of my STASHBOX contributions.
+  .forget_key_box
+    .forget_stashname_bg
+      = devise_error_messages! 
+      .forget_heading_txt2
+        Please enter your new password and confirmation password .
+        Click the "enter" button.
+      = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| 
+        = f.hidden_field :reset_password_token
+        .member_login_field_main
+          .forgot_login_field
+            = f.password_field :password , :class=>:forgot_login_field_bg
+          .forgot_login_field
+            = f.password_field :password_confirmation, :class=>:forgot_login_field_bg
+        .member_login_forget_txt
+          Forgot your
+          %a{:href => "#"} username
+        .member_login_enter_bttn
+          %input.member_login_enter_bttn_bg{:type => "button", :value => "ENTER",:onclick=>"this.form.submit();"}/

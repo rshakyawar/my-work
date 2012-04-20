@@ -1,0 +1,17 @@
+%div{:style=>	"width:824px;height:786px;margin:0px auto;background:url(/images/TSB_congrats.png) no-repeat left top;"}
+  = image_tag "http://#{Settings.site_base_uri}/images/emailFriendInvite.jpg",:style=>"height:100%,width:100%"  
+%br/
+%br
+Please use your membership code in the next 14 days
+%br/ 
+%br
+Membership Code:
+= message["my_membership_code"] unless message["my_membership_code"].blank?
+%br/
+%br/
+Thank you
+%br/
+%br
+The Stash Box Family
+%br/
+

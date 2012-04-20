@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hopelessly_devoted_to: MyString
+  academic_accolades: MyString
+  shelling_it_out: MyString
+  punch_the_clock: MyString
+  guilty_by_vocation: MyString
+  stork_inventory: MyString
+  member: 
+
+two:
+  hopelessly_devoted_to: MyString
+  academic_accolades: MyString
+  shelling_it_out: MyString
+  punch_the_clock: MyString
+  guilty_by_vocation: MyString
+  stork_inventory: MyString
+  member: 

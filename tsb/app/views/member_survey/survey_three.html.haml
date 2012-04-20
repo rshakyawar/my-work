@@ -1,0 +1,262 @@
+:css
+  .ui-dialog {
+    background-color:#EDF0F0;
+    background-image:url("") !important;
+    background-position:center center;
+    background-repeat:no-repeat;
+    border:3px solid grey !important;
+    height:auto !important;
+    width:260px !important;
+  }
+
+  .ui-dialog_custom {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+  
+  .privacy_agree{
+    position:relative;
+    right:100px;
+    top:255px;
+    font:17px TrajanPro,Arial,Helvetica,sans-serif;
+  }
+  .membership_step3_top_txt_bg {
+    width:381px;
+    height:51px;
+    background:url("../images/membership_survey3_top_txt_bg.png") no-repeat left top;
+    font:normal 15px "TrajanPro";
+    color:#711104;
+    text-align:center;
+    margin:-20px auto 0px auto;
+    padding:30px 20px 0px 30px;
+  }   
+
+  .membership_survery1_heading {      
+   	width:867px;     
+   	height:30px;     
+   	font:bold 18px "TrajanPro";    
+   	color:#000;    
+   	margin:0px auto 0px auto;     
+   	text-align:center;      
+  }
+  .membership_survey1_steps {    
+   	width:160px;    
+   	height:40px;   
+   	margin:10px auto 0px auto;  
+  }
+  
+  .steps1 {   
+   	width:33px;      
+   	height:33px;    
+   	background:url("../images/membership_survey_step_round.png") no-repeat left top;     
+   	float:left;    
+   	margin:0px 10px 0px 10px;    
+   	font:normal 25px  Arial, Helvetica, sans-serif;   
+   	color:#333;   
+   	font-style:italic;    
+   	text-align:center;   
+   	padding:2px 0px 0px 0px;    
+  }
+  
+  .steps1 span {     
+  	 color:#fff;     
+  }
+  
+  .member_survey_stp3_img_center_row {
+    width:867px;
+    height:145px;
+  }
+
+  .member_survey_stp3_next_bttn {
+    width:182px;
+    height:93px;
+    margin:0px;
+    float:right;
+    margin:0px 15px 0px 0px;
+  }
+#main
+  #middle_content
+    .membership_survery1_heading STASH STATS
+    .membership_survey1_steps
+      .steps1 1
+      .steps1 2
+      .steps1
+        %span 3
+    .membership_step3_top_txt_bg
+      Simply put, enter your personal info below
+    -if @member_form.errors.any?
+      #error_explanation{:style=>"margin-left:145px;text-align:left;"}
+        %h3= "#{pluralize(@member_form.errors.count, "error")} prohibited this member from being saved:"
+        %FONT{:COLOR => "red"} 
+          %ul{:style=>"margin-left:15px;"}
+            - @member_form.errors.full_messages.each do |msg|
+              %li= msg            
+    .step3_form
+    = form_for(@member_survey_three, :url => members_save_path,:html =>  {:id=>"save_member_survey_form_three"}) do |f|
+      = fields_for @member_form do |fm|
+        .step3_form_field_main
+          .step3_form_name Email
+          .step3_form_field1
+            =fm.text_field :email,:class=>"step3_form_field_bg1_new",:autocomplete=>"off",:tabindex=>"1"
+        .step3_form_field_main
+          .step3_form_name Name
+          .step3_form_field2
+            =fm.text_field :first_name,:class=>"step3_form_field_bg2_new",:autocomplete=>"off",:tabindex=>"2"
+          .step3_form_field1
+            =fm.text_field :last_name,:class=>"step3_form_field_bg2_new",:autocomplete=>"off",:tabindex=>"3"
+        .step3_form_field_main
+          .step3_form_name 
+            Stashname
+            %br/
+            %span{:style => "font:10px Arial, Helvetica, sans-serif; font-style:italic;"} 3-10 characters; Numbers and letters only
+          .step3_form_field2
+            =fm.text_field :stash_name,:class=>"step3_form_field_bg2_new",:autocomplete=>"off",:tabindex=>"4"
+          .step3_form_name
+            Stashword
+            %br/
+            %span{:style => "font:10px Arial, Helvetica, sans-serif; font-style:italic;"} 6-10 characters, Numbers and letters only         
+          .step3_form_field2
+            =fm.password_field :password,:class=>"step3_form_field_bg2_new",:tabindex=>"5"
+        .step3_form_field_main
+          .confirm_stashword_row
+            .step3_form_name Confirm Stashword
+            .step3_form_field2
+              =fm.password_field :password_confirmation,:class=>"step3_form_field_bg2_new",:tabindex=>"6"
+        .step3_form_field_main
+        .step3_form_field_main
+          .step3_form_name B'day
+          .step3_bday_field1{:style=>"margin: 0px 0px 0px 10px;"}
+            =fm.date_select :b_day,{:order => [:month,:day,:year],:prompt => true, :start_year => Date.current.year - 120, :end_year => Date.current.year - 1},{:class=>:step3_bday_month_year_field_bg1,:style=>"background-color:#EEEFEF;border: 2px solid #C6C6C6;",:tabindex=>"7"}
+          .confirm_stashword_row{:style=>" float: left;height: 30px;width: auto;"}
+            .step3_form_name{:style=>"width:130px;"} ZIP
+            .step3_zip_field
+              =fm.text_field :zip,:class=>"step3_zip_field_bg_new",:autocomplete=>"off" ,:tabindex=>"8"           
+        .step3_form_field_main
+          .step3_form_name
+            My Mail Goes to
+            %br/
+            %span{:style => "font:10px Arial, Helvetica, sans-serif; font-style:italic;"} optional
+          .step3_form_field1
+            =fm.text_field :my_mail_goes_to,:class=>"step3_form_field_bg1_new",:tabindex=>"9"
+          .step3_form_name.privacy_agree{:style=>"width:813px;"}
+            %span Please agree to <a href="/tsb_term_of_uses" tabindex="-1">Terms of use</a> + <a href="/tsb_privacy" tabindex="-1">Privacy Policy</a>
+          .step3_form_field2.privacy_agree{:style=>"width:20px;padding-top:7px;"}
+            =fm.check_box :accept_term_conditions,:tabindex=>"16"
+        .step3_form_field_main
+          .step3_form_name 
+            City
+            %br/
+            %span{:style => "font:10px Arial, Helvetica, sans-serif; font-style:italic;"} optional          
+          .step3_form_field2
+            =fm.text_field :city,:class=>"step3_form_field_bg2_new",:autocomplete=>"off",:tabindex=>"10"
+          .step3_form_name{:style=>"width:80px!important;"} 
+            State
+            %br/
+            %span{:style => "font:10px Arial, Helvetica, sans-serif; font-style:italic;"} optional          
+          .step3_form_field2{:style=>"margin: -10px 0 0 15px;"}
+            - if @member_form.state.blank?
+              = fm.select 'state', options_for_select(APPLICATION_CONFIG.member_survey.state_names), { :size=>APPLICATION_CONFIG.member_survey.state_names.size, :include_blank => "Select State"},{:style=>"margin-left: -5px;margin-top: 7px;border: 2px solid #C6C6C6;",:id => "member_form_state",:tabindex=>"11"}
+            - else
+              = fm.select 'state', options_for_select(APPLICATION_CONFIG.member_survey.state_names, @member_form.state), { :size=>APPLICATION_CONFIG.member_survey.state_names.size, :include_blank => "Select State"},{:style=>"margin-left: -5px;margin-top: 7px;",:id => "member_form_state",:tabindex=>"11"}
+        .step3_form_field_main
+      .clear
+      .step3_form
+        .step2_img_row{:style=>"margin:20px 0 0 -11px;"}
+          .step3_img_center_row{:style=>"width:867px;"}
+            .step3_img_bg{:onClick=>"change_expert_color('#drop_down_5','#select_5_id','#member_survey_three_guilty_by_vocation','5');"}
+              .step3_img_links_row
+                - unless @member_survey_three.guilty_by_vocation.blank?  
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_5",:style=>"background-color:#3BB9FF",:tabindex=>"12"} GUILTY BY VOCATION     
+                  %input{:type => "hidden",:id=>"member_survey_three_guilty_by_vocation",:value=>"#{@member_survey_three.guilty_by_vocation.first}",:name=>"member_survey_three[guilty_by_vocation][]"}                                            
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_5",:tabindex=>"12"} GUILTY BY VOCATION
+                  %input{:type => "hidden",:id=>"member_survey_three_guilty_by_vocation",:value=>"#{@member_survey_three.guilty_by_vocation}",:name=>"member_survey_three[guilty_by_vocation][]", :disabled=>true}                     
+                .step3_img_guilty            
+            .step3_img_bg{:onClick=>"change_expert_color('#drop_down_4','#select_4_id','#member_survey_three_punch_the_clock','4');"}
+              .step3_img_links_row
+                - unless @member_survey_three.punch_the_clock.blank?  
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_4",:style=>"background-color:#3BB9FF",:tabindex=>"13"} PUNCH THE CLOCK       
+                  %input{:type => "hidden",:id=>"member_survey_three_punch_the_clock",:value=>"#{@member_survey_three.punch_the_clock.first}",:name=>"member_survey_three[punch_the_clock][]"}                                          
+                - else        
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_4",:tabindex=>"13"} PUNCH THE CLOCK
+                  %input{:type => "hidden",:id=>"member_survey_three_punch_the_clock",:value=>"#{@member_survey_three.punch_the_clock}",:name=>"member_survey_three[punch_the_clock][]", :disabled=>true}                     
+              .step3_img_punch         
+            .step3_img_bg{:onClick=>"change_expert_color('#drop_down_2','#select_2_id','#member_survey_three_academic_accolades','2');"}
+              .step3_img_links_row
+                - unless @member_survey_three.academic_accolades.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_2",:style=>"background-color:#3BB9FF",:tabindex=>"14"} ACADEMIC ACCOLADES    
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{@member_survey_three.academic_accolades.first}",:name=>"member_survey_three[academic_accolades][]"}                                       
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_2",:tabindex=>"14"} ACADEMIC ACCOLADES
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{@member_survey_three.academic_accolades}",:name=>"member_survey_three[academic_accolades][]", :disabled=>true}                
+              .step3_img_academic
+            .step3_img_bg{:onClick=>"change_expert_color('#drop_down_3','#select_3_id','#member_survey_three_shelling_it_out','3');"}
+              .step3_img_links_row
+                - unless @member_survey_three.shelling_it_out.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_3",:style=>"background-color:#3BB9FF",:tabindex=>"15"} SHELLING IT OUT              
+                  %input{:type => "hidden",:id=>"member_survey_three_shelling_it_out",:value=>"#{@member_survey_three.shelling_it_out.first}",:name=>"member_survey_three[shelling_it_out][]"}                      
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_3",:tabindex=>"15"} SHELLING IT OUT
+                %input{:type => "hidden",:id=>"member_survey_three_shelling_it_out",:value=>"#{@member_survey_three.shelling_it_out}",:name=>"member_survey_three[shelling_it_out][]", :disabled=>true}                
+              .step3_img_shelling             
+          / -- second  row 2 start ---
+      .clear
+    .step3_next_bttn_row
+      .step3_next_bttn
+        %input.submit_button{:name => "save",:tabindex =>"17", :type => "button",:onclick=>"save_member_survey_form_three();"}/
+      .clear
+    .clear
+  .clear
+#popup1.popupbox
+  %div.survey_two_pop_up
+    #select_1_id
+      - APPLICATION_CONFIG.member_survey.survey_3.HOPELESSLY_DEVOTED_TO.each do |val|
+        = check_box_tag 'ms_two_health_fitness', val, (!@member_survey_three.hopelessly_devoted_to.nil? and @member_survey_three.hopelessly_devoted_to.first == val),{:id=>"health_fitness" + val}        
+        = val
+        %br
+#popup2.popupbox
+  %div.survey_two_pop_up
+    #select_2_id
+      - APPLICATION_CONFIG.member_survey.survey_3.ACADEMIC_ACCOLADES.each do |val|
+        = check_box_tag 'ms_two_academic_accolades', val, (!@member_survey_three.academic_accolades.nil? and @member_survey_three.academic_accolades.first == val),{:id=>"academic_accolades" + val}
+        = val
+        %br    
+#popup3.popupbox
+  %div.survey_two_pop_up
+    #select_3_id
+      - APPLICATION_CONFIG.member_survey.survey_3.SHELLING_IT_OUT.each do |val|
+        = check_box_tag 'ms_two_shelling_it_out', val, (!@member_survey_three.shelling_it_out.nil? and @member_survey_three.shelling_it_out.first == val),{:id=>"shelling_it_out" + val}        
+        = val
+        %br          
+#popup4.popupbox
+  %div.survey_two_pop_up
+    #select_4_id
+      - APPLICATION_CONFIG.member_survey.survey_3.PUNCH_THE_CLOCK.each do |val|
+        = check_box_tag 'ms_two_punch_the_clock', val, (!@member_survey_three.punch_the_clock.nil? and @member_survey_three.punch_the_clock.first == val),{:id=>"punch_the_clock" + val}        
+        = val
+        %br 
+#popup5.popupbox
+  %div.survey_two_pop_up
+    #select_5_id
+      - APPLICATION_CONFIG.member_survey.survey_3.GUILTY_BY_VOCATION.each do |val| 
+        = check_box_tag 'ms_two_guilty_by_vocation', val, (!@member_survey_three.guilty_by_vocation.nil? and @member_survey_three.guilty_by_vocation.first == val),{:id=>"guilty_by_vocation" + val}
+        = val
+        %br         
+#popup6.popupbox
+  %div.survey_two_pop_up
+    #select_6_id
+      - APPLICATION_CONFIG.member_survey.survey_3.STORK_INVENTORY.each do |val| 
+        = check_box_tag 'ms_two_stork_inventory', val, (!@member_survey_three.stork_inventory.nil? and @member_survey_three.stork_inventory.first == val),{:id=>"stork_inventory" + val}
+        = val
+        %br         
+#popup7.popupbox
+  %div
+    %h2 Please select one option from each category                                   
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'member_survey_three'

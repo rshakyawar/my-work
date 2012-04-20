@@ -1,0 +1,28 @@
+<!doctype html>
+/[if lt IE 7 ] <html lang="en" class="no-js ie6">
+/ [if (gt IE 6)|!(IE)]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}/
+    %title= @title ||= "The Stashbox"
+    %meta{:content => "The Stash Box", :name => "description"}/
+    %meta{:content => "The Stash Box", :name => "author"}/
+    /[if lte IE 7]
+      %link{:href => "/stylesheets/ie_member_survey.css", :rel => "stylesheet"}/     
+      %link{:href => "/stylesheets/ie7.css", :rel => "stylesheet"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "/stylesheets/reset.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/global.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/main.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/popups.css", :rel => "stylesheet"}/   
+    %link{:href => "/stylesheets/member_survey.css", :rel => "stylesheet"}/
+    %script{:src => "/javascripts/modernizr-1.6.min.js"}
+    %script{:src => "/javascripts/google.js"}
+    %script{:src => "/javascripts/jquery-1.5.1.js", :type => "text/javascript"}
+  %body{:class => @class}
+    #wrapper
+      = render :partial => 'layouts/header'
+      = yield
+      = render :partial => 'layouts/footer'

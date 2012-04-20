@@ -1,0 +1,136 @@
+#main
+  #middle_content
+    .membership_survery_img
+    .membership_steps
+      .step 1
+      .step
+        %span{:style => "color:#FFF; font:30px Arial, Helvetica, sans-serif; font-style:italic;"} 2
+      .step 3
+    .main_heading EVERYBODY'S GOT THEIR SOMETHING
+    .main_content
+      Here at TSB we, embrace our member's individuality and expertise. Take a look below and flaunt your knowledge.
+      %br>/
+      If you just like something, click the LIKE button, If you are an expert, tell us more and click the  EXPERT button.
+    .step2_img_row
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_1",:onClick=>"change_like_color('#like_1','#expert_1','#select_1_id');"} like
+          %input{:type => "hidden",:id=>"",:value=>"",:name=>"img_block"}/
+          %a{:href => "javascript:void(0);",:id=>"expert_1",:onClick=>"change_expert_color('#like_1','#expert_1','#select_1_id')"} EXPERT
+          #select_1_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_book
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_2",:onClick=>"change_like_color('#like_2','#expert_2','#select_2_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_2",:onClick=>"change_expert_color('#like_2','#expert_2','#select_2_id')"} EXPERT
+          #select_2_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_travel
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_3",:onClick=>"change_like_color('#like_3','#expert_3','#select_3_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_3",:onClick=>"change_expert_color('#like_3','#expert_3','#select_3_id')"} EXPERT
+          #select_3_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_fashion
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_4",:onClick=>"change_like_color('#like_4','#expert_4','#select_4_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_4",:onClick=>"change_expert_color('#like_4','#expert_4','#select_4_id')"} EXPERT
+          #select_4_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_tv-film
+    / -- second  row 2 start ---
+    .step2_img_row
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_5",:onClick=>"change_like_color('#like_5','#expert_5','#select_5_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_5",:onClick=>"change_expert_color('#like_5','#expert_5','#select_5_id')"} EXPERT
+          #select_5_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_nightlife
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_6",:onClick=>"change_like_color('#like_6','#expert_6','#select_6_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_6",:onClick=>"change_expert_color('#like_6','#expert_6','#select_6_id')"} EXPERT
+          #select_6_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_home
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_7",:onClick=>"change_like_color('#like_7','#expert_7','#select_7_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_7",:onClick=>"change_expert_color('#like_7','#expert_7','#select_7_id')"} EXPERT
+          #select_7_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_food
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_8",:onClick=>"change_like_color('#like_8','#expert_8','#select_8_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_8",:onClick=>"change_expert_color('#like_8','#expert_8','#select_8_id')"} EXPERT
+          #select_8_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_gaming
+    / -- Third  row 3 start ---
+    .step2_img_row
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_9",:onClick=>"change_like_color('#like_9','#expert_9','#select_9_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_9",:onClick=>"change_expert_color('#like_9','#expert_9','#select_9_id')"} EXPERT
+          #select_9_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_music
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_10",:onClick=>"change_like_color('#like_10','#expert_10','#select_10_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_10",:onClick=>"change_expert_color('#like_10','#expert_10','#select_10_id')"} EXPERT
+          #select_10_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_art
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_11",:onClick=>"change_like_color('#like_11','#expert_11','#select_11_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_11",:onClick=>"change_expert_color('#like_11','#expert_11','#select_11_id')"} EXPERT
+          #select_11_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_beauty_grooming
+      .step2_img_bg
+        .step2_img_links_row
+          %a{:href => "javascript:void(0);",:id=>"like_12",:onClick=>"change_like_color('#like_12','#expert_12','#select_12_id');"} like
+          %a{:href => "javascript:void(0);",:id=>"expert_12",:onClick=>"change_expert_color('#like_12','#expert_12','#select_12_id')"} EXPERT
+          #select_12_id
+            = select_tag 'member_survey_two[books]', options_for_select(APPLICATION_CONFIG.member_survey.survey_2.books), {:multiple => true, :size=>5}
+        .step2_img_health_fitness
+    .step2_next-back_bttn_row
+      .step2_next-back_bttn_main
+        .step2_next-back_bttn
+          %a{:href => "javascript:void(0);"} Back
+          %a{:href => "javascript:void(0);"} Next
+
+:javascript
+  $(document).ready(function() {
+      $('#select_1_id').hide();
+      $('#select_2_id').hide();
+      $('#select_3_id').hide();
+      $('#select_4_id').hide();
+      $('#select_5_id').hide();
+      $('#select_6_id').hide();
+      $('#select_7_id').hide();
+      $('#select_8_id').hide();
+      $('#select_9_id').hide();
+      $('#select_10_id').hide();
+      $('#select_11_id').hide();
+      $('#select_12_id').hide();
+    });
+
+  function change_like_color(like_id,expert_id,select_id){
+    $(expert_id).css('background-color', '');
+    $(select_id).hide();
+    $(like_id).css('background-color', 'orange');
+  }
+
+  function change_expert_color(like_id,expert_id,select_id){
+    $(like_id).css('background-color', ''); 
+    $(expert_id).css('background-color', '#3BB9FF'); 
+    $(select_id).show();
+  }

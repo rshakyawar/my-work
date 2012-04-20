@@ -1,0 +1,38 @@
+%header
+  %h1
+    %a{:href => "index.html"}
+      %img{:alt => "The Stash Box", :height => "38", :src => "/images/logo_head.png", :width => "40"}/
+  %nav
+    %ul
+      %li
+        %a.one{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["logo_one"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["logo_one"])} Logo One
+      %li
+        %a.two{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["logo_two"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["logo_two"])} Logo Two
+      %li
+        %a.three{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["top_banner"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["top_banner"])} Top Banner
+      %li
+        %a.four{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["bottom_banner"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["bottom_banner"])} Bottom Banner
+      %li
+        %a.five{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["background"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["background"])} Background
+      %li
+        %a.six{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["versus_left"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["versus_left"])} Versus Left
+      %li
+        %a.seven{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["versus_right"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["versus_right"])} Versus Right
+
+  - if @selected_tab == 'versus_question'
+    .question_btns
+      .questions
+        %div
+          %ul
+            %li
+              %a{:class => "queOne current",:href=>"javascript:{}",:onclick=>"change_question_value(1);" ,}
+                %span Question 1
+            %li
+              %a{:class => "queTwo",:href=>"javascript:{}",:onclick=>"change_question_value(2);"}
+                %span Question 2
+            %li
+              %a{:class => "queThree",:href=>"javascript:{}",:onclick=>"change_question_value(3);"}
+                %span Question 3
+  %p.quesSty
+    %a{:href => "/brandpartners/#{Product::BLOCK_IMAGE_NAME["versus_question"]}",}
+      %img{:alt => "Your Question", :src => "/images/btn_question.png"}/

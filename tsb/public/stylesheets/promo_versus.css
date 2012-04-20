@@ -1,0 +1,469 @@
+:css
+  .clr {
+    clear:both;
+  }
+  .promo_page_main {
+    width:600px;
+    height:auto;
+    margin:0px auto;
+  }
+  .promo_close_row {
+    width:600px;
+    height:30px;
+  }
+  .promo_close {
+    width:28px;
+    height:27px;
+    float:right;
+    margin:0px 20px 0px 0px;
+  }
+  .promo_close a {
+    width:28px;
+    height:27px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -599px -391px;
+    display:block;
+  }
+  .promo_page_laft_part {
+    width:224px;
+    height:416px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -1px top;
+    float:left;
+  }
+  .promo_left_product_imgbox {
+    width:183px;
+    height:169px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -6px -421px;
+    margin:20px 0px 0px 15px;
+    padding:0px 0px 0px 6px;
+  }
+  .promo_left_product_img {
+    width:170px;
+    height:auto;
+    padding:6px 0px 0px 0px;
+  }
+  .promo_left_prouct_txt {
+    width:170px;
+    height:auto;
+    font:normal 16px Arial, Helvetica, sans-serif;
+    color:#000;
+    text-align:center;
+    margin-top:10px;
+  }
+  .promo_left_middle_box {
+    width:183px;
+    height:94px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -220px -452px;
+    margin:20px 0px 0px 20px;
+    padding:10px 0px 0px 6px;
+  }
+  .promo_left_middle_txt1 {
+    width:128px;
+    height:24px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -646px -395px;
+    margin:0px 0px 0px 15px;
+  }
+  .promo_left_middle_txt2 {
+    width:170px;
+    height:22px;
+    font:normal 16px Arial, Helvetica, sans-serif;
+    color:#ff8a00;
+    text-align:center;
+    margin:5px 0px 0px 0px;
+  }
+  .promo_left_middle_txt3 {
+    width:136px;
+    height:30px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -643px -421px;
+    margin:0px 0px 0px 15px;
+  }
+  .promo_left_bottom_box {
+    width:181px;
+    height:92px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -433px -452px;
+    margin:0px 0px 0px 20px;
+    padding:7px 0px 0px 0px;
+  }
+  .promo_left_bottm_img {
+    width:54px;
+    height:40px;
+    margin:0px 0px 0px 60px;
+  }
+  .promo_left_bottm_txt {
+    width:170px;
+    height:30px;
+    font:normal 13px Arial, Helvetica, sans-serif;
+    color:#000;
+    text-align:center;
+    margin: 7px 0 0 10px
+  }
+  .promo_page_right_part {
+    width:361px;
+    height:434px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -229px top;
+    float:right;
+  }
+  .promo_right_heading {
+    width:323px;
+    height:19px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -205px -565px;
+    margin:25px 0px 0px 20px;
+  }
+  .promo_right_box1 {
+    width:317px;
+    height:71px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -599px -11px;
+    margin:0px 0px 0px 20px;
+    padding:12px 0px 0px 0px;
+  }
+  .promo_right_topbox_row1 {
+    width:271px;
+    height:14px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -635px -452px;
+    margin:0px 0px 0px 15px;
+  }
+  .promo_right_topbox_row2 {
+    width:280px;
+    height:20px;
+    margin:15px 0px 0px 15px;
+  }
+  .promo_topbox_left_txt {
+    width:142px;
+    height:20px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -629px -480px;
+    float:left;
+  }
+  .promo_topbox_right_txt {
+    width:110px;
+    height:20px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -799px -480px;
+    float:left;
+    margin:0px 0px 0px 20px;
+  }
+  .promo_video_box {
+    width:317px;
+    height:180px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -599px -95px;
+    margin:0px 0px 0px 20px;
+  }
+  .promo_right_bottm_box {
+    width:317px;
+    height:97px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -598px -276px;
+    margin:0px 0px 0px 20px;
+    padding:10px 0px 0px 0px;
+  }
+  .promo_right_bottmbox_heading {
+    width:235px;
+    height:20px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -628px -505px;
+    margin:0px 0px 0px 35px;
+  }
+  .promo_right_signup_heading {
+    width:87px;
+    height:20px;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -693px -531px;
+    margin:5px 0px 0px 100px;
+  }
+  .promo_right_signup_row {
+    width:260px;
+    height:30px;
+    margin:0px 0px 0px 15px;
+  }
+  .promo_right_field_part {
+      float: left;
+      height: 22px;
+      margin-left: 5px;
+      width: 195px;
+  }
+  .promo_right_field {
+    width:150px;
+    height:28px;
+    border:solid 1px #000;;
+  }
+ .promo_right_signup_bttn {
+    background: url("/images/promo_page2_sprite_img.png") no-repeat scroll -745px -558px transparent;
+    float: left;
+    height: 23px;
+    margin: -26px 0 0 213px;
+    width: 54px;
+  }
+    .video_div{
+    margin-left: 15px;
+    padding-top: 15px;
+  }
+  
+  .promo_signup_field_bg {
+    width:195px;
+    height:23px;
+    font:normal 12px "Trajan Pro";
+    text-align:right;
+    background:url(/images/promo_page2_sprite_img.png) no-repeat -529px -560px;
+    border:none;
+  }
+  .promo_signup_bttn_bg {
+    width:54px;
+    height:23px;
+    opacity:0;
+    filter:alpha(opacity=0);
+  }
+  
+  
+  
+  .clr {
+  	clear:both;
+  }
+  
+  .promo_page_main {
+   	width:800px;
+   	height:auto;
+    margin: 0 auto 0 50px; 
+  }
+  
+  .promo_close_row {  
+   	width:800px;  
+   	height:30px;  
+  }
+  
+  .promo_close { 
+   	width:28px; 
+   	height:27px; 
+   	float:right; 
+   	margin:0px 20px 0px 0px;  
+  }
+  
+  .promo_close a {
+   	width:28px;
+   	height:27px;  
+   	background:url("../images/promo_page2_sprite_img.png") no-repeat -860px -513px; 
+   	display:block;  
+  }
+  
+  .promo_page_laft_part {  
+  	width:300px; 
+  	height:558px;  
+  	background:url("../images/promo_left_bg_img_new.png") no-repeat left top; 
+  	float:left;  
+  	margin-top:11px;
+  }
+  
+  .promo_left_product_imgbox {  
+  	width:250px; 
+  	height:224px; 
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat left -560px; 
+  	margin:20px 0px 0px 24px;  
+  	padding:0px 0px 0px 6px;  
+  }
+  
+  .promo_left_product_img {  
+  	width:222px; 
+  	height:auto; 
+  	padding:6px 0px 0px 0px; 
+  	margin-left:2px; 
+  }
+  
+  .promo_left_prouct_txt {  
+  	width:226px;
+  	height:auto; 
+  	font:normal 18px Arial, Helvetica, sans-serif;
+  	color:#000; 
+  	text-align:center;  
+  	margin-top:18px;
+  	margin-left:62px;
+  }
+  
+  .promo_left_middle_box { 
+  	width:251px;  
+  	height:138px; 
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -260px -553px; 
+  	margin:0px 0px 0px 24px;
+  	padding:10px 0px 0px 6px;
+  }
+  
+  .promo_left_middle_txt1 {  
+  	width:128px; 
+  	height:24px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -858px -564px;  
+  	margin:10px 0px 0px 50px; 
+  }
+  
+  .promo_left_middle_txt2 { 
+  	width:226px; 
+  	height:22px; 
+  	font:normal 18px Arial, Helvetica, sans-serif; 
+  	color:#ff8a00; 
+  	text-align:center;
+  	margin:10px 0px 0px 62px; 
+  }
+  
+  .promo_left_middle_txt3 {  
+  	width:140px;
+  	height:20px; 
+  	background:url("../images/promo_left_middle_date.png") no-repeat;
+  	margin:15px 0px 0px 40px; 
+  }
+  
+  .promo_left_bottom_box { 
+  	width:251px; 
+   height:121px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -517px -553px;
+  	margin:0px 0px 0px 24px; 
+  	padding:7px 0px 0px 0px;
+  	margin-top:-10px;
+  }
+  
+  .promo_left_bottm_img { 
+  	width:54px;  
+  	height:40px; 
+  	margin:10px auto 0 70px;
+  }
+  
+  .promo_left_bottm_txt {  
+  	width:226px; 
+  	height:30px; 
+  	font:normal 16px Arial, Helvetica, sans-serif; 
+  	color:#000;
+  	text-align:center;  
+  	margin:10px 0px 0px 48px; 
+  }
+  
+  .promo_page_right_part {  
+  	width:450px;  
+  	height:540px; 
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -306px top; 
+  	float:left; 
+  	margin:0px 0px 0px 25px; 
+  }
+  
+  .promo_right_heading {  
+  	width:323px;
+  	height:15px;
+  	background:url("../images/promo_right_checkout_txt.png") no-repeat;
+  	margin:0px 0px 0px 68px;
+  }
+  
+  .promo_right_heading_top {  
+  	width:323px;
+  	height:26px;
+  	background:url("../images/remove_img_button.jpg") no-repeat ;
+  	margin:20px 0px 0px 400px;
+  }
+  
+  .promo_right_box1 {
+  	width:399px;
+  	height:82px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -774px -13px;
+  	margin:0px 0px 0px 25px;
+  	padding:12px 0px 0px 0px;
+  }
+  
+  .promo_right_topbox_row1 {
+  	width:271px;
+  	height:14px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -845px -620px;
+  	margin:10px auto 0px auto;
+  }
+  
+  .promo_right_topbox_row2 {
+  	width:400px;
+  	height:20px;
+  	margin:20px 0px 0px 15px;
+  }
+  
+  .promo_topbox_left_txt {
+  	width:142px;
+  	height:20px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -839px -648px;
+  	float:left;
+  	margin:0px 0px 0px 30px;
+  }
+  
+  .promo_topbox_left_txt_right {
+  	width:20px;
+  	height:20px;
+  	background:url("../images/promo_right_dot_img.png") no-repeat;
+  	float:left;
+  	margin:6px 0px 0px 5px;
+  }
+  
+  .promo_topbox_right_txt {
+  	width:110px;
+  	height:20px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -1009px -648px;
+  	float:left;
+  	margin:0px 0px 0px -9px;
+  }
+  
+  .promo_video_box {
+  	width:399px;
+  	height:222px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -774px -113px;
+  	margin:0px 0px 0px 25px;
+  }
+  
+  .promo_right_bottm_box {
+  	width:399px;
+  	height:136px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -773px -344px;
+  	margin:7px 0px 0px 25px;
+  	padding:10px 0px 0px 0px;
+  }
+  
+  .promo_right_bottmbox_heading {
+  	width:235px;
+  	height:20px;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -839px -673px;
+  	margin:10px auto 0px auto;
+  }
+  
+  .promo_right_signup_heading {
+  	width:87px;
+  	height:20px;
+  	background:url(../images/promo_page2_sprite_img.png) no-repeat -903px -700px;
+  	margin:10px auto 0px auto; 
+  }
+  
+  .promo_right_signup_row {
+  	width:300px; 
+  	height:23px;
+  	margin:5px 0px 0px 50px;
+  }
+  
+  .promo_right_field_part {
+   	float: left;
+    height: 23px;
+    margin-left: -5px;
+    margin-top: -5px;
+    width: 204px;
+  }
+  
+  .promo_right_field {
+  	width:195px;
+  	height:23px;
+  	border:solid 1px #000;;
+  }
+  
+  .promo_signup_field_bg {
+  	width:195px;
+  	height:23px;
+  	font:normal 12px "Trajan Pro";
+  	text-align:right;
+  	background:url("../images/promo_page2_sprite_img.png") no-repeat -739px -728px;
+  	border:none;
+  }
+  
+  .promo_right_signup_bttn {
+  	width:54px;
+  	height:15px;
+  	float:left;
+   cursor:pointer;
+  }
+  
+  .promo_signup_bttn_bg { 
+  	width:54px;
+  	height:23px;
+   opacity:0;
+  	filter:alpha(opacity=0);
+  	cursor:pointer;
+  }  
+  
+

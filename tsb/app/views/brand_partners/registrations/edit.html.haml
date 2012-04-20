@@ -1,0 +1,57 @@
+:css
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+#main
+  .versusLogoBlock
+    %a{:href => "#"}
+      %img{:alt => "brand logo", :height => "113", :src => "/images/logoAirImg.png", :width => "339"}/
+  .BrandTxtBlock
+    %a{:href => "#"}
+      %img{:alt => "Brand Partner", :height => "28", :src => "/images/brandPartnerTxt.png", :width => "249"}/
+  .navBtnBlock
+    %ul
+      %li
+        %a{:href => "/brand_partners/versus/new"}
+          %img{:alt => "New Versus", :height => "39", :src => "/images/newVersusBtn.png", :width => "130"}/
+      %li
+        %a{:href => "/brand_partners/my_versus"}
+          %img{:alt => "My Versus", :height => "39", :src => "/images/myVersusBtn.png", :width => "130"}/
+      %li
+        %a.active{:href => "/brand_partners/edit"}
+          %img{:alt => "My Profile", :height => "39", :src => "/images/myProfileBtn.png", :width => "130"}/
+  .versusBlock
+    .versusContentBlock
+      %form#brand_partner{:action => "/brand_partners", :method => "post", :name => "brand_partner_profile"}
+        .versusTit{:style=>"margin-bottom: 0px;"}
+          %h2 MY PROFILE
+        .versusSubTit
+          %h4 USERNAME
+        .versusInput
+          %input#changeUser.inputSty{:name => "brand_partner[partner_name]", :placeholder => "CHANGE USERNAME", :required => "", :style => "margin-bottom: 0px;", :type => "text", :value => "#{current_brand_partner.partner_name}"}/
+          %input{:name=>"_method", :type=>"hidden", :value=>"put"}
+        .versusSubTit
+          %h4 PASSWORD
+        .versusInput
+          %input#changePw.inputSty{:name => "brand_partner[password]", :placeholder => "PASSWORD", :required => "",:autocomplete=>"off", :type => "password", :value => ""}/
+        .versusInput
+          %input#confirmPw.inputSty{:name => "brand_partner[password_confirmation]", :placeholder => "CONFIRM PASSWORD", :required => "", :type => "password", :value => ""}/
+        .versusSubTit
+          %h4 CURRENT PASSWORD
+        .versusInput
+          %input#changePw.inputSty{:name => "brand_partner[current_password]", :placeholder => "CURRENT PASSWORD", :required => "", :type => "password", :value => ""}/
+        .submitBtnBlock
+          %input#saveBtn.saveBtnSty{:name => "saveBtn",:style=>"margin-top: 25px;" ,:type => "submit", :onclick=>"this.form.submit();", :value => ""}/
+#popup1.popupbox
+  %h2 Please enter valid value
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+-if @brand_partner.errors.any?
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [490,375] });

@@ -1,0 +1,1 @@
+Tweet = Struct.new(:text, :from_user, :from_user_img, :created_at)

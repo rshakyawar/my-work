@@ -1,0 +1,143 @@
+= stylesheet_link_tag "/stylesheets/rewards_reset.css.css"
+= stylesheet_link_tag "/stylesheets/rewards_main.css"
+= stylesheet_link_tag "promo_versus_second"
+= javascript_include_tag 'fb'
+= javascript_include_tag 'deal_live'
+:css
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .FBConnectButton_Simple, .FBConnectButton_RTL_Simple {
+    background-image:url("/images/iconFbook.png");
+    height: 30px;
+    width: 34px;
+    display: block;
+    float: right
+   }
+   .tb, .t-count, .t-count a {
+     background:url("../images/iconBird.png") no-repeat scroll 0 0 transparent;
+   }
+   .float_align{
+     float:left;
+   }
+   input.enterBtn {
+     background:url("../images/btn_enter.gif") no-repeat scroll 0 0 transparent;
+     display:block;
+     font-size:0;
+     height:30px;
+     line-height:0;
+     text-indent:-3000px;
+     width:70px;
+  }   
+   .Ernestschwag_facebook_bttn {   
+    	width:29px;  
+    	height:34px;  
+    	float:left;   
+   }
+   
+   .Ernestschwag_facebook_bttn a {   
+    	width:29px;   
+    	height:29px;  
+    	background:url(../images/ernestschwag_social_icons.png) no-repeat -3px -2px;   
+    	display:block;  
+   }   
+#main{:style => "padding-top:40px;padding-bottom:25px"}
+  #blockRight{:style => "position:relative;margin-left:30px;"}
+    %section.promo_shadow
+      #topBanner{:style=>"width: 761px;"}
+        %img{:alt => "Top Banner", :src => "#{@question.product.top_banner.url(:promo_top_banner)}"}/
+      .dealBlock{:style=>"width: 761px;"}
+        .dealBlockLeft
+          .imgBlock
+            .current-map-layer{:style => "background: url('#{@deal.deal_image.url(:medium)}') no-repeat scroll 0% 0% transparent; width: 237px; height: 212px;"}
+          %label.dealPrice #{ @deal.price}
+          %label.itemDesc #{@deal.description}
+        .dealBlockRight{:style => "margin-left: 105px;"}
+          .sendMeImgBlock
+            .sendMeInnerBlock
+              .sendMeTit SEND ME MY DEAL
+              .iconBlock
+                %ul
+                  %li
+                    %a{:href => "javascript:void(0);",:onclick=>"sendmail_pop_up()"}
+                      %img{:height => "33", :src => "/images/iconMail.png", :width => "33"}/
+                  %li
+                    %a{:href => "javascript:void(0);", :onclick=>"sms_pop_up();"}
+                      %img{:height => "33", :src => "/images/iconSms.png", :width => "33"}/
+              .sendMeTit SPREAD THE LOVE
+              .iconBlock
+                %ul{:style=>"margin-left:30px;"}
+                  %li.float_align
+                    %a{:href => "javascript:void(0);",:onclick=>"sendmail_pop_up()"}
+                      %img{:height => "33", :src => "/images/iconMail.png", :width => "33"}/
+                  %li.float_align
+                    %a{:href => "javascript:void(0);", :onclick=>"sms_pop_up();"}
+                      %img{:height => "33", :src => "/images/iconSms.png", :width => "33"}/
+                  %li.float_align
+                    .Ernestschwag_facebook_bttn
+                      %a{:href => "javascript:void(0);"}
+                  %li.float_align
+                    %a{:href => "#{get_twitter_deal_url}"}
+                      %img{:border => "0", :src => "/images/twitter.png"}/               
+            %label.dealCode.codeEco #{@deal.code}
+            %label.ecomLink.codeEco 
+              %a{:href=>"#{@deal.e_commerce_link}"}
+                #{@deal.e_commerce_link}
+%a{:href => "/members/thank_you_page",:style=>" margin-left: 419px;",:id=>"old_question_id"}          
+  %img{:alt => "", :src => "/images/final_versus_back_bttn.png",:style=>" margin-top: 30px;"}  
+%img#fb_share_image{:alt => "Icon-facebook", :src => "http://#{Settings.site_base_uri}/images/icon-facebook.gif", :style => "display: none;"}/
+%input#fb_share_text{:style => "display: none;", :type => "hidden", :value => "#{Settings.fb_share_text}"}/
+%input#fb_share_return_url{:style => "display: none;", :type => "hidden", :value => "http://#{Settings.site_base_uri}/members/the_deal"}/ 
+%input#fb_share_app_id{:style => "display: none;", :type => "hidden", :value => "#{Settings.fb_share_app_id}"}/     
+#popup1.popupbox
+  %div{:style=>"margin-top:100px;"}
+    =form_tag('/sms/send_message', :remote => true, :method=>:get, :id=>"sms_form") do 
+      %p Send SMS
+      = text_field_tag "country_code","", {:id => 'country_code', :placeholder => "Code", :size => 3}
+      = text_field_tag "mobile_number","", {:id => 'email', :placeholder => "Mobile Number", :size => 22}
+      = submit_tag 'Enter', :class => 'enterBtn',:style=>"margin-left:136px;margin-top:15px;"
+#popup2.popupbox
+  %div{:style=>"margin-top:70px;"}
+    =form_tag('/mail/send_mail', :remote => true, :method=>:get, :id=>"mail_form") do 
+      = label_tag "to"
+      = text_field_tag "to_email","", {:id => 'email_id', :placeholder => "Email",:style=>"margin: 5px 0 0 16px;"}
+      %br
+      %br
+      = label_tag "Message"
+      = text_area_tag "message_body","#{Settings.twitter_share_text}", {:id => 'email_body', :placeholder => "Email",:style=>"margin-top: -8px;"}      
+      = submit_tag 'Send', :class => 'enterBtn',:style=>"margin-left:136px;margin-top:15px;",:onclick=>"validate_email();"   
+#popup3.popupbox
+  %h2{:style=>"margin-top:80px;"} Email Is Not Valid       
+#popup4.popupbox
+  %h2{:style=>"margin-top:80px;"} Email Has Been Send              
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'rails'           
+:javascript
+  jQuery(function($){
+    $("#sms_form").bind('ajax:complete', function() {  $("#popup1").dialog('close');});
+    $("#sms_form").bind('ajax:beforeSend', function(evt, xhr, settings){ $("#popup1").dialog('close');});
+   });               
+

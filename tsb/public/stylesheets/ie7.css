@@ -1,0 +1,17 @@
+nav li a.one:hover,
+nav li a.two:hover,
+nav li a.three:hover,
+nav li a.four:hover,
+nav li a.five:hover,
+nav li a.six:hover,
+nav li a.seven:hover{
+	background-color:#edf0f0;
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#c694ec', Direction=180, Strength=5) !important;
+}
+ul.buttons.social{
+	margin:0 189px !important;
+}
+form#loginForm{
+  float:left;
+}

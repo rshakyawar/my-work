@@ -1,0 +1,20 @@
+#popup1.popupbox
+  %h2 So Watcha Got?
+  %p Despite popular belief, we haven't seen it all nor do we know everything so please, enlighten us and share your finds!
+  - form_for @submitted_asset do |f|
+    %ul.whatyougot
+      %li
+        = f.text_field :name, :id => 'name', :placeholder => "NAME"
+      %li
+        = f.text_field :email, :id => 'email', :placeholder => "EMAIL"
+      %li
+        = f.text_field :url, :id => 'url', :placeholder => "URL"
+      %li.sel
+        %select{:name => "whatisit",:style=>"border: 2px solid #C6C6C6;"}
+          %option{:value => "Watch"} Watch (Video Links)
+          %option{:value => "Listen"} Listen (Music Links)
+          %option{:value => "Learn"} Learn (Article Links)
+          %option{:value => "Love"} Love (Favorite Products)
+          %option{:value => "Random"} Random
+      .submitBtnBlock
+        %input#enterBtn.invited_frnd_send_bttn_bg{:type => "submit", :value => "Send"}/        

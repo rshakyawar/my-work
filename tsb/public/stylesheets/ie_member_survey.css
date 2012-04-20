@@ -1,0 +1,1203 @@
+/* ----   TSB_code Dont Have css are start ----------  */
+
+.revalution_needs_img {
+	width:461px;
+	height:91px;
+	background:url("../images/logo-memberlogin.gif") no-repeat left top;
+	margin:0px auto 0px auto;
+}
+
+.dont_have_bg {
+	width:458px;
+	height:260px;
+	background:url("../images/code_donthave_images.png") no-repeat left top;
+	margin:30px auto 0px auto;
+	padding:100px 0px 0px 0px;
+}
+.dont_have_heading {
+	width:458px;
+	height:20px;
+	font:bold 18px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+}
+.dont_have_content {
+	width:300px;
+	height:auto;
+	font:bold 14px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	line-height:25px;
+	margin:0px auto 0px auto;
+	padding:30px 0px 0px 10px;
+}
+.continue_bttn_row {
+	width:717px;
+	height:90px;
+	padding:10px 150px 0px 0px;
+	margin:20px 0px 0px 0px;
+}
+
+.continue_bttn {
+	width:182px;
+	height:93px;
+	float:right;
+}
+.continue_bttn a {
+	width:182px;
+	height:68px;
+	background:url("../images/code_donthave_images.png") no-repeat left -360px;
+	float:right;
+	font:bold 28px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	font-style:italic;
+	text-decoration:none;
+	padding:25px 0px 0px 0px;
+	float:right;
+}
+.continue_bttn_bg {
+	width:182px;
+	height:93px;
+	background:url("../images/code_donthave_images.png") no-repeat left -360px;
+	float:right;
+	font:bold 28px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	font-style:italic;
+	text-decoration:none;
+	padding:0px 0px 0px 0px;
+	float:right;
+	border:none;
+}
+
+
+
+/*  -------  TSB_code Dont Have css are End -------- */
+
+/*  ------- TSB_code I Have css are start --------- */
+
+
+
+.join_us_img {
+	width:274px;
+	height:92px;
+	background:url("../images/code_donthave_images.png") no-repeat -196px -361px;
+	margin:0px auto 0px auto;
+}
+.so_close_row {
+	width:867px;
+	height:auto;
+	margin:0px auto 0px auto;
+}
+.lock_img {
+	width:152px;
+	height:210px;
+	background:url("../images/code_donthave_images.png") no-repeat left -762px;
+	float:left;
+	margin:70px 0px 0px 120px;
+}
+.lock_img2 {
+	width:152px;
+	height:210px;
+	background:url("../images/code_donthave_images.png") no-repeat left -762px;
+	float:left;
+	margin:70px 0px 0px 40px;
+}
+.I_have_bg {
+	width:335px;
+	height:250px;
+	background:url("../images/code_donthave_images.png") no-repeat left -462px;
+	float:left;
+	margin:50px auto 0px auto;
+	padding:30px 0px 0px 0px;
+}
+.so_close_heading {
+	width:171px;
+	height:48px;
+	background:url("../images/code_donthave_images.png") no-repeat -155px -768px;
+	margin:0px auto 0px auto;
+}
+.I_have_content {
+	width:280px;
+	height:auto;
+	font:bold 14px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	line-height:25px;
+	margin:10px auto 0px auto;
+	padding:0px 0px 0px 10px;
+}
+.code_field_main {
+	width:295px;
+	height:32px;
+	margin:20px 0px 0px 0px;
+	padding:0px 0px 0px 40px;
+}
+		     
+.code_field { 
+	width:267px;
+	height:32px;
+}
+.code_field_bg { 
+	width:257px;
+	height:27px;
+	background:url("../images/code_donthave_images.png") no-repeat -155px -826px;
+	border:none;
+/* 	font:normal 17px  Trajan Pro, Arial, Helvetica, sans-serif; */
+	color:#000;
+	text-align:right;
+	padding:5px 10px 0px 0px;
+}
+
+
+/*  ------- TSB_code I Have css are End --------- */
+
+/*  ------- TSB_code Membership Survery step1 page Start --------- */
+
+
+.membership_survery_img {
+	width:383px;
+	height:60px;
+	background:url("../images/membership_survery_imgs.png") no-repeat left top;
+	margin:0px auto 0px auto;
+}
+.membership_steps {
+	width:250px;
+	height:56px;
+	margin:10px auto 0px auto;
+}
+.step {
+	width:55px;
+	height:46px;
+	background:url("../images/membership_survery_imgs.png") no-repeat -394px -3px;
+	float:left;
+	margin:0px 10px 0px 10px;
+	font:normal 30px  Arial, Helvetica, sans-serif;
+	color:#333;
+	font-style:italic;
+	text-align:center;
+	padding:10px 0px 0px 0px;
+}
+.main_heading {
+	width:867px;
+	height:20px;
+	font:bold 18px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	margin:20px 0px 0px 0px ;
+}
+.main_content {
+	width:867px;
+	height:auto;
+	font:bold 15px "Times New Roman", Times, serif;
+	font-style:italic;
+	color:#000;
+	text-align:center;
+	margin:5px 0px 0px 0px ;
+}
+
+.row1 {
+	width:867px;
+	height:105px;
+	margin:5px 0px 0px 0px;
+}
+.colum_name {
+	width:275px;
+	height:105px;
+	float:left;
+}
+.name {
+	width:170px;
+	height:65px;
+	font:bold 14px "Times New Roman", Times, serif;
+	color:#000;
+	font-style:italic;
+	text-align:right;
+	text-decoration:underline;
+	float:left;
+	padding:40px 0px 0px 0px;
+}
+.icon_sms {
+	width:95px;
+	height:105px;
+	background:url("../images/membership_survery_imgs.png") no-repeat -80px -68px; 
+	float:left;
+	margin:0px 4px 0px 5px;
+}
+.icon_calls {
+	width:90px;
+	height:105px;
+	background:url("../images/membership_survery_imgs.png") no-repeat -175px -68px; 
+	float:left;
+	margin:0px 4px 0px 10px;
+}
+.icon_email {
+	width:95px;
+	height:105px;
+	background:url("../images/membership_survery_imgs.png") no-repeat -260px -68px; 
+	float:left;
+	margin:0px 4px 0px 5px;
+}
+.icon_social_networking {
+	width:95px;
+	height:105px;
+	background:url("../images/membership_survery_imgs.png") no-repeat -352px -68px; 
+	float:left;
+	margin:0px 4px 0px 5px;
+}
+.icon_humans {
+	width:95px;
+	height:105px;
+	background:url("../images/membership_survery_imgs.png") no-repeat -447px -68px; 
+	float:left;
+	margin:0px 4px 0px 5px;
+}
+.number_colum {
+	width:590px;
+	height:105px;
+	float:left;
+}
+.numbers-link {
+	width:590px;
+	height:48px;
+	float:left;
+	margin:30px 0px 0px 0px;
+}
+.numbers-link a {
+	width:50px;
+	height:38px;
+	background:url("../images/membership_survery_imgs.png") no-repeat -21px -97px;
+	font:bold 24px "Times New Roman", Times, serif;
+	color:#000;
+	font-style:italic;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	float:left;
+	margin:0px 40px 0px 40px;
+	padding:10px 0px 0px 0px;
+}
+
+.next_bttn_row {
+	width:767px;
+	height:90px;
+	padding:10px 100px 0px 0px;
+	margin:10px 0px 0px 0px;
+}
+.next_bttn {
+	width:182px;
+	height:93px;
+	margin:0px;
+	float:right;
+	margin:0px;
+}
+.next_bttn a {
+	width:182px;
+	height:68px;
+	background:url("../images/code_donthave_images.png") no-repeat left -360px;
+	float:right;
+	font:bold 28px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	font-style:italic;
+	text-decoration:none;
+	padding:25px 0px 0px 0px;
+}
+
+
+
+/*  ------- TSB_code Membership Survery Step1 page End --------- */
+
+/*  ------- TSB_Thank you page Start --------- */
+
+
+
+
+.thank_you_row {
+	width:807px;
+	height:auto;
+	margin:0px auto 0px auto;
+	padding:0px 0px 0px 60px;
+}
+.clock_img {
+	width:164px;
+	height:255px;
+	background:url("../images/code_donthave_images.png") no-repeat -356px -460px;
+	float:left;
+	margin:100px 30px 0px 20px;
+}
+.thank_you_bg {
+	width:340px;
+	height:331px;
+	background:url("../images/code_donthave_images.png") no-repeat -464px 0px;
+	float:left;
+	margin:50px auto 0px auto;
+	padding:30px 0px 0px 0px;
+}
+.thank_you_heading {
+	width:260px;
+	height:auto;
+	font:bold 18px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	margin:30px 0px 0px 40px;
+}
+.thank_you_content {
+	width:240px;
+	height:auto;
+	font:bold 18px "Times New Roman", Times, serif;
+	color:#000;
+	line-height:25px;
+	text-align:center;
+	margin:30px 0px 0px 60px;
+}
+
+
+/*  ------- TSB_Thank you page End --------- */
+
+/*  ------- TSB_Log In page Start --------- */
+
+
+.my_stash_box_main {
+	width:730px;
+	height:110px;
+	margin:0px auto 0px auto;
+}
+.my_stash_box_lock_img {
+	width:79px;
+	height:110px;
+	background:url("../images/log_in_imgs.png") no-repeat left top;
+	float:left;
+}
+.my_stash_box {
+	width:493px;
+	height:82px;
+	background:url("../images/log_in_imgs.png") no-repeat -90px -19px;
+	float:left;
+	margin:20px 30px 0px 30px;
+}
+.my_stash_box_heading_txt {
+	width:520px;
+	height:20px;
+	font:bold 16px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	margin:0px auto 0px auto;
+}
+.key_box {
+	width:489px;
+	height:348px;
+	background:url("../images/log_in_imgs.png") no-repeat -16px -133px;
+	margin:10px auto 0px auto;
+	padding:100px 0px 0px 0px;
+}
+
+.member_login_bg {
+	width:340px;
+	height:205px;
+	background:url("../images/log_in_imgs.png") no-repeat -595px -15px;
+	margin:0px auto 0px auto;
+	padding:30px 0px 0px 0px;
+}
+.member_login_heading {
+	width:200px;
+	height:30px;
+	font:bold 17px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	margin:0px auto 0px auto;
+}
+.member_login_field_main {
+	width:305px;
+	height:auto;
+	padding:0px 0px 0px 35px;
+}
+.member_login_field {
+	width:267px;
+	height:32px;
+	margin:20px 0px 0px 0px;
+}
+.member_login_field_bg {
+	width:257px;
+	height:27px;
+	background:url("../images/log_in_imgs.png") no-repeat -641px -272px;
+	border:none;
+/* 	font:normal 14px Trajan Pro, Arial, Helvetica, sans-serif; */
+	color:#000;
+	text-align:right;
+	padding:5px 10px 0px 0px;
+}
+.member_login_forget_txt {
+	width:270px;
+	height:20px;
+	font:normal 12px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	margin:5px 0px 0px 35px;
+}
+.member_login_forget_txt a {
+	color:#ffa800;
+	text-decoration:none;
+	font:normal 12px Trajan Pro, Arial, Helvetica, sans-serif;
+}
+.member_login_enter_bttn {
+	width:94px;
+	height:37px;
+	float:right;
+	margin:0px 30px 0px 0px;
+}
+.member_login_enter_bttn_bg {
+	width:94px;
+	height:35px;
+	background:url("../images/log_in_imgs.png") no-repeat -536px -270px;
+	font:bold 15px "Times New Roman", Times, serif;
+	color:#000;
+	font-style:italic;
+	text-align:center;
+	text-decoration:none;
+	border:none;
+}
+
+
+/*  ------- TSB_Log In page End --------- */
+
+/*  ------- TSB_Landing page Start --------- */
+
+.landing_links_main {
+	width:867px;
+	height:auto;
+	position:absolute;
+	top:420px;
+	padding:0px 0px 50px 0px;
+}
+.landing_links_row {
+	width:850px;
+	height:141px;
+	margin:0px auto 0px auto;
+}
+.landing_links_row2 {
+	width:460px;
+	height:141px;
+	margin:0px auto 0px auto;
+}
+.landing_button {
+	width:auto;
+	height:141px;
+	float:left;
+	margin:0px 0px 0px 0px;
+}
+.landing_button a {
+	width:295px;
+	height:91px;
+	background:url("../images/log_in_imgs.png") no-repeat -535px -308px;
+	display:block;
+	font:normal 24px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	text-decoration:none;
+	float:left;
+	margin:0px 0px 0px 90px;
+	padding:50px 0px 0px 0px;
+}
+
+/*  ------- TSB_Landing page End --------- */
+
+/*  ------- TSB_code Membership Survery step2 page Start --------- */
+
+
+.step2_img_row {
+	width:867px;
+	height:145px;
+	margin:20px 0px 0px 0px;
+}
+.step2_img_bg {
+	width:190px;
+	height:139px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -5px -15px;
+	float:left;
+	margin:0px 0px 0px 18px;
+	padding:6px 0px 0px 8px;
+}
+
+.step2_img_links_row {
+	width:177px;
+	height:29px;
+	margin:0 0 0 -15px;
+}
+.step2_img_links_row a {
+	width:86px;
+	height:24px;
+	text-align:center;
+	font:bold 15px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	font-style:italic;
+	text-decoration:none;
+	float:left;
+	border:solid 1px #999;
+	padding:3px 0px 0px 0px;
+}
+.step2_img_book {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -215px -21px;
+}
+.step2_img_travel {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -423px -21px;
+}
+.step2_img_fashion {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -632px -21px;
+}
+.step2_img_tv-film {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -831px -21px;
+}
+.step2_img_nightlife {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -215px -167px;
+}
+.step2_img_home {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -423px -167px;
+}
+.step2_img_food {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -632px -167px;
+}
+.step2_img_gaming {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -831px -167px;
+}
+.step2_img_music {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -215px -317px;
+}
+.step2_img_art {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -423px -317px;
+}
+.step2_img_beauty_grooming {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -632px -317px;
+}
+.step2_img_health_fitness {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -15px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -831px -317px;
+}
+.step2_next-back_bttn_row {
+	width:857px;
+	height:90px;
+	padding:10px 10px 0px 0px;
+	margin:10px 0px 50px 0px;
+}
+.step2_next-back_bttn_main {
+	width:440px;
+	height:93px;
+	float:right;
+}
+.step2_next-back_bttn {
+	width:auto;
+	height:93px;
+	margin:0px;
+	float:left;
+	margin:0px;
+}
+.step2_next-back_bttn a {
+	width:178px;
+	height:68px;
+	background:url("../images/code_donthave_images.png") no-repeat left -360px;
+	float:left;
+	font:bold 28px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	font-style:italic;
+	text-decoration:none;
+	padding:25px 0px 0px 0px;
+	margin:0px 0px 0px 38px;
+}
+
+
+/*  ------- TSB_code Membership Survery step2 page End --------- */
+
+/*  ------- TSB_code Invited Friends page Start --------- */
+
+.invite_frnd_key_box {
+	width:489px;
+	height:398px;
+	background:url("../images/log_in_imgs.png") no-repeat -16px -133px;
+	margin:10px auto 0px auto;
+	padding:50px 0px 0px 0px;
+}
+
+
+.invited_friend_top_txt {
+		width:489px;
+		height:20px;
+		font:bold 13px Trajan Pro, Arial, Helvetica, sans-serif;
+		color:#000;
+		text-align:center;
+}
+.invite_frnd_bg {
+	width:412px;
+	height:295px;
+	background:url("../images/code_donthave_images.png") no-repeat -560px -375px;
+	margin:0px auto 0px auto;
+	padding:30px 0px 0px 0px;
+}
+.invited_frnd_allfields_main {
+	width:412px;
+	height:auto;
+}
+.invited_frnd_fields_main {
+	width:380px;
+	height:32px;
+	margin:15px 0px 0px 15px;
+}
+.invited_frnd_field {
+	width:267px;
+	height:32px;
+	float:left;
+	margin:0px 0px 0px 20px;
+}
+.invited_frnd_send_bttn {
+	width:84px;
+	height:32px;
+	float:left;
+	margin:0px 0px 0px 5px;
+}
+.invited_frnd_send_bttn_bg {
+	width:84px;
+	height:32px;
+	background:url("../images/log_in_imgs.png") no-repeat -540px -272px;
+	font:bold 16px "Times New Roman", Times, serif;
+	color:#000;
+	text-decoration:none;
+	font-style:italic;
+	display:block;
+	border:none;
+
+}
+	
+	
+.invite_frnd_field_bg {
+	width:262px;
+	height:27px;
+	background:url("../images/log_in_imgs.png") no-repeat -641px -272px;
+	border:none;
+/*	font:bold 13px Trajan Pro, Arial, Helvetica, sans-serif;*/
+	color:#000;
+	text-align:left;
+	padding:5px 0px 0px 5px;
+}
+
+
+/*  ------- TSB_code Invited Friends page End --------- */
+
+/*  ------- TSB_code Membership Survery step3 page Start --------- */
+
+
+
+.step3_form {
+	width:867px;
+	height:auto;
+	margin:20px 0px 0px 0px;
+}
+.step3_form_field_main {
+	width:867px;
+	height:32px;
+	margin:10px 0px 0px 0px;
+}
+.step3_form_name {
+	width:200px;
+	height:27px;
+	float:left;
+	font:normal 17px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:right;
+	padding:5px 0px 0px 0px;
+}
+.step3_form_field1 {
+	width:267px;
+	height:32px;
+	float:left;
+	margin:0px 0px 0px 10px;
+}
+.step3_form_field_bg1 {
+	width:267px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -24px -19px;
+	border:none;
+}
+.step3_form_field_bg1_new {
+	width:267px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -24px -19px;
+	border:none;
+	padding-left: 5px;
+}
+.step3_form_field2 {
+	width:207px;
+	height:32px;
+	float:left;
+	margin:0px 0px 0px 10px;
+}
+.step3_form_field_bg2 {
+	width:207px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -313px -19px;
+	border:none;
+}
+.step3_form_field_bg2_new {
+	width:207px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -313px -19px;
+	border:none;
+	padding-left: 5px;
+}
+.confirm_stashword_row {
+	width:450px;
+	height:30px;
+	float:right;
+}
+.step3_bday_field1 {
+	width:230px;
+	height:32px;
+	float:left;
+	margin:0px 0px 0px 10px;
+}
+.step3_bday_field_bg1 {
+	width:68px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -550px -19px;
+	border:none;
+}
+.step3_bday_month_year_field_bg1 {
+	height:30px;
+	background:url("../images/date_of_birth_bg.jpg") no-repeat;
+	border:none;
+}
+.step3_bday_field2 {
+	width:94px;
+	height:32px;
+	float:left;
+	margin:0px 0px 0px 10px;
+}
+.step3_bday_field_bg2 {
+	width:94px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -400px -63px;
+	border:none;
+}
+.step3_state_field_bg {
+	width:207px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -24px -63px;
+	border:none;
+}
+.step3_zip_field {
+	width:129px;
+	height:32px;
+	float:left;
+	margin:0px 0px 0px 10px;
+}
+.step3_zip_field_bg {
+	width:129px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -255px -63px;
+	border:none;
+}
+.step3_zip_field_bg_new {
+	width:129px;
+	height:30px;
+	background:url("../images/step3_images.png") no-repeat -255px -63px;
+	border:none;
+	padding-left: 5px;
+}
+.step3_img_center_row {
+	width:650px;
+	height:auto;
+	margin:0px auto 0px auto;
+}
+.step3_img_bg {
+	width:177px;
+	height:125px;
+	background:url("../images/membership_survery_step2_imgs.png") no-repeat -5px -15px;
+	float:left;
+	margin:0px 13px 14px 18px;
+	padding:6px 0px 0px 8px;
+	cursor:pointer;
+	
+}
+
+.step3_img_links_row {
+	width:174px;
+	height:27px;
+	border:solid 1px #999;
+	margin:0 0 0 -4px;
+}
+.step3_img_links_row a {
+	width:174px;
+	height:22px;
+	display:block;
+	text-align:center;
+	font:bold 13px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	font-style:italic;
+	text-decoration:none;
+	padding:5px 0px 0px 0px;
+}
+.step3_img_hopelessly {
+	width:175px;
+	height:92px;
+	background:url("../images/step3_images.png") no-repeat -8px -122px;
+}
+.step3_img_academic {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -2px;
+	background:url("../images/04.jpg")
+}
+.step3_img_shelling {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -2px;	
+	background:url("../images/01.jpg") ;
+}
+.step3_img_punch {
+	width:175px;
+	height:92px;
+	margin:0 0 0 -2px;
+	background:url("../images/02.jpg") ;
+}
+.step3_img_guilty {
+	width:175px;
+	height:92px;
+	background:url("../images/03.jpg");
+}
+.step3_img_stork {
+	width:175px;
+	height:92px;
+	background:url("../images/step3_images.png") no-repeat -424px -274px;
+}
+
+.step3_next_bttn_row {
+	width:867px;
+	height:100px;
+	padding:0px 0px 0px 0px;
+	margin:20px 0px 50px 0px;
+}
+.step3_next_bttn {
+	width:182px;
+	height:93px;
+	margin:0px;
+	float:right;
+	margin:0px 120px 0px 0px;
+}
+.step3_next_bttn_bg {
+	width:182px;
+	height:93px;
+	background:url("../images/code_donthave_images.png") no-repeat left -360px;
+	float:right;
+	font:bold 28px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	font-style:italic;
+	text-decoration:none;
+	border:none;
+}
+
+
+/*  ------- TSB_code Membership Survery step3 page End --------- */
+
+/*  ------- TSB_Congrats page Start --------- */
+
+
+.congrates_bg {
+	width:631px;
+	height:586px;
+	background:url("../images/TSB_congrats-paper.png") no-repeat left top;
+	margin:50px auto 0px auto;
+	padding:10px 0px 0px 0px; 
+}
+.congrates_revalution_needs_img {
+	width:461px;
+	height:91px;
+	background:url("../images/logo-memberlogin.gif") no-repeat left top;
+	margin:0px auto 0px auto;
+}
+.congrates_heading_row {
+	width:615px;
+	height:67px;
+	margin:30px 0px 0px 10px;
+}
+.congrates_heading {
+	width:251px;
+	height:67px;
+	background:url("../images/code_donthave_images.png") no-repeat -460px -730px;
+	margin:0px 0px 0px 60px;
+}
+.congrates_txt_main {
+	width:615px;
+	height:auto;
+	margin:30px 0px 0px 10px;
+}
+.congrates_txt {
+	width:450px;
+	height:auto;
+	font:normal 18px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	margin:0px auto 0px auto;
+}
+.congrates_txt2 {
+	width:275px;
+	height:27px;
+	background:url"../images/code_donthave_images.png") no-repeat -544px -810px;
+	margin:20px auto 0px auto;
+}
+.congrats_your_truly {
+	width:186px;
+	height:54px;
+	background:url("../images/code_donthave_images.png") no-repeat -477px -860px;
+	margin:50px 0px 0px 50px;
+}
+.congrats_thestash_box {
+	width:254px;
+	height:50px;
+	background:url("../images/code_donthave_images.png") no-repeat -714px -865px;
+	margin:20px 0px 0px 70px;
+}
+
+
+/*  ------- TSB_Congrats page css End --------- */
+
+/*  ------- TSB_memberLogin_Stashname page css Start --------- */
+
+.forget_key_box {
+	width:489px;
+	height:398px;
+	background:url("../images/log_in_imgs.png") no-repeat -16px -133px;
+	margin:10px auto 0px auto;
+	padding:50px 0px 0px 0px;
+}
+
+
+.forget_stashname_bg {
+	width:340px;
+	height:255px;
+	background:url("../images/code_donthave_images.png") no-repeat 0px -464px;
+	margin:0px auto 0px auto;
+	padding:30px 0px 0px 0px;
+}
+.forget_login_heading {
+	width:285px;
+	height:30px;
+	background:url("../images/code_donthave_images.png") no-repeat -170px -865px;
+	margin:0px 0px 0px 30px;
+}
+.forget_heading_txt {
+	width:300px;
+	height:auto;
+	font:normal 11px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	margin:0px 0px 0px 20px;
+}
+.forgot_login_field_main {
+	width:305px;
+	height:auto;
+	padding:0px 0px 0px 35px;
+}
+.forgot_login_field {
+	width:267px;
+	height:32px;
+	margin:15px 0px 0px 0px;
+}
+.forgot_login_field_bg {
+	width:257px;
+	height:27px;
+	background:url("../images/log_in_imgs.png") no-repeat -641px -272px;
+	border:none;
+/* 	font:normal 14px Trajan Pro, Arial, Helvetica, sans-serif; */
+	color:#000;
+	text-align:right;
+	padding:5px 10px 0px 0px;
+}
+
+/*  ------- TSB_memberLogin_Stashname page css End --------- */
+
+/*  ------- TSB_memberLogin_Stashword page css Start --------- */
+
+
+.forget_login_heading2 {
+	width:288px;
+	height:30px;
+	background:url("../images/code_donthave_images.png") no-repeat -170px -896px;
+	margin:20px 0px 0px 30px;
+}
+.forget_heading_txt2 {
+	width:220px;
+	height:auto;
+	font:normal 11px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	margin:10px 0px 0px 60px;
+}
+
+
+/*  ------- TSB_memberLogin_Stashword page css End --------- */
+
+/*  ------- TSB_codeDoesNotWork pop up css Start --------- */
+	
+	
+	
+.popup_stashname_bg {
+	width:340px;
+	height:275px;
+	background:url("../images/code_donthave_images.png") no-repeat 0px -464px;
+	margin:0px auto 0px auto;
+	padding:10px 0px 0px 0px;
+}
+.popup_heading {
+	width:330px;
+	height:20px;
+}
+.popup_close {
+	width:71px;
+	height:20px;
+	float:right;
+}
+.popup_close a {
+	width:71px;
+	height:20px;
+	background:url("../images/log_in_imgs.png") no-repeat -561px -452px;
+	float:right;
+}
+.popup_logo {
+	width:120px;
+	height:43px;
+	background:url("../images/log_in_imgs.png") no-repeat -667px -450px;
+	margin:20px auto 0px auto;
+}
+.popup_oh_no_txt {
+	width:320px;
+	height:40px;
+	font:bold 36px Trajan Pro, Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:center;
+	margin:10px 0px 0px 15px;
+}
+.popup_content_txt {
+	width:280px;
+	height:auto;
+	font:bold 14px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	margin:20px 0px 0px 35px;
+}
+.display_hide{
+        display:none;
+}
+input.submit_button{
+    background: url("../images/submit_button.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 93px;
+    margin-top: 10px;
+    width: 182px;
+	 border: 0px;
+
+}
+
+.select_box_bg {
+	background:url("../images/menu_bg_img.png")
+}
+
+.menu_main {
+  height: auto;
+  overflow: hidden;
+  width: 175px;
+}
+.menu_bg {
+	width:175px;
+  margin-top: 1px;
+  min-height: 9px;
+  background-color: #eeefef;
+	border:none;
+	font:normal 14px Arial, Helvetica, sans-serif;
+	color:#494949;
+	padding:3px 10px 10px 0px;
+}
+.menu_bottom {
+	width:196px;
+	height:6px;
+	background:url(images/menu_bottom_corner_img.png) no-repeat left top;
+}
+.survay_page_two_drop_down{
+  background-color: #EEEFEF;
+  overflow: hidden;
+  width: 175px;
+  height: auto;
+
+}
+#fix_set_div{
+   left: 168px;
+   position: relative;
+   top: 7px;
+   width: 200px;
+   height:20px;
+  }
+#fix_set_div_2{
+   left: 65px;
+   position: relative;
+   top: 7px;
+   width: 200px;
+   height:20px;
+  }
+
+.survey_two_pop_up{
+  text-align:left;
+  margin-top:30px;
+  font:italic bold 15px Times New Roman,Times,serif;
+  }
+
+.select_style{
+    clear: both;
+    display: block;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    width: 175px;
+}
+#member_form_state { 
+background: none repeat scroll 0 0 #EDF0F0;
+    border: 0 none;
+    height: 30px;
+    padding: 0 0 0 5px;
+    width: 221px;
+}

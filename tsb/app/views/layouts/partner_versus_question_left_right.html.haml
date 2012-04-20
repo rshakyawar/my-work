@@ -1,0 +1,68 @@
+<!doctype html>
+/[if lt IE 7 ] <html lang="en" class="no-js ie6">
+/ [if (gt IE 6)|!(IE)]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}/
+    %title The Stash Box - Versus
+    %meta{:content => "The Stash Box", :name => "description"}/
+    %meta{:content => "The Stash Box", :name => "author"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "/stylesheets/reset_versus.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/main_versus.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/jquery-ui-1.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/colorpicker.css", :rel => "stylesheet"}/
+    %link{:href => "/stylesheets/global.css", :rel => "stylesheet"}/
+    /[if lt IE 9 ] <link rel="stylesheet" href="css/ie.css">
+    %script{:src => "/javascripts/jquery-1.5.1.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.core.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.widget.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.mouse.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.ui.slider.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/mapbox.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/curvycorners.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/controlPanel.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/colorpicker.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/fontselector.js", :type => "text/JavaScript"}
+    %script{:src => "/javascripts/modernizr-1.6.min.js"}
+  %body{:class => @class}
+    #wrapper
+      %header
+        %h1
+          = render :partial => 'layouts/back_button'
+        %nav
+          %ul{:style=>"margin-left: 318px;"}
+            %li
+ 
+            %li
+              %a.three{:href => "/brand_partners/show_versus/#{@versus.id}/#{Product::BLOCK_IMAGE_NAME["top_banner"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["top_banner"])} Top Banner
+            %li
+
+            %li
+              %a.five{:href => "/brand_partners/show_versus/#{@versus.id}/#{Product::BLOCK_IMAGE_NAME["background"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["background"])} Background
+            %li
+              %a.six{:href => "/brand_partners/question/#{@versus.id}/#{session_question}/#{Product::BLOCK_IMAGE_NAME["versus_left"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["versus_left"])} Versus Left
+            %li
+              %a.seven{:href => "/brand_partners/question/#{@versus.id}/#{session_question}/#{Product::BLOCK_IMAGE_NAME["versus_right"]}", :class=> set_activate_tab(@selected_tab,Product::BLOCK_IMAGE_NAME["versus_right"])} Versus Right
+        .question_btns{:style=>"width: 120%"}
+          .questions
+            %ul{:style=> "margin-left: 294px;"}
+              %li
+                - if params[:question_no] == '1'
+                  %a{:class => "queOne current",:href=>"/brand_partners/versus_question/#{@versus.id}/1"}
+                    %span Question 1
+              %li
+                - if params[:question_no] == '2'
+                  %a{:class => "queTwo",:href=>"/brand_partners/versus_question/#{@versus.id}/2"}
+                    %span Question 2
+              %li
+                - if params[:question_no] == '3'
+                  %a{:class => "queThree",:href=>"/brand_partners/versus_question/#{@versus.id}/3"}
+                    %span Question 3
+        %p.quesSty
+          %a{:href => "/brand_partners/versus_question/#{@versus.id}/#{session_question}",}
+            %img{:alt => "Your Question", :src => "/images/btn_question.png"}/
+      = yield
+      = render :partial => 'layouts/footer'

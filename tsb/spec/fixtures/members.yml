@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyText
+  stash_name: MyString
+  stash_word: MyString
+  b_day: 2011-08-29
+  my_mail_goes_to: MyString
+  zip: MyString
+  membership_code_id: 1
+  temp_session_id: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyText
+  stash_name: MyString
+  stash_word: MyString
+  b_day: 2011-08-29
+  my_mail_goes_to: MyString
+  zip: MyString
+  membership_code_id: 1
+  temp_session_id: 1

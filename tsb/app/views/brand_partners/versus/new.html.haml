@@ -1,0 +1,59 @@
+:css
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+#main
+  .versusLogoBlock
+    %a{:href => "#"}
+      %img{:alt => "brand logo", :height => "113", :src => "/images/logoAirImg.png", :width => "339"}/
+  .BrandTxtBlock
+    %a{:href => "#"}
+      %img{:alt => "Brand Partner", :height => "28", :src => "/images/brandPartnerTxt.png", :width => "249"}/
+  .navBtnBlock
+    %ul
+      %li
+        %a.active{:href => "/brand_partners/versus/new"}
+          %img{:alt => "New Versus", :height => "39", :src => "/images/newVersusBtn.png", :width => "130"}/
+      %li
+        %a{:href => "/brand_partners/my_versus"}
+          %img{:alt => "My Versus", :height => "39", :src => "/images/myVersusBtn.png", :width => "130"}/
+      %li
+        %a{:href => "/brand_partners/edit"}
+          %img{:alt => "My Profile", :height => "39", :src => "/images/myProfileBtn.png", :width => "130"}/
+  .versusBlock
+    .versusContentBlock
+      =form_for(@versus, :url =>brand_partners_create_versus_path) do |f|
+        .versusTit
+          %h2 CREATE A NEW VERSUS
+        .versusSubTit
+          %h4 CONTACT
+        .versusInput
+          = f.text_field :contact_name, :class=>"inputSty" ,:placeholder => "CONTACT NAME"
+        .versusInput
+          = f.email_field :contact_email, :class=>"inputSty",:placeholder => "EMAIL"
+        .versusSubTit
+          %h4 VERSUS DETAILS
+        .versusInput
+          = f.text_field :detail, :class=>"inputSty",:placeholder => "VERSUS DETAIL"
+        .versusSubTit
+          %h4 # OF VERSUS QUESTIONS
+        .drobDownInput
+          = f.select :no_of_questions, %w[1 2 3],{},{:class=>"Short",:id=>"drop"}
+        .submitBtnBlock
+          %input#enterBtn.submitBtnSty{:name => "enterBtn", :type => "submit",:onclick=>"this.form.submit();", :value => ""}/
+#popup1.popupbox
+  - if @versus.errors and @versus.errors.size == 1
+    %h2 #{@versus.errors.full_messages[0] rescue ""}
+  - else
+    %h2 All ﬁelds must be ﬁlled in Please try again
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+-if @versus.errors.any?
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [520,287] });

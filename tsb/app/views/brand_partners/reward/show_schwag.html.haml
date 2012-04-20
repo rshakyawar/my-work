@@ -1,0 +1,319 @@
+= stylesheet_link_tag 'TSB_css'
+= stylesheet_link_tag 'schwag_game'
+= javascript_include_tag 'rails'
+= javascript_include_tag 'fb'
+= stylesheet_link_tag "promo_versus_second"
+= stylesheet_link_tag "real_tsb"
+= stylesheet_link_tag "schwag_earn_wrong_shot"
+= stylesheet_link_tag "schwag_winner"
+:css
+  .FBConnectButton_Simple, .FBConnectButton_RTL_Simple {
+    background-image: url("");
+    background-repeat: no-repeat;
+    outline: medium none;
+    text-decoration: none;
+  }
+  .ui-dialog {
+     background-color: Transparent;
+     background-image: url("") !important;
+  }
+  .ui-dialog .ui-dialog-titlebar-close{
+    margin: 3px 26px 0 5px;
+  } 
+  a.ui-dialog-titlebar-close {
+    background: url("") no-repeat scroll center top transparent;
+  }
+  #wrapper {
+    height:100%;
+    margin:0 auto 0px;
+    overflow:hidden;
+    padding:0;
+    width:868px;
+  }    
+  .schwag_win_main {
+    width:390px;
+    height:317px;
+    background:url("/images/schwag-win_bg.png") no-repeat left top;
+    margin:0px auto;
+    padding:20px 0px 0px 0px;
+  }
+
+  .schwag_lose_close_row {
+    width:315px;
+    height:20px;
+    margin:0 auto;
+  }
+
+  .schwag_lose_close_bttn {
+    width:71px;
+    height:20px;
+    float:right;
+    margin-left:-21px;
+  }
+
+  .schwag_lose_close_bttn a {
+    width:71px;
+    height:20px;
+    background:url("/images/schwag-lose_sprite_img.png") no-repeat left -9px;
+    display:block;
+    margin-left:-21px;
+  }
+
+  .schwag_lose_top_txt {
+    width:302px;
+    height:auto;
+    font:bold 18px TrajanPro;
+    color:#000;
+    text-align:center;
+    margin:10px 0px 0px 45px;
+  }
+
+  .schwag_lose_top_txt2 {
+    width:240px;
+    height:auto;
+    font:normal 18px TrajanPro;
+    color:#000;
+    text-align:center;
+    margin:10px auto 0px auto;
+  }
+
+  .schwag_lose_img {
+    width:300px;
+    height:auto;
+    margin:5px auto 0px auto;
+    text-align:center;
+  }
+
+  .schwag_social_bttn_row {
+    width:80px;
+    height:33px;
+    margin:23px 0px 0px 143px;
+  }
+
+  .schwag_facebook_bttn {
+    width:28px;
+    height:29px;
+    float:left;
+  }
+
+  .schwag_facebook_bttn a {
+    width:28px;
+    height:29px;
+    background:url("/images/schwag-lose_sprite_img.png") no-repeat -80px -4px;
+    display:block;
+  }
+
+  .schwag_twitter_bttn {
+    width:31px;
+    height:33px;
+    float:left;
+    margin-left:10px;
+  }
+
+  .schwag_twitter_bttn a {
+    width:31px;
+    height:33px;
+    background:url("/images/schwag-lose_sprite_img.png") no-repeat -118px top;
+    display:block;
+  }  
+  .schwag_lose_close_row {
+    width:315px;
+    height:20px;
+    margin:0 auto;
+    margin-left:45px;
+  }
+  .schwag_lose_close_bttn {
+    width:71px;
+    height:20px;
+    float:right;
+  }
+  .schwag_lose_close_bttn a {
+    width:71px;
+    height:20px;
+    background:url("/images/schwag-lose_sprite_img.png") no-repeat left -9px;
+    display:block;
+  }
+  .schwag_lose_top_txt {
+    width:302px;
+    height:auto;
+    font:bold 18px TrajanPro;
+    color:#000;
+    text-align:center;
+    margin:10px 0px 0px 27px;
+  }
+  .schwag_lose_top_txt2 {
+    width:240px;
+    height:auto;
+    font:normal 18px TrajanPro;
+    color:#000;
+    text-align:center;
+    margin:10px auto 0px auto;
+  }
+  .schwag_lose_img {
+    width:300px;
+    height:auto;
+    margin:5px auto 0px auto;
+    text-align:center;
+  }
+  .schwag_win_img {
+    width:300px;
+    height:auto;
+    margin:0 auto;
+    text-align:center;
+  }  
+  .schwag_win_top_txt {
+    width:300px;
+    height:auto;
+    font:bold 18px TrajanPro;
+    color:#000;
+    text-align:center;
+    margin-left:50px;
+    margin-top:16px;
+  }  
+  .schwag_win_txt2 {
+    width:331px;
+    height:auto;
+    font:bold 16px TrajanPro;
+    color:#000;
+    text-align:center;
+    margin-left:35px;
+    line-height:22px;
+  }  
+  .schwag_win_last_txt {
+    width:300px;
+    height:20px;
+    font:normal 14px "Times New Roman", Times, serif;
+    color:#000;
+    text-align:center;
+    margin-left:40px;
+    margin-top:8px;
+  }  
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background:url("../images/wrong_earn_shot_close.png")  no-repeat scroll center top transparent;
+    border:0 solid #999999;
+    color:#212121;
+    font-weight:normal;
+    outline:medium none;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("/images/wrong_earn_shot_close.png") no-repeat scroll center top transparent;
+  }
+  .ui-dialog {
+    height: 335px !important;
+    width: 390px !important;
+  }
+  .width_real{
+    height: 800px !important;
+    width: 454px !important;
+  }
+  .width_earn_another{
+    height: 820px !important;
+    width: 454px !important;
+  }
+  .schwag_loose_main {
+    width:349px;
+    height:317px;
+    background:url("/images/schwag-win_bg1.png") no-repeat left top;
+    margin:0px auto;
+    padding:20px 0px 0px 0px;
+  }
+  .Ernestschwag_facebook_bttn {
+    float:temp;
+    height:temp;
+    width:temp;
+  }
+  .none_display{
+    display:none;
+  }
+#main
+  #blockLeft{:style=>"width: 840px; margin-bottom: 20px;"}
+    %section.secOne
+      #secOneBlock
+        .tit The Schwag Image
+        =form_for(@schwag, :url =>"/brand_partners/show_schwag/#{@versus.id}",:html =>  {:id=>"schwag_form",:enctype => "multipart/form-data",:multipart => true, :style => " top:0px; position: relative; z-index: 100; height: 0px;"}) do |f|
+          %input#files{:size => "13", :type => "file",:style=>"opacity:0.0; filter:alpha(opacity=0);", :name=> "schwag[schwag_image]", :onchange=>"hide_image();"}
+          %input{:type => "hidden",:value=>"",:name=>"removed",:id=>"is_removed"}/
+          %input{:type => "hidden",:value=>"#{@versus.id}",:name=>"versus_id", :id=>"versus_id"}/
+          %input{:type => "hidden",:value=>"#{ @schwag.no_of_items  || "# Of Items"}",:name=>"schwag[no_of_items]", :id=>"no_of_items_id"}/
+          %input{:type => "hidden",:value=>"#{ @schwag.description  || "100 Character max"}",:name=>"schwag[description]", :id=>"description_id"}/
+          %input{:type => "hidden",:value=>"#{ @versus.schwag_magic_number.magic_numbers rescue ''}",:name=>"schwag_magic_numbers", :id=>"schwag_magic_numbers"}/
+          %input{:size => "13", :type => "submit",:value=>"upload",:style=>"margin-left:100px;"}/
+        .chooseImgBtn
+        .chooseImgBtnNoBackground
+        .chooseImgTxt image requirements
+        .removeImg remove image
+    %section.secFour{:style=>"margin-left: 20px;margin-top: 0px;"}
+      #secFourBlock
+        .tit IMAGE REQUIREMENTS
+        .txt1 FILE FORMATS: #{ApplicationHelper::IMAGE_FORMAT}
+        .txt2 File DIMENSION: #{get_file_dimension("schwag")}         
+  #blockRight{:style=>"width:865px;"}
+    .schwag_winner_numbner
+      Simply click on the squares you like and make them the winning Schwag numbers
+    .Ernestrewards_main
+      .Ernestrewards_top
+        %img{:alt => "", :border => "0", :src => "#{@versus.product.top_banner.url(:promo_top_banner)}"}/
+      .Ernestrewards_middle
+        .Ernestschwag_the_steal_txt_row
+        .Ernestschwag_the_steal_img_row
+        .Ernestschwag_the_upcomming_txt_row
+        .Ernestschwag_main_content_row
+          .Ernestschwag_middle_bttn
+            %ul
+              - for i in 1..45
+                %li
+                  %div{:style=>"width:60px;cursor:pointer;"}
+                    %div{:id=>"schwag_#{i}",:onclick=>"select_schwag_number(this,#{i});", :class=>"#{select_magic_number_class(i, @versus.schwag_magic_number.magic_numbers) rescue ''}"}
+                      %img{:alt => "", :border => "0", :src => "#{@schwag.schwag_image.url(:schwag_icon)}"}/
+                    %div{:id=>"schwag_number_#{i}",:onclick=>"unselect_schwag_number(this,#{i});", :class=>"#{de_select_magic_number_class(i, @versus.schwag_magic_number.magic_numbers) rescue 'none_display'}"}
+                      %img{:alt => "", :border => "0", :src => "/images/the_schwag_winner.jpg"}/
+          .clear
+        .Ernestschwag_middle_bttnrow2{:style=>"margin: 24px auto 0 131px;"}
+          - class_one, class_two, class_three = rgb_schwag_button(@is_ready_to_next_click, @played_shots)
+          %div{:class=>"Ernestschwag_first_shot_bttn#{class_one}"}
+            %a{:href => "#"}
+          %div{:class=>"Ernestschwag_second_shot_bttn#{class_two}"}
+            %a{:href => "#"}
+          %div{:class=>"Ernestschwag_third_shot_bttn#{class_three}"}
+            %a{:href => "#"}
+        .Ernestschwag_middle_txtrow3
+          .Ernestschwag_middle_txtrow3_row1
+            .Ernestschwag_txt_part1 Share the love
+            .Ernestschwag_social_bttn_part
+              .Ernestschwag_facebook_bttn{:style=>"float:left;height:34px;width:29px;"}
+                %a{:href => "javascript:void(0);"}
+              .Ernestschwag_twitter_bttn
+                - twitter_text = (@popup_sending_text.blank? or @popup_sending_text.twitter_text.blank?)? "" :@popup_sending_text.twitter_text               
+                %a{:href => "https://twitter.com/share?original_referer=http://#{Settings.site_base_uri}/brand_partners/show_schwag/#{@schwag.versus_id}&text=#{URI.escape(twitter_text)}&url=."}
+            .Ernestschwag_txt_part2 And we love you back
+          .Ernestschwag_middle_txtrow3_row2 ( earn another shot at the schwag by sharing this versus )     
+    - fb_image_link = (@shwag_winner_looser_popup.fb_image.url(:medium) == "/images/fb_logo.jpg")? "http://staging.thestashbox.com/images/fb_logo.jpg" : @shwag_winner_looser_popup.fb_image.url(:medium)           
+    %img#fb_share_image{:alt => "Icon-facebook", :src => "#{fb_image_link}", :style => "display: none;"}/
+    %input#fb_share_text{:style => "display: none;", :type => "hidden", :value => "#{@popup_sending_text.fb_text unless @popup_sending_text.blank? or @popup_sending_text.fb_text.blank?}"}/
+    %input#fb_image_link{:style => "display: none;", :type => "hidden", :value => "#{@shwag_winner_looser_popup.fb_image_link}"}/
+    %input#fb_share_return_url{:style => "display: none;", :type => "hidden", :value => "http://#{Settings.site_base_uri}/brand_partners/show_schwag/#{@schwag.versus_id}"}/
+    %input#fb_share_app_id{:style => "display: none;", :type => "hidden", :value => "#{Settings.fb_share_app_id}"}/
+    %section.secThree{:style=>"margin:70px 0 0 15px;"}
+      .ButtonBlock{:style=>"margin-left: 35px;width: 820px;"}
+        %input.saveBtnSty.btnPos{:name => "save", :type => "button",:onclick=>"save_and_submit();"}/
+        %input.reviewVersusBtnSty.btnPos{:name => "Review My Versus", :type => "button",:style=>"margin-left: 432px;"}/
+%img#fb_share_image{:alt => "Icon-facebook", :src => "#{@shwag_winner_looser_popup.fb_image.url(:medium)}", :style => "display: none;"}/
+%input#fb_share_text{:style => "display: none;", :type => "hidden", :value => "#{@popup_sending_text.fb_text unless @popup_sending_text.blank? or @popup_sending_text.fb_text.blank?}"}/
+%input#fb_image_link{:style => "display: none;", :type => "hidden", :value => "#{@shwag_winner_looser_popup.fb_image_link}"}/
+%input#fb_share_return_url{:style => "display: none;", :type => "hidden", :value => "http://#{Settings.site_base_uri}/brand_partners/show_schwag/#{@schwag.versus_id}"}/
+%input#fb_share_app_id{:style => "display: none;", :type => "hidden", :value => "#{Settings.fb_share_app_id}"}/         
+%input#slider{:type => "hidden", :value => "0"}
+= javascript_include_tag "reward_schwag"
+= javascript_include_tag "set_schwag_number"
+:javascript
+  $(document).ready(function() {
+      setPanelControls('#viewport7');		
+      setClearFields('#itemDesc', '.schwagTtemDescBg', '#{ @schwag.description  || "100 Character max"}','#{(@schwag.description.blank? or @schwag.description.to_s == "100 Character max")? "Item Description" : @schwag.description}');
+      setClearFields('#stealCode', '.noOfItemBg', '#{ @schwag.no_of_items  || "# Of Items"}','#{ @schwag.no_of_items || "# Of Items"}');
+      view.mapbox('back', 1);//step twice
+      var valore;
+      valore = parseInt($("#slider01").slider('value')) - 1;
+      $("#slider01").slider('value', valore);
+      $('#slider').val(valore);
+      return false;
+    });

@@ -1,0 +1,201 @@
+= stylesheet_link_tag "rewards_reset"
+= stylesheet_link_tag "rewards_main"
+= stylesheet_link_tag "popups"
+= stylesheet_link_tag "osdg_thank_you"
+= stylesheet_link_tag "real_tsb"
+:css
+  .rewardLink {
+    background-color:#FFFFFF;
+    border:1px solid #000000;
+    float:left;
+    height:223px;
+    margin-left:2px;
+    margin-top:50px;
+    width:197px;
+  }
+  @font-face {
+    font-family: 'TrajanPro';
+    src: url('/fonts/TrajanPro-Regular.eot?') format('eot'),
+    url('/fonts/TrajanPro-Regular.woff') format('woff'),
+    url('/fonts/TrajanPro-Regular.ttf') format('truetype'),
+    url('/fonts/TrajanPro-Regular.svg') format('svg');
+  }
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .rewardLink{
+    background-color:#FFFFFF;
+    border:1px solid #000000;
+    float:left;
+    height:223px;
+    width:197px;
+    margin-left:5px;
+    margin-top:94px;
+  }
+  .ui-dialog {
+    background-color: Transparent;
+    background-image: url("") !important;
+    height: 820px !important;
+    width: 454px !important;
+  }
+  .ui-dialog .ui-dialog-titlebar-close{
+    margin: 3px 26px 0 5px;
+  } 
+  a.ui-dialog-titlebar-close {
+    background: url("") no-repeat scroll center top transparent;
+  }
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background:url("/images/wrong_earn_shot_close.png")  no-repeat scroll center top transparent;
+    border:0 solid #999999;
+    color:#212121;
+    font-weight:normal;
+    outline:medium none;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("/images/wrong_earn_shot_close.png") no-repeat scroll center top transparent;
+  }
+  .TSB_Sorry_No_Win_Pop_main {
+    width:354px;
+    height:522px;
+    margin:0 auto;
+    position:relative;
+  }
+  .TSB_Sorry_No_Win_Pop_txt1 {
+    color: #FFFFFF;
+    font: italic 22px "TheLastFont11";
+    height: auto;
+    left: 38px;
+    position: absolute;
+    text-align: center;
+    top: 109px;
+    width: 280px;
+    line-height:25px;
+  }
+  .sorry-bg{
+    background: url("/images/tsb-sorry-box-logo.png") no-repeat scroll center 17px transparent;
+    height:80px;
+  }
+  .tsb-sorry-box-logo{
+    background: url("/images/tsb-sorry-box-logo.png") no-repeat scroll center 17px transparent;
+    height:80px;
+  }
+  .dont-win{
+    color:#010101;
+    font: italic 25px TheLastFont11;
+    text-align: center;
+    width: 324px;
+    margin-left:5px;
+  }
+  .dont-worry{
+     color:#010101;
+     font: italic 20px TheLastFont11;
+     text-align: center;
+     width: auto;
+     margin-bottom:10px;
+  }
+  .ready-soon{
+    color:#010101;
+    font: italic 15px TheLastFont11;
+    text-align: center;
+    width: auto;
+    line-height:27px;
+  }  
+- current_bracket_text = ""  
+#main
+  #blockLeft{:style=>"width: 840px; margin-bottom: 20px;"}
+    %section.secOne
+      #secOneBlock
+        .tit The #{params[:current_link].split("_")[0] +" Logo"}
+        - if params[:current_link] == "steal_image"                 
+          - current_bracket_text = "#{@reward_link.steal_bracket_text.to_s[0,50]}" 
+        - if params[:current_link] == "schwag_image"                 
+          - current_bracket_text = "#{@reward_link.schwag_bracket_text.to_s[0,50]}"          
+        =form_for(@reward_link, :url =>"/brand_partners/show_reward_link/#{@versus.id}/#{params[:current_link]}",:method=>:put,:html =>{:id=>"deal_form",:enctype => "multipart/form-data",:multipart => true, :style => " top:0px; position: relative; z-index: 100; height: 0px;"}) do |f|
+          %input#files{:size => "13", :type => "file", :style=>"opacity:0.0; filter:alpha(opacity=0);",:name=> "reward_link[#{params[:current_link]}]", :onchange=>"hide_image();"}
+          %input{:type => "hidden",:value=>"",:name=>"removed",:id=>"is_removed"}/
+          %input{:type => "hidden",:value=>"#{@versus.id}",:name=>"versus_id", :id=>"versus_id"}/
+          %input{:type => "hidden",:value=>"#{params[:current_link]}",:name=>"img_block", :id=>"img_block"}/
+          %input{:type => "hidden",:value=>"#{current_bracket_text}",:name=>"bracket_text", :id=>"bracket_text"}/
+          %input{:size => "13", :type => "submit",:value=>"upload",:style=>"margin-left:100px;"}/
+        .chooseImgBtn
+        .chooseImgBtnNoBackground
+        .chooseImgTxt image requirements
+        .removeImg remove image
+    %section.secFour{:style=>"margin-left: 20px;"}
+      #secFourBlock
+        .tit IMAGE REQUIREMENTS
+        .txt1 FILE FORMATS: #{ApplicationHelper::IMAGE_FORMAT}
+        .txt2 File DIMENSION: #{get_file_dimension("reward_link")}  
+    %input.dealCode.codeEco{:name=>"bracket_text",:value=>"#{current_bracket_text}",:id=>"bracket_text_below",:type => "text",:placeholder=>"#{params[:current_link].split("_")[0]+ " offer"}",:style=>"margin-left:40px;"} 
+    %br
+    %span{:style => "font:10px Arial, Helvetica, sans-serif; font-style:italic;margin-left: 42px;float: left;"} Maximum 50 characters   
+#blockRight{:style=>"width: 855px;"}
+  #main{:style=>"margin-bottom:90px;"}
+    .steel-container
+      .head-rewards
+        %span> Y
+        our
+        = succeed "ewards" do
+          %span R
+      .osdg_thank_you_content_main
+        .steal-wrapper
+          .left-part
+            .rewards-down-head
+              The
+              = succeed "teal" do
+                %span S
+            %div{:style=>"height: 221px;"}
+              #steal_viewport
+                %img{:src => "#{@reward_link.steal_image.url(:thank_you_steal)}"}/
+            .brackets{:style=>"margin-top:2px !important;"}
+              = @reward_link.steal_bracket_text.to_s[0,50] unless @reward_link.steal_bracket_text.blank?
+          .right-part
+            .rewards-down-head
+              The
+              = succeed "chwag" do
+                %span S
+            %div{:style=>"height: 221px;"}
+              #schwag_viewport
+                %img{:src => "#{@reward_link.schwag_image.url(:thank_you_schwag)}"}/
+            .brackets
+              = @reward_link.schwag_bracket_text.to_s[0,50] unless @reward_link.schwag_bracket_text.blank?
+%section.secThree 
+  .ButtonBlock{:style=>"margin-left: 85px;width: 690px;"}
+    %input.saveBtnSty.btnPos{:name => "save", :type => "button",:onclick=>"submit_form();"}/
+    %input.reviewVersusBtnSty.btnPos{:name => "Review My Versus", :type => "button",:style=>"width:200px;margin-left: 320px;"}/
+%input#slider{:type => "hidden", :value => "0"}
+= javascript_include_tag "reward_link"
+- if params[:current_link] == "deal_image"
+  :javascript
+    $(document).ready(function() {
+      setPanelControls('#deal_viewport');
+      });
+- if params[:current_link] == "steal_image"
+  :javascript
+    $(document).ready(function() {
+      setPanelControls('#steal_viewport');
+      });
+- if params[:current_link] == "schwag_image"
+  :javascript
+    $(document).ready(function() {
+      setPanelControls('#schwag_viewport');
+      });    
+:javascript
+  function submit_form(){
+    var text_data = $('#bracket_text_below').val();
+    $('#bracket_text').val(text_data);
+    $('#deal_form').submit();
+  }        

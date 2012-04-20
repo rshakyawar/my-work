@@ -1,0 +1,104 @@
+= stylesheet_link_tag "versus_winner_pop_up"
+= stylesheet_link_tag "promo_versus_second"
+= stylesheet_link_tag "brand_partner"
+= stylesheet_link_tag "gest_member"
+= stylesheet_link_tag "versus_member_login_pop_up"
+= stylesheet_link_tag "versus_login"
+:css
+  .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(""); }
+  .ui-dialog {
+    background-image: url("") !important;
+  }
+  .ui-widget-header{
+    background: url("") repeat-x scroll 50% 50% #776855;
+  }
+  .ui-dialog .ui-dialog-titlebar {
+    height:22px;
+    margin-right:16px;
+    margin-top:10px;
+    padding-bottom:0.4em;
+    padding-left:1em;
+    padding-right:44px;
+    padding-top:0.4em;
+    position:absolute;
+    right:0;
+    width:75px;
+    z-index:9999999;
+  }
+  a.ui-dialog-titlebar-close {
+   background:url("../images/TSB_Guest_Landing_sprite_img.png") no-repeat scroll -302px -125px transparent;
+  }
+  .ui-state-hover{
+    background:url("../images/TSB_Guest_Landing_sprite_img.png") no-repeat scroll -302px -125px transparent !important;
+  }
+  @font-face {
+    font-family: 'TrajanPro';
+    src: url('/fonts/TrajanPro-Regular.eot?') format('eot'),
+    url('/fonts/TrajanPro-Regular.woff') format('woff'),
+    url('/fonts/TrajanPro-Regular.ttf') format('truetype'),
+    url('/fonts/TrajanPro-Regular.svg') format('svg');
+  }
+- if request.path == "/"
+  #black_bg
+    #door_left
+    #door_right
+  #door_left_visible
+  #door_right_visible
+#main{:style => "padding-top:40px;padding-bottom:40px;"}
+  #blockRight{:style => "position:relative;margin-left:30px;"}
+    %section.promo_shadow
+      #topBanner_promo{:style=>"border-right: 1px solid gray;"}
+        %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:promo_top_banner)}"}/
+      #bgImgBlock_promo{:style=>"background-image:url('#{@product.background.url(:promo_background)}');"}
+        - if @product.background.to_s =="/backgrounds/original/missing.png"
+          %p Background Image
+        - else 
+          %p &nbsp;
+        #versusBlock{:style=>"margin:20px 0 0px 64px"}
+          #versusLeft.versusLeft_set.blue_border_versus
+            %img{:alt => "Versus Left", :src => "#{@question.versus_left.url(:medium)}"}/
+          #versusRight.versusRight_set.blue_border_versus
+            %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+      #bottomBannerBlock_promo
+        %img{:alt => "question_image", :src => "#{@question.question_image.url(:promo_question)}"}      
+#content_winner_code_id.dis_none{:style=>"position:relative; width:500px; height:2px;"}
+  .YouWonPopup_main{:style=>"position:absolute;left:180px;margin-top:-487px;"}
+    .youwonpopup_close_bttn_main
+      .youwonpopup_close_bttn
+        %a{:href => "#",:id=>"winner_pop_close_id"}
+    .TSB_Dessert_youwonpopup_txtline1 
+      %img{:align => "left", :alt => "", :border => "0", :src => "images/Dessert_textline1.png"}/    
+    .TSB_Dessert_youwonpopup_txtline2
+      Just email the winning code to
+      %br/
+      %span 
+        %a{:href => "mailto:info@thestashbox.com",:style=>"color:#EA6421;"} info@thestashbox.com 
+        to redeem your gift
+    .TSB_Dessert_youwonpopup_img_bg
+      %img{:align => "left", :alt => "", :border => "0", :src => "images/TSB_Dessert_YouWonPopup_img.jpg"}/
+    #promo_generate_code.youwonpopup_winner_code_txt Winner Code: TSB krwe
+    .youwonpopup_dont_belive_txt
+      %span Don't believe us?
+      Give us a ring at
+      %span{:style => "font-size:24px; color:#000;"} 646-833-7752
+#popup1.popupbox
+  .Versus_Login3_main
+    =form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      =f.text_field :stash_name ,:placeholder => "stashname", :autocomplete=>"off", :class=>:versus_login3_input1
+      = f.password_field :password ,:placeholder => "stashword", :class=>:versus_login3_input2
+      %input.Versus_Login3_submit{:type => "submit", :value => ""}/
+      .versus_login3_not_member_bttn
+        = link_to "",membership_path     
+= javascript_include_tag 'promo_versus'
+= javascript_include_tag 'homepage'
+= javascript_include_tag 'how_it_works'
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"} 
+:javascript
+  function go_to_home()
+  {
+    window.location.href = "#{versus_question_path(1)}";
+  }
+- unless request.path == "/"
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [425,287], close: function(event, ui){go_to_home();} });     

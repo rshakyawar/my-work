@@ -1,0 +1,207 @@
+= stylesheet_link_tag "membership"
+:css
+  body.memberLog .ui-dialog {
+    background-image:url("") !important;
+    height:500px !important;
+    width:450px !important;
+  }
+  .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(""); }
+  .ui-dialog {
+    background-image: url("") !important;
+  }
+  .ui-widget-header{
+    background: url("") repeat-x scroll 50% 50% #776855;
+  }
+  .ui-dialog .ui-dialog-titlebar {
+    height:22px;
+    margin-right:28px;
+    margin-top:68px;
+    padding-bottom:0.4em;
+    padding-left:1em;
+    padding-right:44px;
+    padding-top:0.4em;
+    position:absolute;
+    right:0;
+    width:75px;
+    z-index:9999999;
+  }
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  a.ui-dialog-titlebar-close {
+   background:url("../images/TSB_Guest_Landing_sprite_img.png") no-repeat scroll -302px -125px transparent;
+  }
+  .ui-state-hover{
+    background:url("../images/TSB_Guest_Landing_sprite_img.png") no-repeat scroll -302px -125px transparent !important;
+  }
+  .dialog_css{
+    background:url("../images/error_popup.png") !important;
+    width:272px;
+    height:214px;
+    position:relative;
+    margin-left:109px;
+    margin-top:54px;
+  }
+  .congrates_bg{
+    background:url("../images/congrates_bg.png") no-repeat;
+    width:358px;
+    height:318px;
+    position:relative;
+  }
+  .congrates_bg a{
+    cursor: pointer;
+    height: 43px;
+    left: 59px;
+    position: absolute;
+    top: 171px;
+    width: 239px;
+  }
+  .do-code{
+    background:url("../images/do_code.png");
+    width:287px;
+    height:142px;
+    position:relative;
+  }
+  .do-code input{
+    background: url("../images/do_input.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #010101;
+    font: bold 17px "Times New Roman",Times,serif;
+    height: 31px;
+    left: 22px;
+    padding-right: 7px;
+    position: absolute;
+    text-align: right;
+    top: 85px;
+    width: 154px;
+    line-height:26px;
+  }
+  .do-code input[type="submit"] {
+    cursor: pointer;
+    height: 30px;
+    left: 195px;
+    opacity: 0;
+    position: absolute;
+    width: 64px;
+    filter: alpha(opacity=0);
+  }
+#main
+  .main_logo
+    %img{:alt => "The Stash Box Membership Login", :height => "98", :src => "/images/logo-memberlogin.gif", :width => "461"}/
+  #boxWrap
+    .box{:style => "padding:0px 180px 0px 55px;"}
+      %h2
+        Enlist As a
+        %br
+          Stashbox Member
+      %h3
+        =image_tag "membership_text1.png"
+    .box.np{:style => "padding: 0px;"}
+      %h2{:style=>"margin-top:10px;"}
+        Get What You Give
+        %br>/
+        \ 
+      %h3{:style=>"margin-top:20px;"}
+        =image_tag "membership_text2.png"
+    .box{:style => "padding:30px 180px 0px 55px;"}
+      %h2
+        Applause for
+        %br
+          Participation
+      %h3
+        =image_tag "membership_text3.png"
+    .box{:style => "padding: 30px 0 0 0;"}
+      %h2{:style=>"margin-top:10px;width: 303px;"} You Have Our Word
+      %h3{:style=>"margin-top:20px;"}
+        =image_tag "membership_text4.png"
+    %br
+      .clear
+      %ul.buttons
+        %li
+          = form_for "",:url=>member_survey_submit_code_path,:remote => true, :html => {:id=>"have_code_form",:name=>"have_code_form"} do |f|
+            .have-code
+              %input{:name=>"membership_code",:id=>"membership_code",:placeholder => "code", :type => "text"}
+                %input#send_button_have_code{:name => "commit", :type => "submit"}
+                  #updating_div_have_code.display_hide{:style => "position:absolute;top:80px;left:222px;"}
+                    %p{:align => "center"}
+                      %img{:src => "/images/spinner_small.gif"}/
+        %li
+          = form_for :guest_user, :url=>send_membership_code_to_guest_path, :remote => true, :html => {:id=>"guest_form",:name=>"guest_form"} do |f|
+            .do-code
+              %input{:name => "guest_user[email]", :id=>"guest_user_email", :type => "text",:placeholder=>"email"}/
+              %input{:name => "", :type => "submit", :id=>"send_button", :name=>"commit"}/
+              %div.display_hide{:id => "updating_div",:style=>"position:absolute;top:80px;left:222px;"}
+                %p{:align => "center"}
+                  %img{:src => "/images/spinner_small.gif"}/
+#popup1.popupbox
+  .congrates_bg
+    %a{:href => "/guest/versus_question/1"}
+#popup2.popupbox
+  .dialog_css
+    %h2{:style=>"font-size:13px;left:28px;position:absolute;top:96px;"} Please enter valid code.
+#popup3.popupbox
+  .dialog_css
+    %h2{:style=>"font-size:13px;left:28px;position:absolute;top:96px;"} Please enter valid Email.
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'membership'
+= javascript_include_tag 'rails'
+
+:javascript
+    window.onload = function(){
+      $('#membership_code').val("");
+    }
+    jQuery(function($){
+      $("#guest_form").bind("ajax:beforeSend", function(evt, xhr, settings){
+        $("#updating_div").show();
+        $("#send_button").hide();
+      });
+      $("#guest_form").bind('ajax:success', function(data, status, xhr) { 
+        $("#send_button").show();
+        $("#updating_div").hide();
+        $("#guest_user_email").val("");
+        $("#popup1").dialog();
+      });
+      $("#guest_form").bind('ajax:failure', function(xhr, status, error) {
+        alert("Some thing went wrong!");
+        $("#send_button").show();  
+        $("#updating_div").hide();
+      });
+      $("#guest_form").bind('ajax:complete', function() { 
+        $("#send_button").show();
+        $("#updating_div").hide();
+      });
+      $("#guest_form").bind("ajax:error", function(evt, xhr, status, error){ 
+        $("#send_button").show(); 
+        $("#updating_div").hide();
+        $("#popup3").dialog({position: [417,100]});
+      });
+      
+      
+      $("#have_code_form").bind("ajax:beforeSend", function(evt, xhr, settings){
+        $("#updating_div_have_code").show();
+        $("#send_button_have_code").hide();
+      });
+      $("#have_code_form").bind('ajax:success', function(data, status, xhr) { 
+        $("#send_button_have_code").show();
+        $("#updating_div_have_code").hide();
+        window.location= "#{member_survey_survey_path}";
+      });
+      $("#have_code_form").bind('ajax:failure', function(xhr, status, error) {
+        alert("Some thing went wrong!");
+        $("#send_button_have_code").show();  
+        $("#updating_div_have_code").hide();
+      });
+      $("#have_code_form").bind('ajax:complete', function() { 
+        $("#send_button_have_code").show();
+        $("#updating_div_have_code").hide();
+      });
+      $("#have_code_form").bind("ajax:error", function(evt, xhr, status, error){ 
+        $("#send_button_have_code").show(); 
+        $("#updating_div_have_code").hide();
+        $("#popup2").dialog({position: [417,100]});
+      });
+    });
+
+        

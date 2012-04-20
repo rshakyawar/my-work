@@ -1,0 +1,109 @@
+/*less than IE 9*/
+
+body.blog .ui-dialog h2 {
+    margin: 30px 10px 10px;
+}
+section #secOneBlock .chooseImgTxt{
+    padding-top: 3px;
+	font-size: 0.688em !important;
+	text-transform: lowercase !important;
+}
+section #secOneBlock .removeImg a{
+	padding-left: 15px;
+	font-size: 0.875em;
+}
+#secOneBlock div.chooseImgTxt{
+    clear: both;
+    float: left;
+    font-size: 12px!important;
+	width: 95px;
+    margin: 0px;
+}
+#secOneBlock .moveTxt{
+    clear: both;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+	width: 95px;
+}
+#secOneBlock div.map-control {
+    position: relative;
+    top: 5px;
+    background: url(../images/move_img_button.jpg) no-repeat;
+    height: 32px;
+    width: 34px;
+	float: left;
+	clear: both;
+}
+#secOneBlock div.reset{
+    clear: both;
+    display: block;
+    float: left;
+    height: 30px;
+    margin-left: 100px;
+	margin-top: 5px;
+    width: 78px;
+}
+#secOneBlock div.resetImg{
+    float: left;
+    margin-left: 5px;
+    width: 30px;
+}
+#secOneBlock div.resetTxt{
+    float: left;
+    margin-top: 5px;
+}
+#secFourBlock div.tit{
+    font-size: 0.87em;
+    font-style: italic;
+    margin: 5px 0px 10px 10px;
+}
+#secFourBlock div.txt1 {
+    clear: both;
+    float: left;
+    font-size: 11px;
+    font-style: italic;
+	width: 90px;
+	margin-bottom: 20px;
+}
+#secFourBlock div.txt2 {
+    clear: both;
+    float: left;
+    font-size: 11px;
+    font-style: italic;
+	width: 55px;
+}
+#questionBlock div.delQ{
+    clear: both;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 30px 0;
+    width: 175px;
+}
+#questionBlock div.chooseFont{
+    background: url("../images/quesPanelImg4.gif") no-repeat scroll top left transparent;
+    clear: both;
+    height: 20px;
+	margin-bottom: 5px;
+	float: left;
+}
+#files{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+#question_b {
+    border: medium none;
+    height: 33px;
+    text-align: center;
+    width: 530px;
+	float: left;
+	clear: both;
+}
+#bannerLeftBlock div.tit{
+    font-size: 13px;
+    font-style: italic;
+    margin: 5px 0 10px 0;
+	text-align: center;
+}

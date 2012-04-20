@@ -1,0 +1,54 @@
+#main
+  %img{:alt => "Ways to Hunt The Stash Box Membership", :src => "images/logo_waysToHunt.gif"}/
+  %p.tagLine Hunt down membership codes on and offline. Check out the hints below.
+  #boxWrap
+    %ul#huntCode
+      %li
+        %a#lnkMore1{:href => "javascript:;", :onclick => "OpenDialog(this,1);"}
+          %img{:alt => "Get it on Twitter", :src => "images/icon_twitter.gif"}/
+      %li
+        %a#lnkMore2{:href => "javascript:;", :onclick => "OpenDialog(this,2);"}
+          %img{:alt => "Stashblog partners", :src => "images/icon_and.gif"}/
+      %li
+        %a#lnkMore3{:href => "javascript:;", :onclick => "OpenDialog(this,3);"}
+          %img{:alt => "Brick and mortar", :src => "images/icon_block.gif"}/
+      %li
+        %a#lnkMore4{:href => "javascript:;", :onclick => "OpenDialog(this,4);"}
+          %img{:alt => "Hangouts", :src => "images/icon_crowd.gif"}/
+      %li
+        %a#lnkMore5{:href => "javascript:;", :onclick => "OpenDialog(this,5);"}
+          %img{:alt => "We've only just begun", :src => "images/icon_blog.gif"}/
+      %li
+        %a#lnkMore6{:href => "javascript:;", :onclick => "OpenDialog(this,6);"}
+          %img{:alt => "Celebration Anticipation", :src => "images/icon_record.gif"}/
+/ #main
+#popup1.popupbox
+  %img{:alt => "Get it on Twitter", :height => "55", :src => "images/icon_twitter.gif", :width => "60"}/
+  %h2 Twitter
+  %p
+    Follow us
+    = succeed "," do
+      %a{:href => "http://twitter.com/#!/the_stashbox",:style=>"color: black;"} @the_stashbox as we'll be blasting out membership codes a few times a week. Prompt, pertinent and rewarding info in 140 characters or less from @the_stashbox
+#popup2.popupbox
+  %img{:alt => "Stashblog partners", :height => "55", :src => "images/icon_and.gif", :width => "60"}/
+  %h2 Stashblog partners
+  %p Don't be a stranger, check our blog, twitter and facebook pages regularly and find out whom we'll be teaming up with for those partnerships will soon be hosting the 411 on becoming a StashBox member.
+#popup3.popupbox
+  %img{:alt => "Brick and mortar", :height => "55", :src => "images/icon_block.gif", :width => "60"}/
+  %h2 Brick and mortar
+  %p Stay tuned as TSB will be selecting local NYC businesses that meet the needs of our user base. These carefully picked locations will have membership code cards so stop and mention the STASHBOX. Your curiosity will be rewarded.
+#popup4.popupbox
+  %img{:alt => "Hangouts", :height => "55", :src => "images/icon_crowd.gif", :style => "margin:10px 0 0 0;", :width => "60"}/
+  %h2{:style => "margin:0;"} Hangouts
+  %p Join our mailing list, follow us on Twitter, friend us on FaceBook, check out our blog- basically by doing a bit of cyber stalking you'll find out where we'll be hanging out. Come by for a drink (on us!) and get a membership code. WARNING: This means you'll have to step away from the computer and into the real world. It's more fun in person, we promise!
+#popup5.popupbox
+  %img{:alt => "We've only just begun", :height => "55", :src => "images/icon_blog.gif", :width => "60"}/
+  %h2 We've only just begun
+  %p Check out our STASHBLOG as membership codes will appear in our posts and you'll be in the loop of what we're up to. Blog it up!
+#popup6.popupbox
+  %img{:alt => "Celebration Anticipation", :height => "55", :src => "images/icon_record.gif", :width => "60"}/
+  %h2 Celebration Anticipation
+  %p Leave your email address with us and check back in as we'll be sending out exclusive event invitations – a toast to the opportunity of becoming a StashBox member
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'hunt_membership'

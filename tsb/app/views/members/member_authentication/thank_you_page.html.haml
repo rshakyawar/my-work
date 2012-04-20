@@ -1,0 +1,181 @@
+= stylesheet_link_tag "rewards_reset"
+= stylesheet_link_tag "rewards_main"
+= stylesheet_link_tag "popups"
+= stylesheet_link_tag "osdg_thank_you"
+= stylesheet_link_tag "real_tsb"
+:css
+  @font-face {
+    font-family: 'TrajanPro';
+    src: url('/fonts/TrajanPro-Regular.eot?') format('eot'),
+    url('/fonts/TrajanPro-Regular.woff') format('woff'),
+    url('/fonts/TrajanPro-Regular.ttf') format('truetype'),
+    url('/fonts/TrajanPro-Regular.svg') format('svg');
+  }
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .rewardLink{
+    background-color:#FFFFFF;
+    border:1px solid #000000;
+    float:left;
+    height:223px;
+    width:197px;
+    margin-left:5px;
+    margin-top:94px;
+  }
+  .ui-dialog {
+    background-color: Transparent;
+    background-image: url("") !important;
+    height: 820px !important;
+    width: 454px !important;
+  }
+  .ui-dialog .ui-dialog-titlebar-close{
+    margin: 3px 26px 0 5px;
+  } 
+  a.ui-dialog-titlebar-close {
+    background: url("") no-repeat scroll center top transparent;
+  }
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background:url("/images/wrong_earn_shot_close.png")  no-repeat scroll center top transparent;
+    border:0 solid #999999;
+    color:#212121;
+    font-weight:normal;
+    outline:medium none;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("/images/wrong_earn_shot_close.png") no-repeat scroll center top transparent;
+  }
+  .TSB_Sorry_No_Win_Pop_main {
+    width:354px;
+    height:522px;
+    margin:0 auto;
+    position:relative;
+  }
+  .TSB_Sorry_No_Win_Pop_txt1 {
+    color: #FFFFFF;
+    font: italic 22px "TheLastFont11";
+    height: auto;
+    left: 38px;
+    position: absolute;
+    text-align: center;
+    top: 109px;
+    width: 280px;
+    line-height:25px;
+  }
+  .sorry-bg{
+    background: url("/images/tsb-sorry-box-logo.png") no-repeat scroll center 17px transparent;
+    height:80px;
+  }
+  .tsb-sorry-box-logo{
+    background: url("/images/tsb-sorry-box-logo.png") no-repeat scroll center 17px transparent;
+    height:80px;
+  }
+  .dont-win{
+    color:#010101;
+    font: italic 25px TheLastFont11;
+    text-align: center;
+    width: 324px;
+    margin-left:5px;
+  }
+  .dont-worry{
+     color:#010101;
+     font: italic 20px TheLastFont11;
+     text-align: center;
+     width: auto;
+     margin-bottom:10px;
+  }
+  .ready-soon{
+    color:#010101;
+    font: italic 15px TheLastFont11;
+    text-align: center;
+    width: auto;
+    line-height:27px;
+  }
+  
+#main{:style=>"margin-bottom:90px;"}
+  .steel-container
+    .head-rewards
+      %span> Y
+      our
+      = succeed "ewards" do
+        %span R
+    .osdg_thank_you_content_main
+      .steal-wrapper
+        .left-part
+          .rewards-down-head
+            The
+            = succeed "teal" do
+              %span S
+          %div
+            /%a{:href => "/members/the_steal"}
+            %img{:src => "#{@reward_link.steal_image.url(:thank_you_steal)}"}/
+          .brackets{:style=>"margin-top:2px !important;"}
+            = @reward_link.steal_bracket_text.to_s[0,50] unless @reward_link.steal_bracket_text.blank?            
+        .right-part
+          .rewards-down-head
+            The
+            = succeed "chwag" do
+              %span S
+          %div
+            %a{:href => "/members/the_schwag"}
+              %img{:src => "#{@reward_link.schwag_image.url(:thank_you_schwag)}"}/
+          .brackets
+            = @reward_link.schwag_bracket_text.to_s[0,50] unless @reward_link.schwag_bracket_text.blank?            
+#popup1.popupbox
+  .TSB_Sorry_No_Win_Pop_main
+    %img{:alt => "", :border => "0", :src => "/images/TSB_Sorry_No_Win_Pop.png", :usemap => "#Map"}/
+    .TSB_Sorry_No_Win_Pop_txt1
+      We really are
+      %br/
+      Sorry you didn't win
+    %map#Map{:name => "Map"}
+      %area{:coords => "95,468,168,480", :onclick=>"$('#popup3').dialog({ closeText: '' ,modal:true , resizable: false});",:href => "javascript:void(0);", :shape => "rect"}
+#popup2.popupbox
+  .TSB_Sorry_No_Win_Pop_main
+    %img{:alt => "", :border => "0", :src => "/images/TSB_Sorry_No_Win_Pop.png", :usemap => "#Map"}/
+    .TSB_Sorry_No_Win_Pop_txt1
+      You have already won
+      %br/
+      Please wait
+    %map#Map{:name => "Map"}
+      %area{:coords => "95,468,168,480", :onclick=>"$('#popup3').dialog({ closeText: '' ,modal:true , resizable: false});",:href => "javascript:void(0);", :shape => "rect"}
+#popup3.popupbox
+  .real_pop_container
+    .real_pop_innercontainer
+      .real_top_black
+        .big_brackets
+          You think it is too
+          %br/
+          good to be True?
+        %p.trust_issues_txt It's okay we have trust issues as well!
+      .photo_evidence    
+        %img{:src => "#{@shwag_winner_looser_popup.real.url(:medium)}"}/         
+      %p.enough_shot 
+        If the photo isn't enough shoot us an email
+        %p.russ_email
+          %a{:href => "#"} russ@thestashbox.com
+= javascript_include_tag 'promo_versus'
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+- if params[:shot_pop_up] == "true"
+  :javascript
+    $("#popup1").dialog({ closeText: '' ,modal:true , resizable: false});
+- if params[:winner] == "true"
+  :javascript
+    $("#popup2").dialog({ closeText: '' ,modal:true , resizable: false});
+- if params[:real_tsb] == "true"
+  :javascript
+    $("#popup3").dialog({ closeText: '' ,modal:true , resizable: false});

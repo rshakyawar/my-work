@@ -1,0 +1,23 @@
+%section.promo_shadow
+  #topBanner_promo
+    %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:promo_top_banner)}"}/
+  #bgImgBlock
+    .mapwrapper_bg{:style => "height:300px;"}
+      #viewport_bg
+        .current-map-layer{:style => "background: url('#{@product.background.url(:promo_background)}') no-repeat scroll 0% 0% transparent; width: 760px; height: 300px;"}
+          / top level map content goes here
+        %div{:style => "height: 1600px; width: 2560px;"}
+          = image_tag @product.background.url(:promo_background)
+          .mapcontent
+            / map content goes here
+      #viewport{:style => "display: none;"}
+        %img{:alt => "background image", :src => "/images/temp_background.jpg"}/
+    #versusBlock{:style=>"margin:20px 0 0px 64px;position:absolute;top:97px;left:16px;"}
+      #versusLeft.versusLeft_set
+        %img{:alt => "Versus Left", :src => "#{@question.versus_left.url(:medium)}"}/
+      #versusRight.versusRight_set
+        %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+  #bottomBannerBlock_promo
+    %img{:alt => "question_image", :src => "#{@question.question_image.url(:promo_question)}"}
+:javascript
+  $(document).ready(function() {setPanelControls('#viewport_bg');	});

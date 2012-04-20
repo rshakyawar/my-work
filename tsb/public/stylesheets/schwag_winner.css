@@ -1,0 +1,79 @@
+.real_pop_container1{
+	background:url(/images/wrong_earn_shot_mainbg.png);
+	width:354px;
+	height:522px;
+	margin:0 auto;
+}
+.swach_inner_black1{
+	background:url(/images/schwag_winner_innerblack_bg.png);
+	width:324px;
+	height:491px;
+    left: 16px;
+    position: relative;
+    top: 9px;	
+}
+.top_winner_img1{
+	background:url();
+	width:171px;
+	height:184px;
+	margin:0 auto;
+	position:relative;
+	top:7px;
+}
+.love_it_txt1{
+	font:normal 17px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	margin-top:17px;		
+}
+.yes_spa1{
+	font:italic 26px "TheLastFont11";
+}
+.win_spa1{
+	color:#fff200;
+}
+.free_qbag_txt1{
+	font:normal 14px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	margin-top:25px;
+}
+.free_qbag_txt1 span{
+	color:#fff200;
+	text-decoration:none;
+}
+.free_qbag_txt1 span a{
+	color:#fff200;
+	text-decoration:none;
+}
+.good_be_true1{
+	font:normal 17.5px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	margin-top:19px;	
+}
+.good_be_true1 span{
+	font:normal 17.5px "TheLastFont11";
+	color:#ffffff;	
+}
+.good_be_true_txt1{
+	font:normal 11px "TrajanPro";
+	color:#ffffff;
+	margin-top:5px;
+	text-align:center;
+}
+.tsb_pin1{
+	float:left;
+	font:normal 10px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	width:150px;
+	margin-top:0px;
+}
+.rus_pin1{
+	float:right;
+	margin-right:16px;
+	font:normal 10px "TheLastFont11";
+	color:#ffffff;
+	margin-top:0px;
+}

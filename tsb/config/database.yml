@@ -1,0 +1,38 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: tsb_development
+  pool: 5
+  username: root
+  password: manager
+
+test:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: tsb_development
+  pool: 5
+  username: root
+  password: manager
+
+staging:
+  host: localhost
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: tsb_staging
+  pool: 5
+  username: deployer
+  password: g00dc0des
+
+production:
+  host: localhost
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: tsb_production
+  pool: 5
+  username: root
+  password: .#3H^c7)2XsJR
+

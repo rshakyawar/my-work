@@ -1,0 +1,26 @@
+:css
+  .holiday_versus_main {  
+   	width:450px; 
+   	background:url("/images/TSBHolidayVersusThanks_bg.png") no-repeat 0 0;  
+   	height:630px;  
+   	margin:0 auto; 
+   	position:relative; 
+  }  
+  .holiday_versus_invite_friend_bttn {  
+   	width:225px; 
+   	height:63px; 
+   	position:absolute;  
+   	top:513px;  
+   	left:111px; 
+  } 
+  .holiday_versus_invite_friend_bttn a {  
+   	background:url("/images/invite_friends_bttn.jpg") no-repeat 0 0;
+   	width:225px; 
+   	height:63px; 
+   	display:block; 
+  }
+  
+%body
+  .holiday_versus_main
+    .holiday_versus_invite_friend_bttn
+      %a{:href => "#{members_invite_friends_path}"}

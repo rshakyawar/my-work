@@ -1,0 +1,47 @@
+:css
+  h2 {
+    font-family:Trajan Pro,serif;
+    font-size:9px;
+    text-transform:uppercase;
+  }
+  #error_explanation{
+    margin-left:40px;
+  }
+
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+#middle_content
+  .my_stash_box_main
+    .my_stash_box_lock_img
+    .my_stash_box
+    .my_stash_box_lock_img
+  .my_stash_box_heading_txt A personal collection of my STASHBOX contributions.
+  .forget_key_box
+    .forget_stashname_bg
+      .forget_login_heading2
+      .forget_heading_txt2
+        Please enter your stashname .
+        Click the "enter" button.
+      = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+        .member_login_field_main
+          .forgot_login_field
+            = f.text_field :stash_name, :class=>:forgot_login_field_bg, :placeholder => "STASHNAME"
+        .member_login_forget_txt
+          Forgot your
+          %a{:href => "#{members_forgot_stash_name_path}"} stashname
+        .member_login_enter_bttn
+          %input.member_login_enter_bttn_bg{:type => "button", :value => "ENTER",:onclick=>"this.form.submit();",:style=>"cursor:pointer;padding-left: 10px;"}/
+#popup1.popupbox
+  %h2 Please Enter correct STASHNAME
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+-if resource.errors.any?
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [510,375] });

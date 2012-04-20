@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  selected_option: MyString
+  question: 
+
+two:
+  email: MyString
+  selected_option: MyString
+  question: 

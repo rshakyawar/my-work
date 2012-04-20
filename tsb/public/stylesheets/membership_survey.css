@@ -1,0 +1,596 @@
+@charset "utf-8";
+/* CSS Document */
+
+.membership_content {
+	width:870px;
+	height:auto;
+	margin:25px auto 0;
+}
+.membership_heading {
+	width:304px;
+	height:55px;
+	background:url(/images/membership_survey_heading.png) no-repeat 0 0;
+	margin:20px auto 0;
+}
+.communication_box {
+	width:820px;
+	height:auto;
+	margin:30px auto 0;
+}
+.box_top_corner {
+	width:820px;
+	height:17px;
+	background:url(/images/box_bg_top_corner.png) no-repeat 0 0;
+}
+.box_middle_corner {
+	width:820px;
+	height:auto;
+	background:url(/images/box_bg_middle.png) repeat-y;
+	padding:0 0 10px 0;
+}
+.box_bottm_corner {
+	width:820px;
+	height:20px;
+	background:url(/images/box_bg_bottm_corner.png) no-repeat 0 0;
+}
+
+.communication_heading {
+	width:820px;
+	height:auto;
+	font:normal 14px "Times New Roman", Times, serif;
+	color:#4d4d4d;
+	margin:0 auto;
+	text-align:center;
+}
+.communication_heading span {
+	font:bold 24px "TrajanPro";
+	color:#ab0000;
+}
+.communication_content {
+	width:760px;
+	height:auto;
+	margin:15px auto 0;
+}
+.communication_colum {
+	width:151px;
+	height:auto;
+	float:left;
+	border-right:solid 1px #e2dedd;
+}
+.commu_last_colum {
+	border:none !important;
+}
+.commu_colum_text {
+	width:151px;
+	height:auto;
+	font:bold italic 15px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+}
+.commu_colum_txt_icon {
+	width:151px;
+	height:63px;
+	text-align:center;
+	background:url(/images/membership_icon_spirite.png) no-repeat center 0;
+	margin:5px 0 0 0;
+}
+.commu_colum_calls_icon {
+	width:151px;
+	height:63px;
+	text-align:center;
+	background:url(/images/membership_icon_spirite.png) no-repeat center -84px;
+	margin:5px 0 0 0;
+}
+.commu_colum_emails_icon {
+	width:151px;
+	height:63px;
+	text-align:center;
+	background:url(/images/membership_icon_spirite.png) no-repeat center -165px;
+	margin:5px 0 0 0;
+}
+.commu_colum_social_icon {
+	width:151px;
+	height:63px;
+	text-align:center;
+	background:url(/images/membership_icon_spirite.png) no-repeat center -255px;
+	margin:5px 0 0 0;
+}
+.commu_colum_human_icon {
+	width:151px;
+	height:63px;
+	text-align:center;
+	background:url(/images/membership_icon_spirite.png) no-repeat center -334px;
+	margin:5px 0 0 0;
+}
+.box2_image_center {
+	margin-left:110px !important;
+}
+
+.membership_img_row {
+	width:820px;
+	height:145px;
+	margin:20px 0px 0px 0px;
+}
+.membership_img_bg {
+	width:191px;
+	height:142px;
+	background:url(/images/membership_img_bg.png) no-repeat 0 0;
+	float:left;
+	margin:0px 0px 0px 6px;
+	padding:6px 0px 0px 8px;
+}
+.step2_img_links_row {
+	width:177px;
+	height:29px;
+	background:#e8e7e7;
+}
+.step2_img_links_row a {
+	width:86px;
+	height:26px;
+	text-align:center;
+	font:bold 13px "TrajanPro";
+	color:#000;
+	text-align:center;
+	text-decoration:none;
+	float:left;
+	border:solid 1px #999;
+	padding:6px 0px 0px 0px;
+}
+.membership_box3_img_row {
+	width:620px;
+	height:auto;
+	margin: 20px auto 0;
+}
+
+.box3_img_relationship {
+	background:url(/images/box3_sprite_imags.png) no-repeat 0 0px;
+	width:206px;
+	height:153px;
+	float:left;
+}
+.box3_img_relationship a {
+	width:180px;
+	height:126px;
+	display:block;
+	margin:10px 0 0 13px;
+}
+.box3_img_education {
+	background:url(/images/box3_sprite_imags.png) no-repeat 0 -168px;
+	width:206px;
+	height:153px;
+	float:left;
+}
+.box3_img_education a {
+	width:180px;
+	height:126px;
+	display:block;
+	margin:10px 0 0 13px;
+}
+.box3_img_spending {
+	background:url(/images/box3_sprite_imags.png) no-repeat 0 -349px;
+	width:206px;
+	height:153px;
+	float:left;
+}
+.box3_img_spending a {
+	width:180px;
+	height:126px;
+	display:block;
+	margin:10px 0 0 13px;
+}
+
+.box3_img_9to5 {
+	background:url(/images/box3_sprite_imags.png) no-repeat 0 -522px;
+	width:206px;
+	height:153px;
+	float:left;
+	margin-left:100px;
+}
+.box3_img_9to5 a {
+	width:180px;
+	height:126px;
+	display:block;
+	margin:10px 0 0 13px;
+}
+
+.box3_img_occupation {
+	background:url(/images/box3_sprite_imags.png) no-repeat 0 -717px;
+	width:206px;
+	height:153px;
+	float:left;
+}
+.box3_img_occupation a {
+	width:180px;
+	height:126px;
+	display:block;
+	margin:10px 0 0 13px;
+}
+.membership_next_bttn_row {
+	width:870px;
+	height:93px;
+	margin:0 auto;
+}
+.membership_next_bttn {
+	width:182px;
+	height:93px;
+	background:url(/images/membership_next_bttn.png) no-repeat 0 0;
+	float:right;
+	margin:45px 23px 0 0;
+}
+.membership_next_bttn a {
+	width:163px;
+	height:75px;
+	display:block;
+	margin:6px 0 0 15px;
+}
+.membership_like_icon {
+	width:15px;
+	height:15px;
+	background:url(/images/like_icon.png) no-repeat 9px 5px;
+}
+
+
+
+/*   checkbox  css start  */
+
+
+.skinned-form-controls input[type="checkbox"],
+.skinned-form-controls input[type="radio"]
+{
+	position: absolute;
+	-moz-opacity: 0;
+	-webkit-opacity: 0;
+	opacity: 0;
+}
+
+/* prevent the entire page from scrolling if there is overflow and checkbox or radio button are clicked */
+.skinned-form-controls label
+{
+	position: relative;
+	font:normal 15px "Times New Roman", Times, serif;
+	color:#2d0f01;
+}
+
+/* fallback for IE6, IE7 and IE8 */
+.skinned-form-controls input[type="checkbox"],
+.skinned-form-controls input[type="radio"]
+{
+	position: static\9;
+}
+
+.skinned-form-controls input[type="checkbox"] + span::before,
+.skinned-form-controls input[type="radio"] + span::before
+{
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	background-repeat:  no-repeat;
+}
+
+.skinned-form-controls input[type="checkbox"]:checked + span::before
+{
+	background-position: 0 -20px;
+}
+
+.skinned-form-controls input[type="radio"] + span::before
+{
+	background-position: -20px 0;
+}
+
+.skinned-form-controls input[type="radio"]:checked + span::before
+{
+	background-position: -20px -20px;
+}
+
+/* disabled form elements */
+.skinned-form-controls input[type="radio"]:disabled + span,
+.skinned-form-controls input[type="checkbox"]:disabled + span,
+.skinned-form-controls input[type="radio"]:disabled + span::before,
+.skinned-form-controls input[type="checkbox"]:disabled + span::before
+{
+	-moz-opacity: .4;
+	-webkit-opacity: .4;
+	opacity: .4;
+}
+
+/* focused and active form elements */
+.skinned-form-controls input[type="checkbox"]:focus + span::before,
+.skinned-form-controls input[type="radio"]:focus + span::before,
+.skinned-form-controls input[type="checkbox"]:active + span::before,
+.skinned-form-controls input[type="radio"]:active + span::before
+{
+	outline: dotted 1px #ccc;
+}
+
+/* skin-specific sprite */
+.skinned-form-controls.skinned-form-controls-mac input[type="checkbox"] + span::before,
+.skinned-form-controls.skinned-form-controls-mac input[type="radio"] + span::before
+{
+	background-image: url(/images/sprite.png);
+	padding:3px 0 0 10px;
+/*	margin:0 0 0 20px;   */
+}
+
+
+
+
+/*   Form page  css start    */
+
+.chechbox_margin {
+	margin-left:20px;
+}
+
+.membership_form_main {
+	width:675px;
+	height:auto;
+	margin:0 auto;
+}
+.membership_form_top_corner {
+	width:675px;
+	height:25px;
+	background:url(/images/top_crnr_form_box.png) no-repeat 0 0;
+}
+.membership_form_middle_corner {
+	width:675px;
+	height:auto;
+	background:url(/images/middle_crnr_form_box.png) repeat-y 0 0;
+}
+.membership_form_bottm_corner {
+	width:675px;
+	height:25px;
+	background:url(/images/bottom_crnr_form_box.png) no-repeat 0 0;
+}
+.membership_form_main_row {
+	width:675px;
+	height:auto;
+	padding:10px 0 0 0;
+}
+.membership_form_name {
+	width:170px;
+	height:28px;
+	float:left;
+	font:normal 17px "TrajanPro";
+	color:#b01111;
+	text-align:right;
+	padding:4px 0 0 0;
+}
+.membership_form_name p {
+	font:bold italic 11px "Times New Roman", Times, serif;
+	color:#6d6c6c;
+	margin-top:-6px;
+}
+.membership_form_field {
+	width:auto;
+	height:32px;
+	float:left;
+	margin:0 0 0 15px;
+}
+.member_form_field1 {
+	width:257px;
+	height:30px;
+	background:url(/images/membership_form_sprite_imgs.png) no-repeat -1px 0;
+	font:bold italic 13px "Times New Roman", Times, serif;	
+	border:none;
+	text-align:right;
+	padding:0 5px;
+	padding-top: 7px\9	
+}
+.member_form_field2 {
+	width:200px;
+	height:30px;
+	background:url(/images/membership_form_sprite_imgs.png) no-repeat 0 -40px;
+	border:none;
+	font:bold italic 13px "Times New Roman", Times, serif;
+	text-align:right;
+	padding:0 5px;
+	padding-top: 7px\9	
+}
+.member_divide_line {
+	width:623px;
+	height:1px;
+	border-bottom:solid 2px #cbcccb;
+	margin:0 auto;
+	padding:12px 0;
+}
+
+   /*   fox select list css   */
+   
+   
+   .select {background: url(/images/membership_form_sprite_imgs.png) no-repeat 0px -81px transparent;color: #4d4d4d; font: bold italic 13px/28px "Times New Roman", Times, serif;; height:32px; padding:5px 0px 0px 18px; position: absolute; width: 267px;
+}
+select.styled { height: 32px; filter:alpha(opacity = 0); font:bold italic 13px "Times New Roman", Times, serif; margin:0px; opacity: 0; position: relative; width:267px; z-index: 5;}
+
+
+   .date {background: url(/images/membership_form_sprite_imgs.png) no-repeat 0px -121px transparent;color: #4d4d4d; font: bold italic 13px/28px "Times New Roman", Times, serif;; height:32px; padding:2px 0px 0px 10px; position: absolute; width: 68px;
+}
+select.date_styled { height: 32px; filter:alpha(opacity = 0); font:bold italic 13px "Times New Roman", Times, serif; margin:0px; opacity: 0; position: relative; width:68px; z-index: 5;}
+
+
+   .month {background: url(/images/membership_form_sprite_imgs.png) no-repeat -172px -121px transparent;color: #4d4d4d; font: bold italic 13px/28px "Times New Roman", Times, serif;; height:32px; padding:2px 0px 0px 5px; position: absolute; width: 94px;
+}
+select.month_styled { height: 32px; filter:alpha(opacity = 0); font:bold italic 13px "Times New Roman", Times, serif; margin:0px; opacity: 0; position: relative; width:94px; z-index: 5;}
+	
+	
+	.year {background: url(/images/membership_form_sprite_imgs.png) no-repeat -172px -121px transparent;color: #4d4d4d; font: bold italic 13px/28px "Times New Roman", Times, serif;; height:32px; padding:2px 0px 0px 10px; position: absolute; width: 94px;
+}
+select.year_styled { height: 32px; filter:alpha(opacity = 0); font:bold italic 13px "Times New Roman", Times, serif; margin:0px; opacity: 0; position: relative; width:94px; z-index: 5;}
+
+
+
+.confirm_password {
+	font-size:14px !important;
+}
+.space1 {
+	margin-top:20px !important;
+}
+
+
+.member_form_field3 {
+	width:425px;
+	height:32px;
+	background:url(/images/membership_form_sprite_imgs.png) no-repeat 0 -163px;
+	border:none;
+	font:bold italic 13px "Times New Roman", Times, serif;
+	text-align:right;
+	padding:0 8px;
+	padding-top: 7px\9	
+}
+.member_form_zip_field {
+	width:120px;
+	height:32px;
+	background:url(/images/membership_form_sprite_imgs.png) no-repeat 0 -244px;
+	border:none;
+	font:bold italic 13px "Times New Roman", Times, serif;
+	text-align:right;
+	padding:0 5px;
+	padding-top: 7px\9
+}
+.membership_form_name2 {
+	width:75px !important;
+}
+
+
+	.state {background: url(/images/membership_form_sprite_imgs.png) no-repeat 0px -202px transparent;color: #4d4d4d; font: bold italic 13px/28px "Times New Roman", Times, serif;; height:32px; padding:2px 0px 0px 20px; position: absolute; width: 150px;
+}
+select.state_styled { height: 32px; filter:alpha(opacity = 0); font:bold italic 13px "Times New Roman", Times, serif; margin:0px; opacity: 0; position: relative; width:150px; z-index: 5;}
+
+
+
+.member_form_bottm_bttn_main {
+	width:870px;
+	height:auto;
+	margin:30px auto 0;
+}
+.form_page_next_bttn {
+	background:url(/images/form_page_bttn_sprite.png) no-repeat 0 0;
+	width:182px;
+	height:93px;
+	float:left;
+	margin-left:20px;
+}
+.form_page_next_bttn a {
+	width:162px;
+	height:74px;
+	display:block;
+	margin:8px 0 0 15px;
+}
+.form_page_create_bttn {
+	background:url(/images/form_page_bttn_sprite.png) no-repeat 0 -111px;
+	width:182px;
+	height:93px;
+	float:right;
+	margin-right:30px;
+}
+.form_page_create_bttn a {
+	width:162px;
+	height:74px;
+	display:block;
+	margin:8px 0 0 15px;
+}
+.member_first_field_row {
+	padding-top:0 !important;
+}
+
+	  .box3_img_bg{
+    background:url("/images/stash_status_img_bg.png") no-repeat 0 0;
+    width:206px;
+    height:153px;
+    float:left;
+    cursor: pointer;    
+  }
+  .box3_top_txt_row {
+      width:174px;
+      height:26px;
+      margin:11px 0 0 16px;
+  }
+  .box3_top_txt_row a {
+      width:174px;
+      height:20px;
+      display:block;
+      font:bold italic 13px "Times New Roman", Times, serif;
+      color:#000;
+      text-align:center;
+      padding:6px 0 0 0;
+      text-decoration:none;
+  }
+  .box3_img_relationship {
+      background:url("/images/stash_status_sprite_imgs.png") no-repeat 0 0px;
+      width:175px;
+      height:93px;
+      margin:2px 0 0 0px;
+  }
+  .box3_img_education {
+      background:url("/images/stash_status_sprite_imgs.png") no-repeat 0 -107px;
+      width:175px;
+      height:93px;
+      margin:-1px 0 0 0px;
+  }
+  .box3_img_spending {
+      background:url("/images/stash_status_sprite_imgs.png") no-repeat 0 -217px;
+      width:175px;
+      height:93px;
+      margin:-1px 0 0 -1px;
+  }
+  .box3_img_9to5 {
+      background:url("/images/stash_status_sprite_imgs.png") no-repeat 0 -330px;
+      width:175px;
+      height:93px;
+      margin:2px 0 0 -1px;
+  }
+  .box3_img_occupation {
+      background:url("/images/stash_status_sprite_imgs.png") no-repeat 0 -435px;
+      width:175px;
+      height:93px;
+      margin:2px 0 0 -1px;
+  }
+  .box3_last_row {
+      margin-left:100px;
+  }   
+	  .ui-dialog-new {
+    background-color: Transparent;
+    background-image: url("../images/hover_txt_bttn.png") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 120px !important;
+    width: 160px !important;
+  }
+  a.ui-dialog-titlebar-close {
+      background: url("../images/Close.jpg") no-repeat scroll center top transparent;
+      cursor: pointer;
+      z-index: 9999999;
+  }  
+  .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%;height: 50px; z-index:1011111; cursor:pointer; }
+
+  .custom_close{
+    background:url("../images/Close.jpg") no-repeat scroll center top transparent;
+    cursor:pointer;
+    margin-top:5px;
+    position:absolute;
+    width:75px;
+    z-index:9999999;
+    height:30px;
+  }
+  .ui-dialog {
+    background-color:#EDF0F0;
+    background-image:url("") !important;
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:auto !important;
+    width:480px !important;
+  }
+
+  .ui-dialog_custom {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+  .popupbox h2 {
+      font-size: 20px;
+      margin: 40px 10px 10px;
+  }    

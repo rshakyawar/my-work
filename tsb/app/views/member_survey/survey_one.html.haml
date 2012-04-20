@@ -1,0 +1,533 @@
+= stylesheet_link_tag 'membership_survey'
+:css
+  .number_colum .numbers-link div{
+    background-image: url("../images/close_bttn.jpg") !important;
+    cursor: pointer;
+    float: left;
+    height: 48px;
+    margin-right: -53px;
+    position: relative;
+    right: 90px;
+    width: 50px;
+  }
+  .ui-dialog {
+    background-color: Transparent;
+    background-image: url("../images/close_bttn.jpg") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: medium none !important;
+    height: 50px !important;
+    width: 50px !important;
+  }
+  .ui-dialog-new {
+    background-color: Transparent;
+    background-image: url("../images/hover_txt_bttn.png") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 120px !important;
+    width: 160px !important;
+  }
+
+  a.ui-dialog-titlebar-close {
+      background: url("../images/Close.jpg") no-repeat scroll center top transparent;
+      cursor: pointer;
+      z-index: 9999999;
+  }  
+  .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%;height: 50px; z-index:1011111; cursor:pointer; }
+
+  .ui-dialog_custom {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+
+  .custom_close{
+    background:url("../images/Close.jpg") no-repeat scroll center top transparent;
+    cursor:pointer;
+    margin-top:5px;
+    position:absolute;
+    width:75px;
+    z-index:9999999;
+    height:30px;
+  }
+  .membership_survery1_heading {      
+   	width:867px;     
+   	height:30px;     
+   	font:bold 18px "TrajanPro";    
+   	color:#000;    
+   	margin:0px auto 0px auto;     
+   	text-align:center;      
+  }
+  .membership_survey1_steps {    
+   	width:160px;    
+   	height:40px;   
+   	margin:10px auto 0px auto;  
+  }
+  
+  .steps1 {   
+   	width:33px;      
+   	height:33px;    
+   	background:url("../images/membership_survey_step_round.png") no-repeat left top;     
+   	float:left;    
+   	margin:0px 10px 0px 10px;    
+   	font:normal 25px  Arial, Helvetica, sans-serif;   
+   	color:#333;   
+   	font-style:italic;    
+   	text-align:center;   
+   	padding:2px 0px 0px 0px;    
+  }
+  
+  .steps1 span {     
+  	 color:#fff;     
+  }
+  
+  .membership_top_txt_bg {      
+   	width:782px;     
+   	height:91px;     
+   	background:url("../images/membership_survey_top_txt_bg.png") no-repeat left top;      
+   	font:normal 14px "TrajanPro";        
+   	color:#711104;      
+   	text-align:center;      
+   	margin:0px auto;     
+   	padding:30px 20px 0px 30px;     
+  }  
+  .ui-dialog {
+    background-color:#EDF0F0;
+    background-image:url("") !important;
+    background-position:center center;
+    background-repeat:no-repeat;
+    border:3px solid grey !important;
+    height:auto !important;
+    width:260px !important;
+  }
+
+  .ui-dialog_custom {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  } 
+.membership_content
+  .membership_heading
+  / communication box start  -
+  -if @member_survey_one.errors.any?
+    #error_explanation{:style=>"margin-left:145px;margin-top:50px;text-align:left;color:red;"}
+      %h3= "#{pluralize(@member_survey_one.errors.count, "error")} prohibited this survey from being saved:"
+      %ul{:style=>"margin-left:15px"}
+        - @member_survey_one.errors.full_messages.each do |msg|
+          %li= msg            
+  = nested_form_for :member,  :url => member_survey_save_survey_one_path do |form|          
+    = form.fields_for :member_survey_one do |f|            
+      .communication_box
+        .box_top_corner
+        .box_middle_corner
+          .communication_heading
+            %span COMMUNICATION BREAKDOWN
+            = succeed "We" do
+              %br/
+            know you've got lots to say, and we want to know how you say it.
+          .communication_content
+            .communication_colum
+              .commu_colum_text TEXT
+              .commu_colum_txt_icon
+              .skinned-form-controls.skinned-form-controls-mac
+                %ul{:style => "margin-left:20px;"}
+                  %li
+                    %label
+                      = f.radio_button("sms","1",:checked => true)                    
+                      %span never
+                  %li
+                    %label
+                      = f.radio_button("sms","2")
+                      %span ehh, sometimes
+                  %li
+                    %label
+                      = f.radio_button("sms","3")
+                      %span all the time
+            .communication_colum
+              .commu_colum_text CALLS
+              .commu_colum_calls_icon
+              .skinned-form-controls.skinned-form-controls-mac
+                %ul.chechbox_margin
+                  %li
+                    %label
+                      = f.radio_button("calls","1",:checked => true)                    
+                      %span never
+                  %li
+                    %label
+                      = f.radio_button("calls","2")
+                      %span ehh, sometimes
+                  %li
+                    %label
+                      = f.radio_button("calls","3")
+                      %span all the time
+            .communication_colum
+              .commu_colum_text EMAIL
+              .commu_colum_emails_icon
+              .skinned-form-controls.skinned-form-controls-mac
+                %ul.chechbox_margin
+                  %li
+                    %label
+                      = f.radio_button("email","1",:checked => true)                    
+                      %span never
+                  %li
+                    %label
+                      = f.radio_button("email","2")
+                      %span ehh, sometimes
+                  %li
+                    %label
+                      = f.radio_button("email","3")
+                      %span all the time
+            .communication_colum
+              .commu_colum_text SOCIAL
+              .commu_colum_social_icon
+              .skinned-form-controls.skinned-form-controls-mac
+                %ul.chechbox_margin
+                  %li
+                    %label
+                      = f.radio_button("social_networking","1",:checked => true)                    
+                      %span never
+                  %li
+                    %label
+                      = f.radio_button("social_networking","2")
+                      %span ehh, sometimes
+                  %li
+                    %label
+                      = f.radio_button("social_networking","3")
+                      %span all the time
+            .communication_colum.commu_last_colum
+              .commu_colum_text HUMANS
+              .commu_colum_human_icon
+              .skinned-form-controls.skinned-form-controls-mac
+                %ul.chechbox_margin
+                  %li
+                    %label
+                      = f.radio_button("humans","1",:checked => true)                    
+                      %span never
+                  %li
+                    %label
+                      = f.radio_button("humans","2")
+                      %span ehh, sometimes
+                  %li
+                    %label
+                      = f.radio_button("humans","3")
+                      %span all the time
+            .clear
+        .box_bottm_corner
+      / -    second  box start  -
+    = form.fields_for :member_survey_two do |f|   
+      .communication_box
+        .box_top_corner
+        .box_middle_corner
+          .communication_heading
+            %span Everybody's Got Their Something
+            = succeed "1." do
+              %br/
+            If you're intrigued, click the "like" button.
+            %br/
+            2. If you are really into something, click the "expert" button.
+          .membership_img_row
+            .membership_img_bg
+              .step2_img_book
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_1",:onClick=>"change_like_color('#like_1','#expert_1','#select_1_id','#span_like_1_id','#books_like', '#member_survey_two_books', '1');"} like
+                %span.display_hide{:id=>"span_like_1_id"}  
+                  %input{:type => "hidden",:id=>"books_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[books] []", :disabled=>true}/                          
+                %a{:href => "javascript:void(0);",:id=>"expert_1",:onClick=>"change_expert_color('#like_1','#expert_1','#select_1_id','#span_like_1_id','#books_like', '#member_survey_two_books', '1')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_books",:value=>"",:name=>"member_survey_two[books][]", :disabled=>true}/              
+            .membership_img_bg
+              .step2_img_travel
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_2",:onClick=>"change_like_color('#like_2','#expert_2','#select_2_id','#span_like_2_id','#travel_like', '#member_survey_two_travel','2');"} like
+                %span.display_hide{:id=>"span_like_2_id"}
+                  %input{:type => "hidden",:id=>"travel_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[travel][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_2",:onClick=>"change_expert_color('#like_2','#expert_2','#select_2_id','#span_like_2_id','#travel_like', '#member_survey_two_travel','2')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_travel",:value=>"",:name=>"member_survey_two[travel][]", :disabled=>true}/              
+            .membership_img_bg
+              .step2_img_fashion
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_3",:onClick=>"change_like_color('#like_3','#expert_3','#select_3_id','#span_like_3_id','#fashion_like', '#member_survey_two_fashion','3');"} like
+                %span.display_hide{:id=>"span_like_3_id"}
+                  %input{:type => "hidden",:id=>"fashion_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[fashion][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_3",:onClick=>"change_expert_color('#like_3','#expert_3','#select_3_id','#span_like_3_id','#fashion_like', '#member_survey_two_fashion','3')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_fashion",:value=>"",:name=>"member_survey_two[fashion][]", :disabled=>true}/
+            .membership_img_bg
+              .step2_img_art
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_10",:onClick=>"change_like_color('#like_10','#expert_10','#select_10_id','#span_like_10_id','#gallery_like', '#member_survey_two_gallery','10');"} like
+                %span.display_hide{:id=>"span_like_10_id"}
+                  %input{:type => "hidden",:id=>"gallery_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[gallery][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_10",:onClick=>"change_expert_color('#like_10','#expert_10','#select_10_id','#span_like_10_id','#gallery_like', '#member_survey_two_gallery','10')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_gallery",:value=>"",:name=>"member_survey_two[gallery][]", :disabled=>true}
+          / -  image row 2 start  -
+          .membership_img_row
+            .membership_img_bg
+              .step2_img_nightlife
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_5",:onClick=>"change_like_color('#like_5','#expert_5','#select_5_id','#span_like_5_id','#nightlife_like', '#member_survey_two_nightlife','5');"} like
+                %span.display_hide{:id=>"span_like_5_id"}
+                  %input{:type => "hidden",:id=>"nightlife_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[nightlife][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_5",:onClick=>"change_expert_color('#like_5','#expert_5','#select_5_id','#span_like_5_id','#nightlife_like', '#member_survey_two_nightlife','5')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_nightlife",:value=>"",:name=>"member_survey_two[nightlife][]", :disabled=>true}/
+            .membership_img_bg
+              .step2_img_home
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_6",:onClick=>"change_like_color('#like_6','#expert_6','#select_6_id','#span_like_6_id','#home_like', '#member_survey_two_home','6');"} like
+                %span.display_hide{:id=>"span_like_6_id"}
+                  %input{:type => "hidden",:id=>"home_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[home][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_6",:onClick=>"change_expert_color('#like_6','#expert_6','#select_6_id','#span_like_6_id','#home_like', '#member_survey_two_home','6')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_home",:value=>"",:name=>"member_survey_two[home][]", :disabled=>true}
+            .membership_img_bg
+              .step2_img_food
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_7",:onClick=>"change_like_color('#like_7','#expert_7','#select_7_id','#span_like_7_id','#food_like', '#member_survey_two_food','7');"} like
+                %span.display_hide{:id=>"span_like_7_id"}
+                  %input{:type => "hidden",:id=>"food_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[food][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_7",:onClick=>"change_expert_color('#like_7','#expert_7','#select_7_id','#span_like_7_id','#food_like', '#member_survey_two_food','7')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_food",:value=>"",:name=>"member_survey_two[food][]", :disabled=>true}
+            .membership_img_bg
+              .step2_img_gaming
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_8",:onClick=>"change_like_color('#like_8','#expert_8','#select_8_id','#span_like_8_id','#gaming_like', '#member_survey_two_gaming','8');"} like
+                %span.display_hide{:id=>"span_like_8_id"}
+                  %input{:type => "hidden",:id=>"gaming_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[gaming][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_8",:onClick=>"change_expert_color('#like_8','#expert_8','#select_8_id','#span_like_8_id','#gaming_like', '#member_survey_two_gaming','8')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_gaming",:value=>"",:name=>"member_survey_two[gaming][]", :disabled=>true}
+          / -  image row 3 start  -
+          .membership_img_row
+            .membership_img_bg.box2_image_center
+              .step2_img_music
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_9",:onClick=>"change_like_color('#like_9','#expert_9','#select_9_id','#span_like_9_id','#music_like', '#member_survey_two_music','9');"} like
+                %span.display_hide{:id=>"span_like_9_id"}
+                  %input{:type => "hidden",:id=>"music_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[music][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_9",:onClick=>"change_expert_color('#like_9','#expert_9','#select_9_id','#span_like_9_id','#music_like', '#member_survey_two_music','9')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_music",:value=>"",:name=>"member_survey_two[music][]", :disabled=>true}
+            .membership_img_bg
+              .step2_img_beauty_grooming
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_11",:onClick=>"change_like_color('#like_11','#expert_11','#select_11_id','#span_like_11_id','#beauty_grooming_like', '#member_survey_two_beauty_grooming','11');"} like
+                %span.display_hide{:id=>"span_like_11_id"}
+                  %input{:type => "hidden",:id=>"beauty_grooming_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[beauty_grooming][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_11",:onClick=>"change_expert_color('#like_11','#expert_11','#select_11_id','#span_like_11_id','#beauty_grooming_like', '#member_survey_two_beauty_grooming','11')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_beauty_grooming",:value=>"",:name=>"member_survey_two[beauty_grooming][]", :disabled=>true}
+            .membership_img_bg
+              .step2_img_health_fitness
+              .membership_img_links_row
+                %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_12",:onClick=>"change_like_color('#like_12','#expert_12','#select_12_id','#span_like_12_id','#health_fitness_like', '#member_survey_two_health_fitness','12');"} like
+                %span.display_hide{:id=>"span_like_12_id"}
+                  %input{:type => "hidden",:id=>"health_fitness_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member_survey_two[health_fitness][]", :disabled=>true}/
+                %a{:href => "javascript:void(0);",:id=>"expert_12",:onClick=>"change_expert_color('#like_12','#expert_12','#select_12_id','#span_like_12_id','#health_fitness_like', '#member_survey_two_health_fitness','12')"} EXPERT
+                %input{:type => "hidden",:id=>"member_survey_two_health_fitness",:value=>"",:name=>"member_survey_two[health_fitness][]", :disabled=>true}
+        .box_bottm_corner
+      / -  Third  box start  -
+      /= form_for(@member_survey_three, :url => members_save_path,:html =>  {:id=>"save_member_survey_form_three"}) do |f| 
+      = form.fields_for :member_survey_three,:html =>  {:id=>"save_member_survey_form_three"} do |f|          
+        .communication_box
+          .box_top_corner
+          .box_middle_corner
+            .communication_heading
+              %span Stash Stats
+              = succeed "We've" do
+                %br/
+              got our own census thing going on, and want to know what your stats are. Let us know what's going on by
+              %br/
+              checking off the options that apply to you in each of the below categories:
+            .membership_box3_img_row
+              .box3_img_relationship{:onClick=>"change_expert_color('#drop_down_5','#select_5_id','#member_survey_three_guilty_by_vocation','5');"}
+                - unless @member_survey_three.guilty_by_vocation.blank?  
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_5",:style=>"background-color:#3BB9FF",:tabindex=>"12"}    
+                  %input{:type => "hidden",:id=>"member_survey_three_guilty_by_vocation",:value=>"#{@member_survey_three.guilty_by_vocation.first}",:name=>"member_survey_three[guilty_by_vocation][]"}                                            
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_5",:tabindex=>"12"} 
+                  %input{:type => "hidden",:id=>"member_survey_three_guilty_by_vocation",:value=>"#{@member_survey_three.guilty_by_vocation}",:name=>"member_survey_three[guilty_by_vocation][]", :disabled=>true} 
+              .box3_img_education{:onClick=>"change_expert_color('#drop_down_2','#select_2_id','#member_survey_three_academic_accolades','2');"}
+                - unless @member_survey_three.academic_accolades.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_2",:style=>"background-color:#3BB9FF",:tabindex=>"14"}    
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{@member_survey_three.academic_accolades.first}",:name=>"member_survey_three[academic_accolades][]"}                                       
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_2",:tabindex=>"14"} 
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{@member_survey_three.academic_accolades}",:name=>"member_survey_three[academic_accolades][]", :disabled=>true}                
+              .box3_img_spending{:onClick=>"change_expert_color('#drop_down_3','#select_3_id','#member_survey_three_shelling_it_out','3');"}
+                - unless @member_survey_three.shelling_it_out.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_3",:style=>"background-color:#3BB9FF",:tabindex=>"15"}          
+                  %input{:type => "hidden",:id=>"member_survey_three_shelling_it_out",:value=>"#{@member_survey_three.shelling_it_out.first}",:name=>"member_survey_three[shelling_it_out][]"}                      
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_3",:tabindex=>"15"} 
+                %input{:type => "hidden",:id=>"member_survey_three_shelling_it_out",:value=>"#{@member_survey_three.shelling_it_out}",:name=>"member_survey_three[shelling_it_out][]", :disabled=>true} 
+              .box3_img_9to5{:onClick=>"change_expert_color('#drop_down_4','#select_4_id','#member_survey_three_punch_the_clock','4');"}
+                - unless @member_survey_three.punch_the_clock.blank?  
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_4",:style=>"background-color:#3BB9FF",:tabindex=>"13"}     
+                  %input{:type => "hidden",:id=>"member_survey_three_punch_the_clock",:value=>"#{@member_survey_three.punch_the_clock.first}",:name=>"member_survey_three[punch_the_clock][]"}                                          
+                - else        
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_4",:tabindex=>"13"} 
+                  %input{:type => "hidden",:id=>"member_survey_three_punch_the_clock",:value=>"#{@member_survey_three.punch_the_clock}",:name=>"member_survey_three[punch_the_clock][]", :disabled=>true} 
+              .box3_img_occupation{:onClick=>"change_expert_color('#drop_down_5','#select_5_id','#member_survey_three_guilty_by_vocation','5');"}
+                - unless @member_survey_three.academic_accolades.blank?       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_2",:style=>"background-color:#3BB9FF",:tabindex=>"14"}     
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{@member_survey_three.academic_accolades.first}",:name=>"member_survey_three[academic_accolades][]"}                                       
+                - else       
+                  %a{:href => "javascript:void(0);",:id=>"drop_down_2",:tabindex=>"14"}
+                  %input{:type => "hidden",:id=>"member_survey_three_academic_accolades",:value=>"#{@member_survey_three.academic_accolades}",:name=>"member_survey_three[academic_accolades][]", :disabled=>true}  
+            .clear
+          .box_bottm_corner
+  .membership_next_bttn_row
+    .membership_next_bttn
+      %a{:href => "javascript:void(0)",:onclick=>"validate_survey_one();"}
+#popup1.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_1_id
+      - APPLICATION_CONFIG.member_survey.survey_2.books.each do |val|
+        = check_box_tag 'ms_two_books', val, false,{:id=>"books" + val}
+        = val
+        %br
+#popup2.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_2_id
+      - APPLICATION_CONFIG.member_survey.survey_2.travel.each do |val|
+        = check_box_tag 'ms_two_travel', val, false,{:id=>"travel" + val}
+        = val
+        %br
+#popup3.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_3_id
+      - APPLICATION_CONFIG.member_survey.survey_2.fashion.each do |val|
+        = check_box_tag 'ms_two_fashion', val, false,{:id=>"fashion" + val}
+        = val
+        %br
+#popup4.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_4_id
+      - APPLICATION_CONFIG.member_survey.survey_2.tv_film.each do |val|
+        = check_box_tag 'ms_two_tv_film', val, false,{:id=>"tv_film" + val}
+        = val
+        %br
+#popup5.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_5_id
+      - APPLICATION_CONFIG.member_survey.survey_2.nightlife.each do |val|
+        = check_box_tag 'ms_two_nightlife', val, false,{:id=>"nightlife" + val}
+        = val
+        %br
+#popup6.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_6_id
+      - APPLICATION_CONFIG.member_survey.survey_2.home.each do |val|
+        = check_box_tag 'ms_two_home', val, false,{:id=>"two_home" + val}
+        = val
+        %br
+#popup7.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_7_id
+      - APPLICATION_CONFIG.member_survey.survey_2.food.each do |val|
+        = check_box_tag 'ms_two_food', val, false,{:id=>"two_food" + val}
+        = val
+        %br
+#popup8.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_8_id
+      - APPLICATION_CONFIG.member_survey.survey_2.gaming.each do |val|
+        = check_box_tag 'ms_two_gaming', val, false,{:id=>"two_gaming" + val}
+        = val
+        %br
+#popup9.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_9_id
+      - APPLICATION_CONFIG.member_survey.survey_2.music.each do |val|
+        = check_box_tag 'ms_two_music', val, false,{:id=>"two_music" + val}
+        = val
+        %br
+#popup10.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_10_id
+      - APPLICATION_CONFIG.member_survey.survey_2.arts.each do |val|
+        = check_box_tag 'ms_two_arts', val, false,{:id=>"two_arts" + val}
+        = val
+        %br
+#popup11.popupbox
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_11_id
+      - APPLICATION_CONFIG.member_survey.survey_2.beauty_grooming.each do |val|
+        = check_box_tag 'ms_two_beauty_grooming', val, false,{:id=>"beauty_grooming" + val}
+        = val
+        %br
+#popup12.popupbox 
+  %div.survey_two_pop_up{:style=>"font-size:18px;"} Just click on what you love!
+  %div.survey_two_pop_up
+    #select_12_id
+      - APPLICATION_CONFIG.member_survey.survey_2.health_fitness.each do |val|
+        = check_box_tag 'ms_two_health_fitness', val, false,{:id=>"health_fitness" + val}
+        = val
+        %br
+#popup13.popupbox
+  %div
+    %h2 Please select one option from each category   
+#popup14.popupbox
+  %div.survey_two_pop_up
+    #select_1_id
+      - APPLICATION_CONFIG.member_survey.survey_3.HOPELESSLY_DEVOTED_TO.each do |val|
+        = check_box_tag 'ms_two_health_fitness', val, (!@member_survey_three.hopelessly_devoted_to.nil? and @member_survey_three.hopelessly_devoted_to.first == val),{:id=>"health_fitness" + val}        
+        = val
+        %br
+#popup15.popupbox
+  %div.survey_two_pop_up
+    #select_2_id
+      - APPLICATION_CONFIG.member_survey.survey_3.ACADEMIC_ACCOLADES.each do |val|
+        = check_box_tag 'ms_two_academic_accolades', val, (!@member_survey_three.academic_accolades.nil? and @member_survey_three.academic_accolades.first == val),{:id=>"academic_accolades" + val}
+        = val
+        %br    
+#popup16.popupbox
+  %div.survey_two_pop_up
+    #select_3_id
+      - APPLICATION_CONFIG.member_survey.survey_3.SHELLING_IT_OUT.each do |val|
+        = check_box_tag 'ms_two_shelling_it_out', val, (!@member_survey_three.shelling_it_out.nil? and @member_survey_three.shelling_it_out.first == val),{:id=>"shelling_it_out" + val}        
+        = val
+        %br          
+#popup17.popupbox
+  %div.survey_two_pop_up
+    #select_4_id
+      - APPLICATION_CONFIG.member_survey.survey_3.PUNCH_THE_CLOCK.each do |val|
+        = check_box_tag 'ms_two_punch_the_clock', val, (!@member_survey_three.punch_the_clock.nil? and @member_survey_three.punch_the_clock.first == val),{:id=>"punch_the_clock" + val}        
+        = val
+        %br 
+#popup18.popupbox
+  %div.survey_two_pop_up
+    #select_5_id
+      - APPLICATION_CONFIG.member_survey.survey_3.GUILTY_BY_VOCATION.each do |val| 
+        = check_box_tag 'ms_two_guilty_by_vocation', val, (!@member_survey_three.guilty_by_vocation.nil? and @member_survey_three.guilty_by_vocation.first == val),{:id=>"guilty_by_vocation" + val}
+        = val
+        %br         
+#popup19.popupbox
+  %div.survey_two_pop_up
+    #select_6_id
+      - APPLICATION_CONFIG.member_survey.survey_3.STORK_INVENTORY.each do |val| 
+        = check_box_tag 'ms_two_stork_inventory', val, (!@member_survey_three.stork_inventory.nil? and @member_survey_three.stork_inventory.first == val),{:id=>"stork_inventory" + val}
+        = val
+        %br         
+#popup20.popupbox
+  %div
+    %h2 Please select one option from each category       
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}         
+= javascript_include_tag 'membership'
+= javascript_include_tag 'member_survey_two'
+= javascript_include_tag 'member_survey_three'
+= javascript_include_tag :defaults, "nested_form"      

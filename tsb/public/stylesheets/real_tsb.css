@@ -1,0 +1,65 @@
+.real_pop_container{
+	background:url(../images/wrong_earn_shot_mainbg.png);
+	width:354px;
+	height:522px;
+	margin:0 auto;
+}
+.real_pop_innercontainer{
+    background: url("../images/wrong_earn_shot_blackbg.png") repeat scroll 0 0 transparent;
+    height: 491px;
+    left: 16px;
+    position: relative;
+    top: 9px;
+    width: 324px;
+}
+.real_top_black{
+	background:url(../images/wrong_earn_shot_innertopbg.png);
+	width:320px;
+	height:108px;
+	position:relative;
+	top:20px;
+}
+.big_brackets{
+    background: url("../images/big-bracket.png") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font: italic 22px/27px TheLastFont11;
+    height: 53px;
+    margin: 0 auto;
+    padding: 6px 0 0 0px;
+    position: relative;
+    top: 5px;
+    width: 264px;
+    text-align:center;
+	}
+.trust_issues_txt{
+	font:normal 14px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	margin-top:18px;
+}
+.photo_evidence{
+	background:url("");
+	width:196px;
+	height:254px;
+	margin:40px auto 0px;
+	
+}
+.enough_shot{
+	font:normal 11px "TrajanPro";
+	color:#ffffff;
+	text-align:center;
+	margin-top:32px;
+}
+.russ_email{
+	background:url(../images/small_bracket.png);
+	width:176px;
+	height:22px;
+	margin:0 auto;
+	text-align:center;	
+	margin-top:11px;	
+}
+.russ_email a{
+	font:normal 14px TheLastFont11;
+	color:#ffffff;
+	text-decoration:none;		
+}

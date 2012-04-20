@@ -1,0 +1,267 @@
+= stylesheet_link_tag "rewards_reset"
+= stylesheet_link_tag "rewards_main"
+= stylesheet_link_tag "promo_versus_second"
+= stylesheet_link_tag "steal"
+= javascript_include_tag 'fb'
+= javascript_include_tag 'steal_live'
+
+:css
+  @font-face {
+    font-family: 'TrajanPro'; 
+    src: url('/fonts/TrajanPro-Regular.eot?') format('eot'),
+    url('/fonts/TrajanPro-Regular.woff') format('woff'),
+    url('/fonts/TrajanPro-Regular.ttf') format('truetype'),
+    url('/fonts/TrajanPro-Regular.svg') format('svg'); 
+  }   
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("") !important;
+  }
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .FBConnectButton_Simple, .FBConnectButton_RTL_Simple {
+    background-image:url("/images/iconFbook.png");
+    height: 30px;
+    width: 34px;
+    display: block;
+    float: right
+   }
+   .tb, .t-count, .t-count a {
+     background:url("../images/iconBird.png") no-repeat scroll 0 0 transparent;
+   }
+   .float_align{
+     float:left;
+   }
+   input.enterBtn {
+     background:url("../images/btn_enter.gif") no-repeat scroll 0 0 transparent;
+     display:block;
+     font-size:0;
+     height:30px;
+     line-height:0;
+     text-indent:-3000px;
+     width:70px;
+  }
+   .Ernestschwag_facebook_bttn {   
+   }
+   
+   .Ernestschwag_facebook_bttn a {    
+    	background:url(../images/ernestschwag_social_icons.png) no-repeat -3px -2px;   
+   } 
+  .TSB_Email_Steal_Me_main { 
+   	width:354px;
+   	height:297px; 
+   	margin:0 auto;
+   	position:relative;
+  }
+ 
+  .TSB_Email_Steal_Me_field_bg { 
+   	width:253px;
+   	height:18px; 
+   	background:url("../images/TSB_Email_Steal_Friends_field_bg.png") no-repeat 0 0;
+   	border:none; 
+   	position:absolute; 
+   	top:175px; 
+   	left:43px;
+   	font:normal 17px "TrajanPro" !important; 
+   	color:#000;
+   	text-align:right; 
+   	padding:8px; 
+  }
+ 
+  .TSB_Email_Steal_Me_submit_bttn {
+    cursor: pointer; 
+    height: 29px; 
+    left: 244px; 
+    opacity: 0;
+    filter:alpha(opacity=0); 
+    position: absolute; 
+    top: 232px; 
+    width: 67px;
+  }        
+  .TSB_Email_Steal_Friends_main {      
+   	width:354px;      
+   	height:297px;      
+   	margin:0 auto;     
+   	position:relative;    
+  }
+  
+  .TSB_Email_Steal_Friends_field_bg {     
+   	width:253px;    
+   	height:18px;   
+   	background:url("../images/TSB_Email_Steal_Friends_field_bg.png") no-repeat 0 0;   
+   	border:none;   
+   	position:absolute;      
+   	top:175px;     
+   	left:43px;     
+   	font:normal 17px "TrajanPro" !important;     
+   	color:#000;    
+   	text-align:right;    
+   	padding:8px;     
+  }
+  
+  .TSB_Email_Steal_Friends_submit_bttn {      
+    cursor: pointer;      
+    height: 29px;     
+    left: 244px;     
+    opacity: 0;      
+    filter:alpha(opacity=0);     
+    position: absolute;     
+    top: 232px;     
+    width: 67px;      
+  } 
+  .ui-dialog {
+    background-color: Transparent;
+    background-image: url("") !important;
+    height: 320px !important;
+    width: 454px !important;
+  }
+  .ui-dialog .ui-dialog-titlebar-close{
+    margin: 3px 26px 0 5px;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("") no-repeat scroll center top transparent;
+  }
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background:url("")  no-repeat scroll center top transparent;
+    border:0 solid #999999;
+    color:#212121;
+    font-weight:normal;
+    outline:medium none;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("") no-repeat scroll center top transparent;
+  }   
+  .sms_popup{
+    background-color: Transparent;
+    background-image: url("../images/error_popup.png") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: medium none !important;
+    height: 214px !important;
+    width: 275px !important;
+  }   
+
+  .sms_poup-close {
+    background: url("/images/Close.jpg") no-repeat scroll center top transparent;
+    height: 22px;
+    left: 175px;
+    position: absolute;
+    width: 75px;   
+  }
+#main{:style => "padding-top:0px;padding-bottom:25px"}
+  .steel-container
+    .main-head
+      The
+      = succeed "teal" do
+        %span S
+    .osdg_steel_content_main
+      .steal-wrapper
+        .left-part-steel
+          .t-shirt-off
+            %img{:src => "#{@steal.steal_image.url(:steal)}"}/
+          .left-part_txt_percenr_off
+            %br/
+            = @steal.description unless @steal.description.blank?
+        .right-part
+          .my-steel-head
+            Send me my Steal
+            %br/
+            %span {for your codes safe keeping}
+          .social-icon
+            %a{:href => "javascript:void(0);"}
+              %img{:border => "0", :src => "/images/mail.png",:onclick=>"sendmail_pop_up()"}/
+            %a{:href => "#",:onclick=>"sms_pop_up_steal_code()"}
+              %img{:border => "0", :src => "/images/sms.png"}/
+          .my-steel-head
+            Spread the Love
+            %br/
+            %span {be nice share with friends}
+          .social-icon
+            %a{:href => "javascript:void(0);"}
+              %img{:border => "0", :src => "/images/mail.png",:onclick=>"sendmail_pop_up_below()"}/
+            %a{:href => "#",:onclick=>"sms_pop_up()"}
+              %img{:border => "0", :src => "/images/sms.png"}/
+            %a{:href => "javascript:void(0);",:class=>"Ernestschwag_facebook_bttn"}
+              %img{:border => "0", :src => "/images/facebook.png"}/
+            %a{:href => "#{get_twitter_steal_url}"}
+              %img{:border => "0", :src => "/images/twitter.png"}/
+          .osdg_steelcode
+            %div{:style=>"height: 79px;"}
+              Steal Code:
+              %div
+                %table{:style=>"height: 70px;width: 307px;"}
+                  %tr
+                    %td{:style=>"height: 70px;width: 307px;vertical-align: middle;text-align: center;"}                  
+                      %p.osdg_steelcode_bottom_txt
+                        = @steal.code unless @steal.code.blank?
+            %p.osdg_sono-link
+              = link_to "#{@steal.e_commerce_link}", "#{@steal.e_commerce_link}", {:target=>"_blank"}
+    %div{:style=>"margin-top:20px;"}
+      = link_to image_tag("footer-icon.png"),"/members/thank_you_page"   
+- fb_image_link = (@shwag_winner_looser_popup.fb_image.url(:medium) == "/images/fb_logo.jpg")? "http://staging.thestashbox.com/images/fb_logo.jpg" : @shwag_winner_looser_popup.fb_image.url(:medium)      
+%img#fb_share_image{:alt => "Icon-facebook", :src => "#{fb_image_link}", :style => "display: none;"}/
+%input#fb_share_text{:style => "display: none;", :type => "hidden", :value => "#{@fb_sending_text}"}/
+%input#fb_image_link{:style => "display: none;", :type => "hidden", :value => "#{@shwag_winner_looser_popup.fb_image_link}"}/
+%input#fb_share_return_url{:style => "display: none;", :type => "hidden", :value => "http://#{Settings.site_base_uri}/members/the_steal"}/
+%input#fb_share_app_id{:style => "display: none;", :type => "hidden", :value => "#{Settings.fb_share_app_id}"}/
+#popup1.popupbox
+  .sms_poup-close
+  %div{:style=>"margin-top:100px;"}
+    =form_tag('/sms/send_message', :remote => true, :method=>:get, :id=>"sms_form1") do 
+      %p 10 digit cell number
+      +1 - 
+      = text_field_tag "mobile_number","", {:placeholder => "Mobile Number", :size => 22}
+      = submit_tag 'Enter', :class => 'enterBtn',:style=>"margin-left:136px;margin-top:15px;"
+#popup6.popupbox
+  .sms_poup-close
+  %div{:style=>"margin-top:100px;"}
+    =form_tag('/sms/send_message', :remote => true, :method=>:get, :id=>"sms_form2") do 
+      %p 10 digit cell number
+      +1 - 
+      = text_field_tag "mobile_number","", {:placeholder => "Mobile Number", :size => 22}
+      = hidden_field_tag "steal_code","steal_code", {:placeholder => "Mobile Number", :size => 22}
+      = submit_tag 'Enter', :class => 'enterBtn',:style=>"margin-left:136px;margin-top:15px;"
+#popup2.popupbox
+  .TSB_Email_Steal_Me_main
+    %img{:alt => "", :border => "0", :src => "/images/TSB_Email_Steal_Me.png", :usemap => "#Map"}/
+    %map#Map{:name => "Map"}
+      %area{:coords => "336,5,348,18", :href => "#", :shape => "rect"}/  
+    =form_tag('/mail/send_mail', :remote => true, :method=>:post, :id=>"mail_form") do 
+      = text_field_tag "to_email","", {:id => 'email_id', :placeholder => "Email",:class=>"TSB_Email_Steal_Me_field_bg"}     
+      = submit_tag 'Send', :class => 'TSB_Email_Steal_Me_submit_bttn'    
+#popup5.popupbox
+  .TSB_Email_Steal_Friends_main
+    %img{:alt => "", :border => "0", :src => "/images/TSB_Email_Steal_Friends.png", :usemap => "#Map"}/
+    %map#Map{:name => "Map"}
+      %area{:coords => "336,5,348,18", :href => "#", :shape => "rect"}/  
+    =form_tag('/mail/send_multiple_mail', :remote => true, :method=>:post, :id=>"mail_form_below") do 
+      = text_field_tag "to_email","", {:id => 'email_id_below', :placeholder => "Email",:class=>"TSB_Email_Steal_Friends_field_bg"}     
+      = submit_tag 'Send', :class => 'TSB_Email_Steal_Friends_submit_bttn'              
+#popup3.popupbox
+  .sms_poup-close
+  %h2{:style=>"margin-top:80px;"} Email Is Not Valid       
+#popup4.popupbox
+  .sms_poup-close
+  %h2{:style=>"margin-top:80px;"} Email Has Been Send     
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}   
+= javascript_include_tag 'rails'      
+
+
+
+
+

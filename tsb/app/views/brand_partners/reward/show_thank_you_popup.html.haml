@@ -1,0 +1,265 @@
+= stylesheet_link_tag "rewards_reset"
+= stylesheet_link_tag "rewards_main"
+= stylesheet_link_tag "popups"
+= stylesheet_link_tag "osdg_thank_you"
+= stylesheet_link_tag "real_tsb"
+= stylesheet_link_tag 'schwag_game'
+= stylesheet_link_tag "schwag_earn_wrong_shot"
+= stylesheet_link_tag "schwag_winner"
+:css
+  .rewardLink {
+    background-color:#FFFFFF;
+    border:1px solid #000000;
+    float:left;
+    height:223px;
+    margin-left:2px;
+    margin-top:50px;
+    width:197px;
+  }
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:2px solid #FF2800 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .rewardLink{
+    background-color:#FFFFFF;
+    border:1px solid #000000;
+    float:left;
+    height:223px;
+    width:197px;
+    margin-left:5px;
+    margin-top:94px;
+  }
+  .image_bg_class{
+    background: url("/images/OSDG__TheSteal_down_bg.jpg") no-repeat scroll center top transparent;
+    width: 107px;
+    height: 60px;
+    margin-left: 360px;
+  }
+  .ui-dialog {
+    background-color: Transparent;
+    background-image: url("") !important;
+    height: 820px !important;
+    width: 454px !important;
+  }
+  .ui-dialog .ui-dialog-titlebar-close{
+    margin: 3px 26px 0 5px;
+  } 
+  a.ui-dialog-titlebar-close {
+    background: url("") no-repeat scroll center top transparent;
+  }
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background:url("/images/wrong_earn_shot_close.png")  no-repeat scroll center top transparent;
+    border:0 solid #999999;
+    color:#212121;
+    font-weight:normal;
+    outline:medium none;
+  }
+  a.ui-dialog-titlebar-close {
+    background: url("/images/wrong_earn_shot_close.png") no-repeat scroll center top transparent;
+  }
+  .TSB_Sorry_No_Win_Pop_main {
+    width:354px;
+    height:522px;
+    margin:0 auto;
+    position:relative;
+  }
+  .TSB_Sorry_No_Win_Pop_txt1 {
+    color: #FFFFFF;
+    font: italic 22px "TheLastFont11";
+    height: auto;
+    left: 38px;
+    position: absolute;
+    text-align: center;
+    top: 109px;
+    width: 280px;
+    line-height:25px;
+  }
+  .sorry-bg{
+    background: url("/images/tsb-sorry-box-logo.png") no-repeat scroll center 17px transparent;
+    height:80px;
+  }
+  .tsb-sorry-box-logo{
+    background: url("/images/tsb-sorry-box-logo.png") no-repeat scroll center 17px transparent;
+    height:80px;
+  }
+  .dont-win{
+    color:#010101;
+    font: italic 25px TheLastFont11;
+    text-align: center;
+    width: 324px;
+    margin-left:5px;
+  }
+  .dont-worry{
+     color:#010101;
+     font: italic 20px TheLastFont11;
+     text-align: center;
+     width: auto;
+     margin-bottom:10px;
+  }
+  .ready-soon{
+    color:#010101;
+    font: italic 15px TheLastFont11;
+    text-align: center;
+    width: auto;
+    line-height:27px;
+  }  
+#main
+  #blockLeft{:style=>"width: 840px; margin-bottom: 20px;"}
+    %section.secOne
+      #secOneBlock
+        .tit The #{params[:current_link].split("_")[0] +" Logo"}
+        =form_for(@shwag_winner_looser_popup, :url =>"/brand_partners/show_thank_you_popup/#{@versus.id}/#{params[:current_link]}",:method=>:put,:html =>{:id=>"deal_form",:enctype => "multipart/form-data",:multipart => true, :style => " top:0px; position: relative; z-index: 100; height: 0px;"}) do |f|
+          %input#files{:size => "13", :type => "file", :style=>"opacity:0.0; filter:alpha(opacity=0);",
+          :name=> "shwag_winner_looser_popup[#{params[:current_link]}]", :onchange=>"hide_image();"}
+          %input{:type => "hidden",:value=>"",:name=>"removed",:id=>"is_removed"}/
+          %input{:type => "hidden",:value=>"#{@versus.id}",:name=>"versus_id", :id=>"versus_id"}/
+          %input{:type => "hidden",:value=>"#{params[:current_link]}",:name=>"img_block", :id=>"img_block"}/
+          %input{:type => "hidden",:value=>"#{ @shwag_winner_looser_popup.winner_text.to_s[0,100]}",:name=>"shwag_winner_looser_popup[winner_text]", :id=>"winner_text"}/
+          %input{:type => "hidden",:value=>"#{ @shwag_winner_looser_popup.fb_image_link.to_s[0,100]}",:name=>"shwag_winner_looser_popup[fb_image_link]", :id=>"fb_image_link"}/          
+          %input{:size => "13", :type => "submit",:value=>"upload",:style=>"margin-left:100px;"}/
+        .chooseImgBtn
+        .chooseImgBtnNoBackground
+        .chooseImgTxt image requirements
+        .removeImg remove image
+    %section.secFour{:style=>"margin-left: 20px;"}
+      #secFourBlock
+        .tit IMAGE REQUIREMENTS
+        .txt1 FILE FORMATS: #{ApplicationHelper::IMAGE_FORMAT}
+        .txt2 File DIMENSION: #{get_file_dimension(params[:current_link])}  
+    - if params[:current_link] == "winner"                  
+      %input.dealCode.codeEco{:name=>"winner_text",:value=>"#{ @shwag_winner_looser_popup.winner_text.to_s[0,100] || "100 Character max"}",:id=>"winner_text_below",:type => "text",:placeholder=>"Winner Text",:style=>"margin-left:40px;"}   
+    - else
+      %input{:type => "hidden",:value=>"#{ @shwag_winner_looser_popup.winner_text.to_s[0,100]}",:name=>"shwag_winner_looser_popup[winner_text]", :id=>"winner_text_below"}/       
+      %br
+      %span{:style => "font:10px Arial, Helvetica, sans-serif; font-style:italic;margin-left: 42px;float: left;"} Maximum 100 characters  
+    - if params[:current_link] == "fb_image"                  
+      %input.dealCode.codeEco{:name=>"fb_image_link",:value=>"#{ @shwag_winner_looser_popup.fb_image_link.to_s[0,100] || "100 Character max"}",:id=>"fb_image_link_below",:type => "text",:placeholder=>"FB logo link",:style=>"margin-left:40px;"}     
+    - else
+      %input{:type => "hidden",:value=>"#{ @shwag_winner_looser_popup.fb_image_link.to_s[0,100]}",:name=>"shwag_winner_looser_popup[fb_image_link]", :id=>"fb_image_link_below"}/                    
+#blockRight{:style=>"width: 855px;"}
+  #main{:style=>"margin-bottom:90px;"}
+    - if params[:current_link] == "real"  
+      .real_pop_container
+        .real_pop_innercontainer
+          .real_top_black
+            .big_brackets
+              You think it is too
+              %br/
+              good to be True?
+            %p.trust_issues_txt It's okay we have trust issues as well!
+          .photo_evidence 
+            #real_viewport
+              %img{:src => "#{@shwag_winner_looser_popup.real.url(:medium)}"}/            
+          %p.enough_shot 
+            If the photo isn't enough shoot us an email
+            %p.russ_email
+              %a{:href => "#"} russ@thestashbox.com
+    - if params[:current_link] == "winner"              
+      .real_pop_container1
+        .swach_inner_black1
+          .top_winner_img1
+            #winner_viewport
+              %img{:src => "#{@shwag_winner_looser_popup.winner.url(:medium)}"}/         
+          %p.love_it_txt1
+            %span.yes_spa1 Yes!
+            %br/
+            we Love it When
+            %span.win_spa1 you Win!!!
+          %div{:style=>"height: 40px;"}  
+            %p.free_qbag_txt1
+              = @shwag_winner_looser_popup.winner_text.to_s[0,100] unless @shwag_winner_looser_popup.winner_text.blank?
+          %p.free_qbag_txt1
+            Please Verify your mailing info
+            %span
+              %a{:href => "javascript:void(0);"} Here
+          %p.good_be_true1
+            %span> T
+            oo good to be true?
+          %p.good_be_true_txt1 Give us a ring or email. We promise we're real
+          %div{:style=>"width:320px;height:20px;position:absolute;top:446px;"}
+            %p.tsb_pin1 tsb: 646.833.7752
+            %p.rus_pin1 russ@thestashbox.com  
+    - if params[:current_link] == "looser"                 
+      .Wrong_Earn_Shot_container
+        .Wrong_Earn_Shot_close_row
+          .Wrong_Earn_Shot_close_bttn
+            %a{:href => "#"}
+        .Wrong_Earn_Shot_inner_black
+          .top_Wrong_Earn_Shot_img
+            #looser_viewport
+              %img{:src => "#{@shwag_winner_looser_popup.looser.url(:medium)}"}/            
+          .Wrong_Earn_Shot_sorry_txt
+            %span{:style=>"font:italic 24px TheLastFont11;color:#fff;"} e
+            %span{:style=>"margin-left:-5px;"} hh...
+            %span{:style=>"font:italic 24px TheLastFont11;color:#fff;"} s
+            %span{:style=>"margin-left:-5px;"} orry You didn't Hit It.
+          %p.Wrong_Earn_Shot_love_it_txt
+            Don't forget you
+            %br/
+            get
+            %span 3
+            shots to win!
+          %p.Wrong_Earn_Shot_simply_txt simply spread the word below & earn a #{remaining_shots(@is_ready_to_next_click, @played_shots)} Shot!
+          .Wrong_Earn_Shot_social_icon_row
+            .Wrong_Earn_Shot_twitter_part
+              %a{:href => "javascript:void(0);"}>
+              click to spread the word
+            .Wrong_Earn_Shot_facebook_part.Ernestschwag_facebook_bttn
+              %a{:href => "javascript:void(0);"}>
+              click to spread the word
+            .clear
+          %p.Wrong_Earn_Shot_still_dont_txt
+            still don't think this is real?
+            %br/
+            %span
+              %a{:href => "#",:onclick=>"$('#popup4').dialog({ closeText: '' ,modal:true , resizable: false, dialogClass: 'width_earn_another'});"}  Click here
+            for for proof!         
+    - if params[:current_link] == "fb_image"         
+      .image_bg_class         
+        %img#fb_viewport{:src => "#{@shwag_winner_looser_popup.fb_image.url(:medium)}",:style=>"margin-top: 10px;"}/                         
+%section.secThree 
+  .ButtonBlock{:style=>"margin-left: 85px;width: 690px;"}
+    %input.saveBtnSty.btnPos{:name => "save", :type => "button",:onclick=>"submit_form();"}/
+    %input.reviewVersusBtnSty.btnPos{:name => "Review My Versus", :type => "button",:style=>"width:200px;margin-left: 320px;"}/
+%input#slider{:type => "hidden", :value => "0"}
+= javascript_include_tag "reward_link"   
+- if params[:current_link] == "real"
+  :javascript
+    $(document).ready(function() {
+      setPanelControls('#real_viewport');
+      });
+- if params[:current_link] == "winner"
+  :javascript
+    $(document).ready(function() {
+      setPanelControls('#winner_viewport');
+      });
+- if params[:current_link] == "looser"
+  :javascript
+    $(document).ready(function() {
+      setPanelControls('#looser_viewport');
+      });   
+- if params[:current_link] == "fb_image"
+  :javascript
+    $(document).ready(function() {
+      setPanelControls('#fb_viewport');
+      });       
+:javascript
+  function submit_form(){
+    var text_data = $('#winner_text_below').val();
+    $('#winner_text').val(text_data);
+    var fb_image_link_text = $('#fb_image_link_below').val();
+    $('#fb_image_link').val(fb_image_link_text);    
+    $('#deal_form').submit();
+  }        

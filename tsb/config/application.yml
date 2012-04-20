@@ -1,0 +1,41 @@
+defaults: &defaults
+  site_base_uri: localhost:3000
+  twitter_username: the_stashbox
+  twitter_consumer_key: t7zsI0ml6ljUsbvroRaF5Q
+  twitter_consumer_secret: qnhXPcao7MHCTysTtnzXOcNqrsOLVDyJ7ecqWy2DIVs
+  twitter_oauth_token: 61337819-gVGxrs9teiTJukvqKxhbNKn6hJxDf2gEAcClHUc
+  twitter_oauth_token_secret: pqKLatHCNrVdy2wcLLZDn3puUPW2G1crBaw12xqc
+  bucket_name: staging.thestashbox.com
+  sms_tropo_token: 099b6a27af87a049bed5ba277770d5b0525efe3733a7115b6e81c73c11f35a7c5166e0443e3eed8368abef27
+  tsb_join_homepage?: true
+  fb_share_text: "{From: theSTASHBOX.com} Help Invisible Children Free Timmy! http://blog.invisiblechildren.com/2011/12/free-timmy-and-help-invisible-children-cross-the-2-million-finish-line/ {20 IC T-shirts up for grabs on thestashbox.com}"
+  fb_share_app_id: 292739440760648
+  schwag_shot: 3
+  email_text: "{From: theSTASHBOX.com} Help Invisible Children Free Timmy! http://tinyurl.com/TSBIC {20 IC T-shirts up for grabs on thestashbox.com}"
+  twitter_share_text: "{From: theSTASHBOX.com} Help Invisible Children Free Timmy! http://tinyurl.com/TSBIC {20 IC T-shirts up for grabs on thestashbox.com}"
+  sms_share_text: "{From: theSTASHBOX.com} Help Invisible Children Free Timmy! http://tinyurl.com/TSBIC {20 IC T-shirts up for grabs on thestashbox.com}"
+  my_steal_email_text: "{From: theSTASHBOX.com} Help Invisible Children Free Timmy! http://tinyurl.com/TSBIC {20 IC T-shirts up for grabs on thestashbox.com}"
+  steal_code: "{From: theSTASHBOX.com} Help Invisible Children Free Timmy! http://tinyurl.com/TSBIC {20 IC T-shirts up for grabs on thestashbox.com}"
+
+development:
+  <<: *defaults
+  tsb_join_homepage?: true
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+  site_base_uri: staging.thestashbox.com
+  bucket_name: staging.thestashbox.com
+  sms_tropo_token: 099b6a27af87a049bed5ba277770d5b0525efe3733a7115b6e81c73c11f35a7c5166e0443e3eed8368abef27
+  tsb_join_homepage?: false
+
+production:
+  <<: *defaults
+  site_base_uri: thestashbox.com
+  bucket_name: production.thestashbox.com
+  sms_tropo_token: 099b926413d9da4188a9df39d2b98830d19c5d6957fbf39ff92b8189861eb01948f9afc765680f8ce1982856
+  tsb_join_homepage?: false
+  fb_share_app_id: 174403995986641
+

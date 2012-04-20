@@ -1,0 +1,58 @@
+:css
+  .Over21_main {
+    width:548px;
+    height:701px;
+    background:url("/images/Over21_bg.png") no-repeat left top;
+    margin:0 auto;
+    position:relative;
+  }
+  .Over21_yes_bttn {
+    width:91px;
+    height:38px;
+    position:absolute;
+    top:536px;
+    left:147px;
+  }
+  .Over21_yes_bttn a {
+    background:url("/images/Over21_bttn_sprite.png") no-repeat -20px -10px;
+    width:91px;
+    height:38px;
+    display:block;
+  }
+  .Over21_no_bttn {
+    width:91px;
+    height:38px;
+    position:absolute;
+    top:536px;
+    left:311px;
+  }
+  .Over21_no_bttn a {
+    background:url("/images/Over21_bttn_sprite.png") no-repeat -184px -10px;
+    width:91px;
+    height:38px;
+    display:block;
+  }
+  .UB_Learn_more {
+    width:591px;
+    height:788px;
+    margin:0 auto;
+  }
+#popup1.popupbox
+  .Over21_main
+    .Over21_yes_bttn
+      %a{:href => "javascript:void(0)",:onclick=>"open_pop_up2();"}
+    .Over21_no_bttn
+      =link_to "",tsb_join_path
+#popup2.popupbox
+  .UB_Learn_more
+    %img{:alt => "", :border => "0", :src => "/images/UB_Learn-More_bg.png", :usemap => "#Map"}/
+    %map#Map{:name => "Map"}
+      %area{:coords => "236,562,328,580", :href => "http://www.urbanmercenaries.com/", :shape => "rect", :target=>"_blank"}/
+- if @question_no.to_i == 1
+  :javascript
+    $("#popup1").dialog({modal:true,resizable:false,closeText:'hide',closeOnEscape:false,open:function(event, ui) { $(".ui-dialog-titlebar-close").hide();}}); 
+:javascript
+  function open_pop_up2(){
+    $("#popup1").dialog("close");
+    $("#popup2").dialog({ modal:true ,resizable: false});  
+  }

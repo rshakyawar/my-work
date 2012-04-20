@@ -1,0 +1,98 @@
+= inner_form.fields_for :member_survey_one_attributes,:id=>"nested_form_id" do |f|            
+  #communication_box.communication_box
+    .box_top_corner
+    .box_middle_corner
+      .communication_heading
+        %span COMMUNICATION BREAKDOWN
+        = succeed "We" do
+          %br/
+        know you've got lots to say, and we want to know how you say it.
+      .communication_content
+        .communication_colum
+          .commu_colum_text TEXT
+          .commu_colum_txt_icon
+          .skinned-form-controls.skinned-form-controls-mac
+            %ul{:style => "margin-left:20px;"}
+              %li
+                %label
+                  = f.radio_button :sms,"1", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.sms ) == "1" ? true : false
+                  %span never
+              %li
+                %label
+                  = f.radio_button :sms,"2", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.sms ) == "2" ? true : false
+                  %span ehh, sometimes
+              %li
+                %label
+                  = f.radio_button :sms,"3", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.sms ) == "3" ? true : false
+                  %span all the time
+        .communication_colum
+          .commu_colum_text CALLS
+          .commu_colum_calls_icon
+          .skinned-form-controls.skinned-form-controls-mac
+            %ul.chechbox_margin
+              %li
+                %label
+                  = f.radio_button :calls,"1", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.calls ) == "1" ? true : false                    
+                  %span never
+              %li
+                %label
+                  = f.radio_button :calls,"2" , :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.calls ) == "2" ? true : false
+                  %span ehh, sometimes
+              %li
+                %label
+                  = f.radio_button :calls,"3", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.calls ) == "3" ? true : false
+                  %span all the time
+        .communication_colum
+          .commu_colum_text EMAIL
+          .commu_colum_emails_icon
+          .skinned-form-controls.skinned-form-controls-mac
+            %ul.chechbox_margin
+              %li
+                %label
+                  = f.radio_button :email,"1", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.email ) == "1" ? true : false                    
+                  %span never
+              %li
+                %label
+                  = f.radio_button :email,"2", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.email ) == "2" ? true : false
+                  %span ehh, sometimes
+              %li
+                %label
+                  = f.radio_button :email,"3", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.email ) == "3" ? true : false
+                  %span all the time
+        .communication_colum
+          .commu_colum_text SOCIAL
+          .commu_colum_social_icon
+          .skinned-form-controls.skinned-form-controls-mac
+            %ul.chechbox_margin
+              %li
+                %label
+                  = f.radio_button :social_networking,"1", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.social_networking ) == "1" ? true : false               
+                  %span never
+              %li
+                %label
+                  = f.radio_button :social_networking,"2", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.social_networking ) == "2" ? true : false
+                  %span ehh, sometimes
+              %li
+                %label
+                  = f.radio_button :social_networking,"3", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.social_networking ) == "3" ? true : false
+                  %span all the time
+        .communication_colum.commu_last_colum
+          .commu_colum_text HUMANS
+          .commu_colum_human_icon
+          .skinned-form-controls.skinned-form-controls-mac
+            %ul.chechbox_margin
+              %li
+                %label
+                  = f.radio_button :humans,"1", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.humans ) == "1" ? true : false                    
+                  %span never
+              %li
+                %label
+                  = f.radio_button :humans,"2", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.humans ) == "2" ? true : false
+                  %span ehh, sometimes
+              %li
+                %label
+                  = f.radio_button :humans,"3", :checked=> ( !@member.member_survey_one.blank? and @member.member_survey_one.humans ) == "3" ? true : false
+                  %span all the time
+        .clear
+    .box_bottm_corner
+  / -    second  box start  -

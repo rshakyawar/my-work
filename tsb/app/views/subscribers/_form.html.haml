@@ -1,0 +1,4 @@
+= form_for @subscriber, :html => {:id => 'loginForm'} do |f|
+  %p
+    = f.text_field :email, :id => 'email', :placeholder => "Enter Your Email", :size => 22
+    = submit_tag 'Enter', :class => 'enterBtn'

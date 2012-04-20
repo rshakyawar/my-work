@@ -1,0 +1,116 @@
+.steel-container{
+	width:655px;
+	margin:0 auto;
+}
+.steel-container .head-rewards{
+	text-align:center;
+	font: normal 33px "TrajanPro";
+	color:#636363;
+}
+.steel-container .head-rewards span{
+	text-align:center;
+	font: normal 33px TheLastFont11;
+	color:#636363;
+}
+.osdg_thank_you_content_main {
+	width:655px;
+	height:435px;
+	background:url(../images/osdg_main_bg.png) no-repeat;
+	padding:13px 0px 0px 0px;
+}
+.steel-container .steal-wrapper{
+	background:url(../images/osdg_left_right_part_bg.png) no-repeat left top;
+	width:615px;
+	height:418px;
+	margin:0px auto 0px auto;
+}
+.steal-wrapper .left-part{
+	float:left;
+	width:320px;
+	text-align:center;	
+	text-align:center;
+	font: normal 20px TheLastFont11;
+	color:#e1e1e1;
+	}
+.left-part span{
+	font: normal 30px TheLastFont11;		
+}
+.left-part .t-shirt-off{
+	margin-top:65px;
+	line-height:10px;
+}
+.steal-wrapper .right-part{
+	float:left;
+	width:295px;
+	text-align:center;
+}
+.right-part .my-steel-head{
+	text-align:center;
+	font:italic 24px TheLastFont11;
+	color:#e1e1e1;
+	margin-top:14px;
+}
+.my-steel-head span{
+	font:normal 12px "TrajanPro";
+	color:#e1e1e1;
+}
+.right-part .social-icon{
+	margin-top:21px;
+	text-align:center;	
+}
+.right-part .social-icon a{
+	text-decoration:none;
+}
+.steelcode{
+	background:url(../images/steel-down-bg.jpg);
+	width:294px;
+	height:100px;
+	text-align:center;
+	font:italic 20px TheLastFont11;
+	color:#e1e1e1;
+	margin-top:14px;
+	padding-top:18px;
+}
+.love-som{
+	font:normal 18px "TrajanPro";
+	color:#ec008c;
+	margin:13px 0px 25px 0px;
+	padding:0px;
+}
+.sono-link{
+	font:normal 13px "TrajanPro";
+	color:#e1e1e1;
+	margin:0px;
+	padding:0px;
+	}
+.rewards-down-head{
+	height:72px;
+	font:bold 34px "TrajanPro";
+	color:#e1e1e1;
+	padding-top:10px;
+	text-align:center;
+}
+.rewards-down-head span{
+	height:72px;
+	font:bold 38px TheLastFont11;
+	color:#e1e1e1;
+	padding-top:23px;
+	text-align:center;
+}
+.brackets{
+
+ background: url("../images/bracket.png") no-repeat scroll left center transparent;
+ color: #FFFFFF;
+ font: bold 13px "TrajanPro";
+ height: 54px;
+ margin: 7px auto 0;
+ padding: 15px 15px 0;
+ text-align: center;
+ width: 195px;
+}
+.osdg_last_logo {
+	width:140px;
+	height:50px;
+	background:url(../images/osdg_last_logo.png) no-repeat;
+	margin:15px auto 0px auto;
+}

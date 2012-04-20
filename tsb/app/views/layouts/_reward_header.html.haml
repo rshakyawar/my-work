@@ -1,0 +1,101 @@
+%header
+  %h1
+    = render :partial => 'layouts/back_button'
+  %nav
+    %span{:style => "float: left;"}
+      %img{:alt => "Rewards Upload", :height => "22", :src => "/images/title_rewards_upload.gif", :width => "159"}/
+    %ul
+      %li
+        
+        - if ["show_reward_link","create_reward_link","update_reward_link"].include?(action_name)
+          %a.thank_you{:href => "/brand_partners/show_reward_link/#{@versus.id}/deal_image",:class=>"active"} Thank You 
+        - else
+          %a.thank_you{:href => "/brand_partners/show_reward_link/#{@versus.id}/deal_image",:class=>""} Thank You 
+      %li
+        - if ["show_deal","create_deal","update_deal"].include?(action_name)
+          %a.one{:href => "/brand_partners/show_deal/#{@versus.id}",:class=>"active"} The Deal
+        - else
+          %a.one{:href => "/brand_partners/show_deal/#{@versus.id}"} The Deal
+      %li
+        - if ["show_steal","create_steal","update_steal"].include?(action_name)
+          %a.two{:href => "/brand_partners/show_steal/#{@versus.id}",:class=>"active"} The Steal
+        - else
+          %a.two{:href => "/brand_partners/show_steal/#{@versus.id}"} The Steal
+      %li
+        - if ["show_schwag","create_schwag","update_schwag"].include?(action_name)
+          %a.three{:href => "/brand_partners/show_schwag/#{@versus.id}",:class=>"active"} The Schwag
+        - else
+          %a.three{:href => "/brand_partners/show_schwag/#{@versus.id}"} The Schwag   
+      %li
+        
+        - if ["show_thank_you_popup","create_thank_you_popup","update_thank_you_popup","show_popup_sending_text"].include?(action_name)
+          %a.thank_you_popup{:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/real",:class=>"active"} Thank You popup 
+        - else
+          %a.thank_you_popup{:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/real",:class=>""} Thank You popup   
+  %div                     
+    .question_btns
+      .reward_logos{:style=>"margin-left:-110px;width:94%"}
+        - if ["deal_image","steal_image","schwag_image"].include?(params[:current_link])
+          %ul{:style=>"margin-left: 465px;"}
+            %li
+              - if params[:current_link] == "deal_image"
+                %a{:class => "deal_logo current_logo",:href=>"/brand_partners/show_reward_link/#{@versus.id}/deal_image"}
+                  %span deal logo
+              - else
+                %a{:class => "deal_logo",:href=>"/brand_partners/show_reward_link/#{@versus.id}/deal_image"}
+                  %span deal logo
+            %li
+              - if params[:current_link] == "steal_image"
+                %a{:class => "steal_logo current_logo",:href=>"/brand_partners/show_reward_link/#{@versus.id}/steal_image"}
+                  %span steal logo
+              - else
+                %a{:class => "steal_logo",:href=>"/brand_partners/show_reward_link/#{@versus.id}/steal_image"}
+                  %span steal logo
+            %li
+              - if params[:current_link] == "schwag_image"
+                %a{:class => "schwag_logo current_logo",:href=>"/brand_partners/show_reward_link/#{@versus.id}/schwag_image"}
+                  %span schwag logo
+              - else
+                %a{:class => "schwag_logo",:href=>"/brand_partners/show_reward_link/#{@versus.id}/schwag_image"}
+                  %span schwag logo                
+        - if ["real","looser","winner","text","fb_image"].include?(params[:current_link])
+          %ul
+            %li
+              - if params[:current_link] == "real"
+                %a{:class => "real_popup current_logo",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/real"}
+                  %span steal logo
+              - else
+                %a{:class => "real_popup",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/real"}
+                  %span steal logo
+            %li
+              - if params[:current_link] == "looser"
+                %a{:class => "looser_popup current_logo",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/looser",:style=>"padding:5px 28px;"}
+                  %span steal logo
+              - else
+                %a{:class => "looser_popup",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/looser",:style=>"padding:5px 28px;"}
+                  %span steal logo
+            %li
+              - if params[:current_link] == "winner"
+                %a{:class => "winner_popup current_logo",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/winner"}
+                  %span schwag logo
+              - else
+                %a{:class => "winner_popup",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/winner"}
+                  %span schwag logo                                                      
+            %li
+              - if params[:current_link] == "text"
+                %a{:class => "sending_text current_logo",:href=>"/brand_partners/show_popup_sending_text/#{@versus.id}/text"}
+                  %span schwag logo
+              - else
+                %a{:class => "sending_text",:href=>"/brand_partners/show_popup_sending_text/#{@versus.id}/text"}
+                  %span schwag logo    
+            %li
+              - if params[:current_link] == "fb_image"
+                %a{:class => "fb_image current_logo",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/fb_image"}
+                  %span steal logo
+              - else
+                %a{:class => "fb_image",:href=>"/brand_partners/show_thank_you_popup/#{@versus.id}/fb_image"}
+                  %span steal logo            
+                               
+  %p.versusBack
+    %a{:href => "/brand_partners/show_versus/#{@versus.id}/top_banner"}
+      %img{:alt => "Back To Versus", :src => "/images/btn_verus_back.png"}/

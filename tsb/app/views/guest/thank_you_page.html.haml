@@ -1,0 +1,50 @@
+:css
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+  .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(""); }  
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head  
+    = stylesheet_link_tag("TSB_css.css")
+    = stylesheet_link_tag "/stylesheets/promo_versus_second.css"    
+  %body
+    #main
+      #middle_content
+        .TSB_Guest_Landing_main
+          .TSB_Guest_Landing_top
+            .TSB_Guest_Landing_top_left
+            .TSB_Guest_Landing_top_txt Want In ?
+            .TSB_Guest_Landing_top_left
+            .clear
+          .TSB_Guest_Landing_txt_row2
+            Simply enter your email to receive the
+            
+            next available  membership code 
+          = form_for(@guest_email, :url =>guest_save_guest_information_path) do |f|                            
+            .TSB_Guest_Landing_email_row
+              .TSB_Guest_Landing_email_field
+                = f.text_field :email, :onblur => "if ( this.value == '' ) { this.value = this.defaultValue;}", :onfocus => "if ( this.value == this.defaultValue || this.value == '' ) { this.value = '';}", :type => "text", :value => "Email",:name=>"email"
+              .TSB_Guest_Landing_email_bttn
+                %input{:type => "submit", :value => "",:name => "saveBtn"}/
+          .TSB_Guest_Landing_howwork_txt
+            How
+            %span TSB
+            Works
+          .TSB_Guest_Landing_video_bg
+            %div{:style=>"margin:12px 0 0 10px"}
+              %iframe{:allowFullScreen => "", :frameborder => "0", :src => "http://player.vimeo.com/video/30886867",:width=>"255px",:height=>"185px",:id=>"iframe_video",:style=>"margin:15px 0 0 -2px"}          
+#popup1.popupbox
+  - if @guest_email.errors
+    %h2{:style=>"margin:100px 10px 10px 35px"} #{@guest_email.errors.full_messages[0] rescue ""} 
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}       
+-if !@guest_email.nil? and @guest_email.errors.any?
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [520,287] });          

@@ -1,0 +1,205 @@
+= inner_form.fields_for :member_survey_two_attributes do |f|   
+  #everybody.communication_box
+    .box_top_corner
+    .box_middle_corner
+      .communication_heading
+        %span Everybody's Got Their Something
+        = succeed "1." do
+          %br/
+        If you're intrigued, click the "like" button.
+        %br/
+        2. If you are really into something, click the "expert" button.
+      .membership_img_row
+        .membership_img_bg
+          .step2_img_book
+          .step2_img_links_row
+            - if !survey_two_obj.books.blank? and survey_two_obj.books.first == "Like"            
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_1",:onClick=>"change_like_color('#like_1','#expert_1','#select_1_id','#span_like_1_id','#books_like', '#member_survey_two_books', '1');"} like
+              %span.display_hide{:id=>"span_like_1_id", :style=>"display:inline;"}  
+                %input{:type => "hidden", :id=>"books_like", :value=>"#{survey_two_obj.books[0]}",:name=> "member[member_survey_two_attributes][books][]"}/               
+            - else
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_1",:onClick=>"change_like_color('#like_1','#expert_1','#select_1_id','#span_like_1_id','#books_like', '#member_survey_two_books', '1');"} like              
+              %span.display_hide{:id=>"span_like_1_id"}  
+                %input{:type => "hidden", :id=>"books_like", :value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=> "member[member_survey_two_attributes][books][]", :disabled=>true}/  
+            - if !survey_two_obj.books.blank? and survey_two_obj.books.first != "Like"                             
+              %a{:href => "javascript:void(0);",:id=>"expert_1",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_1','#expert_1','#select_1_id','#span_like_1_id','#books_like', '#member_survey_two_books', '1')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_books",:value=>"#{survey_expert survey_two_obj.books}",:name=>"member[member_survey_two_attributes][books][]"}/              
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_1",:onClick=>"change_expert_color_two('#like_1','#expert_1','#select_1_id','#span_like_1_id','#books_like', '#member_survey_two_books', '1')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_books",:value=>"#{survey_two_obj.books}",:name=>"member[member_survey_two_attributes][books][]", :disabled=>true}/               
+        .membership_img_bg
+          .step2_img_travel
+          .step2_img_links_row
+            - if !survey_two_obj.travel.blank? and survey_two_obj.travel.first == "Like"            
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_2",:onClick=>"change_like_color('#like_2','#expert_2','#select_2_id','#span_like_2_id','#travel_like', '#member_survey_two_travel','2');"} like
+              %span.display_hide{:id=>"span_like_2_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"travel_like",:value=>"#{survey_two_obj.travel[0]}",:name=>"member[member_survey_two_attributes][travel][]"}/              
+            - else   
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_2",:onClick=>"change_like_color('#like_2','#expert_2','#select_2_id','#span_like_2_id','#travel_like', '#member_survey_two_travel','2');"} like            
+              %span.display_hide{:id=>"span_like_2_id"}
+                %input{:type => "hidden",:id=>"travel_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][travel][]", :disabled=>true}/
+            - if !survey_two_obj.travel.blank? and survey_two_obj.travel.first != "Like"              
+              %a{:href => "javascript:void(0);",:id=>"expert_2",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_2','#expert_2','#select_2_id','#span_like_2_id','#travel_like', '#member_survey_two_travel','2')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_travel",:value=>"#{survey_expert survey_two_obj.travel}",:name=>"member[member_survey_two_attributes][travel][]"}/     
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_2",:onClick=>"change_expert_color_two('#like_2','#expert_2','#select_2_id','#span_like_2_id','#travel_like', '#member_survey_two_travel','2')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_travel",:value=>"#{survey_two_obj.travel}",:name=>"member[member_survey_two_attributes][travel][]", :disabled=>true}/                         
+        .membership_img_bg
+          .step2_img_fashion
+          .step2_img_links_row
+            - if !survey_two_obj.fashion.blank? and survey_two_obj.fashion.first == "Like"                
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_3",:onClick=>"change_like_color('#like_3','#expert_3','#select_3_id','#span_like_3_id','#fashion_like', '#member_survey_two_fashion','3');"} like
+              %span.display_hide{:id=>"span_like_3_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"fashion_like",:value=>"#{survey_two_obj.fashion[0]}",:name=>"member[member_survey_two_attributes][fashion][]"}/              
+            - else
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_3",:onClick=>"change_like_color('#like_3','#expert_3','#select_3_id','#span_like_3_id','#fashion_like', '#member_survey_two_fashion','3');"} like                           
+              %span.display_hide{:id=>"span_like_3_id"}
+                %input{:type => "hidden",:id=>"fashion_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][fashion][]", :disabled=>true}/
+            - if !survey_two_obj.fashion.blank? and survey_two_obj.fashion.first != "Like"             
+              %a{:href => "javascript:void(0);",:id=>"expert_3",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_3','#expert_3','#select_3_id','#span_like_3_id','#fashion_like', '#member_survey_two_fashion','3')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_fashion",:value=>"#{survey_expert survey_two_obj.fashion}",:name=>"member[member_survey_two_attributes][fashion][]"}/
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_3",:onClick=>"change_expert_color_two('#like_3','#expert_3','#select_3_id','#span_like_3_id','#fashion_like', '#member_survey_two_fashion','3')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_fashion",:value=>"",:name=>"member[member_survey_two_attributes][fashion][]", :disabled=>true}/              
+        .membership_img_bg
+          .step2_img_art
+          .step2_img_links_row
+            - if !survey_two_obj.gallery.blank? and survey_two_obj.gallery.first == "Like"           
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_10",:onClick=>"change_like_color('#like_10','#expert_10','#select_10_id','#span_like_10_id','#gallery_like', '#member_survey_two_gallery','10');"} like
+              %span.display_hide{:id=>"span_like_10_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"gallery_like",:value=>"#{survey_two_obj.gallery[0]}",:name=>"member[member_survey_two_attributes][gallery][]"}/              
+            - else
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_10",:onClick=>"change_like_color('#like_10','#expert_10','#select_10_id','#span_like_10_id','#gallery_like', '#member_survey_two_gallery','10');"} like              
+              %span.display_hide{:id=>"span_like_10_id"}
+                %input{:type => "hidden",:id=>"gallery_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][gallery][]", :disabled=>true}/
+            - if !survey_two_obj.gallery.blank? and survey_two_obj.gallery.first != "Like"                
+              %a{:href => "javascript:void(0);",:id=>"expert_10",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_10','#expert_10','#select_10_id','#span_like_10_id','#gallery_like', '#member_survey_two_gallery','10')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_gallery",:value=>"#{survey_expert survey_two_obj.gallery}",:name=>"member[member_survey_two_attributes][gallery][]"}
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_10",:onClick=>"change_expert_color_two('#like_10','#expert_10','#select_10_id','#span_like_10_id','#gallery_like', '#member_survey_two_gallery','10')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_gallery",:value=>"",:name=>"member[member_survey_two_attributes][gallery][]", :disabled=>true}                          
+      / -  image row 2 start  -
+      .membership_img_row
+        .membership_img_bg
+          .step2_img_nightlife
+          .step2_img_links_row
+            - if !survey_two_obj.nightlife.blank? and survey_two_obj.nightlife.first == "Like"              
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_5",:onClick=>"change_like_color('#like_5','#expert_5','#select_5_id','#span_like_5_id','#nightlife_like', '#member_survey_two_nightlife','5');"} like
+              %span.display_hide{:id=>"span_like_5_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"nightlife_like",:value=>"#{survey_two_obj.nightlife[0]}",:name=>"member[member_survey_two_attributes][nightlife][]"}/              
+            - else  
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_5",:onClick=>"change_like_color('#like_5','#expert_5','#select_5_id','#span_like_5_id','#nightlife_like', '#member_survey_two_nightlife','5');"} like            
+              %span.display_hide{:id=>"span_like_5_id"}
+                %input{:type => "hidden",:id=>"nightlife_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][nightlife][]", :disabled=>true}/
+            - if !survey_two_obj.nightlife.blank? and survey_two_obj.nightlife.first != "Like"                 
+              %a{:href => "javascript:void(0);",:id=>"expert_5",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_5','#expert_5','#select_5_id','#span_like_5_id','#nightlife_like', '#member_survey_two_nightlife','5')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_nightlife",:value=>"#{survey_expert survey_two_obj.nightlife}",:name=>"member[member_survey_two_attributes][nightlife][]"}/
+            - else 
+              %a{:href => "javascript:void(0);",:id=>"expert_5",:onClick=>"change_expert_color_two('#like_5','#expert_5','#select_5_id','#span_like_5_id','#nightlife_like', '#member_survey_two_nightlife','5')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_nightlife",:value=>"",:name=>"member[member_survey_two_attributes][nightlife][]", :disabled=>true}/            
+        .membership_img_bg
+          .step2_img_home
+          .step2_img_links_row
+            - if !survey_two_obj.home.blank? and survey_two_obj.home.first == "Like"          
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_6",:onClick=>"change_like_color('#like_6','#expert_6','#select_6_id','#span_like_6_id','#home_like', '#member_survey_two_home','6');"} like
+              %span.display_hide{:id=>"span_like_6_id",:style=>"display:inline;"}            
+                %input{:type => "hidden",:id=>"home_like",:value=>"#{survey_two_obj.home[0]}",:name=>"member[member_survey_two_attributes][home][]"}/              
+            - else
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_6",:onClick=>"change_like_color('#like_6','#expert_6','#select_6_id','#span_like_6_id','#home_like', '#member_survey_two_home','6');"} like                          
+              %span.display_hide{:id=>"span_like_6_id"}            
+                %input{:type => "hidden",:id=>"home_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][home][]", :disabled=>true}/ 
+            - if !survey_two_obj.home.blank? and survey_two_obj.home.first != "Like"               
+              %a{:href => "javascript:void(0);",:id=>"expert_6",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_6','#expert_6','#select_6_id','#span_like_6_id','#home_like', '#member_survey_two_home','6')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_home",:value=>"#{survey_expert survey_two_obj.home}",:name=>"member[member_survey_two_attributes][home][]"}
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_6",:onClick=>"change_expert_color_two('#like_6','#expert_6','#select_6_id','#span_like_6_id','#home_like', '#member_survey_two_home','6')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_home",:value=>"",:name=>"member[member_survey_two_attributes][home][]", :disabled=>true}                           
+        .membership_img_bg
+          .step2_img_food
+          .step2_img_links_row
+            - if !survey_two_obj.food.blank? and survey_two_obj.food.first == "Like"            
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_7",:onClick=>"change_like_color('#like_7','#expert_7','#select_7_id','#span_like_7_id','#food_like', '#member_survey_two_food','7');"} like
+              %span.display_hide{:id=>"span_like_7_id",:style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"food_like",:value=>"#{survey_two_obj.food[0]}",:name=>"member[member_survey_two_attributes][food][]"}/              
+            - else
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_7",:onClick=>"change_like_color('#like_7','#expert_7','#select_7_id','#span_like_7_id','#food_like', '#member_survey_two_food','7');"} like              
+              %span.display_hide{:id=>"span_like_7_id"}
+                %input{:type => "hidden",:id=>"food_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][food][]", :disabled=>true}/
+            - if !survey_two_obj.food.blank? and survey_two_obj.food.first != "Like"               
+              %a{:href => "javascript:void(0);",:id=>"expert_7",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_7','#expert_7','#select_7_id','#span_like_7_id','#food_like', '#member_survey_two_food','7')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_food",:value=>"#{survey_expert survey_two_obj.food}",:name=>"member[member_survey_two_attributes][food][]"}
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_7",:onClick=>"change_expert_color_two('#like_7','#expert_7','#select_7_id','#span_like_7_id','#food_like', '#member_survey_two_food','7')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_food",:value=>"",:name=>"member[member_survey_two_attributes][food][]", :disabled=>true}                          
+        .membership_img_bg
+          .step2_img_gaming
+          .step2_img_links_row
+            - if !survey_two_obj.gaming.blank? and survey_two_obj.gaming.first == "Like"           
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_8",:onClick=>"change_like_color('#like_8','#expert_8','#select_8_id','#span_like_8_id','#gaming_like', '#member_survey_two_gaming','8');"} like
+              %span.display_hide{:id=>"span_like_8_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"gaming_like",:value=>"#{survey_two_obj.gaming[0]}",:name=>"member[member_survey_two_attributes][gaming][]"}/              
+            - else
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_8",:onClick=>"change_like_color('#like_8','#expert_8','#select_8_id','#span_like_8_id','#gaming_like', '#member_survey_two_gaming','8');"} like            
+              %span.display_hide{:id=>"span_like_8_id"}
+                %input{:type => "hidden",:id=>"gaming_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][gaming][]", :disabled=>true}/
+            - if !survey_two_obj.gaming.blank? and survey_two_obj.gaming.first != "Like"                
+              %a{:href => "javascript:void(0);",:id=>"expert_8",:style=>"background-color:#3BB9FF",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_8','#expert_8','#select_8_id','#span_like_8_id','#gaming_like', '#member_survey_two_gaming','8')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_gaming",:value=>"#{survey_expert survey_two_obj.gaming}",:name=>"member[member_survey_two_attributes][gaming][]"}
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_8",:onClick=>"change_expert_color_two('#like_8','#expert_8','#select_8_id','#span_like_8_id','#gaming_like', '#member_survey_two_gaming','8')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_gaming",:value=>"",:name=>"member[member_survey_two_attributes][gaming][]", :disabled=>true}              
+      / -  image row 3 start  -
+      .membership_img_row
+        .membership_img_bg.box2_image_center
+          .step2_img_music
+          .step2_img_links_row
+            - if !survey_two_obj.music.blank? and survey_two_obj.music.first == "Like"              
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_9",:onClick=>"change_like_color('#like_9','#expert_9','#select_9_id','#span_like_9_id','#music_like', '#member_survey_two_music','9');"} like
+              %span.display_hide{:id=>"span_like_9_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"music_like",:value=>"#{survey_two_obj.music[0]}",:name=>"member[member_survey_two_attributes][music][]"}/              
+            - else 
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_9",:onClick=>"change_like_color('#like_9','#expert_9','#select_9_id','#span_like_9_id','#music_like', '#member_survey_two_music','9');"} like              
+              %span.display_hide{:id=>"span_like_9_id"}
+                %input{:type => "hidden",:id=>"music_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][music][]", :disabled=>true}/
+            - if !survey_two_obj.music.blank? and survey_two_obj.music.first != "Like"                
+              %a{:href => "javascript:void(0);",:id=>"expert_9",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_9','#expert_9','#select_9_id','#span_like_9_id','#music_like', '#member_survey_two_music','9')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_music",:value=>"#{survey_expert survey_two_obj.music}",:name=>"member[member_survey_two_attributes][music][]"}
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_9",:onClick=>"change_expert_color_two('#like_9','#expert_9','#select_9_id','#span_like_9_id','#music_like', '#member_survey_two_music','9')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_music",:value=>"",:name=>"member[member_survey_two_attributes][music][]", :disabled=>true}              
+        .membership_img_bg
+          .step2_img_beauty_grooming
+          .step2_img_links_row
+            - if !survey_two_obj.beauty_grooming.blank? and survey_two_obj.beauty_grooming.first == "Like"           
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_11",:onClick=>"change_like_color('#like_11','#expert_11','#select_11_id','#span_like_11_id','#beauty_grooming_like', '#member_survey_two_beauty_grooming','11');"} like
+              %span.display_hide{:id=>"span_like_11_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"beauty_grooming_like",:value=>"#{survey_two_obj.beauty_grooming[0]}",:name=>"member[member_survey_two_attributes][beauty_grooming][]"}/              
+            - else
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_11",:onClick=>"change_like_color('#like_11','#expert_11','#select_11_id','#span_like_11_id','#beauty_grooming_like', '#member_survey_two_beauty_grooming','11');"} like              
+              %span.display_hide{:id=>"span_like_11_id"}
+                %input{:type => "hidden",:id=>"beauty_grooming_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][beauty_grooming][]", :disabled=>true}/
+            - if !survey_two_obj.beauty_grooming.blank? and survey_two_obj.beauty_grooming.first != "Like"                 
+              %a{:href => "javascript:void(0);",:id=>"expert_11",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_11','#expert_11','#select_11_id','#span_like_11_id','#beauty_grooming_like', '#member_survey_two_beauty_grooming','11')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_beauty_grooming",:value=>"#{survey_expert survey_two_obj.beauty_grooming}",:name=>"member[member_survey_two_attributes][beauty_grooming][]"}
+            - else
+              %a{:href => "javascript:void(0);",:id=>"expert_11",:onClick=>"change_expert_color_two('#like_11','#expert_11','#select_11_id','#span_like_11_id','#beauty_grooming_like', '#member_survey_two_beauty_grooming','11')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_beauty_grooming",:value=>"",:name=>"member[member_survey_two_attributes][beauty_grooming][]", :disabled=>true}            
+        .membership_img_bg
+          .step2_img_health_fitness
+          .step2_img_links_row
+            - if !survey_two_obj.health_fitness.blank? and survey_two_obj.health_fitness.first == "Like"            
+              %a.membership_like_icon{:href => "javascript:void(0);",:style=>"background-color:orange",:id=>"like_12",:onClick=>"change_like_color('#like_12','#expert_12','#select_12_id','#span_like_12_id','#health_fitness_like', '#member_survey_two_health_fitness','12');"} like
+              %span.display_hide{:id=>"span_like_12_id", :style=>"display:inline;"}
+                %input{:type => "hidden",:id=>"health_fitness_like",:value=>"#{survey_two_obj.health_fitness[0]}",:name=>"member[member_survey_two_attributes][health_fitness][]"}/              
+            - else 
+              %a.membership_like_icon{:href => "javascript:void(0);",:id=>"like_12",:onClick=>"change_like_color('#like_12','#expert_12','#select_12_id','#span_like_12_id','#health_fitness_like', '#member_survey_two_health_fitness','12');"} like             
+              %span.display_hide{:id=>"span_like_12_id"}
+                %input{:type => "hidden",:id=>"health_fitness_like",:value=>"#{APPLICATION_CONFIG.member_survey.survey_2.like}",:name=>"member[member_survey_two_attributes][health_fitness][]", :disabled=>true}/
+            - if !survey_two_obj.health_fitness.blank? and survey_two_obj.health_fitness.first != "Like"               
+              %a{:href => "javascript:void(0);",:id=>"expert_12",:style=>"background-color:#3BB9FF",:onClick=>"change_expert_color_two('#like_12','#expert_12','#select_12_id','#span_like_12_id','#health_fitness_like', '#member_survey_two_health_fitness','12')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_health_fitness",:value=>"#{survey_expert survey_two_obj.health_fitness}",:name=>"member[member_survey_two_attributes][health_fitness][]"}
+            - else  
+              %a{:href => "javascript:void(0);",:id=>"expert_12",:onClick=>"change_expert_color_two('#like_12','#expert_12','#select_12_id','#span_like_12_id','#health_fitness_like', '#member_survey_two_health_fitness','12')"} EXPERT
+              %input{:type => "hidden",:id=>"member_survey_two_health_fitness",:value=>"",:name=>"member[member_survey_two_attributes][health_fitness][]", :disabled=>true}            
+    .box_bottm_corner
+  / -  Third  box start  -

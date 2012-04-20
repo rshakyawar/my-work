@@ -1,0 +1,533 @@
+ /*---------------------------------------------
+	The Stash Box Stylesheet
+
+	Author: Beata Domagala Pink Parachuters
+	Created: June, 2011
+	Modified: ...
+	--------
+	Structure of this Document (search for "=" to jump to each section heading):
+
+		1. =XHTML ELEMENTS
+		2. =GLOBAL
+		3. =HEADER
+		4. =NAV
+		5. =CONTENT
+		6. =SIDEBAR
+		7. =FOOTER
+SH - start here
+EH - end here
+---------------------------------------------*/
+
+/*=XHTML ELEMENTS
+---------------------------------------------*/
+
+@font-face {font-family:Trajan Pro; src: url('TrajanPro-Regular.otf');}
+@font-face {font-family:Copperplate; src: url('Copperplate.ttc');}
+@font-face {font-family: 'temp_Copperplate';
+  src: url('../fonts/Copperplate.eot?') format('eot'),
+  url('../fonts/Copperplate.woff') format('woff'),
+  url('../fonts/Copperplate.ttf') format('truetype'),
+  url('../fonts/Copperplate.svg') format('svg');
+}
+
+ @font-face {
+     font-family: 'TheLastFont11';
+     src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+          url('../fonts/lastfontwastingonyou.woff') format('woff'),
+          url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+          url('../fonts/lastfontwastingonyou.svg') format('svg');
+ }
+  @font-face {
+     font-family: 'TheLastFont';
+     src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+          url('../fonts/lastfontwastingonyou.woff') format('woff'),
+          url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+          url('../fonts/lastfontwastingonyou.svg') format('svg');
+ }
+  @font-face {
+     font-family: 'Trajan';
+     src: url('../fonts/TrajanPro-Regular.eot?') format('eot'),
+          url('../fonts/TrajanPro-Regular.woff') format('woff'),
+          url('../fonts/TrajanPro-Regular.ttf') format('truetype'),
+          url('../fonts/TrajanPro-Regular.svg') format('svg');
+ }
+  @font-face {
+     font-family: 'TrajanPro';
+     src: url('../fonts/TrajanPro-Regular.eot?') format('eot'),
+          url('../fonts/TrajanPro-Regular.woff') format('woff'),
+          url('../fonts/TrajanPro-Regular.ttf') format('truetype'),
+          url('../fonts/TrajanPro-Regular.svg') format('svg');
+ }
+body {
+	color: #000;
+	font-size:14px;
+    font-family:"Times New Roman", Times, serif;
+    line-height:1.4;
+    background: url("../images/doors_bricks_resized.jpg") repeat scroll 50% 40% black;
+	}
+
+a {color: #666;}
+a:link, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {}
+
+h2{font-family:Trajan Pro, serif; font-size:24px; text-transform:uppercase; }
+h3{font-family:Copperplate, sans-serif; font-weight:bold; font-size:12px;}
+
+p {margin: 5px 0;}
+em{font-style: italic;}
+
+/*=GLOBAL ELEMENTS
+---------------------------------------------*/
+.mgsIntro{
+	font-style:italic;
+	font-size:14px;
+	width:300px;
+	margin:0 auto;
+	text-align:center;
+	padding:10px 0 15px 0;
+}
+p.tagLine{
+	font-size:14px;
+	font-family:Trajan Pro, serif;
+	text-transform:uppercase;
+}
+/*=HEADER ELEMENTS
+---------------------------------------------*/
+header{
+	margin: 0 auto;
+    overflow: hidden;
+    width: 99%;
+	padding:20px 0;
+}
+h1{
+	float:left;
+	width:30px;
+	padding:0 25px 0 15px;
+}
+/*=NAV ELEMENTS
+---------------------------------------------*/
+nav{
+	float:left;
+	}
+
+nav li{
+	float:left;
+	margin:0 5px;
+}
+nav li a{
+	display:block;
+	text-indent:-3000px;
+	height:27px;
+}
+nav li a.active{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+nav li a.one{
+	background:url(../images/nav.png) no-repeat 0 0;
+	width:110px;
+}
+nav li a.two{
+	background:url(../images/nav.png) no-repeat -124px 0;
+	width:113px;
+}
+nav li a.three{
+	background:url(../images/nav.png) no-repeat -249px 0;
+	width:63px;
+}
+nav li a.four{
+	background:url(../images/nav.png) no-repeat -327px 0;
+	width:88px;
+}
+nav li a.five{
+	background:url(../images/nav.png) no-repeat -428px 0;
+	width:108px;
+}
+nav li a.six{
+	background:url(../images/nav.png) no-repeat -552px 0;
+	width:89px;
+}
+nav li a.seven{
+	background:url(../images/nav.png) no-repeat -652px 0;
+	width:121px;
+}
+nav li a.one:hover,
+nav li a.two:hover,
+nav li a.three:hover,
+nav li a.four:hover,
+nav li a.five:hover,
+nav li a.six:hover,
+nav li a.seven:hover{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+
+nav li a.one:hover,
+nav li a.two:hover,
+nav li a.three:hover,
+nav li a.four:hover,
+nav li a.five:hover,
+nav li a.six:hover,
+nav li a.seven:hover{
+	background-color:#edf0f0;
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#c694ec', Direction=135, Strength=5);
+}
+ /*=CONTENT ELEMENTS
+---------------------------------------------*/
+#black_bg {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#door_left, #door_left_visible {
+    background: url("../images/door_left.jpg") no-repeat scroll 100% 50% transparent;
+    cursor: pointer;
+    display: none;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 50%;
+    z-index: 30;
+}
+#door_right, #door_right_visible {
+    background: url("../images/door_right.jpg") no-repeat scroll 0 50% transparent;
+    cursor: pointer;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 49.9%;
+    z-index: 30;
+}
+#wrapper{
+	width:868px;
+   margin:0 auto;
+   height:100%;
+   padding:0;
+   overflow:hidden;
+}
+#main{
+    display: block;
+    margin:0 10px 15px 10px;
+    overflow: hidden;
+    text-align: center;
+}
+ul.buttons{
+	display: block;
+    margin: 0 auto;
+    width: 390px;
+}
+ul.buttons.social{
+	margin:0 30% ;
+}
+ul.buttons li{
+	float:left;
+  margin: 10px 30px 10px 0;
+}
+
+/*Twitter*/
+.tweet{
+	width:520px;
+	padding:15px 10px;
+	margin:15px auto;
+	text-align:left;
+	background:#FFF;
+	 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	 filter: alpha(opacity=80);
+     -moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	 opacity: 0.8;
+	 -moz-box-shadow: 5px 5px 10px #444;
+  	-webkit-box-shadow: 5px 5px 10px #444;
+ 	 box-shadow: 3px 0px 10px #333;
+}
+a.tweet_avatar{
+	display:block;
+	float:left;
+	height:50px;
+	width:50px;
+	padding:0 5px;
+}
+ul.tweet_list li{
+	 height: 55px;
+    padding: 10px;
+}
+ul.tweet_list li a{
+	color:#c694ec;
+	text-transform:capitalize;
+}
+body.memberLog #wrapper{
+	background:url(../images/memberLog.jpg) no-repeat;
+}
+/*Members Login*/
+body.membership #wrapper{
+	background:url(../images/bg_memeber.jpg) no-repeat;
+	height:780px;
+}
+body.membership #boxWrap{
+	margin:0px 0 0 40px;
+}
+body.membership #main {
+	margin:-20px 0 0 0;
+}
+body.membership .box{
+	padding: 0 160px 0 20px;
+    width: 280px;
+	height:190px;
+}
+body.membership .box h2{
+	padding:25px 10px 10px 10px;
+	font-size:20px;
+}
+/*How it works*/
+body.howworks #wrapper{
+	background:url(../images/bg_howitworks.jpg) no-repeat;
+}
+#boxWrap{
+	float:left;
+	margin:-25px 0 0 0;
+	width:100%;
+}
+.box{
+	 float: left;
+    height: 220px;
+    padding: 20px 180px 0 68px;
+    width: 265px;
+}
+.box2 {
+    float: left;
+    height: 310px;
+    width: 400px;
+}
+.box2 p,
+.box p{
+	font-family:Copperplate, sans-serif;
+	width:250px;
+  font-size: 15px;
+	margin:10px auto;
+}
+.box2 a,
+.box a{
+	font-size:15px;
+	text-transform:uppercase;
+	display:block;
+}
+.box2 h2,
+.box h2{
+	text-align:center;
+	padding:10px 0 0 0;
+}
+.hunt h2,
+.voice h2{
+		padding:100px 0 0 0;
+}
+.safe h2{
+	padding:18px 0 0 0;
+}
+.hunt{
+	margin: 10px 30px 0px 60px;
+    width: 350px;
+}
+.hunt a{
+	float:right;
+	}
+.voice{
+	margin: 10px 0 0;
+    width: 300px;}
+.voice a{
+	float:left;
+}
+.schang{
+	  margin: 0 0 0 50px;
+    width: 360px;
+}
+.schang a{
+	float:right;
+}
+.safe{
+     margin: 0 0 0 30px;
+    text-align: center;
+    width: 286px;
+}
+.safe a{
+float:left;
+}
+/*Contact*/
+#boxWrap.contactBox{
+	margin:15px;
+}
+.contactTBS{
+	background:#FFF;
+	transparency:;
+	margin: 15px 25px 65px 25px;
+    padding:10px 20px 20px 20px;
+	float:left;
+    width: 330px;
+	 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	 filter: alpha(opacity=70);
+     -moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	 opacity: 0.7;
+	 -moz-box-shadow: 5px 5px 10px #444;
+  	-webkit-box-shadow: 5px 5px 10px #444;
+ 	 box-shadow: 3px 0px 10px #333;
+
+}
+.contactImg{
+	margin:25px 0 0 0;
+	float:left;
+}
+.contactTBS p{
+	text-align:left;
+	width:280px;
+	font-weight:600;
+}
+.contactBtn{
+	float:right;
+	margin:-65px 0 0 0;
+}
+/*Who we are*/
+.bioBox{
+	float:left;
+	margin:10px 10%;
+	width:645px;
+}
+.bioBox img {
+	float:left;
+	padding:15px;
+}
+.bioBox .bio{
+	padding:15px 25px 15px 15px;
+	text-align:left;
+}
+.bioBox .bio h2{
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	font-size:16px;
+	font-weight:bold;
+	padding:5px;
+	margin:0 0 10px 0;
+}
+.bio ul {
+  display: block;
+}
+/*Blog*/
+.blogEntry{
+	width:460px;
+	margin:20px auto;
+	text-align:left;
+}
+
+.facebook_twit{
+  margin-left: 330px;
+}
+
+ul.whatyougot li{
+	background: url("../images/bg_input.png") no-repeat scroll 0 0 transparent;
+    height: 32px;
+    text-align: right;
+    width: 267px;
+	margin: 3px 0 0 10px;
+}
+ul.whatyougot li input{
+	    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #000000;
+    font-size: 14px;
+    margin: 9px 10px 0 0;
+    text-align: right;
+    text-transform: uppercase;
+    width: 93%;
+}
+ul.whatyougot li.sel{
+	background:none;
+}
+ul.whatyougot li select{
+	background: none repeat scroll 0 0 transparent;
+    outline: medium none;
+    padding: 0px 0;
+    text-align: left;
+    width: 267px;
+    height: 32px;
+}
+ul.whatyougot li option{
+	background:#fff;
+	outline:none;
+	text-align:left;
+}
+
+ul.whatyougot li input.sendBtn{
+	background:url(../images/bg_send.png) no-repeat;
+	height:30px;
+	width:70px;
+	text-indent:-4000px;
+	margin:9px 0 0 0;
+}
+/*Hunt the Code*/
+ul#huntCode{
+	float:left;
+	margin:43px 0 0 11%;
+}
+ul#huntCode li{
+	float:left;
+	width:150px;
+	padding:30px;
+}
+/*Forms*/
+form#loginForm{
+	background:url(../images/bg_loginBox.png) no-repeat;
+	height: 119px;
+  margin:6px auto 10px auto;
+	width:275px;
+}
+form#loginForm p{
+	padding:65px 0 0 0;
+}
+input.enterBtn{
+	background:url(../images/btn_enter.gif) no-repeat;
+	height:30px;
+	width:70px;
+	text-indent:-3000px;
+	font-size: 0;
+	display:block;
+	line-height: 0;
+border: medium none;
+}
+#email{
+	float: left;
+  height: 20px;
+  margin: 5px 0 0 20px;
+}
+
+#error_explanation{
+  color: red;
+}
+.clear {
+  clear: both;
+}
+#stashbox_image_bttn {
+/*	width:269px;
+	height:284px;
+	position:absolute;
+	left:584px;
+ margin-top:-58px;*/
+  bottom: 56px;
+  float: left;
+  height: 284px;
+  left: 585px;
+  position: relative;
+  width: 269px;
+}
+#member_code_super{
+ /*position: relative;
+ height:1px;
+ width:1px;*/
+}
+

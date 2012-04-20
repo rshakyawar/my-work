@@ -1,0 +1,156 @@
+.space1 {
+	padding:10px 0px 0px 0px;
+}
+
+.Versus_Login_close_row {
+	width:402px;
+	height:20px;
+}
+.Versus_Login_close {
+	width:50px;
+	height:12px;
+	float:right;
+	margin:0px 35px 0px 0px;
+}
+.Versus_Login_close a {
+	width:50px;
+	height:12px;
+	/*background:url(../images/TSB_Guest_Landing_sprite_img.png) no-repeat -302px -125px;*/
+	display:block;
+}
+.Versus_Login_main {
+	width:402px;
+	height:549px;
+	background:url(../images/TSB_Versus_Login_bg.png) no-repeat left top;
+	margin:0px auto;
+	padding:25px 0px 0px 0px;
+}
+.Versus_Login_top {
+	width:350px;
+	height:auto;
+	margin:0px auto 0px auto;
+	padding:12px 0px 0px 0px;
+}
+.Versus_Login_top_left {
+	width:55px;
+	height:56px;
+	background:url(../images/TSB_Guest_Landing_sprite_img.png) no-repeat -306px -62px;
+	float:left;
+	margin-left:5px;
+}
+.Versus_Login_top_txt {
+	width:auto;
+	height:50px;
+	font:italic 42px TheLastFont;
+	color:#000;
+	float:left;
+	margin:0px 10px 0px 10px;
+}
+.Versus_Login_top_txt span {
+	font:italic 50px TheLastFont;
+}
+.Versus_Login_stashbox_txt_row {
+	width:402px;
+	height:40px;
+	font:italic 31px TheLastFont;
+	color:#000;
+	text-align:center;
+}
+.Versus_Login2_txt {
+	width:402px;
+	height:20px;
+	font:italic 12px TheLastFont;
+	color:#000;
+	text-align:center;
+}
+.Versus_Login_field_row {
+	width:330px;
+	height:32px;
+	margin-top:14px;
+	padding:0px 0px 0px 72px;
+}
+.Versus_Login_email_field {
+	width:267px;
+	height:32px;
+	float:left;
+}
+.Versus_Login_email_field input {
+	width:251px;
+	height:32px;
+	background:url(../images/TSB_Guest_Landing_sprite_img.png) no-repeat -2px -4px;
+	border:none;
+	font:normal 17px "TrajanPro";
+	color:#000;
+	text-align:right;
+	padding:0px 8px 0px 8px;
+	padding-top:6px\9;
+}
+.Versus_Login_email_bttn {
+	width:66px;
+	height:28px;
+	float:right;
+	margin:1px 65px 0px 13px;
+}
+.Versus_Login_email_bttn input {
+	width:66px;
+	height:28px;
+	background:url(../images/TSB_Guest_Landing_sprite_img.png) no-repeat -287px -7px;
+	border:none;
+	font:italic 17px "Times New Roman", Times, serif;
+	color:#000;
+	cursor:pointer;
+}
+.Versus_Login_middle_txt {
+	width:377px;
+	height:auto;
+	font:italic 14px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	line-height:30px;
+	padding-left:25px;
+	margin:42px 0px 0px 0px;
+}
+.Versus_Login_middle_txt span {
+	font:italic 30px "Times New Roman", Times, serif;
+}
+.Versus_Login_guest_click_bttn_row {
+	width:402px;
+	height:30px;
+	margin:64px 0px 0px 0px;
+}
+.Versus_Login_guest_click_bttn {
+	width:140px;
+	height:29px;
+	float:right;
+	margin:0px 130px 0px 0px;
+}
+.Versus_Login_guest_click_bttn a {
+	width:138px;
+	height:25px;
+	background:url(../images/TSB_Guest_Landing_sprite_img.png) no-repeat -152px -275px;
+	display:block;
+	font:italic 17px "Times New Roman", Times, serif;
+	color:#000;
+	text-align:center;
+	text-decoration:none;
+	padding:4px 0px 0px 2px;
+}
+.Versus_Login_bottom_img {
+	width:136px;
+	height:45px;
+	background:url(../images/TSB_Guest_Landing_sprite_img.png) no-repeat -3px -276px;
+	margin:80px auto 0 auto;
+}
+.clear{
+	clear:both;
+}
+.ui-dialog {
+	background-image:url("../images/popup.png") !important;
+	background-color:Transparent;
+	background-repeat:no-repeat;
+	background-position:center;
+	height:579px !important;
+	width:455px !important;
+	border:none !important;
+}
+

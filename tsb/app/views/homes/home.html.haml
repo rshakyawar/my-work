@@ -1,0 +1,164 @@
+= stylesheet_link_tag "/stylesheets/versus_winner_pop_up.css"
+= stylesheet_link_tag "/stylesheets/promo_versus_second.css"
+= stylesheet_link_tag "/stylesheets/brand_partner.css"
+= stylesheet_link_tag "/stylesheets/gest_member.css"
+:css
+  .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(""); }
+  .ui-dialog {
+    background-image: url("") !important;
+  }
+  .ui-widget-header{
+    background: url("") repeat-x scroll 50% 50% #776855;
+  }
+  .blue_border_versus {
+    border:0px solid black !important;
+    cursor:pointer;
+  }
+  .red_border_versus {
+    border:5px solid #b29c88 !important;
+    cursor:pointer;
+  }
+  section.promo_shadow {
+    background:none repeat scroll 0 0 #FFFFFF;
+    float:left;
+    height:459px;
+    margin:0 0 0 15px;
+    width:760px;
+    box-shadow: 10px 10px 5px #666;
+    border: 3px solid #666 !important;
+  }
+  .TSB_Dessert_youwonpopup_txtline1 {
+  width:511px;
+  height: 50px;
+  padding-left: 105px;
+  font:normal 20px "knowyour", Arial, Helvetica, sans-serif;
+  color:#ea6421;
+  text-align:center;
+  }
+
+  .TSB_Dessert_youwonpopup_txtline2 {
+  width:500px;
+  height:auto;
+  font:italic normal 14px "TheLastFont", Arial, Helvetica, sans-serif  ;
+  color:#000;
+  text-align:center;
+  margin:10px 0px 0px 0px;
+  }
+
+  .TSB_Dessert_youwonpopup_txtline2 span {
+  color:#EA6421;
+  }
+
+  .TSB_Dessert_youwonpopup_img_bg {
+  width:325px;
+  height:224px;
+  background:url(../images/TSB_Dessert_YouWonPopup_img_bg.png) no-repeat left top;
+  margin:10px auto 0px auto;
+  padding:7px 0px 0px 13px;
+  }  
+  .TSB_culturefix_youwonpopup_img_bg {
+  background: url("../images/TSB_Culturefix_youwonpopup_img_bg.png") no-repeat scroll left top transparent;
+  height: 249px;
+  margin: 0px auto 0;
+  padding: 7px 0 0 15px;
+  width: 210px;
+  }
+#black_bg
+  #door_left
+  #door_right
+#door_left_visible
+#door_right_visible
+#main{:style => "padding-top:40px;"}
+  #blockRight{:style => "position:relative;margin-left:30px;"}
+    %section.promo_shadow
+      #topBanner_promo{:style=>"border-right: 1px solid gray;"}
+        %img{:alt => "Top Banner", :src => "#{@product.top_banner.url(:promo_top_banner)}"}/
+      #bgImgBlock_promo{:style=>"background-image:url('#{@product.background.url(:promo_background)}');"}
+        - if @product.background.to_s =="/backgrounds/original/missing.png"
+          %p Background Image
+        - else 
+          %p &nbsp;
+        #versusBlock{:style=>"margin:20px 0 0px 64px"}
+          #versusLeft.versusLeft_set.blue_border_versus
+            %img{:alt => "Versus Left", :src => "#{@question.versus_left.url(:medium)}"}/
+          #versusRight.versusRight_set.blue_border_versus
+            %img{:alt => "Versus Right", :src => "#{@question.versus_right.url(:medium)}"}/
+      #bottomBannerBlock_promo
+        %img{:alt => "question_image", :src => "#{@question.question_image.url(:promo_question)}"}      
+    #logo2Block_promo
+      %input#versus_image_choice{:type => "hidden", :value => ""}/
+      #logoTwo_promo{:style=>"width:120px;"}
+        %div{:id=>"logo_two_id"}
+          %img{:alt => "Logo Two", :src => "#{@product.logo_two.url(:medium)}"}/
+        %div
+          %a.dis_none{:id=>"below_image_tag",:href=>"/save_count_choice/#{@question_no.to_i}",:style=>"color:black;"}
+            %div{:style=>"width:125px"}
+              %img{:alt => "Logo Two", :src => "#{@product.logo_two.url(:medium)}",:style=>"margin-left:-2px"}/
+            %div{:style=>"clear:both;font-family: Trajan Pro,serif;font-size:17px;margin-left: -42px;"}
+              Click for next question   
+#content_winner_code_id.dis_none{:style=>"position:relative; width:500px; height:2px;"}
+  .YouWonPopup_main{:style=>"position:absolute;left:180px;margin-top:-487px;"}
+    .youwonpopup_close_bttn_main
+      .youwonpopup_close_bttn
+        %a{:href => "#",:id=>"winner_pop_close_id"}
+    .TSB_Dessert_youwonpopup_txtline1 
+      %img{:align => "left", :alt => "", :border => "0", :src => "images/Culturefix_pop_txtline1.png"}/    
+    .TSB_Dessert_youwonpopup_txtline2
+      Just email the winning code to
+      %br/
+      %span 
+        %a{:href => "mailto:info@thestashbox.com",:style=>"color:#EA6421;"} info@thestashbox.com 
+        to redeem your gift
+    .TSB_culturefix_youwonpopup_img_bg
+      %img{:align => "left", :alt => "", :border => "0", :src => "images/TSB_Culturefix_youwonpopup_img.png"}/
+    #promo_generate_code.youwonpopup_winner_code_txt Winner Code: TSB taste cf
+    .youwonpopup_dont_belive_txt{:style=>"margin-top:-6px;"}
+      %span Don't believe us?
+      Give us a ring at
+      %span{:style => "font-size:24px; color:#000;"} 646-833-7752
+#popup1.popupbox
+  .Versus_Login_main
+    .Versus_Login_close_row
+      .Versus_Login_close
+        %a{:href => "#"}
+    .Versus_Login_top
+      .Versus_Login_top_left
+      .Versus_Login_top_txt
+        %span> W
+        el
+        %span{:style => "font-family:'Times New Roman', Times, serif !important;"}> c
+        ome
+      .Versus_Login_top_left
+      .clear
+    .Versus_Login_stashbox_txt_row Stashboxer
+    .Versus_Login2_txt Please login Below
+    %form#member_new.member_new{"accept-charset" => "UTF-8", :action => "/members/sign_in", :method => "post"}
+      .Versus_Login_field_row
+        .Versus_Login_email_field
+          %input{:placeholder => "Stashname", :type=>"text", :name=>"member[stash_name]", :value=>""}/
+      .Versus_Login_field_row
+        .Versus_Login_email_field
+          %input{:placeholder => "Stashword", :type=>"password", :name=>"member[password]", :value=>""}/
+      .Versus_Login_field_row.space1
+        .Versus_Login_email_bttn
+          %input{:type => "submit", :value => ""}/
+    .Versus_Login_middle_txt
+      %span> G
+      uests Please feel free to give Versus a try.
+      %br/
+      More information on Membership is behind our doors
+    .Versus_Login_guest_click_bttn_row
+      .Versus_Login_guest_click_bttn
+        %a{:href => "/guest/versus_question/1"} Guests Click Here
+    .Versus_Login_bottom_img                
+      %span{:style => "font-size:24px; color:#000;"} 646-863-7171
+= javascript_include_tag 'promo_versus'
+= javascript_include_tag 'homepage'
+= javascript_include_tag 'how_it_works'
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"} 
+:javascript
+  function go_to_home()
+  {
+    window.location.href = "/guest/versus_question/1";
+  }     

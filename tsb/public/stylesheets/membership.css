@@ -1,0 +1,146 @@
+body.memberLog #wrapper {
+    background: url(../images/memberLog_bg.jpg) no-repeat scroll 0 0 transparent;
+	height:786px;
+}
+#wrapper {
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 868px;
+}
+#main {
+    display: block;
+    margin: 0 10px 15px;
+    overflow: hidden;
+}
+.main_logo {
+	width:868px;
+	height:auto;
+	text-align:center;
+}
+#boxWrap {
+    float: left;
+    margin: 5px 0 0;
+    width: 100%;
+}
+.box {
+    float: left;
+    height:auto;
+    padding: 0px 180px 0 68px;
+    width: 292px;
+	text-align:center;
+}
+.box2 h2, .box h2 {
+    padding: 10px 0 7px 0;
+    text-align: center;
+	line-height:30px;
+}
+h2 {
+    font-family: TrajanPro;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+h3 {
+    font-family:"Copperplate";
+    font-size: 13px;
+    font-weight: normal;
+	text-transform:uppercase;
+	line-height:17px;
+}
+h3 img{
+  margin-top:10px;
+}
+ul.buttons {
+    width: 735px;
+	padding-left:120px;
+	margin-top:10px;
+}
+ul.buttons li {
+    float: left;
+    margin: 20px 40px 10px 0;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a {
+    color: #666666;
+}
+
+a {
+    background: none repeat scroll 0 0 transparent;
+    font-size: 100%;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    vertical-align: baseline;
+}
+a img {
+    border: medium none;
+}
+.do-code {
+    background: url("../images/do_code.png") repeat scroll 0 0 transparent;
+    height: 142px;
+    position: relative;
+    width: 287px;
+}
+.do-code input {
+    background: url("../images/do_input.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #010101;
+    font: bold 17px/26px "Times New Roman",Times,serif;
+    height: 31px;
+    left: 22px;
+    padding-right: 7px;
+    position: absolute;
+    text-align: right;
+    top: 85px;
+    width: 154px;
+}
+.display_hide {
+    display: none;
+}
+p {
+    margin: 5px 0;
+}
+.do-code input[type="submit"] {
+    cursor: pointer;
+    height: 30px;
+    left: 195px;
+    opacity: 0;
+	filter:alpha(opacity=0);
+    position: absolute;
+    width: 64px;
+}
+.have-code {
+    background: url(../images/have_code.png) repeat scroll 0 0 transparent;
+    height: 142px;
+    position: relative;
+    width: 287px;
+}
+.have-code input {
+    background: url("../images/do_input.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #010101;
+    font: bold 17px/26px "Times New Roman",Times,serif;
+    height: 31px;
+    left: 28px;
+    padding-right: 7px;
+    position: absolute;
+    text-align: right;
+    top: 85px;
+    width: 154px;
+}
+.have-code input[type="submit"] {
+    cursor: pointer;
+    height: 30px;
+    left: 200px;
+    opacity: 0;
+	filter:alpha(opacity=0);
+    position: absolute;
+    width: 64px;
+}
+.space_top {
+	margin-top:50px;
+}
+

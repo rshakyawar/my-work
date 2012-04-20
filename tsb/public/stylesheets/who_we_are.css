@@ -1,0 +1,79 @@
+@font-face {
+          font-family: 'TheLastFont';
+          src: url('../fonts/lastfontwastingonyou.eot?') format('eot'),
+               url('../fonts/lastfontwastingonyou.woff') format('woff'),
+               url('../fonts/lastfontwastingonyou.ttf') format('truetype'),
+               url('../fonts/lastfontwastingonyou.svg') format('svg');
+      }
+.about_content {
+	width:864px;
+	height:auto;
+	margin:0px auto 0px auto;
+	padding-bottom:50px;
+}
+.about_middle {
+	width:745px;
+	height:auto;
+	margin:0px auto;
+}
+.about_middle ul {
+	margin:0px;
+	padding:0px;
+}
+.about_middle ul li {
+	width:auto;
+	height:auto;
+	margin:20px 0px 0px 18px;
+	float:left;
+	list-style:none;
+	display:block;
+}
+.about_txt_row {
+	width:720px;
+	height:30px;
+	font:italic 26px 'TheLastFont';
+	color:#3f3e3e;
+	margin:0px 0px 0px 0px;
+	padding:60px 0px 0px 25px;
+	text-align:left;
+	
+} 
+.profile_content {
+	width:864px;
+	height:auto;
+	margin:17px auto 0px auto;
+	padding-bottom:10px;
+	position:relative;
+}
+.profile_back_bttn {
+	width:58px;
+	height:65px;
+	position:absolute;
+	left:32px;
+	top:68px;
+}
+.profile_back_bttn a {
+	width:58px;
+	height:65px;
+	background:url(../images/profile_back_bttn.png) no-repeat;
+	display:block;
+}
+.profile_middle {
+	width:668px;
+	height:auto;
+	margin:0px auto;
+}
+.show_image{
+  background-image: url("../images/tsb_team/andrew_stephen_profile_img.png");
+  width:686px;
+  height:342px;
+  position:relative;
+}
+.show_image a{    
+  cursor: pointer;
+  height: 20px;
+  left: 375px;
+  position: absolute;
+  top: 143px;
+  width: 195px;
+}

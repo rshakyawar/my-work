@@ -1,0 +1,47 @@
+:css
+  .ui-dialog {
+      background-color: Transparent;
+      background-image: url("../images/error_popup.png") !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: medium none !important;
+      height: 214px !important;
+      width: 275px !important;
+  }
+#main
+  .logoBlock
+    %a{:href => "#"}
+      %img{:alt => "brand logo", :height => "127", :src => "/images/brandLogo.gif", :width => "303"}/
+  .BrandTxt
+    %a{:href => "#"}
+      %img{:alt => "Brand Partner Entrance", :height => "30", :src => "/images/brandPartnerTxt.gif", :width => "403"}/
+  .contentBlock
+    .mickLeft
+      %img{:alt => "On the air", :height => "210", :src => "/images/airMickImg.png", :width => "104"}/
+    .userBlock
+      .userBlockContent
+        = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+          .forgotTxt
+            %h2.yellow Forgot Your Password?
+          .userMessage
+            %p
+              PLEASE ENTER YOUR USERNAME/EMAIL BELOW. CLICK THE "ENTER" BUTTON. WE WILL SEND
+              %br>/
+              YOUR PASSWORD INFORMATION TO YOU !
+          .userName
+            = f.text_field :partner_name,:class=>"inputSty",:placeholder => "NAME"
+          .userTxt
+            %span
+              FORGOT YOUR
+              %a{:href => "/forgot_user_name"} USERNAME ?
+          .btnBlock
+            %input#enterBtn.btnSty{:name => "enterBtn",:type => "button",:onclick=>"this.form.submit();",:style=>"margin-top:10px;"}/
+    .mickRight
+      %img{:alt => "On the air", :height => "210", :src => "/images/airMickImg.png", :width => "104"}/
+#popup1.popupbox
+  %h2 Please Enter username or email
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+-if resource.errors.any?
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [490,375] });

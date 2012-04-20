@@ -1,0 +1,71 @@
+#middle_content
+  .my_stash_box_main
+    .my_stash_box_lock_img
+    .my_stash_box
+    .my_stash_box_lock_img
+  .my_stash_box_heading_txt Invite up to 5 friends to join the TSB revolution!
+  .invite_frnd_key_box
+    .invited_friend_top_txt Please enter email information below
+    .invite_frnd_bg
+      .invited_frnd_allfields_main
+        #validation_error{:style=>"margin-left: 42px;"}
+        #comments.flash_notic_class{:style=>"margin-left: 44px;"}
+        - if @exist_invite_friends == InviteFriend::FRIENDS_SIZE
+          %h3{:style=>"text-align:center;"} Sorry You have already invited #{InviteFriend::FRIENDS_SIZE} friends. 
+        - @member.invite_friends.each_with_index do |invite_friend,index|
+          - if  invite_friend.id.nil?
+            = form_for invite_friend,:url=>members_send_mail_for_invite_friend_path, :remote => true, :html => {:id=>"invite_form_#{index}",:name=>"invite_form_#{index}"} do |f|
+              .invited_frnd_fields_main{:id=>"main_div_#{index}"}
+                .invited_frnd_field
+                  =f.text_field :email,:class=>"invite_frnd_field_bg",:style=>"margin-left:5px"
+                .invited_frnd_send_bttn
+                  =f.submit :class=>"invited_frnd_send_bttn_bg",:id=>"send_button_#{index}",:value => "SEND"
+                  %div.display_hide{:id => "updating_#{index}"}
+                    %p{:align => "center"}
+                      %img{:src => "/images/spinner_small.gif"}/ 
+#popup6.popupbox
+  .thankyou_invitefrnd_popup_bg
+    .thankyou_invitefrnd_popup_heading.space
+    .thank_you_popup_img
+    .email_list_popup_content_txt
+      Thank You For Inviting A Friend!
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag 'rails'
+- @member.invite_friends.each_with_index do |invite_friend,index|
+  - if  invite_friend.id.nil?
+    :javascript
+    jQuery(function($){
+      $("#invite_form_#{index}").bind("ajax:beforeSend", function(evt, xhr, settings){  
+        var $submitButton = $(this).find('input[name="commit"]');
+        $submitButton.hide();
+        $("#updating_#{index}").show();
+      });
+      $("#invite_form_#{index}").bind('ajax:success', function(data, status, xhr) {
+        $("#main_div_#{index}").html("<p style='text-align:center'>Email Sent successfully<p>");
+        $("#validation_error").html("");
+        $("#comments").html("");
+        $("#popup6").dialog({ closeText: '', dialogClass:"ui-dialog_custom" ,modal:true , resizable: false,position: [500,100], open : function(e){open_popup(this);}});
+      });
+      $("#invite_form_#{index}").bind('ajax:failure', function(xhr, status, error) {alert("Some thing went wrong!");});
+      $("#invite_form_#{index}").bind('ajax:complete', function() {  });
+      $("#invite_form_#{index}").bind("ajax:error", function(evt, xhr, status, error){
+        var $form = $(this);
+        try {
+          errors = $.parseJSON(xhr.responseText);
+        } catch(err) {
+          errors = {email: "is invalid,can't be blank "};
+        }
+        errorText = "";
+        for ( error in errors ) {
+          errorText += "" + error + ': ' + errors[error] + " ";
+        }
+        errorText += "";
+        $('#validation_error').html(errorText);
+        var $submitButton = $(this).find('input[name="commit"]');
+        var $submitText = $(this).find('input[type="text"]');
+        $submitText.css("border", "2px solid black");
+        $submitButton.show();
+        $("#updating_#{index}").hide();
+      });
+    });

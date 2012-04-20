@@ -1,0 +1,33 @@
+= stylesheet_link_tag 'brand_partner'
+= include_tiny_mce_if_needed
+#main{:style=>"margin-bottom: 50px;"}
+  .versusBlockPopup
+    .versusContentBlock{:style=>"height: 554px;width: 697px;"}
+      =form_for(@popup_sending_text,:url =>"/brand_partners/show_popup_sending_text/#{@versus.id}/#{params[:current_link]}",:method=>:put) do |f|
+        .versusTit{:style=>"margin-left:200px;"}
+          %h2{:style=>"font-style: normal;"} Enter Text for share  
+        .step3_form_field_main          
+          .step3_form_name Facebook text                     
+          .step3_form_field1
+            = f.text_area :fb_text, :class=>"inputSty" ,:placeholder => "Facebook Text",:style=>"height: 22px;width: 430px;"
+        .step3_form_field_main          
+          .step3_form_name Twitter text                     
+          .step3_form_field1
+            = f.text_area :twitter_text, :class=>"inputSty",:placeholder => "Twitter Text",:style=>"height: 22px;width: 430px;"
+        .step3_form_field_main          
+          .step3_form_name SMS text                     
+          .step3_form_field1
+            = f.text_area :sms_text, :class=>"inputSty",:placeholder => "SMS Text",:style=>"height: 22px;width: 430px;"                     
+        .versusInput
+          = f.label "Email Text",:style=>"font: 17px Trajan Pro,Arial,Helvetica,sans-serif;margin-left: -190px;"     
+          %br/   
+          = f.text_area:email_txt, :class=>"inputSty",:placeholder => "Email Text",:style=>"height: 270px;width: 645px;",:class => "mceEditor" 
+        %br/         
+        .submitBtnBlock{:style=>"float:none;width:662px;"}
+          %input#enterBtn.submitBtnSty{:name => "enterBtn", :type => "submit",:onclick=>"this.form.submit();", :value => "",:style=>"margin-top:8px;margin-left:286px;"}/
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+= javascript_include_tag "reward_link"     
+     
+
+         

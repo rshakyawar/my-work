@@ -1,0 +1,35 @@
+:css
+  .member_survey_popup_main {
+   	background:url("/images/member_survey_page_popup.png") no-repeat 0 0;  
+   	width:428px; 
+   	height:492px; 
+   	margin:0 auto; 
+   	position:relative;
+   	border: none;
+  }
+  .auto_pop_box{
+    width:500px !important;
+  }
+  .member_survey_close { 
+   	width:70px; 
+   	height:50px; 
+   	position:absolute;  
+   	top:17px; 
+   	right:16px;  
+  }
+  
+  .member_survey_close a { 
+   	background:url("/images/member_survey_popup_close.png") no-repeat 0 0;  
+   	display:block; 
+   	width:70px; 
+   	height:20px; 
+  }
+  .popupbox h2 {
+    font-size:20px;
+    margin:38px 10px 10px;
+  }
+#popup100.auto_pop_box
+  .member_survey_popup_main
+    .member_survey_close
+      %a{:href => "javascript:void(0)", :onclick=>"$('#popup100').dialog('close')"}
+ 

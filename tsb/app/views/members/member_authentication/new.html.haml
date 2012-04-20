@@ -1,0 +1,30 @@
+#middle_content
+  .my_stash_box_main
+    .my_stash_box_lock_img
+    .my_stash_box
+    .my_stash_box_lock_img
+    #popup1.popupbox      
+      %h2
+        You information is on its way!
+  .my_stash_box_heading_txt A personal collection of my STASHBOX contributions.
+  .key_box
+    .member_login_bg
+      =form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .member_login_heading Member Login
+        .member_login_field_main
+          .member_login_field
+            = f.text_field :stash_name, :class=>:member_login_field_bg,:autocomplete=>"off", :placeholder => "Stash Name"
+          .member_login_field
+            = f.password_field :password ,:class=>:member_login_field_bg, :placeholder => "Stash Word"
+        .member_login_forget_txt
+          Forgot your
+          %a{:href => "#{members_forgot_stash_name_path}"} stashname
+          or
+          %a{:href => "#{new_member_password_path}"} stashword
+        .member_login_enter_bttn
+          %input.member_login_enter_bttn_bg{:type => "submit", :value => "ENTER",:style=>"cursor:pointer;padding-left: 10px;"}/
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}    
+-if flash[:notice]
+  :javascript
+    $("#popup1").dialog({ modal:true ,resizable: false,position: [510,375] });      

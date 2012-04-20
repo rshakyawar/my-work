@@ -1,0 +1,878 @@
+ /*---------------------------------------------
+	The Stash Box Stylesheet
+
+	Author: Beata Domagala Pink Parachuters
+	Created: JuLy, 2011
+	Modified: ...
+	--------
+	Structure of this Document (search for "=" to jump to each section heading):
+
+		1. =XHTML ELEMENTS
+		2. =GLOBAL
+		3. =HEADER
+		4. =NAV
+		5. =CONTENT
+		6. =SIDEBAR
+		7. =FOOTER
+SH - start here
+EH - end here
+---------------------------------------------*/
+
+/*=XHTML ELEMENTS
+---------------------------------------------*/
+
+@font-face {font-family:Trajan Pro; src: url('TrajanPro-Regular.otf');}
+@font-face {font-family:Copperplate; src: url('Copperplate.ttc');}
+@font-face {
+    font-family: 'TheLastFont11';
+    src: url('/fonts/lastfontwastingonyou.eot?') format('eot'),
+         url('/fonts/lastfontwastingonyou.ttf') format('truetype'),
+         url('/fonts/lastfontwastingonyou.svg') format('svg');
+}
+body {
+	color: #000;
+	font-size:14px;
+    font-family:"Times New Roman", Times, serif;
+    line-height:1.4;
+    background: url("../images/doors_bricks_resized.jpg") repeat scroll 50% 40% black;
+	}
+
+a {color: #666;}
+a:link, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {}
+
+h2{font-family:Trajan Pro, serif; font-size:18px; text-transform:uppercase; float: left; font-style:italic; padding:15px 0 3px 15px; }
+h3{font-family:Copperplate, sans-serif; font-weight:bold; font-size:12px;}
+
+p {margin: 5px 0;}
+em{font-style: italic;}
+
+/*=GLOBAL ELEMENTS
+---------------------------------------------*/
+/*=HEADER ELEMENTS
+---------------------------------------------*/
+header{
+	margin: 0 auto;
+    overflow: hidden;
+    width: 99%;
+	padding:10px 0px 10px 0px;
+}
+h1{
+	float:left;
+	width:30px;
+	padding:0 25px 0 15px;
+}
+/*=NAV ELEMENTS
+---------------------------------------------*/
+nav{
+	float:left;
+	}
+
+nav li{
+	float:left;
+	margin:0 4px;
+}
+nav li a{
+	display:block;
+	text-indent:-3000px;
+	height:30px;
+}
+nav li a.active{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+nav li a.one{
+	background:url(../images/nav_versus.png) no-repeat 0 0;
+	width:87px;
+}
+nav li a.two{
+	background:url(../images/nav_versus.png) no-repeat -93px 0;
+	width:84px;
+}
+nav li a.three{
+	background:url(../images/nav_versus.png) no-repeat -188px 0;
+	width:101px;
+}
+nav li a.four{
+	background:url(../images/nav_versus.png) no-repeat -301px 0;
+	width:121px;
+}
+nav li a.five{
+	background:url(../images/nav_versus.png) no-repeat -432px 0;
+	width:111px;
+}
+nav li a.six{
+	background:url(../images/nav_versus.png) no-repeat -552px 0;
+	width:108px;
+}
+nav li a.seven{
+	background:url(../images/nav_versus.png) no-repeat -669px 0;
+	width:103px;
+}
+nav li a.one:hover,
+nav li a.two:hover,
+nav li a.three:hover,
+nav li a.four:hover,
+nav li a.five:hover,
+nav li a.six:hover,
+nav li a.seven:hover{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+
+
+
+div li a.queOne:hover,
+div li a.queTwo:hover,
+div li a.queThree:hover{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+}
+p.quesSty{
+    float: right;
+    margin: 10px 20px 3px 0;
+}
+p.quesSty a.active{
+	-moz-box-shadow: 5px 5px 10px #c694ec;
+  	-webkit-box-shadow: 5px 5px 10px #c694ec;
+ 	 box-shadow: 3px 0px 10px #c694ec;
+	 display: block;
+    height: 40px;
+}
+
+ /*=CONTENT ELEMENTS
+---------------------------------------------*/
+#black_bg {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#door_left, #door_left_visible {
+    background: url("../images/door_left.jpg") no-repeat scroll 100% 50% transparent;
+    cursor: pointer;
+    display: none;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 50%;
+    z-index: 30;
+}
+#door_right, #door_right_visible {
+    background: url("../images/door_right.jpg") no-repeat scroll 0 50% transparent;
+    cursor: pointer;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 49.9%;
+    z-index: 30;
+}
+#wrapper{
+	width:868px;
+   margin:0 auto;
+   height:100%;
+   padding:0;
+   overflow:hidden;
+}
+#main{
+    display: block;
+    margin:0 10px 15px 10px;
+    overflow: hidden;
+    text-align: center;
+}
+#blockLeft{
+    float: left;
+    width: 204px;
+}
+#blockRight{
+    float: left;
+    width: 630px;
+}
+
+section.secOne_new{
+	background:url(../images/bg-sidebar.png) no-repeat;
+	width:204px;
+	height:349px;
+	float:left;
+}
+
+section.secOne{
+	background:url(../images/image_upload_bg.png) no-repeat;
+	width:204px;
+	height:165px;
+	float:left;
+}
+section.secOne #secOneBlock{
+    float: left;
+    height: 140px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+}
+
+#secOneBlock .tit{
+    clear: both;
+    float: left;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+#secOneBlock .chooseImgBtn{
+    background: url("../images/ch_img_button.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    cursor: pointer;
+    float: left;
+    height: 32px;
+    margin: 0px;
+    width: 175px;
+}
+
+#secOneBlock .chooseImgBtnNoBackground{
+    background: url("../images/ch_img_button_no_bg.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    cursor: pointer;
+    overflow: auto;
+    float: left;
+    height: 32px;
+    margin: 0px;
+    width: 175px;
+    display: none;
+    padding-top: 3px;
+    font-size: medium;
+    text-decoration: underline;
+    position: relative;
+    top: -26px;
+    
+}
+
+#secOneBlock .chooseImgTxt{
+    clear: both;
+    float: left;
+    font-size: 12px!important;
+    margin: 0;
+}
+#secOneBlock .removeImg{
+    background: url("../images/remove_img_button.jpg") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 27px;
+    margin: 20px 0;
+    padding-top: 3px;
+    width: 140px;
+}
+#secOneBlock .removeImg a{
+	padding-left: 10px;
+	font-size: 15px;
+}
+#secOneBlock .zoomTxt{
+    clear: both;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+}
+#secOneBlock ul.zoomer{
+    display: inline;
+    float: left;
+    margin: 15px 0;
+}
+li#zoomNeg{
+	float: left;
+}
+li#zoomCursor{
+	float: left;
+}
+li#zoomPlus{
+	float: left;
+}
+#secOneBlock .moveTxt{
+    clear: both;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+}
+#secOneBlock .moveImg{
+    clear: both;
+    float: left;
+    margin: 7px 0 0 10px;
+}
+
+#secOneBlock div.reset{
+    clear: both;
+    display: block;
+    float: left;
+    height: 30px;
+    margin-left: 100px;
+	margin-top: 5px;
+    width: 85px;
+}
+#secOneBlock div.resetImg{
+    float: left;
+    margin-left: 5px;
+    width: 30px;
+}
+#secOneBlock div.resetTxt{
+    float: left;
+    margin-top: 5px;
+}
+section.secTwo {
+	background:#FFF;
+	border:1px solid #333;
+	width:614px;
+	height:393px;
+	float:left;
+	margin:0 0 0 15px;
+
+}
+section.secTwo p{
+	margin: 0px;
+}
+#logoOne{
+    border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+    height: 75px;
+    width: 172px;
+	float: left;
+}
+#topBanner{
+	border-bottom: 1px solid gray;
+    height: 75px;
+    width:614px;
+	float: left;
+}
+#bgImgBlock{
+    width: 614px;
+	float: left;
+	//padding-top:25px
+}
+#versusBlock_bg{
+    height: 220px;
+    width: 614px;
+	float: left;
+	position:relative;
+	top: -224px;
+	left:0px;
+	z-index:1000
+}
+#versusBlock{
+    height: 220px;
+    width: 614px;
+	float: left;
+}
+.versusLeft_set {
+    float: left;
+    height: 200px;
+    margin-left: 75px;
+    width: 200px;
+    background-color: #FFFFFF;
+}
+#versusLeft{
+    border: 2px solid #A1A1A1;
+}
+.versusRight_set {
+    float: left;
+    height: 200px;
+    margin-left: 75px;
+    width: 200px;
+    background-color: #FFFFFF;
+}
+#versusRight{
+    border: 2px solid #A1A1A1;
+}
+
+#bottomBannerBlock{
+	border-top: 1px solid #000000;
+	border-bottom: 2px solid #918f90;
+    height: 75px;
+    width: 614px;
+	float: left;
+	position:relative;
+}
+#bottomBannerBlock #bannerTxt{
+    float: left;
+    text-align: left;
+}
+#bottomBannerBlock #quizBlock{
+    float: left;
+	border: 1px solid #918f90;
+    margin-left: 30px;
+    margin-top: 3px;
+    text-align: center;
+    width: 565px;
+	height: 35px;
+}
+#quizBlock_bg {
+    text-align: center;
+    width: 565px;
+	height: 35px;
+	position:absolute;
+	top:27px;
+	left:31px;
+	background-color:white;
+  font-size:18px;
+}
+#question_a {
+    background: url("../images/quesPanelImg1.jpg") no-repeat scroll left top transparent;
+	border:none;
+    height: 20px;
+    margin-top: 3px;
+    width: 166px;
+}
+#question_b {
+    border: medium none;
+    height: 33px;
+    text-align: center;
+    width: 565px;
+	float: left;
+	clear: both;
+	font-size:18px;
+}
+#logo2Block{
+    height: 95px;
+    width: 614px;
+    float: left;
+    margin-left: 15px;
+}
+
+#below_image_tag{
+  position: absolute;
+  color: red;
+  cursor:pointer;
+   left: 263px;
+}
+
+#logoTwo{
+    border: 1px solid #918F90;
+    float: left;
+    height: 55px;
+    margin-left: 250px;
+    margin-top: 15px;
+    width: 120px;
+}
+
+.dis_none{
+  display:none;
+}
+
+.blue_border_versus{
+  border: 7px solid #61c8b8 !important; 
+  cursor:pointer;
+}
+
+.red_border_versus{
+  border: 7px solid #ff2800 !important; 
+  cursor:pointer;
+}
+
+section.secThree{
+    float: left;
+    height: 100px;
+    width: 614px;
+	margin: 0 0 0 15px;
+}
+#saveBlock{
+    width: 307px;
+	float: left;
+}
+#continueBlock{
+    width: 307px;
+	float: right;
+}
+#saveBlock input.saveBtnSty{
+    background: url("../images/btn_save.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 75px;
+    margin-top: 15px;
+    width: 164px;
+	border: 0px;
+}
+#continueBlock input.continueBtnSty{
+    background: url("../images/btn_continue.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: right;
+    height: 80px;
+    margin-top: 15px;
+    width: 175px;
+	border: 0px;
+}
+section.secFour{
+    background: url("../images/imgReqBg.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 117px;
+    margin-top: 20px;
+    width: 203px;
+}
+section.secFour #secFourBlock{
+    float: left;
+    height: 105px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+	font-family:Trajan Pro, serif;
+}
+#secFourBlock div.tit{
+    font-size: 16px;
+    font-style: italic;
+    margin: 5px 0 10px 0;
+	text-align:left;
+}
+#secFourBlock div.txt1 {
+    clear: both;
+    float: left;
+    font-size: 11px;
+    font-style: italic;
+    margin-bottom: 15px;
+	text-align: left;
+}
+#secFourBlock div.txt2 {
+    clear: both;
+    float: left;
+    font-size: 11px;
+    font-style: italic;
+}
+
+section.bannerLeft{
+    background: url("../images/imgReqBg.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 117px;
+    width: 203px;
+}
+section.bannerLeft #bannerLeftBlock{
+    float: left;
+    height: 105px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+	font-family:Trajan Pro, serif;
+}
+#bannerLeftBlock div.tit{
+    font-size: 15px;
+    font-style: italic;
+    margin: 5px 0 10px 0;
+	text-align: center;
+}
+
+section.secOne #questionBlock {
+    float: left;
+    height: 335px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+}
+section.secOne_new #questionBlock {
+    float: left;
+    height: 335px;
+    margin: 5px 0 0 15px;
+    width: 182px;
+}
+#questionBlock .h5sty{
+    clear: both;
+    float: left;
+    font-size: 17px;
+    font-style: italic;
+    margin-top: 5px;
+}
+#questionBlock div.typeQues{
+    background: url("../images/quesPanelImg2.jpg") no-repeat scroll left top transparent;
+    clear: both;
+    height: 35px;
+    width: 178px;
+}
+#fontSel {
+    background: url("../images/quesPanelImg3.jpg") no-repeat scroll left top transparent;
+    border: medium none;
+    height: 26px;
+    margin-top: 5px;
+    width: 168px;
+}
+#questionBlock div.maxChar{
+    clear: both;
+    float: left;
+    font-size: 12px !important;
+    padding-left: 3px;
+}
+#questionBlock div.delQ{
+    clear: both;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 30px 0;
+    width: 175px;
+}
+#questionBlock div.delQimg{
+    float: left;
+    margin-right: 5px;
+    width: 30px;
+}
+#questionBlock div.delQtxt{
+    float: left;
+    margin-top: 5px;
+}
+#questionBlock div.chooseFont{
+    background: url("../images/quesPanelImg4.gif") no-repeat scroll left top transparent;
+    clear: both;
+    height: 18px;
+    width: 118px;
+	margin-bottom: 8px;
+}
+#questionBlock div.fontType{
+    background: url("../images/quesPanelImg2.jpg") no-repeat scroll left top transparent;
+    clear: both;
+    display: block;
+    height: 35px;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    width: 178px;
+}
+div.fontColor{
+    background: url("../images/quesPanelImg3.gif") no-repeat scroll left top transparent;
+    clear: both;
+    display: block;
+    height: 35px;
+    margin-bottom: 30px;
+    width: 178px;
+}
+
+/* Master css start */
+
+#slider01 {
+margin: 8px 8px 8px 4px;
+width: 120px;
+}
+
+#overlay {opacity:0.0; z-index:100; background-color:white; position:absolute; top:213px; left:212px;  height:235px; width:200px}
+
+#files, #files:hover {
+	cursor: pointer;
+	height: 31px;
+}
+
+#viewport3, .mapwrapper3 {
+        width: 200px;
+        height: 200px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+#viewport1, .mapwrapper1 {
+        width: 172px;
+        height: 75px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+
+#viewport2, .mapwrapper2 {
+        width: 761px;
+        height: 75px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+
+#viewport5, .mapwrapper5{
+        width: 120px;
+        height: 55px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+
+#viewport_bg, .mapwrapper_bg{
+		width: 760px;
+		height: 300px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+#viewport_ban, .mapwrapper_ban{
+		width: 614px;
+		height: 75px;
+        cursor: move;
+        margin: 0px auto;
+        overflow: hidden;
+}
+
+.mapwrapper3, .mapwrapper1, .mapwrapper2, .mapwrapper5 {
+    position: relative;
+}
+
+
+.map-control {
+    background: url("../images/move_img_button.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    height: 32px;
+    left: 5px;
+    position: relative;
+    top: 5px;
+    width: 34px;
+}
+
+.map-control a {
+    height: 13px;
+    width: 13px;
+    display: block;
+    text-indent: -999em;
+    position: absolute;
+    outline: none;
+}
+
+.map-control a:hover {
+    background: #535353;
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+
+.map-control a.left {
+    left: -2px;
+    top: 9px;
+}
+
+.map-control a.right {
+    left: 22px;
+    top: 9px;
+}
+
+.map-control a.up {
+    left: 10px;
+    top: -2px;
+}
+
+.map-control a.down {
+    left: 10px;
+    top: 20px;
+}
+/* Master css end */
+ul.fontselector {
+  background: white;
+  border: 1px solid #ccc;
+  border-top: 0;
+  font-size: 14px;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding:0;
+  line-height: 1.2;
+  z-index:    10;
+  position:   absolute;
+}
+ul.fontselector li {
+  margin:   0;
+  padding:  0;
+  list-style: none;
+}
+ul.fontselector a {
+  display:    block;
+  padding:    3px;
+  color:      black;
+  text-decoration: none;
+}
+ul.fontselector a:hover {
+  background: #ddd;
+  cursor:     pointer;
+}
+.questions {
+    float: left;
+    width: 60%;
+}
+.questions ul li {
+	display:inline
+}
+.questions ul li a{
+	padding:10px 22px
+}
+.questions ul li a span{
+	visibility:hidden
+}
+.questions ul{
+    margin-left: 160px;
+    margin-top: 22px;
+}
+.queOne {
+	background:transparent url(../images/question1_btn.png) no-repeat;
+}
+.queTwo {
+	background:transparent url(../images/question2_btn.png) no-repeat;
+}
+.queThree {
+	background:transparent url(../images/question3_btn.png) no-repeat;
+}
+.cursor_pointer{
+ cursor: pointer;
+}
+.shadow_question{
+  -moz-box-shadow: 5px 5px 10px #C694EC;
+  webkit-box-shadow: 5px 5px 10px #C694EC;
+  box-shadow: 3px 0px 10px #C694EC;
+}
+.margin_between_question{
+  margin: 5px;
+  padding: 7px 18px;
+}
+
+
+  section.secTwo_promo {
+   background:none repeat scroll 0 0 #FFFFFF;
+   border:1px solid #333333;
+   float:left;
+   height:459px;
+   margin:0 0 0 15px;
+   width:760px;
+  }
+
+  #topBanner_promo {
+   border-bottom:1px solid gray;
+   float:left;
+   height:75px;
+   width:761pxpx;
+  }
+
+  #bottomBannerBlock_promo {
+   border-bottom:2px solid #918F90;
+   border-top:1px solid #000000;
+   border-right: 1px solid gray;   
+   float:left;
+   height:82px;
+   position:relative;
+   width:760px;
+  }
+
+  #bgImgBlock_promo {
+   float:left;
+   height:300px;
+   width:760px;
+   border-right: 1px solid gray;
+  }
+
+  section.secTwo_promo p {
+   margin:0px;
+  }
+
+  #logo2Block_promo {
+   float:left;
+   height:95px;
+   margin-left:15px;
+   width:760px;
+  }
+
+  #logoTwo_promo {
+   border:1px solid #918F90;
+   height:55px;
+   margin:15px auto 0;
+   width:120px;
+  }
+  #below_image_tag {
+    color: red;
+    cursor: pointer;
+    left: 263px;
+    position: absolute;
+    margin-left: 70px;
+  }
+

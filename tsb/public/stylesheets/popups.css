@@ -1,0 +1,245 @@
+
+/* workarounds */
+button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
+
+.ui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }
+.ui-dialog .ui-dialog-titlebar { padding: .4em 1em; position:absolute;right:0px;width:75px;height:22px; z-index:9999999;  }
+.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .1em 0; display:none; } 
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 75px; margin: -6px 10px 0; height: 22px; z-index:1011111; cursor:pointer; }
+.ui-dialog .ui-dialog-titlebar-close span { display: block; width:75px;height:22px; cursor:pointer; }
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
+.ui-dialog .ui-dialog-content { position: relative; border: 0; padding:10px 15px; background: none; overflow: auto; zoom: 1; text-align:center; }
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
+.ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+
+a.ui-dialog-titlebar-close{
+	background: url(../images/Close.jpg) no-repeat top center;
+	cursor:pointer;
+	z-index:9999999;
+}
+
+a.ui-dialog-titlebar-close span{
+	text-indent:-999999em;
+}
+
+.popup_msg{ 
+	position:absolute;
+  min-width:172px;
+  min-height:102px;
+  padding:0;
+  margin:-140px 0 0 220px;
+  text-align:center;
+  color:#FF0000;
+  font: 14px Verdana, Arial, Helvetica, sans-serif;
+  border:1px solid #000;
+  background:#CCC url(../images/close-icon.png) right top no-repeat;
+  -webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+
+.popUpDiv_outer{ width:auto; position:absolute; margin:0; padding:0;}
+#blanket {
+   background-color:#111;
+   opacity: 0.65;
+   position:absolute;
+   z-index: 9001; /*ooveeerrrr nine thoussaaaannnd*/
+   top:0px;
+   left:0px;
+   width:100%;
+}
+
+---------------------------------------------*/
+
+.popup_msg{ 
+	position:absolute;
+  min-width:172px;
+  min-height:102px;
+  padding:0;
+  margin:-140px 0 0 220px;
+  text-align:center;
+  color:#FF0000;
+  font: 14px Verdana, Arial, Helvetica, sans-serif;
+  border:1px solid #000;
+  background:#CCC url(../images/close-icon.png) right top no-repeat;
+  -webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+
+.popUpDiv_outer{ width:auto; position:absolute; margin:0; padding:0;}
+#blanket {
+   background-color:#111;
+   opacity: 0.65;
+   position:absolute;
+   z-index: 9001; /*ooveeerrrr nine thoussaaaannnd*/
+   top:0px;
+   left:0px;
+   width:100%;
+}
+#popUpDiv {
+	position:absolute;
+	background-color:#eeeeee;
+	margin:-125px 0 0 240px;
+	width:150px;
+	height:100px;
+	text-align:left;
+	z-index: 9002; /*ooveeerrrr nine thoussaaaannnd*/
+	border:1px solid #999;
+	-webkit-box-shadow: 0px 0px 10px #242424;
+	-moz-box-shadow: 0px 0px 10px #242424;
+	box-shadow: 0px 0px 10px #242424; 
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#popUpDiv,#popUpDiv2,#popUpDiv3,#popUpDiv4{
+	position:absolute;
+	background-color:#eeeeee;
+	margin:0px 0 0 240px;
+	width:150px;
+	height:100px;
+	text-align:left;
+	z-index: 9002; /*ooveeerrrr nine thoussaaaannnd*/
+	border:1px solid #999;
+}
+
+#popUpDiv a,#popUpDiv2 a,#popUpDi3 a,#popUpDiv4 a{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#000;
+	width:auto;
+	float:right;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+#popUpDiv2 {
+	margin:-125px 0 0 10px;
+}
+
+#popUpDiv3 {
+	margin:0px 0 0 240px;
+}
+
+#popUpDiv4 {
+	margin:0px 0 0 16px;
+}
+
+.common_text{ color:#000; padding:15px 5px 5px 5px; text-align:left;}
+.ui-dialog {
+	background-image:url("../images/popup.png") !important;
+	background-color:Transparent;
+	background-repeat:no-repeat;
+	background-position:center;
+	height:274px !important;
+	width:335px !important;
+	border:none !important;
+}
+body.huntmembership .ui-dialog {
+	background-image:url("../images/popup_blank.png") !important;
+}
+body.huntmembership .ui-dialog img{
+	margin:15px 0 0 0;	
+}
+body.huntmembership .ui-dialog h2{
+	margin:10px
+}
+body.memberLog .ui-dialog {
+	background-image:url("../images/popup_sml.png") !important;
+	height:119px !important;
+	width:175px !important;
+}
+body.memberLog .ui-dialog h2{
+	margin:30px 10px 10px 10px;
+}
+body.blog .ui-dialog{
+	background-image:url("../images/popup_blog.png") !important;
+	height:362px !important;
+	width:320px !important;
+}
+body.blog .ui-dialog h2{
+	margin:40px 10px 10px 10px;
+}
+.ui-widget-header
+{
+	background:none !important;
+	border:none !important;
+}
+
+.popupbox{
+	display:none;
+}
+.popupbox h2{
+	margin:100px 10px 10px 10px;
+	font-size:20px;
+}
+
+.vimeo_video {
+	background-image:url("../images/video_bg.png")!important;
+  margin-top:160px;
+  background-color:Transparent;
+	background-repeat:no-repeat;
+	background-position:center;
+	height: 550px !important;
+	width: 700px !important;
+	border:none !important;
+}
+
+.tsb_offer {
+	background-image:url("../images/tsb_offer.png")!important;
+  margin-top:160px;
+  background-color:Transparent;
+	background-repeat:no-repeat;
+	background-position:center;
+	height: 850px !important;
+	width: 700px !important;
+	border:none !important;
+}
+
+.video_dimension{
+  margin-top:48px;
+  margin-left:7px;
+  height:470px;
+  width:640px
+}
+
+.ui-widget-overlay {
+    position: absolute;
+    top: 0;
+    background-color: gray;  
+    opacity: 0.5;
+    filter:alpha(opacity=50); 
+}
+
+.thankyou_invitefrnd_popup_bg {
+  width:339px;
+  height:248px;
+  background:url() no-repeat left top;
+  margin:0px auto 0px auto;
+  padding:10px 0px 0px 0px;
+}
+
+.thankyou_invitefrnd_popup_heading {
+  width:320px;
+  height:20px;
+}
+
+.thank_you_popup_img {
+  height:63px;
+  background:url("../images/thankyou_invite_img.jpg") no-repeat left top;
+  margin:0px auto 0px auto;
+}
+
+.email_list_popup_content_txt {
+   color: #010101;
+   font: 27px "Trajan Pro";
+   height: auto;
+   margin: 40px 0 0 15px;
+   text-align: center;
+   width: 280px; 
+}

@@ -1,0 +1,47 @@
+.blue_border_versus {
+  border:0px solid black !important;
+  cursor:pointer;
+}
+.red_border_versus {
+  border:2px solid #FF2800 !important;
+  cursor:pointer;
+}
+section.promo_shadow {
+  background:none repeat scroll 0 0 #FFFFFF;
+  float:left;
+  height:459px;
+  margin:0 0 0 15px;
+  width:760px;
+  box-shadow: 10px 10px 5px #666;
+  border: 3px solid #666 !important;
+}
+.TSB_Dessert_youwonpopup_txtline1 {
+  width:511px;
+  height: 50px;
+  padding-left: 105px;
+  font:normal 20px "knowyour", Arial, Helvetica, sans-serif;
+  color:#ea6421;
+  text-align:center;
+}
+
+.TSB_Dessert_youwonpopup_txtline2 {
+  width:500px;
+  height:auto;
+  font:italic normal 14px "TheLastFont", Arial, Helvetica, sans-serif  ;
+  color:#000;
+  text-align:center;
+  margin:10px 0px 0px 0px;
+}
+
+.TSB_Dessert_youwonpopup_txtline2 span {
+  color:#EA6421;
+}
+.TSB_Dessert_youwonpopup_img_bg {
+  width:325px;
+  height:224px;
+  background:url(../images/TSB_Dessert_YouWonPopup_img_bg.png) no-repeat left top;
+  margin:10px auto 0px auto;
+  padding:7px 0px 0px 13px;
+}
+webkit-input-placeholder { text-align:right; }
+input:-moz-placeholder { text-align:right; }
